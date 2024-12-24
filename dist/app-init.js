@@ -1,6 +1,6 @@
 (self["webpackChunkerm"] = self["webpackChunkerm"] || []).push([["app-init"],{
 
-/***/ 33407950:
+/***/ 92455636:
 /*!*********************************************!*\
   !*** ./components/javascript/alert-comp.js ***!
   \*********************************************/
@@ -11,9 +11,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "AlertComp": () => (/* binding */ AlertComp)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_alert_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-alert.js */ 63712806);
-/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/component/index.js */ 26633);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_alert_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-alert.js */ 97238775);
+/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/component/index.js */ 5660422);
 
 var _ = {};
 
@@ -64,14 +64,14 @@ AlertComp._observedAttributes = [];
 
 
 AlertComp.register("alert-comp", {
-    hash: "AlertComp_4",
+    hash: "AlertComp_7",
     refHash: "C_erm_app_0"
 }); 
 
 
 /***/ }),
 
-/***/ 49937256:
+/***/ 6162108:
 /*!********************************************!*\
   !*** ./components/javascript/form-comp.js ***!
   \********************************************/
@@ -82,11 +82,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "FormComp": () => (/* binding */ FormComp)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_input_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-input.js */ 97686034);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_dropdown_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-dropdown.js */ 9950326);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_button_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-button.js */ 62028913);
-/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/component/index.js */ 26633);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_input_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-input.js */ 31525416);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_dropdown_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-dropdown.js */ 25683228);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_button_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-button.js */ 36040942);
+/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/component/index.js */ 5660422);
 
 var _ = {};
 
@@ -106,36 +106,18 @@ class FormComp extends _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_
 		super();
 	}
     init(){
-           this.setData("employeeNumber",this.data.user.employeeNumber);
-           this.setData("name",this.data.user.name);
-           this.setData("email",this.data.user.email);
-           this.setData("phone",this.data.user.phone);
-           this.setData("address",this.data.user.address);
-           this.setData("department",this.data.user.department);
-           this.setData("role",this.data.user.role);
-           this.setData("designation",this.data.user.designation);
-           this.setData("gender",this.data.user.gender);
+           
       }
     data(arg1) {
 		return Object.assign(super.data({
-			show: this.$app.prop("boolean",{default : true}),
-			employeeNumber: this.$app.prop("string"),
-      name: this.$app.prop("string"),
-      email: this.$app.prop("string"),
-      phone: this.$app.prop("string"),
-      address: this.$app.prop("string"),
-      department: this.$app.prop("string"),
-      role: this.$app.prop("string"),
-      designation: this.$app.prop("string"),
-      gender: this.$app.prop("string"),     
+			  user: this.$app.prop("object")
 		}), arg1);	
 	}
-
     static actions(arg1) {
 		return Object.assign(super.actions({
 			submit: function () {
 				try {
-					const { employeeNumber, name, email, phone, address, department, role, designation, gender, type } = this.data;
+					const { employeeNumber, name, email, phone, address, department, role, designation, gender, type } = this.data.user;
 					if (!employeeNumber || !name || !email || !phone || !address || !department || !role || !designation || !gender) {
 						this.$app.$ServiceProvider.toast("All fields are required!", "error");
 						return;
@@ -149,35 +131,29 @@ class FormComp extends _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_
 						this.$app.$ServiceProvider.toast("Please enter a valid phone number!", "error");
 						return;
 					}
-					const user = {
-						employeeNumber,
-						name,
-						email,
-						phone,
-						address,
-						department,
-						role,
-						designation,
-						gender,
-					};
-					if (type.toLowerCase().trim() === "add") {
+					if (this.data.type.toLowerCase().trim() === "add") {
 						this.$app.$ServiceProvider.showAlert(
 							"ADD EMPLOYEE!",
 							"Are you sure you want to add this employee?",
 							() => {
-								this.$app.$ServiceProvider.addUser(user);
+								this.$app.$ServiceProvider.addUser(this.data.user);
+								this.$node.remove();
 							}
 						);
 					} else {
+						console.log(this.getData("user"));
 						this.$app.$ServiceProvider.showAlert(
-							"UPDATE EMPLOYEE!",
-							"Are you sure you want to update this employee " + employeeNumber + "?",
-							() => {
-								this.$app.$ServiceProvider.updateUser(user);
+							 {
+							header:	"UPDATE EMPLOYEE!",
+							content: "Are you sure you want to update this employee " + "?",
+							cb: () => {
+								this.$app.$ServiceProvider.updateUser(this.getData("user"));
+								this.$node.remove();
 							}
+						}
 						);
 					}
-					this.$node.remove();
+					
 				} catch (e) {
 					console.log(e);
 				}
@@ -200,33 +176,21 @@ class FormComp extends _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_
     }
 }
 
-FormComp._template = "<template tag-name=\"form-comp\"> <div class=\"form-container\"> <button class=\"form-btn--close\" onclick=\"{{action('close')}}\">X</button> <form> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(type,'==','add')}}\" is=\"case\" lc-id=\"lc_id_0\"><h2>ADD EMPLOYEE</h2></template><template default=\"\"><h2>UPDATE EMPLOYEE</h2></template></template> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(type,'!=','update')}}\" is=\"case\" lc-id=\"lc_id_0\"><lyte-input lt-prop-label=\"EmployeeNumber\" lt-prop-placeholder=\"Enter EmployeeNumber\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(employeeNumber)}}\"></lyte-input></template></template> <lyte-input lt-prop-label=\"Name\" lt-prop-placeholder=\"Enter Name\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(name)}}\"></lyte-input> <lyte-input lt-prop-label=\"Email\" lt-prop-placeholder=\"Enter Email\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(email)}}\"></lyte-input> <lyte-input lt-prop-label=\"Phone\" lt-prop-placeholder=\"Enter Phone\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(phone)}}\"></lyte-input> <lyte-input lt-prop-label=\"Address\" lt-prop-placeholder=\"Enter Address\" lt-prop-type=\"textarea\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(address)}}\"></lyte-input> <label for=\"department\">Department</label> <lyte-dropdown lt-prop-id=\"department\" lt-prop-class=\"form-input\" lt-prop-selected=\"{{lbind(department)}}\" lt-prop-placeholder=\"Select A Department\"> <template is=\"registerYield\" yield-name=\"yield\"> <lyte-drop-box> <lyte-drop-body> <lyte-drop-item data-value=\"IT\">IT </lyte-drop-item> <lyte-drop-item data-value=\"HR\">HR </lyte-drop-item> <lyte-drop-item data-value=\"Finance\">Finance </lyte-drop-item> <lyte-drop-item data-value=\"Marketing\">Marketing </lyte-drop-item> </lyte-drop-body> </lyte-drop-box> </template> </lyte-dropdown> <label for=\"role\">Role</label> <lyte-dropdown lt-prop-id=\"role\" lt-prop-class=\"form-input\" lt-prop-selected=\"{{lbind(role)}}\" lt-prop-placeholder=\"Select A Role\"> <template is=\"registerYield\" yield-name=\"yield\"> <lyte-drop-box> <lyte-drop-body> <lyte-drop-item data-value=\"Admin\">Admin </lyte-drop-item> <lyte-drop-item data-value=\"Manager\">Manager </lyte-drop-item> <lyte-drop-item data-value=\"Lead Developer\">Lead Developer </lyte-drop-item> <lyte-drop-item data-value=\"Senior Developer\">Senior Developer </lyte-drop-item> <lyte-drop-item data-value=\"Team Lead\">Team Lead</lyte-drop-item> </lyte-drop-body> </lyte-drop-box> </template> </lyte-dropdown> <lyte-input lt-prop-label=\"Designation\" lt-prop-placeholder=\"Enter Designation\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(designation)}}\"></lyte-input> <label for=\"gender\">Gender</label> <lyte-dropdown lt-prop-id=\"gender\" lt-prop-class=\"form-input\" lt-prop-selected=\"{{lbind(gender)}}\" lt-prop-placeholder=\"Select A Gender\"> <template is=\"registerYield\" yield-name=\"yield\"> <lyte-drop-box> <lyte-drop-body> <lyte-drop-item data-value=\"Male\">Male </lyte-drop-item> <lyte-drop-item data-value=\"Female\">Female </lyte-drop-item> </lyte-drop-body> </lyte-drop-box> </template> </lyte-dropdown> <div class=\"form-btns\"> <lyte-button lt-prop-appearance=\"success\" onclick=\"{{action('submit')}}\"> <template is=\"registerYield\" yield-name=\"text\"> Submit </template> </lyte-button> <lyte-button lt-prop-appearance=\"primary\" onclick=\"{{action('reset')}}\"> <template is=\"registerYield\" yield-name=\"text\"> Reset </template> </lyte-button> </div> </form> </div> </template><style>@import url(\"/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-input.css\");\n@import url(\"/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-dropdown.css\");\n@import url(\"/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-button.css\");\nform-comp{\n  position: fixed;\n  top:0;\n  left:0;\n  width: 100vw;\n  height: 100vh;\n  background-color: rgba(0, 0, 0, 0.7);\n  z-index: 22;\n  display: flex;\n  justify-content: center;\n  overflow: auto;\n}\n.form-container{\n  position: relative;\n  background-color: rgb(255, 255, 255);\n  width:500px;\n  height: fit-content;\n  padding:30px;\n  margin-top: 40px;\n  border-radius: 15px;\n  h2{\n    margin-inline: auto;\n  }\n}\n.form-btn--close{\n  position: absolute;\n  right:5px;\n  top:10px;\n  width: 50px;\n  height: 50px;\n  font-size: larger;\n  background-color: inherit;\n  border: none;\n  cursor: pointer;\n}\n\nform-comp form{\n  display: flex;\n  flex-direction: column;\n  gap:20px;\n  height: fit-content;\n}\n\n.form-input{\n  width: 100%;\n  height: 40px;\n  text-indent: 5px;\n  border: 1px solid #d6d6d6 !important;\n}\n\nlyte-dropdown {\n  max-width: 100%;\n}\n\n.form-btns{\n  display: flex;\n  justify-content: center;\n  gap:30px;\n  margin-top: 10px;\n}\n\n.form-btns button{\n  width:150px;\n  height:40px;\n  border-radius: 8px;\n  font-size: 1.2rem;\n}\n\n.lyteField{\n  padding: 0;\n}\n</style>";;
-FormComp._dynamicNodes = [{"t":"a","p":[1,1]},{"t":"s","p":[1,3,1],"c":{"lc_id_0":{"dN":[],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{"dN":[]},"dc":{"lc_id_0":{},"default":{}},"hd":true,"co":["lc_id_0"],"in":16,"sibl":[15]},{"t":"s","p":[1,3,3],"c":{"lc_id_0":{"dN":[{"t":"a","p":[0],"cn":"lc_id_0"},{"t":"cD","p":[0],"in":0,"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{},"dc":{"lc_id_0":{"dc":[0],"hc":true,"trans":true}},"hd":true,"co":["lc_id_0"],"hc":true,"trans":true,"in":15,"sibl":[14]},{"t":"a","p":[1,3,5]},{"t":"cD","p":[1,3,5],"in":14,"sibl":[13]},{"t":"a","p":[1,3,7]},{"t":"cD","p":[1,3,7],"in":13,"sibl":[12]},{"t":"a","p":[1,3,9]},{"t":"cD","p":[1,3,9],"in":12,"sibl":[11]},{"t":"a","p":[1,3,11]},{"t":"cD","p":[1,3,11],"in":11,"sibl":[10]},{"t":"a","p":[1,3,15]},{"t":"r","p":[1,3,15,1],"dN":[{"t":"cD","p":[1,1,1],"in":5,"sibl":[4]},{"t":"cD","p":[1,1,3],"in":4,"sibl":[3]},{"t":"cD","p":[1,1,5],"in":3,"sibl":[2]},{"t":"cD","p":[1,1,7],"in":2,"sibl":[1]},{"t":"cD","p":[1,1],"in":1,"sibl":[0]},{"t":"cD","p":[1],"in":0}],"dc":[5,4,3,2,1,0],"hc":true,"trans":true,"in":10,"sibl":[9]},{"t":"cD","p":[1,3,15],"in":9,"sibl":[8]},{"t":"a","p":[1,3,19]},{"t":"r","p":[1,3,19,1],"dN":[{"t":"cD","p":[1,1,1],"in":6,"sibl":[5]},{"t":"cD","p":[1,1,3],"in":5,"sibl":[4]},{"t":"cD","p":[1,1,5],"in":4,"sibl":[3]},{"t":"cD","p":[1,1,7],"in":3,"sibl":[2]},{"t":"cD","p":[1,1,9],"in":2,"sibl":[1]},{"t":"cD","p":[1,1],"in":1,"sibl":[0]},{"t":"cD","p":[1],"in":0}],"dc":[6,5,4,3,2,1,0],"hc":true,"trans":true,"in":8,"sibl":[7]},{"t":"cD","p":[1,3,19],"in":7,"sibl":[6]},{"t":"a","p":[1,3,21]},{"t":"cD","p":[1,3,21],"in":6,"sibl":[5]},{"t":"a","p":[1,3,25]},{"t":"r","p":[1,3,25,1],"dN":[{"t":"cD","p":[1,1,1],"in":3,"sibl":[2]},{"t":"cD","p":[1,1,3],"in":2,"sibl":[1]},{"t":"cD","p":[1,1],"in":1,"sibl":[0]},{"t":"cD","p":[1],"in":0}],"dc":[3,2,1,0],"hc":true,"trans":true,"in":5,"sibl":[4]},{"t":"cD","p":[1,3,25],"in":4,"sibl":[3]},{"t":"a","p":[1,3,27,1]},{"t":"r","p":[1,3,27,1,1],"dN":[],"in":3,"sibl":[2]},{"t":"cD","p":[1,3,27,1],"in":2,"sibl":[1]},{"t":"a","p":[1,3,27,3]},{"t":"r","p":[1,3,27,3,1],"dN":[],"in":1,"sibl":[0]},{"t":"cD","p":[1,3,27,3],"in":0},{"type":"dc","trans":true,"hc":true,"p":[15,14,13,12,11,10,9,8,7,6,5,4,2,0]}];;
-
-FormComp._observedAttributes = [
-    "show",
-    "employeeNumber",
-    "name",
-    "email",
-    "phone",
-    "address",
-    "department",
-    "role",
-    "designation",
-    "gender"
-];
+FormComp._template = "<template tag-name=\"form-comp\"> <div class=\"form-screen\"> <div class=\"form-container\"> <button class=\"form-btn--close\" onclick=\"{{action('close')}}\">X</button> <form> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(type,'==','add')}}\" is=\"case\" lc-id=\"lc_id_0\"><h2>ADD EMPLOYEE</h2></template><template default=\"\"><h2>UPDATE EMPLOYEE</h2></template></template> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(type,'!=','update')}}\" is=\"case\" lc-id=\"lc_id_0\"><lyte-input lt-prop-label=\"EmployeeNumber\" lt-prop-placeholder=\"Enter EmployeeNumber\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(user.employeeNumber)}}\"></lyte-input></template></template> <lyte-input lt-prop-label=\"Name\" lt-prop-placeholder=\"Enter Name\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(user.name)}}\"></lyte-input> <lyte-input lt-prop-label=\"Email\" lt-prop-placeholder=\"Enter Email\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(user.email)}}\"></lyte-input> <lyte-input lt-prop-label=\"Phone\" lt-prop-placeholder=\"Enter Phone\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(user.phone)}}\"></lyte-input> <lyte-input lt-prop-label=\"Address\" lt-prop-placeholder=\"Enter Address\" lt-prop-type=\"textarea\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(user.address)}}\"></lyte-input> <label for=\"department\">Department</label> <lyte-dropdown lt-prop-id=\"department\" lt-prop-class=\"form-input\" lt-prop-selected=\"{{lbind(user.department)}}\" lt-prop-placeholder=\"Select A Department\"> <template is=\"registerYield\" yield-name=\"yield\"> <lyte-drop-box> <lyte-drop-body> <lyte-drop-item data-value=\"IT\">IT </lyte-drop-item> <lyte-drop-item data-value=\"HR\">HR </lyte-drop-item> <lyte-drop-item data-value=\"Finance\">Finance </lyte-drop-item> <lyte-drop-item data-value=\"Marketing\">Marketing </lyte-drop-item> </lyte-drop-body> </lyte-drop-box> </template> </lyte-dropdown> <label for=\"role\">Role</label> <lyte-dropdown lt-prop-id=\"role\" lt-prop-class=\"form-input\" lt-prop-selected=\"{{lbind(user.role)}}\" lt-prop-placeholder=\"Select A Role\"> <template is=\"registerYield\" yield-name=\"yield\"> <lyte-drop-box> <lyte-drop-body> <lyte-drop-item data-value=\"Admin\">Admin </lyte-drop-item> <lyte-drop-item data-value=\"Manager\">Manager </lyte-drop-item> <lyte-drop-item data-value=\"Lead Developer\">Lead Developer </lyte-drop-item> <lyte-drop-item data-value=\"Senior Developer\">Senior Developer </lyte-drop-item> <lyte-drop-item data-value=\"Team Lead\">Team Lead</lyte-drop-item> </lyte-drop-body> </lyte-drop-box> </template> </lyte-dropdown> <lyte-input lt-prop-label=\"Designation\" lt-prop-placeholder=\"Enter Designation\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(user.designation)}}\"></lyte-input> <label for=\"gender\">Gender</label> <lyte-dropdown lt-prop-id=\"gender\" lt-prop-class=\"form-input\" lt-prop-selected=\"{{lbind(user.gender)}}\" lt-prop-placeholder=\"Select A Gender\"> <template is=\"registerYield\" yield-name=\"yield\"> <lyte-drop-box> <lyte-drop-body> <lyte-drop-item data-value=\"Male\">Male </lyte-drop-item> <lyte-drop-item data-value=\"Female\">Female </lyte-drop-item> </lyte-drop-body> </lyte-drop-box> </template> </lyte-dropdown> <div class=\"form-btns\"> <lyte-button lt-prop-appearance=\"success\" onclick=\"{{action('submit')}}\"> <template is=\"registerYield\" yield-name=\"text\"> Submit </template> </lyte-button> <lyte-button lt-prop-appearance=\"primary\" onclick=\"{{action('reset')}}\"> <template is=\"registerYield\" yield-name=\"text\"> Reset </template> </lyte-button> </div> </form> </div> </div> </template><style>@import url(\"/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-input.css\");\n@import url(\"/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-dropdown.css\");\n@import url(\"/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-button.css\");\n.form-screen{\n  position: fixed;\n  top:0;\n  left:0;\n  width: 100vw;\n  height: 100vh;\n  background-color: rgba(0, 0, 0, 0.7);\n  z-index: 22;\n  display: flex;\n  justify-content: center;\n  overflow: auto;\n}\n.form-container{\n  position: relative;\n  background-color: rgb(255, 255, 255);\n  width:500px;\n  height: fit-content;\n  padding:30px;\n  margin-top: 40px;\n  border-radius: 15px;\n  h2{\n    margin-inline: auto;\n  }\n}\n.form-btn--close{\n  position: absolute;\n  right:5px;\n  top:10px;\n  width: 50px;\n  height: 50px;\n  font-size: larger;\n  background-color: inherit;\n  border: none;\n  cursor: pointer;\n}\n\nform-comp form{\n  display: flex;\n  flex-direction: column;\n  gap:20px;\n  height: fit-content;\n}\n\n.form-input{\n  width: 100%;\n  height: 40px;\n  text-indent: 5px;\n  border: 1px solid #d6d6d6 !important;\n}\n\nlyte-dropdown {\n  max-width: 100%;\n}\n\n.form-btns{\n  display: flex;\n  justify-content: center;\n  gap:30px;\n  margin-top: 10px;\n}\n\n.form-btns button{\n  width:150px;\n  height:40px;\n  border-radius: 8px;\n  font-size: 1.2rem;\n}\n\n.lyteField{\n  padding: 0;\n}\n</style>";;
+FormComp._dynamicNodes = [{"t":"a","p":[1,1,1]},{"t":"s","p":[1,1,3,1],"c":{"lc_id_0":{"dN":[],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{"dN":[]},"dc":{"lc_id_0":{},"default":{}},"hd":true,"co":["lc_id_0"],"in":16,"sibl":[15]},{"t":"s","p":[1,1,3,3],"c":{"lc_id_0":{"dN":[{"t":"a","p":[0],"cn":"lc_id_0"},{"t":"cD","p":[0],"in":0,"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{},"dc":{"lc_id_0":{"dc":[0],"hc":true,"trans":true}},"hd":true,"co":["lc_id_0"],"hc":true,"trans":true,"in":15,"sibl":[14]},{"t":"a","p":[1,1,3,5]},{"t":"cD","p":[1,1,3,5],"in":14,"sibl":[13]},{"t":"a","p":[1,1,3,7]},{"t":"cD","p":[1,1,3,7],"in":13,"sibl":[12]},{"t":"a","p":[1,1,3,9]},{"t":"cD","p":[1,1,3,9],"in":12,"sibl":[11]},{"t":"a","p":[1,1,3,11]},{"t":"cD","p":[1,1,3,11],"in":11,"sibl":[10]},{"t":"a","p":[1,1,3,15]},{"t":"r","p":[1,1,3,15,1],"dN":[{"t":"cD","p":[1,1,1],"in":5,"sibl":[4]},{"t":"cD","p":[1,1,3],"in":4,"sibl":[3]},{"t":"cD","p":[1,1,5],"in":3,"sibl":[2]},{"t":"cD","p":[1,1,7],"in":2,"sibl":[1]},{"t":"cD","p":[1,1],"in":1,"sibl":[0]},{"t":"cD","p":[1],"in":0}],"dc":[5,4,3,2,1,0],"hc":true,"trans":true,"in":10,"sibl":[9]},{"t":"cD","p":[1,1,3,15],"in":9,"sibl":[8]},{"t":"a","p":[1,1,3,19]},{"t":"r","p":[1,1,3,19,1],"dN":[{"t":"cD","p":[1,1,1],"in":6,"sibl":[5]},{"t":"cD","p":[1,1,3],"in":5,"sibl":[4]},{"t":"cD","p":[1,1,5],"in":4,"sibl":[3]},{"t":"cD","p":[1,1,7],"in":3,"sibl":[2]},{"t":"cD","p":[1,1,9],"in":2,"sibl":[1]},{"t":"cD","p":[1,1],"in":1,"sibl":[0]},{"t":"cD","p":[1],"in":0}],"dc":[6,5,4,3,2,1,0],"hc":true,"trans":true,"in":8,"sibl":[7]},{"t":"cD","p":[1,1,3,19],"in":7,"sibl":[6]},{"t":"a","p":[1,1,3,21]},{"t":"cD","p":[1,1,3,21],"in":6,"sibl":[5]},{"t":"a","p":[1,1,3,25]},{"t":"r","p":[1,1,3,25,1],"dN":[{"t":"cD","p":[1,1,1],"in":3,"sibl":[2]},{"t":"cD","p":[1,1,3],"in":2,"sibl":[1]},{"t":"cD","p":[1,1],"in":1,"sibl":[0]},{"t":"cD","p":[1],"in":0}],"dc":[3,2,1,0],"hc":true,"trans":true,"in":5,"sibl":[4]},{"t":"cD","p":[1,1,3,25],"in":4,"sibl":[3]},{"t":"a","p":[1,1,3,27,1]},{"t":"r","p":[1,1,3,27,1,1],"dN":[],"in":3,"sibl":[2]},{"t":"cD","p":[1,1,3,27,1],"in":2,"sibl":[1]},{"t":"a","p":[1,1,3,27,3]},{"t":"r","p":[1,1,3,27,3,1],"dN":[],"in":1,"sibl":[0]},{"t":"cD","p":[1,1,3,27,3],"in":0},{"type":"dc","trans":true,"hc":true,"p":[15,14,13,12,11,10,9,8,7,6,5,4,2,0]}];;
+FormComp._observedAttributes = ["user"];
 
 
 
 FormComp.register("form-comp", {
-    hash: "FormComp_7",
+    hash: "FormComp_8",
     refHash: "C_erm_app_0"
 }); 
 
 
 /***/ }),
 
-/***/ 42596698:
+/***/ 51115378:
 /*!*********************************************!*\
   !*** ./components/javascript/toast-comp.js ***!
   \*********************************************/
@@ -237,9 +201,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ToastComp": () => (/* binding */ ToastComp)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_messagebox_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-messagebox.js */ 1658409);
-/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/component/index.js */ 26633);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_messagebox_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-messagebox.js */ 76875979);
+/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/component/index.js */ 5660422);
 
 var _ = {};
 
@@ -290,14 +254,14 @@ ToastComp._observedAttributes = [];
 
 
 ToastComp.register("toast-comp", {
-    hash: "ToastComp_87",
+    hash: "ToastComp_4",
     refHash: "C_erm_app_0"
 }); 
 
 
 /***/ }),
 
-/***/ 63712806:
+/***/ 97238775:
 /*!**********************************************************************************!*\
   !*** ./node_modules/@zoho/lyte-ui-component/components/javascript/lyte-alert.js ***!
   \**********************************************************************************/
@@ -308,8 +272,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "LyteAlertComponent": () => (/* binding */ LyteAlertComponent)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/core/index.js */ 56505143);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/component.js */ 50761997);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/@slyte/core/index.js */ 76928134);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_helpers_helpers_dev_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/helpers/helpers-dev.js */ 53520025);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_button_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-button.js */ 36040942);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_wormhole_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-wormhole.js */ 2589694);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/component.js */ 40876002);
 
 var _ = {};
 
@@ -322,6 +289,9 @@ var _ = {};
         return _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__.Component;
     }
 });
+
+
+
 
 
 
@@ -895,14 +865,14 @@ LyteAlertComponent._observedAttributes = [
 
 
 LyteAlertComponent.register("lyte-alert", {
-    hash: "LyteAlertComponent_10",
+    hash: "LyteAlertComponent_8",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });
 
 
 /***/ }),
 
-/***/ 62028913:
+/***/ 36040942:
 /*!***********************************************************************************!*\
   !*** ./node_modules/@zoho/lyte-ui-component/components/javascript/lyte-button.js ***!
   \***********************************************************************************/
@@ -913,8 +883,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "LyteButtonComponent": () => (/* binding */ LyteButtonComponent)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/core/index.js */ 56505143);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/component.js */ 50761997);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/@slyte/core/index.js */ 76928134);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/component.js */ 40876002);
 
 var _ = {};
 
@@ -1355,14 +1325,3687 @@ LyteButtonComponent._observedAttributes = [
 
 
 LyteButtonComponent.register("lyte-button", {
-    hash: "LyteButtonComponent_165",
+    hash: "LyteButtonComponent_9",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });
 
 
 /***/ }),
 
-/***/ 9950326:
+/***/ 30543180:
+/*!*************************************************************************************!*\
+  !*** ./node_modules/@zoho/lyte-ui-component/components/javascript/lyte-calendar.js ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "LyteCalendarComponent": () => (/* binding */ LyteCalendarComponent)
+/* harmony export */ });
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/@slyte/core/index.js */ 76928134);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_helpers_helpers_dev_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/helpers/helpers-dev.js */ 53520025);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_dropdown_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-dropdown.js */ 25683228);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/component.js */ 40876002);
+/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js */ 92838254);
+/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_tooltip_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-tooltip.js */ 75036620);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_plugins_lyte_moment_basic_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/plugins/lyte-moment-basic.js */ 11076785);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_plugins_lyte_moment_basic_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_node_modules_zoho_lyte_ui_component_plugins_lyte_moment_basic_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_plugins_lyte_moment_additional_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/plugins/lyte-moment-additional.js */ 90763180);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_plugins_lyte_moment_additional_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_node_modules_zoho_lyte_ui_component_plugins_lyte_moment_additional_js__WEBPACK_IMPORTED_MODULE_7__);
+
+var _ = {};
+
+(0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__._defineProperty)(_, {
+    "prop": function() {
+        return _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop;
+    },
+
+    "Component": function() {
+        return _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__.Component;
+    }
+});
+
+
+
+//v4-calendar doesn't have the fix for DD-MM-YY format issue
+
+
+
+
+
+/* @Slicer.otherframeworkStart */
+
+/*  @Slicer.otherframeworkEnd */
+
+/* @Slicer.otherframeworkStart */
+
+/*  @Slicer.otherframeworkEnd */
+
+/* @Slicer.otherframeworkStart */
+
+/*  @Slicer.otherframeworkEnd */
+
+/**
+ * Renders a calendar
+ * @component lyte-calendar
+ * @version 1.0.0
+ * @utility revertToToday,revertToSelected
+ * @methods onDateSelected,onNavigate,onViewChange
+ * @dependencies lyte-dropdown
+ */
+
+class LyteCalendarComponent extends _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__.Component {
+    constructor() {
+        super();
+    }
+
+    data(arg1) {
+		return Object.assign(super.data({
+			'ltPropStartDate': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)('string', {
+				'default': ''
+			}),
+			'ltPropEndDate': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)('string', {
+				'default': ''
+			}),
+
+			/**
+			 * @componentProperty {dateString} ltPropCurrentDate
+			 */
+
+			'ltPropCurrentDate': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string', { 
+				'default': '' 
+			} ),
+			/** 
+			 * @typedef {
+				* MM/DD/YYYY |
+				* YYYY/MM/DD |
+				* MMM/DD/YYYY |
+				* MMM/YYYY/DD |
+				* DD/MMM/YYYY |
+				* YYYY/MMM/DD |
+				* DD/YYYY/MMM |
+				* YYYY/DD/MMM |
+				* MMMM/DD/YYYY |
+				* MMMM/YYYY/DD |
+				* DD/YYYY/MMMM |
+				* YYYY/DD/MMMM |
+				* DD/MMMM/YYYY |
+				* YYYY/MMMM/DD
+				* } dateFormat
+			*/
+			/**
+			 * @componentProperty {dateFormat} ltPropFormat
+			 * @default MM/DD/YYYY
+			 */
+
+			'ltPropFormat': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string', { 
+				'default': window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'format', 'MM/DD/YYYY' )  
+			} ),
+
+			/**
+			 * @componentProperty {boolean} ltPropYear
+			 * @default false
+			 * 
+			 */
+
+			'ltPropYear': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { 
+				'default': window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'year', false ) 
+			} ),
+
+			/**
+			 * @typedef {
+			 * 'MMMM YYYY' |
+			 * 'MMM YYYY'
+			 * } MonthHeaderFormat
+			 */
+			/**
+			 * @componentProperty {MonthHeaderFormat} ltPropMonthHeaderFormat
+			 * @default 'MMMM YYYY'
+			 */
+
+			'ltPropMonthHeaderFormat': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string', { 
+				'default': window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'monthHeaderFormat', 'MMMM YYYY' ) 
+			} ),
+			'daysOfWeek': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'array', { 
+				'default': [] 
+			} ),
+
+			'ariaMonthNames': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'array', { 'default': [
+					'January',
+					'February',
+					'March',
+					'April',
+					'May',
+					'June',
+					'July',
+					'August',
+					'September',
+					'October',
+					'November',
+					'December' 
+			] } ),
+
+			'monthSystemValues': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'array', {
+				'default': [
+					'January',
+					'February',
+					'March',
+					'April',
+					'May',
+					'June',
+					'July',
+					'August',
+					'September',
+					'October',
+					'November',
+					'December'
+				]
+			}),
+
+			'monthNames': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'array', { 
+				'default': [
+					'January',
+					'February',
+					'March',
+					'April',
+					'May',
+					'June',
+					'July',
+					'August',
+					'September',
+					'October',
+					'November',
+					'December'
+				]
+			} ),
+			'shortHands': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'array', { 
+				'default': [
+					'Jan',
+					'Feb',
+					'Mar',
+					'Apr',
+					'short.may',
+					'Jun',
+					'Jul',
+					'Aug',
+					'Sep',
+					'Oct',
+					'Nov',
+					'Dec'
+				]
+			} ),
+			'todayName': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string', {
+				'default': 'Today' 
+			} ),
+			'viewDate': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'object', { 
+				'default': {} 
+			} ),
+			'changeData': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'number', {
+				'default': 0 
+			} ),
+
+			/**
+			 * @componentProperty {boolean} ltPropYield
+			 * @default false
+			 *
+			 */
+
+			'ltPropYield': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { 
+				'default': false
+			}),
+
+			/**
+			 * @componentProperty {dateString} ltPropMinDate
+			 */
+
+			'ltPropMinDate': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string', { 
+				'default': ''
+			}),
+
+			/**
+			 * @componentProperty {dateString} ltPropMaxDate
+			 */
+
+			'ltPropMaxDate': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string', { 
+				'default': '' 
+			} ),
+
+			/**
+			 * @componentProperty {number} ltPropStartWeekDay
+			 * @default 1
+			 * @minValue 0
+			 * @maxValue 6
+			 * @step 1
+			 */
+
+			'ltPropStartWeekDay': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'number', { 
+				'default': window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'startWeekDay', 1 )
+			} ),
+			'navYield': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { 
+				'default': false 
+			} ),
+			'selectDate': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { 
+				'default': true 
+			} ),
+			'currentDatechanged': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'number', { 
+				'default': 0 
+			} ),
+
+			/**
+			 * @componentProperty {boolean} ltPropFillRows
+			 * @default true
+			 * @version 1.0.2
+			 *
+			 */
+
+			'ltPropFillRows': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { 
+				'default': window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'fillRows', true ) 
+			} ),
+
+			/**
+			 * @componentProperty {object} ltPropFillRowsVariants
+			 * @default {top:true,bottom:true}
+			 * 
+			 */
+
+			'ltPropFillRowsVariants': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'object', { 
+				'default': window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'fillRowsVariants', {'top':true,'bottom':true} ) 
+			} ),
+
+			/**
+			 * @componentProperty {number} ltPropNumberOfRows
+			 * @version 1.0.2
+			 * @default 6
+			 */
+
+			'ltPropNumberOfRows': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'number', { 
+				'default': window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'numberOfRows', 6 )
+			} ),
+			'callFrmDidcnct' : (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)('boolean',{"default" : false}),
+			'monthDD' : (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)("object"),
+			'yearDD' : (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)("object"),
+			'years' :(0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)("array",{"default":[]}),
+
+			/**
+			 * @componentProperty {default|dropdown|drilldown} ltPropHeaderType
+			 * @default default
+			 * @version 1.0.2
+			 */
+
+			'ltPropHeaderType' : (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( "string", { "default": window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'headerType', 'default' ) } ),
+
+			'ltPropDropdown': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'object', { 'default': window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'dropdown', 
+				{
+					'callout': true
+				} 
+			) } ),
+
+			'cords': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'object', { default: {} } ),
+			'start': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'number' ),
+			'prev': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean' ),
+			'tt': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { 'default': true } ),
+			'showToday': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { 'default': true } ),
+
+			'monthViewTableArray': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'array', { 'default': [] } ),
+
+			'ltPropBodyYield': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { 'default': false } ),
+
+			'ltPropShowToday': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { 'default': window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'showToday', true ) } ),
+
+			'ltPropI18n': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { 'default': window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'I18n', false ) } ),
+
+			'ltPropActivateNavigation': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { 'default': false } ),
+
+			// This attribute is only relevant for dateView
+			'ltPropDisableNavigation': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { 'default': false } ),
+
+			/* A team uses this but we are not goint to expose this outside */
+			'ltPropPreventAddingRows': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { 'default': false } ),
+
+			'ltPropSelectionType': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string', { 'default': 'day' } ),
+
+			'ltPropWeekends': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'array', { 'default': [ 6, 0 ] } ),
+
+			'ltPropCurrentWeek': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'array', { 'default': [] } ),
+
+			'ltPropCurrentMonth': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string', { 'default': '' } ),
+
+			'ltPropCurrentYear': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string', { 'default': '' } ),
+
+			'ltPropDisabledDates': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'array', { 'default': [] } ),
+
+			'ltPropCurrentDates': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'array', { 'default': [] } ),
+
+			'ltPropMultiple': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { 'default': false } ),
+
+			'headerId': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string' ),
+
+			'monthDropdownId': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string' ),
+			
+			'yearDropdownId': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string' ),
+
+			'ltPropIso' : (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string'  ),
+
+			'ltPropWeekNumCriteria': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'number', { 'default': 1 } ),
+
+			'ltPropHolidays': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'array', { 'default': window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'holidays', [] ) } ),
+
+			'ltPropDisableWeekends': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { 'default': false } ),
+
+			'ltPropDisableHolidays': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { 'default': false } ),
+
+			'ltPropWeekNumber': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { 'default': false } ),
+
+			//showToday even when we are in current date
+			'ltPropAlwaysShowToday': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { 'default': false } ),
+
+			'ltPropHighlightWeekendHolidays': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { 'default': false } ),
+
+			'ltPropTimeZone' : (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string' ),
+
+			'ltPropDisabledDays' : (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'array', { 'default' : window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'disabledWeekDays', [] ) } ),
+
+			'ltPropHeaderAlignType': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string', { 'default': '' } ),
+
+			'ltPropWeekNumHeader': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string', { 'default': '' } ),
+
+			'showYear': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { 'default': false } ),
+
+			'ltPropCurrentDisplayMonth': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string', { 'default': '' } ),
+
+			'ltPropCurrentDisplayYear': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string', { 'default': '' } ),
+
+			'ltPropCurrentDisplayDecade': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string', { 'default': '' } ),
+
+			'ltPropTransitMonthOnDateSel': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)('boolean', { 'default': window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'transitMonthOnDateSel', false ) } )
+		}), arg1);
+	}
+
+    getCells() {
+		var container = this.getTableContainer(),
+			rows = container.children, cells = [];
+
+		Array.from(rows).forEach(function (row) {
+			cells = cells.concat(Array.from(row.children));
+		});
+
+		return cells;
+	}
+
+    getTableContainer() {
+		return this.$node.querySelector( '.lyteCalTableRowGroup' );
+	}
+
+    moveForward(event, navDirection, cellsToMove) {
+		this.move( event, navDirection, cellsToMove );
+	}
+
+    moveBackward(event, navDirection, cellsToMove) {
+		this.move( event, navDirection, cellsToMove );
+	}
+
+    move(event, navDirection, cellsToMove) {
+		var activeCell = this.getActiveCell(),
+			cells = this.getCells(),
+			currentNavIndex = cells.indexOf(activeCell),
+			newNavIndex = currentNavIndex + cellsToMove,
+			newActiveCell;
+
+		if (!activeCell) {
+			return;
+		}
+
+		if (!this.shouldViewChange(cells, newNavIndex, cellsToMove)) {
+			newActiveCell = this.getCellFromSameView(cells, newNavIndex);
+		}
+		else {
+			newActiveCell = this.getCellFromDifferentView(navDirection, currentNavIndex, cellsToMove, event);
+		}
+
+		this.activateCell(newActiveCell);
+
+		var isCellDisabled = this.isCellDisabled( newActiveCell );
+		if( !isCellDisabled ){
+			this.focusActiveCell();
+		}
+		else{
+			this.move( event, navDirection, cellsToMove )
+		}
+	}
+
+    isCellDisabled( newActiveCell ){
+		if( newActiveCell.classList.contains('lyteCalendarDisabledDate') ){
+			return true;
+		}
+
+		return false
+	}
+
+    getCellFromSameView(cells, index) {
+		return cells[ index ];
+	}
+
+    focusActiveCell() {
+		var activeCell = this.getActiveCell();
+
+		if (activeCell) {
+			activeCell.focus();
+		}
+	}
+
+    focusActiveRow() {
+		var activeRow = this.getActiveRow();
+		if( activeRow ) {
+			activeRow.focus();
+		}
+	}
+
+    shouldViewChange(cells, newNavIndex, cellsToMove) {
+		var viewType = this.getData( 'viewType' );
+
+		if (viewType === 'monthView' || viewType === 'decadeView') {
+			return !cells[newNavIndex];
+		}
+
+		return !this.isSameMonth( cellsToMove );
+	}
+
+    isDisabledCell(cell) {
+		return cell.classList.contains( 'lyteCalDisabled' )
+	}
+
+    getCellFromDifferentView(navDirection, currentNavIndex, cellsToMove, event) {
+		var viewType = this.getData( 'viewType' ), newActiveDate;
+
+		if (viewType === 'monthView' || viewType === 'decadeView') {
+			this.changeView(navDirection);
+
+			return this.getDrillDownViewCell(navDirection, currentNavIndex, cellsToMove);
+		}
+
+
+		newActiveDate = this.getChangedDate(cellsToMove);
+		this.changeView(navDirection);
+
+		return this.getCell( newActiveDate );
+	}
+
+    getDrillDownViewCell(navDirection, currentNavIndex, cellsToMove) {
+		var cells = this.getCells();
+
+		return navDirection === 'previous' ? cells[ cells.length + ( currentNavIndex + cellsToMove ) ] : cells[ ( currentNavIndex + cellsToMove ) % cells.length ]
+	}
+
+    changeView(navDirection) {
+		if( navDirection === 'previous' ) {
+			this.moveToPrevious( 'M', window.event );	
+		}
+		else {
+			this.moveToNext( 'M', window.event );
+		}
+	}
+
+    moveToFirstCell(event, navDirection) {
+		var actionType = 'home',
+			cellsToMove = this.getCellsToMove(navDirection, actionType);
+
+		this.moveBackward( event, navDirection, cellsToMove );
+	}
+
+    moveToLastCell(event, navDirection) {
+		var actionType = 'end', 
+		cellsToMove = this.getCellsToMove( navDirection, actionType );
+
+		this.moveForward( event, navDirection, cellsToMove );
+	}
+
+    getCellsToMove(navDirection, actionType) {
+		var activeCell = this.getActiveCell(),
+			parentElement = (activeCell || {}).parentElement,
+			children = Array.from((parentElement || {}).children || []),
+			index = children.indexOf(activeCell), viewType = this.getData('viewType');
+
+		if (!activeCell) {
+			return 0;
+		}
+
+		if (actionType === 'home' || actionType === 'end') {
+			return navDirection === 'previous' ? -index : (children.length - 1 - index);
+		}
+
+		if (viewType === 'monthView' || viewType === 'decadeView') {
+			return navDirection === 'previous' ? -4 : 4;
+		}
+
+		return navDirection === 'previous' ? -7 : 7;
+	}
+
+    getCell(date) {
+		return this.$node.querySelector( '[data-date="' + date + '"]' );
+	}
+
+    isSameMonth(daysToChange) {
+		var changedMonth = this.getChangedMonth( daysToChange ),
+		viewDate = this.getData( 'viewDate' ),
+		currentViewedMonth = viewDate.getMonth();
+		
+		return changedMonth === currentViewedMonth;
+
+	}
+
+    getChangedMonth(daysToChange) {
+		var changedDate = this.getChangedDate( daysToChange ),
+		format = this.getData( 'ltPropFormat' );
+
+		return _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default().moment( changedDate, format ).format( 'M' ) - 1;
+	}
+
+    // Assume activeCell will always return a valid cell
+    getChangedDate(daysToChange) {
+		var activeCell = this.getActiveCell(),
+			activeDate = activeCell.getAttribute('data-date'),
+			format = this.getData('ltPropFormat');
+
+		return _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default().moment( activeDate, format ).add( daysToChange, 'day' ).format( format );
+	}
+
+    previousNavigation(MONTH, event) {
+		var YEAR = 'Y', MONTH = 'M', 
+		navigationType = event.shiftKey ? YEAR : MONTH;
+
+		this.moveToPrevious(navigationType, event);
+		this.focusActiveCell();
+	}
+
+    nextNavigation(MONTH, event) {
+		var YEAR = 'Y', MONTH = 'M', 
+		navigationType = event.shiftKey ? YEAR : MONTH;
+
+		this.moveToNext(navigationType, event);
+		this.focusActiveCell();
+	}
+
+    toDate() {
+
+		var comp_timezone = this.data.ltPropTimeZone;
+
+		if( comp_timezone != void 0 ){
+			return new Date( _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default().moment().timezone( comp_timezone ).format( 'MM/DD/YYYY' ) );
+		}
+
+		if( this.isHavingTimezone ){
+			return new Date( _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default().moment().format( 'MM/DD/YYYY' ) );
+		}
+		return new Date();
+	}
+
+    moment(arg1, arg2, arg3) {
+		var timezone = this.isHavingTimezone;
+		if (timezone) {// for test case failure
+			if (arg3) {
+				arg3.ignore_timezone = timezone;
+			} else {
+				arg3 = { ignore_timezone: timezone };
+			}
+			return _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default().moment(arg1, arg2, arg3);
+		} else {
+			if (arg2) { // for test case failure
+				if (arg3) { // for test case failure
+					return _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default().moment(arg1, arg2, arg3);
+				}
+				return _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default().moment(arg1, arg2);
+			}
+			return _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default().moment(arg1);
+		}
+	}
+
+    setShowYearAccToView() {
+		var viewType = this.getData( 'viewType' );
+		var showYear = this.getData( 'ltPropYear' );
+
+		if( viewType === 'dateView' ) {
+			if( showYear ){
+				this.setData('showYear',true);
+			}
+			else{
+				this.setData('showYear',false);
+			}
+		}
+		else if( viewType === 'monthView' ) {
+			this.setData('showYear',false);
+		}
+		else if( viewType === 'decadeView' ) {
+			this.setData('showYear',false);
+		}
+	}
+
+    removeSelectionStyles() {
+		var container = this.$node.querySelector( '.lyteCalTableContainer' );
+
+		container.classList.remove( 'lyteCalDaySelType' );
+		container.classList.remove( 'lyteCalWeekSelType' );
+		container.classList.remove( 'lyteCalMonthSelType' );
+		container.classList.remove( 'lyteCalYearSelType' );
+	}
+
+    changeDaysOfWeek() {
+		var days = [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ], 
+		title = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ],
+		startDay = this.getData( 'ltPropStartWeekDay' ), i, result = [] ;
+		var weekend = this.getData('ltPropWeekends') || [];
+
+		startDay = startDay == undefined ? 1 : startDay;
+
+		for( i = 0; i < 7; i++ ) { 
+			var resClass = 'lyteCalTableCellHeader';
+			var isWeekendHeader = weekend.indexOf( ( i + startDay ) % 7 ) === -1 ? false : true;
+			if( isWeekendHeader ){
+				resClass += ' lyteCalWeekendHeader'
+			}
+
+			result.push( { 'day': days[ ( i + startDay ) % 7 ], 'id': this.generateRandomId() , 'title': title[ ( i + startDay ) % 7 ], 'class': resClass } );
+
+		}
+
+		this.setData( 'daysOfWeek', result );
+		
+	}
+
+    generateRandomId() {
+		return 'Lyte_Calendar_Day_' + window._lyteUiUtils.calId++;
+	}
+
+    isYYFormat() {
+		var format = this.getData( 'ltPropFormat' ),
+		rYY = /\byy\b/ig;
+
+		return rYY.test( format );
+	}
+
+    outsideBoundary(calStartDate) {
+		var calculatedYear = calStartDate.getFullYear(),
+			current = this.toDate(),
+			currentYear = current.getFullYear(),
+			diff = calculatedYear - currentYear,
+			dateBounds = this.isMomentSupported ? _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default().moment() : { uL: 19, lL: 80 };
+
+		if (diff > dateBounds.uL) {
+			return true;
+		}
+		else if (diff < -dateBounds.lL) {
+			return true;
+		}	
+		
+	}
+
+    didDestroy() {
+		delete this.$node.revertToToday;
+	}
+
+    activateRelevantCell() {
+		var format = this.getData( 'ltPropFormat' ),
+		curDate = this.stringToDate( this.getData( 'ltPropCurrentDate' ), format ),
+		todayDate = this.toDate(), 
+		previousActiveDate = this.stringToDate( this.getData( 'previousActiveCellDate' ), format ), relevantCell;
+
+		if( previousActiveDate !== 'Invalid Date' ) {
+			relevantCell = this.findSimilarCell( previousActiveDate );
+		}
+
+		if( curDate !== 'Invalid Date' ) {
+			relevantCell = relevantCell || this.findSimilarCell( curDate );
+		}
+
+		relevantCell = relevantCell || this.findSimilarCell( todayDate );
+
+		this.activateCell( relevantCell );
+	}
+
+    findSimilarCell(userDateObj) {
+		var userDate = userDateObj.getDate(),
+			currentViewedDateObj = this.getData('viewDate'),
+			currentViewedMonth = currentViewedDateObj.getMonth(),
+			currentViewedYear = currentViewedDateObj.getFullYear(),
+			userMonth = userDateObj.getMonth(),
+			numberOfDaysInMonth = this.getNumber(currentViewedMonth, currentViewedYear),
+			format = this.getData('ltPropFormat'),
+			resultDate, resultDateObj, resultDateString;
+
+		resultDate = userDate > numberOfDaysInMonth ? numberOfDaysInMonth : userDate;
+		resultDateObj = new Date(currentViewedMonth + 1 + '/' + resultDate + '/' + currentViewedYear);
+		resultDateString = this.getDateFromFormat(resultDateObj, format);
+
+		return this.getCell( resultDateString );
+	}
+
+    activateCell(cell) {
+
+		if (!cell) {
+			return;
+		}
+
+		var previousCell = this.$node.querySelector('.lyteCalNavCell');
+
+		if (previousCell) {
+			previousCell.classList.remove('lyteCalNavCell');
+			previousCell.setAttribute('tabindex', '-1');
+		}
+
+		cell.setAttribute('tabindex', '0');
+		cell.focus();
+		cell.classList.add( 'lyteCalNavCell' );
+		
+		this.setData( 'previousActiveCellDate', cell.getAttribute( 'data-date' ) );
+	}
+
+    getActiveCell() {
+		return this.$node.querySelector( '.lyteCalNavCell' );
+	}
+
+    getActiveRow() {
+		var par =  this.$node.querySelector( '.lyteCalToday' ); //gives undefined !?
+		return _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default()( par ).closest('lyteCalTableRow')[0];
+	}
+
+    removeOutOfRangeOption() {
+		var years = this.getData( 'years' ),
+		index;
+
+		if( !isNaN( this.addedOption ) ) {
+			index = years.indexOf( this.addedOption );
+
+			if( !!~index ) {
+				this.$addon.arrayUtils( years, 'removeAt', index );
+				this.addedOption = null;
+			}
+		}
+	}
+
+    outOfRange(val) {
+		if( val < 1900 || val > 2100 ) {
+			return true;
+		}
+
+		return false;
+	}
+
+    addOutOfRangeOption(val) {
+		var years = this.getData( 'years' );
+
+		this.addedOption = val;
+
+		if( val < 1900 ) {
+			this.$addon.arrayUtils( years, 'insertAt', 0, val );
+		}
+		else if( val > 2100 ) {
+			this.$addon.arrayUtils( years, 'push', val );
+		}
+	}
+
+    getMonthHeader() {
+		var format = this.getData( 'ltPropMonthHeaderFormat' ), 
+		lmd = /MMMM YYYY/ig,
+		ld = /MMM YYYY/ig,
+		retval = "", monthArray;
+
+		if( lmd.test( format ) ) {
+			monthArray = this.getData( 'monthNames' )
+			retval = window._lyteUiUtils.i18n( monthArray[ this.getData( 'viewDate' ).getMonth() ] ) + " " + this.getData( 'viewDate' ).getFullYear();
+		}
+		else if( ld.test( format ) ) {
+			monthArray = this.getData( 'shortHands' )
+			retval = window._lyteUiUtils.i18n( monthArray[ this.getData( 'viewDate' ).getMonth() ] ) + " " + this.getData( 'viewDate' ).getFullYear();
+		}
+
+		return retval;
+	}
+
+    revert(event) {
+		var from = new Date( this.getData( 'viewDate' ).getTime() ), 
+		curDate = this.toDate();
+
+
+		curDate.setDate(1);
+
+		var to = new Date(curDate.getTime());
+
+		this.setData( 'viewDate', curDate );
+		this.setAndBuildView( 'dateView', event );
+		if( !this.getData('ltPropAlwaysShowToday') ){
+			this.setData('showToday',false);
+		}
+		if( this.getMethods( 'onNavigate' ) 
+			&& ( from.getMonth() !== to.getMonth() 
+			|| from.getFullYear() !== to.getFullYear() ) 
+		) {
+			this.executeMethod('onNavigate', event, this.getDateFromFormat(from, this.getData('ltPropFormat')), this.getDateFromFormat(to, this.getData('ltPropFormat')), this);
+		}
+	}
+
+    revertToMonth(event) {
+		var from = new Date( this.getData( 'viewDate' ).getTime() ), 
+		curDate = this.toDate();
+
+
+		curDate.setDate(1);
+
+		var to = new Date( curDate.getTime() );
+
+		this.setData( 'viewDate', curDate );
+		this.setAndBuildView( 'monthView', event );
+		if( !this.getData('ltPropAlwaysShowToday') ){
+			this.setData('showToday',false);
+		}
+		if( this.getMethods( 'onNavigate' ) 
+			&& ( from.getMonth() !== to.getMonth() 
+			|| from.getFullYear() !== to.getFullYear() ) 
+		) {
+			this.executeMethod( 'onNavigate', event, this.getDateFromFormat( from, this.getData( 'ltPropFormat' ) ), this.getDateFromFormat( to, this.getData( 'ltPropFormat' ) ) ,this );
+		}
+	}
+
+    revertToYear( event ) {
+		var from = new Date( this.getData( 'viewDate' ).getTime() ), 
+		curDate = this.toDate();
+
+
+		curDate.setDate(1);
+
+		var to = new Date( curDate.getTime() );
+
+		this.setData( 'viewDate', curDate );
+		this.setAndBuildView( 'decadeView', event );
+		if( !this.getData('ltPropAlwaysShowToday') ){
+			this.setData('showToday',false);
+		}
+
+		var fromDecade = (from.getFullYear()+'').slice(0,3);
+		var toDecade = (to.getFullYear()+'').slice(0,3);
+
+		if( this.getMethods( 'onNavigate' ) 
+			&& (  fromDecade !== toDecade ) 
+		) {
+			this.executeMethod( 'onNavigate', event, this.getDateFromFormat( from, this.getData( 'ltPropFormat' ) ), this.getDateFromFormat( to, this.getData( 'ltPropFormat' ) ) ,this );
+		}
+	}
+
+    getDateFromFormat(dateObj, format) {
+		if( this.isMomentSupported ) {
+			return this.getDateStringFromMoment( dateObj, format );
+		}
+		else {
+			return this.getDateStringManually(dateObj, format);
+		}
+	}
+
+    getDateStringFromMoment(dateObj, format) {
+		format = this.getRelevantFormat( format );
+
+		return this.moment( dateObj ).format( format );
+	}
+
+    resolveConflicts(format) {
+		var match = /(\bd\b|\bdd\b|\bddd\b|\bdddd\b)/.exec( format ),
+		index = ( match || {} ).index,
+		matchLength = ( match || [] )[ 0 ].length || 0;
+
+		if (!isNaN(index)) {
+			return format.substring(0, index + matchLength) + (format.substring(index + matchLength) || '').toUpperCase();
+		}
+
+		return format.toUpperCase();
+	}
+
+    isConflictingFormat(format) {
+		var rdate = /(\bd\b|\bdd\b|\bddd\b|\bdddd\b)/ig,
+			match = format.match(rdate) || [];
+
+		return match.length > 1;
+	}
+
+    getRelevantFormat(format) {
+
+		if (this.isConflictingFormat(format)) {
+			return this.resolveConflicts(format);
+		}
+
+		return format.toUpperCase();
+	}
+
+    getDateStringManually(dateObj, format) {
+		var date = dateObj.getDate(), year = dateObj.getFullYear(), month = dateObj.getMonth() + 1, monthArray,
+			sd = /(MM).+(DD).+(YYYY)/ig,
+			dmy = /(DD).+(MM).+(YYYY)/ig,
+			ld = /(MMM|DD|YYYY).+(MMM|DD|YYYY).+(YYYY|MMM|DD)/ig,
+			lmd = /(MMMM|DD|YYYY).+(MMMM|DD|YYYY).+(YYYY|MMMM|DD)/ig,
+			iso = /(YYYY).+(MM).+(DD)/ig;
+
+		format = format.toUpperCase();
+
+		if (month < 10) {
+			month = '0' + month
+		}
+
+		if (date < 10) {
+			date = '0' + date
+		}
+
+		if (lmd.test(format)) {
+			monthArray = [
+				'January',
+				'February',
+				'March',
+				'April',
+				'May',
+				'June',
+				'July',
+				'August',
+				'September',
+				'October',
+				'November',
+				'December'
+			]
+			format = format.replace('MMMM', monthArray[month - 1]);
+			format = format.replace('DD', date);
+			format = format.replace('YYYY', year);
+		}
+		else if (ld.test(format)) {
+			monthArray = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+			format = format.replace('MMM', monthArray[month - 1]);
+			format = format.replace('DD', date);
+			format = format.replace('YYYY', year);
+		}
+		else if (iso.test(format)) {
+			format = format.replace('MM', month);
+			format = format.replace('DD', date);
+			format = format.replace('YYYY', year);
+		}
+		else if (sd.test(format)) {
+			format = format.replace('MM', month);
+			format = format.replace('DD', date);
+			format = format.replace('YYYY', year);
+		}
+		else if (dmy.test(format)) {
+			format = format.replace('MM', month);
+			format = format.replace('DD', date);
+			format = format.replace('YYYY', year);
+		}
+
+		return format
+	}
+
+    isLeapYear(year) {
+		return ( ( year % 4 == 0 ) && ( year % 100 != 0 ) ) || ( year % 400 == 0 );
+	}
+
+    getNumber(month, year) {
+		var daysinmonths = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
+		if( this.isLeapYear.call( this, year ) && month == 1 ) {
+			return 29;
+		}
+		else {
+			return daysinmonths[month];
+		}
+	}
+
+    showtoday() {
+		var curDate = this.toDate();
+
+		if (curDate.getMonth() != this.getData('viewDate').getMonth() || curDate.getYear() != this.getData('viewDate').getYear()) {
+			this.setData('showToday', true);
+		}
+		else {
+			this.setData('showToday', false);
+		}
+
+		if( this.getData('ltPropAlwaysShowToday') ){
+			this.setData( 'showToday', true);
+		}
+
+	}
+
+    reset(cur) {
+		cur.setHours( 0 );
+		cur.setMinutes( 0 );
+		cur.setSeconds( 0 );
+		cur.setMilliseconds( 0 );
+	}
+
+    isInRange(current, start, end) {
+		var startDate, endDate;
+
+		this.reset(current);
+
+		if (start === '' && end === '') {
+			return true;
+		}
+		else if (start !== '' && end === '') {
+			startDate = this.stringToDate(start, this.getData('ltPropFormat'));
+			this.reset(startDate);
+
+			if (current >= startDate) {
+				return true;
+			}
+		}
+		else if (start !== '' && end !== '') {
+			startDate = this.stringToDate(start, this.getData('ltPropFormat'));
+			this.reset(startDate);
+
+			endDate = this.stringToDate(end, this.getData('ltPropFormat'));
+			this.reset(endDate);
+
+			if (current >= startDate && current <= endDate) {
+				return true;
+			}
+		}
+		else {
+			endDate = this.stringToDate(end, this.getData('ltPropFormat'));
+			this.reset(endDate);
+
+			if (current <= endDate) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+    checkDate(current) {
+		var start = this.getData( 'ltPropMinDate' ) || '', 
+		end = this.getData( 'ltPropMaxDate' ) || '';
+
+		return this.isInRange( current, start, end );
+	}
+
+    getNumberOfFirstRowDates(firstday) {
+		var startDayOfMonth = this.getData( 'ltPropStartWeekDay' ), 
+		firstRowDays;
+
+		startDayOfMonth = startDayOfMonth == undefined ? 1 : startDayOfMonth;
+
+		if( firstday == 0 ) {
+			firstRowDays = startDayOfMonth === 0 ? 7 : startDayOfMonth;
+		}
+		else {
+			if (firstday < startDayOfMonth) {
+				firstRowDays = startDayOfMonth - firstday;
+			}
+			else {
+				firstRowDays = 7 - (firstday - startDayOfMonth);
+			}
+		}
+
+		return firstRowDays;
+
+	}
+
+    getNumberToSubtract(firstday) {
+		var numberToSubtract, startDayOfMonth = this.getData( 'ltPropStartWeekDay' ) ;
+
+		startDayOfMonth = startDayOfMonth == undefined ? 1 : startDayOfMonth;
+
+		if (firstday == 0) {
+			numberToSubtract = startDayOfMonth == 0 ? 0 : 7 - startDayOfMonth;
+		}
+		else {
+			if (firstday < startDayOfMonth) {
+				numberToSubtract = 7 - (startDayOfMonth - firstday);
+			}
+			else {
+				numberToSubtract = firstday - startDayOfMonth;
+			}
+		}
+
+		return numberToSubtract;
+	}
+
+    getFirstDay(cur) {
+		var date = cur.getDate(), day = cur.getDay(), first;
+
+		first = date - Math.floor(date / 7) * 7 - 1;
+		first = day - first;
+
+		if (first < 0) {
+			first = 7 - first;
+		}
+
+		return first;
+	}
+
+    getRemainingDays(numberOfDaysInMonth, firstRowDays) {
+		var rem = numberOfDaysInMonth - firstRowDays;
+		rem = rem - 28;
+
+		return rem;
+	}
+
+    inc(rem, num) {
+		var preventAddingRows = this.getData( 'ltPropPreventAddingRows' );
+
+		if (preventAddingRows) {
+			return num;
+		}
+
+		if (rem > 0 && num == 6) {
+			return 7;
+		}
+
+		return num;
+	}
+
+    getFirstDateOfDateView() {
+		var cur = this.getData( 'viewDate' ), 
+		firstday =  this.getFirstDay( cur ),
+		month = cur.getMonth(), year = cur.getFullYear(),
+		calStartDate = new Date( month + 1 + '/1/' + year ),
+		numberToSubtract = this.getNumberToSubtract( firstday );
+
+		calStartDate.setDate( calStartDate.getDate() - numberToSubtract );
+
+		return calStartDate;
+	}
+
+    getNumberOfRowsToDisplay() {
+		var numberOfRows = this.getData( 'ltPropNumberOfRows' ),
+		cur = this.getData( 'viewDate' ),
+		firstday = this.getFirstDay( cur ), 
+		numberOfDaysInMonth = this.getNumber( cur.getMonth(), cur.getFullYear() ),
+		firstRowDays = this.getNumberOfFirstRowDates( firstday ),
+		rem = this.getRemainingDays( numberOfDaysInMonth, firstRowDays );
+
+		return this.inc( rem, numberOfRows );
+	}
+
+    setDatesFunction() {
+		var fillRows = this.getData( 'ltPropFillRows' ), 
+		fillRowsVariants = this.getData( 'ltPropFillRowsVariants' ),
+		fillRowsTop = fillRowsVariants ? fillRowsVariants.top : false,
+		fillRowsBottom = fillRowsVariants ? fillRowsVariants.bottom : false,
+		reachedNextMonth = false,
+		cur = this.getData( 'viewDate' ),
+		month = cur.getMonth(), 
+		result = [], numberOfRows;
+
+		if( !fillRows ){
+			fillRowsTop = fillRowsBottom = false;
+		}
+
+
+		var weekNumber = this.getCurrentWeekNumber( cur );
+		var weekNumArr = [];
+
+		numberOfRows = this.getNumberOfRowsToDisplay();
+
+		var calStartDate = this.getFirstDateOfDateView();
+		
+		// Construct array
+		for (var i = 0; i < numberOfRows; i++) {
+
+			// This is to ensure that we don't create an empty row when we reach the next month when fillRows is false.
+			if (reachedNextMonth) {
+				break;
+			}
+
+			var weekStartDate = this.cloneDateObj( calStartDate );
+
+			result.push( [] );
+
+			for( var j = 0; j < 7; j++ ) {
+				if( 
+					( !fillRowsTop && month - 1 === calStartDate.getMonth() )
+					|| ( fillRows && this.isYYFormat() && this.outsideBoundary( calStartDate ) && !this.isIso ) 
+				) {
+					result[ i ].push( { emptyBlock: true } );
+
+					if (i != 0) {
+						reachedNextMonth = true;
+					}
+				}
+				else if( ( !fillRowsBottom && month + 1 === calStartDate.getMonth() ) ){
+					result[ i ].push( { emptyBlock: true } );
+
+					if (i != 0) {
+						reachedNextMonth = true;
+					}
+				}
+				else {
+					result[ i ].push( this.createDateCell( calStartDate, this.getCellClass( calStartDate ) ) );
+				}
+
+				calStartDate.setDate( calStartDate.getDate() + 1 );
+			}
+
+			var nextWeekStartDate = this.cloneDateObj( calStartDate );
+			weekNumArr.push( this.createWeekCell( weekStartDate, nextWeekStartDate, weekNumber ) );
+			weekNumber++;
+		}
+
+		this.setData( 'matrix', result );
+		this.setData( 'weeknum', weekNumArr );
+
+		if (this.shouldActivateCell()) {
+			this.activateRelevantCell();
+		}
+	}
+
+    createWeekCell(weekStartDate, nextWeekStartDate, weekNumber) {
+		return { class: this.getWeekClass( weekStartDate, nextWeekStartDate ), val: weekNumber }
+	}
+
+    cloneDateObj(date) {
+		return new Date( date );
+	}
+
+    getWeekClass(weekStartDate, nextWeekStartDate) {
+		var weekNumClass = 'lyteWeekNumberGrid',
+		cur = this.getData( 'viewDate' ),
+		weekEndDate = nextWeekStartDate.setDate( nextWeekStartDate.getDate() - 1 ),
+		todayDate = this.__ignoremin ? cur : this.toDate();
+
+		if( this.isInRange( todayDate, weekStartDate, weekEndDate ) ) {
+			weekNumClass += ' lyteCalCurWeekNum';
+		}
+
+		return weekNumClass;
+	}
+
+    isPresentInViewingMonth(currentProcessedDate) {
+		var viewingMonth = this.getData( 'viewDate' ).getMonth(),
+		currentProcessedMonth = currentProcessedDate.getMonth();
+
+		return viewingMonth === currentProcessedMonth
+	}
+
+    isRangeGiven() {
+		return ( this.getData( 'ltPropMinDate' ) || "" ) !== "" || ( this.getData( 'ltPropMaxDate' ) || "" ) !== "";
+	}
+
+    getCellClass(currentProcessedDate) {
+		var clsname = 'lyteCalCdate', 
+		isRangeGiven = this.isRangeGiven(),
+		isInRange = this.checkDate( currentProcessedDate ),
+		disabledDates = this.getDisabledDates(),
+		isDisabled = this.isDisabled( currentProcessedDate, disabledDates ),
+		selectionType = this.getData( 'ltPropSelectionType' ) || 'day',
+		curSelectedDate = this.getSelectedDateObj(),
+		cur = this.getData( 'viewDate' ), 
+		todayDate = this.__ignoremin ? cur : this.toDate();
+
+		if( !this.isPresentInViewingMonth( currentProcessedDate ) ) {
+			clsname += ' lyteCalDiffMonth';
+
+			if( !isRangeGiven ) {
+				clsname += ' lyteCalGray';
+			}
+
+			// Out of range in different month
+			else if( !isInRange ) {
+				clsname += ' lyteCalDisabled';
+			}		
+		}
+
+		// Out of range in same month
+		else if( isRangeGiven 
+			&& !isInRange ) {
+			clsname += ' lyteCalDisabled';
+		}
+
+		if( isDisabled ) {
+			clsname += ' lyteCalendarDisabledDate';
+		}
+
+		// select-date might be some internal property used somewhere
+		if( selectionType === 'day' && this.isSelectedDate( currentProcessedDate, curSelectedDate ) && this.getData( 'selectDate' ) ) {
+			clsname += ' lyteCalSel';
+		}
+
+		if( selectionType === 'week' ) {
+			clsname += ' ' + this.getWeekSelectedClass( currentProcessedDate );
+		}
+
+		if( 
+			todayDate.getMonth() === currentProcessedDate.getMonth() 
+			&& todayDate.getDate() === currentProcessedDate.getDate() 
+			&& todayDate.getYear() === currentProcessedDate.getYear() ) {
+
+			clsname += ' lyteCalToday';
+		}
+		
+		clsname += this.addWeekEndClass( currentProcessedDate, isDisabled );
+		clsname += this.addHolidayClass( currentProcessedDate, isDisabled );
+		clsname += ' lyteCalTableCell';
+
+		return clsname;
+	}
+
+    addWeekEndClass(currentProcessedDate, isDisabled) {
+		var clsname = '';
+		var holidayDates = this.getHolidayDates();
+
+		if( this.isWeekend( currentProcessedDate ) ) {
+			clsname += ' lyteCalWeekend';	//only weekend
+
+			/* ltPropDisableWeekends property should disable all weekends whether they are present in lt-prop-disabled-dates or not*/
+			if( this.getData('ltPropDisableWeekends') && !isDisabled ){
+				clsname += ' lyteCalendarDisabledDate'; 
+			}
+
+			if( this.getData('ltPropHighlightWeekendHolidays') && this.isHoliday( currentProcessedDate, holidayDates ) ){
+				clsname += ' lyteCalWeekendHoliday'; 	//weekend and holiday 
+			}
+		}
+
+		return clsname;
+	}
+
+    addHolidayClass(currentProcessedDate, isDisabled) {
+		var clsname = '';
+		var holidayDates = this.getHolidayDates();
+
+		if( this.isHoliday( currentProcessedDate, holidayDates ) ) {
+			clsname += ' lyteCalHoliday';
+
+			/* ltPropDisableHolidays property should disable all holidays whether they are present in lt-prop-disabled-dates or not*/
+			if( this.getData('ltPropDisableHolidays') && !isDisabled ){
+				clsname += ' lyteCalendarDisabledDate';
+			}
+		}
+
+		return clsname;
+	}
+
+    createDateCell(calStartDate, clsname) {
+		var obj = {},
+		format = this.getData( 'ltPropFormat' );
+
+		obj.date = calStartDate.getDate();
+		obj.id = this.generateRandomId();
+		obj.clsname = clsname;
+		obj.val = this.getDateFromFormat( calStartDate, format );
+
+		return obj;
+	}
+
+    isSelectedDate(date, selectedDate) {
+		var isMultiple = this.getData( 'ltPropMultiple' );
+
+		if (isMultiple) {
+			return this.isDateInArray(selectedDate, date);
+		}
+		else {
+			return selectedDate !== 'nodate' && selectedDate !== 'Invalid Date' && this.isSameDate(date, selectedDate);
+		}
+		
+	}
+
+    isDateInArray(dateArr, date) {
+		dateArr = dateArr || [];
+
+		for (var i = 0; i < dateArr.length; i++) {
+			if (this.isSameDate(date, dateArr[i])) {
+				return true;
+			}
+		}
+	}
+
+    isSameDate(obj1, obj2) {
+		return obj1.getYear() == obj2.getYear()
+			&& obj1.getMonth() == obj2.getMonth()
+			&& obj1.getDate() == obj2.getDate();
+	}
+
+    getSelectedDateObj() {
+		var isMultiple = this.getData( 'ltPropMultiple' ),
+		selectedDates = this.getData( 'ltPropCurrentDates' ),
+		that = this,
+		dateObj;
+
+		if (isMultiple) {
+			return this.getDObjArrayFromStrings(selectedDates);
+		}
+		else {
+			if (this.isIso) {
+				dateObj = this.isoToDate(this.getData('ltPropIso'));
+			} else {
+				dateObj = this.getData('ltPropCurrentDate') ? this.stringToDate(this.getData('ltPropCurrentDate'), this.getData('ltPropFormat')) : 'nodate';
+			}
+
+			return dateObj;
+		}
+
+	}
+
+    getDObjArrayFromStrings(dates) {
+		var that = this;
+
+		dates = dates || [];
+
+		return dates.map( function( date ) { 
+			return that.stringToDate( date, that.getData( 'ltPropFormat' ) );
+		} );
+	}
+
+    getDisabledDates() {
+		var disabledDates = this.getData( 'ltPropDisabledDates' );
+
+		return this.getDObjArrayFromStrings( disabledDates );
+	}
+
+    isDisabled(date, disabledDates) {
+		return this.isDateInArray( disabledDates, date );
+	}
+
+    getWeekSelectedClass(currentDate) {
+		var selectedWeek = this.getData( 'ltPropCurrentWeek' ) || [],
+		weekStart = selectedWeek[ 0 ] || '',
+		weekEnd = selectedWeek[ 1 ] || '',
+		format = this.getData( 'ltPropFormat' );
+
+		weekStart = this.stringToDate(weekStart, format);
+		weekEnd = this.stringToDate(weekEnd, format);
+
+		if (weekStart === 'Invalid Date' || weekEnd === 'InvalidDate' || currentDate < weekStart || currentDate > weekEnd) {
+			return ''
+		}
+		else {
+			return 'lyteCalWeekSel';
+		}
+	}
+
+    isWeekend(date) {
+		var day = date.getDay(),
+			weekends = this.getData('ltPropWeekends') || [];
+
+		return !!~weekends.indexOf( day );
+	}
+
+    getHolidayDates() {
+		var holidayDates = this.getData( 'ltPropHolidays' );
+
+		return this.getDObjArrayFromStrings( holidayDates );
+	}
+
+    isHoliday(date, holidayDates) {
+		return this.isDateInArray( holidayDates, date );
+	}
+
+    shouldActivateCell() {
+		var disableNavigation = this.getData( 'ltPropDisableNavigation' ),
+		/* input can set the lt-prop-current-date - so don't activate during observer changes because input might lose focus */
+		isObserverCall = this.isFromCurrentDateObserver,
+
+			/* don't focus when previous/next buttons are pressed */
+			navigationButtonPressed = this.navigationButtonPressed;
+
+		this.isFromCurrentDateObserver = false;
+
+		this.navigationButtonPressed = false;
+
+		return !disableNavigation && !isObserverCall && !navigationButtonPressed;
+	}
+
+    /** 
+	 * get proper month from user defined value
+	 * @param {String} mon - The current month
+	 *
+	 */
+
+    getProperMonth(val) {
+		var sm = {
+			'jan': 1,
+			'feb': 2,
+			'mar': 3,
+			'apr': 4,
+			'may': 5,
+			'jun': 6,
+			'jul': 7,
+			'aug': 8,
+			'sep': 9,
+			'oct': 10,
+			'nov': 11,
+			'dec': 12
+		}, lg = {
+			'january': 1,
+			'february': 2,
+			'march': 3,
+			'april': 4,
+			'may': 5,
+			'june': 6,
+			'july': 7,
+			'august': 8,
+			'september': 9,
+			'october': 10,
+			'november': 11,
+			'december': 12
+		}, ret
+
+		val = val.toLowerCase();
+		ret = sm[val] || lg[val];
+
+		if (!ret && ret !== 0) {
+			return parseFloat(val) - 1;
+		}
+
+		return ret-1;
+	}
+
+    /**
+	 * Checks if the date is a proper date for the corresponding month and year
+	 * @param {Number} year - The year of the date object
+	 * @param {Number} month - The month of the date object
+	 * @param {Number} date - The date value of the date object
+	 *
+	 */
+
+    isProperDate(year, month, date) {
+		var daysInMonth = this.getNumber( month, year );
+
+		if (date <= daysInMonth) {
+			return true;
+		}
+
+		return false;
+	}
+
+    /**
+	 * Return the date object for the given string and format
+	 * @param {String} dateString - The current date in the form of a string
+	 * @param {String} format - The format of the dateString
+	 *
+	 */
+
+    getDateObjFromString(dateString, format) {
+		try {
+			var vals = dateString.match(/([\da-z]+)/ig), year, month,
+				format = format.toUpperCase(),
+				sep = format.match(/([a-z]+)/ig),
+				date = this.toDate(), i = 0, order = ['Y', 'M', 'D'];
+			date.setDate(1);  //initialize the day to be 1 to avoid error for eg: 30 Feb if passed will generate 1 Mar as result.
+
+			if (vals.length !== 3) {
+				return 'Invalid Date';
+			}
+
+			while (i < sep.length) {
+				var ind = this.getOrderIndex(sep, order[i]);
+
+				if (i == 0) {
+					date.setFullYear(year = vals[ind]);
+				}
+				else if (i == 1) {
+					month = this.getProperMonth(vals[ind]);
+
+					if (month < 0 || month > 11) {
+						return 'Invalid Date';
+					}
+
+					date.setMonth(month);
+				}
+				else if (i == 2) {
+					if (!this.isProperDate(year, month, vals[ind])) {
+						return 'Invalid Date';
+					}
+
+					date.setDate(vals[ind]);
+				}
+
+				if (date.toString() === 'Invalid Date') {
+					return date.toString();
+				}
+
+				i++;
+			}
+
+			return date;
+		}
+		catch (e) {
+			return 'Invalid Date';
+		}
+	}
+
+    getDateObjFromMoment(dateString, format) {
+		var momentObj, ret;
+
+		format = this.getRelevantFormat(format);
+
+		if (!dateString) {
+			return 'Invalid Date';
+		}
+
+		try {
+			momentObj = this.moment(dateString, format);
+			ret = momentObj.getDObj();
+		}
+		catch (e) {
+			ret = 'Invalid Date';
+		}
+
+		if (Object.prototype.toString.call(ret) === '[object Date]') {
+			if (isNaN(ret.getTime())) {
+				ret = 'Invalid Date';
+			}
+		}
+
+		return ret || 'Invalid Date';
+	}
+
+    /**
+	 * Convert the string to date object based on the format
+	 * @param {String} cur - The current date of the user passed
+	 * @param {String} format - The format of the dates
+	 *
+	 */
+
+    stringToDate(cur, format) {
+		var ret;
+
+		cur = this.convertToEnglish(cur);
+
+		if (this.isMomentSupported) {
+			ret = this.getDateObjFromMoment(cur, format);
+		}
+		else {
+			ret = this.getDateObjFromString(cur, format);
+		}
+
+		return ret;
+	}
+
+    findISO() {
+		this.isIso = this.getData('ltPropIso') ? true : false;
+	}
+
+    isoToDate(cur) {
+		var ret = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default().moment(cur).getDObj();
+		this.data.ltPropCurrentDate = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default().moment(ret).format(this.getData('ltPropFormat'));
+		return ret;
+	}
+
+    convertToEnglish(cur) {
+		var i18n = this.getData( 'ltPropI18n' ),
+		format = this.getData( 'ltPropFormat' );
+
+		if (i18n) {
+			return this.moment(cur, format, { i18n: true }).format(format);
+		}
+
+		return cur;
+	}
+
+    getEnglishShorthand(cur) {
+		var months = this.getShortHands(), proper = -1, max = 0,
+			shortHands = this.getData('shortHands');
+
+		for (var i = 0; i < months.length; i++) {
+			if (!!~cur.indexOf(months[i]) && months[i].length > max) {
+				proper = i;
+				max = months[i].length;
+			}
+		}
+
+		if (proper !== -1) {
+			cur = cur.replace(months[proper], this.getProperShortHand(shortHands[proper]));
+		}
+
+		return cur;
+	}
+
+    getShortHands() {
+		var shortHands = this.getData( 'shortHands' ), res = [];
+
+		for( var i = 0; i < shortHands.length; i++ ) {
+			res.push( window._lyteUiUtils.i18n( shortHands[ i ] ) );
+		}
+
+		return res;
+	}
+
+    getProperShortHand(val) {
+		if( val === 'short.may' ) {
+			return 'May';
+		}
+
+		return val;
+	}
+
+    getEnglishStandard(cur) {
+		var months = this.getStandardMonths(), englishMonths = this.getData( 'monthNames' ),
+		proper = -1, max = 0;
+
+		for (var i = 0; i < months.length; i++) {
+			if (!!~cur.indexOf(months[i]) && months[i].length > max) {
+				proper = i;
+				max = months[i].length;
+			}
+		}
+
+		if (proper !== -1) {
+			cur = cur.replace(months[proper], englishMonths[proper]);
+		}
+
+		return cur;
+	}
+
+    getStandardMonths() {
+		var monthNames = this.getData( 'monthNames' ), res = [];
+
+		for( var i = 0; i < monthNames.length; i++ ) {
+			res.push( window._lyteUiUtils.i18n( monthNames[ i ] ) );
+		}
+
+		return res;
+	}
+
+    getOrderIndex(objArr, match) {
+		for(var i = 0; i < objArr.length; i++){
+			if(objArr[i].charAt(0) === match){
+				return i;
+			}
+		}
+		return -1;
+	}
+
+    buildYears() {
+		/*var yearBounds = this.buildMinAndMaxYear(),*/
+		var maxYear = 2100,
+			minYear = 1900, i, years = [];
+
+		for (i = minYear; i <= maxYear; i++) {
+			years.push(i.toString());
+		}
+		// if(this.isIso){
+		// 	years.push( $L.moment(this.getData('ltPropIso')).get('fullYear') )
+		// }
+		this.setData( 'years', years );
+	}
+
+    /*buildMinAndMaxYear: function() {
+			
+		var currentDate = this.toDate();
+		var isYYFormat = this.isYYFormat(),
+		currentYear = currentDate.getFullYear(),
+		dateBounds = this.isMomentSupported ? $L.moment() : { uL: 19, lL: 80 },
+		valueToAdd = dateBounds.uL,
+		valueToRemove = dateBounds.lL;
+
+		return {
+			maxYear: isYYFormat ? currentYear + valueToAdd : 2100,
+			minYear: isYYFormat ? currentYear - valueToRemove : 1900
+		};
+
+	},*/
+
+    setAndBuildView(viewType, event, preventCallback) {
+		var oldView = this.getData( 'viewType' ),
+		newView = viewType;
+
+		this.setData('viewType', viewType);
+
+		if (viewType === 'monthView') {
+			this.buildMonthView();
+		}
+		else if (viewType === 'decadeView') {
+			this.buildDecadeView();
+			this.setData('showToday', false);
+		}
+		else if (viewType === 'dateView') {
+			this.buildDateView();
+		}
+
+		if( this.getData('ltPropAlwaysShowToday') ){
+			this.setData( 'showToday', true );
+		}
+		// pressing the today button should not fire the viewChange when it is in the dateview
+		if (!preventCallback && (oldView !== newView)) {
+			if (this.getMethods('onViewChange')) {
+				this.executeMethod('onViewChange', event, viewType, this);
+			}
+		}
+		
+	}
+
+    buildDateView() {
+		this.buildDateViewHeader();
+		this.buildDateViewContent();
+		this.showtoday();
+	}
+
+    buildDateViewHeader() {		
+		var viewDate = this.getData( 'viewDate' );
+		var year = viewDate.getFullYear();
+		var month = viewDate.getMonth();
+		var currentYear = viewDate.getFullYear();
+		var numberOfYearsFromDecadeStart = currentYear % 10;
+		var decadeStart = currentYear - numberOfYearsFromDecadeStart;
+		var decadeEnd = decadeStart + 9;
+
+		this.setData( 'monthHeader', this.getMonthHeader() );
+		this.setData( 'ltPropCurrentDisplayMonth', month );
+		this.setData( 'ltPropCurrentDisplayYear', year );
+		this.setData('ltPropCurrentDisplayDecade',decadeStart + '-' + decadeEnd);
+
+	}
+
+    buildDateViewContent() {
+		this.setDatesFunction();
+	}
+
+    buildMonthView() {
+		this.buildMonthViewHeader();
+		this.buildMonthViewContent();
+		this.showtoday();
+		this.activateCell( this.getActiveCell() );
+	}
+
+    buildMonthViewHeader() {
+		var viewDate = this.getData( 'viewDate' );
+		var year = viewDate.getFullYear();
+		var currentYear = viewDate.getFullYear();
+		var numberOfYearsFromDecadeStart = currentYear % 10;
+		var decadeStart = currentYear - numberOfYearsFromDecadeStart;
+		var decadeEnd = decadeStart + 9;
+
+		this.setData( 'currentYear', year );
+		this.setData( 'ltPropCurrentDisplayYear', year );
+		this.setData('ltPropCurrentDisplayDecade',decadeStart + '-' + decadeEnd);
+
+	}
+
+    buildMonthViewContent() {
+		var systemValues = this.getData( 'monthSystemValues' ),
+		displayValue = this.getData( 'shortHands' ),
+		rowCount = 3, columnCount = 4,
+		rowIterator = 0, columnIterator,
+		result = [], indexOfMonth;
+
+		for (; rowIterator < rowCount; rowIterator++) {
+			result.push([]);
+
+			for (columnIterator = 0; columnIterator < columnCount; columnIterator++) {
+				indexOfMonth = (rowIterator * columnCount) + columnIterator;
+
+				result[rowIterator].push(
+					{
+						displayValue: window._lyteUiUtils.i18n( displayValue[ indexOfMonth ] ),
+						systemValue: systemValues[ indexOfMonth ],
+						class: this.getProperClassForMonthView( indexOfMonth )
+					} 
+				);
+			}
+		}
+
+		this.setData( 'monthViewData', result );
+	}
+
+    getProperClassForMonthView(month) {
+		var viewDate = this.getData( 'viewDate' ),
+		viewYear = viewDate.getFullYear(),
+		todayMonth = this.getCurrentMonth(),
+		todayYear = this.getCurrentYear(),
+		format = this.getData( 'ltPropFormat' ),
+		curDate = this.stringToDate( this.getData( 'ltPropCurrentDate' ), format ),
+		previousActiveDate = this.getData( 'previousActiveCellDate' ) || '',
+		previousActiveMonth = this.getData( 'monthSystemValues' ).indexOf( previousActiveDate ),
+		ret = 'lyteCalTableCell', curMonth, selectedMonth = this.getData( 'ltPropCurrentMonth' );
+
+		ret += todayYear === viewYear && month === todayMonth ? ' lyteDrillCalCurrentMonth' : '';
+
+		if (previousActiveMonth !== -1) {
+			ret += month === previousActiveMonth ? ' lyteCalNavCell' : '';
+		}
+		else if (curDate !== 'Invalid Date') {
+			curMonth = curDate.getMonth();
+			ret += month === curMonth ? ' lyteCalNavCell' : '';
+		}
+		else {
+			ret += month === todayMonth ? ' lyteCalNavCell' : '';
+		}
+
+		if (selectedMonth === (month + 1).toString()) {
+			ret += ' lyteCalMonthSel';
+		}
+
+
+		return ret;
+	}
+
+    getCurrentYear() {
+		var date = this.toDate();
+
+		return date.getFullYear();
+	}
+
+    getCurrentMonth() {
+		var date = this.toDate();
+
+		return date.getMonth();
+	}
+
+    buildDecadeView() {
+		this.buildDecadeViewHeader();
+		this.buildDecadeViewContent();
+		this.activateCell( this.getActiveCell() );
+	}
+
+    buildDecadeViewHeader() {
+		var viewDate = this.getData( 'viewDate' ),
+		currentYear = viewDate.getFullYear(),
+		numberOfYearsFromDecadeStart = currentYear % 10,
+		decadeStart = currentYear - numberOfYearsFromDecadeStart,
+		decadeEnd = decadeStart + 9;
+
+		this.setData( 'decadeStart', decadeStart );
+		this.setData( 'decadeEnd', decadeEnd );
+		this.setData('ltPropCurrentDisplayDecade',decadeStart + '-' + decadeEnd);
+	}
+
+    buildDecadeViewContent() {
+		var viewDate = this.getData( 'viewDate' ),
+		currentYear = viewDate.getFullYear(),
+		numberOfYearsFromDecadeStart = currentYear % 10,
+		decadeStart = currentYear - numberOfYearsFromDecadeStart,
+		yearBounds = {minYear:1900 , maxYear:2100},	
+		isYYFormat = this.isYYFormat(),
+		minYear = yearBounds.minYear, maxYear = yearBounds.maxYear,	
+		rows = 3, columns = 4, i, j, result = [], year;
+
+		for( i = 0; i < rows; i++ ) {
+			result.push( [] );
+
+			for (j = 0; j < columns; j++) {
+
+				year = (decadeStart + i * 4 + j) - 1;
+
+				if (isYYFormat) {
+					result[i].push(
+						(year > maxYear || year < minYear) ? this.emptyCell() : this.currentYearCell(year, decadeStart)
+					);
+				}
+				else {
+					result[i].push(this.currentYearCell(year, decadeStart));
+				}
+
+			}
+		}
+
+		this.setActiveDecadeCell(result);
+
+		this.setData( 'decadeViewData', result );
+	}
+
+    emptyCell() {
+		return {
+			emptyBlock: true
+		};
+	}
+
+    currentYearCell(year, decadeStart) {
+		var decadeEnd = decadeStart + 9,
+			classVal = [], todayYear = this.getCurrentYear(),
+			selectedYear = this.getData('ltPropCurrentYear');
+
+		if (year < decadeStart || year > decadeEnd) {
+			classVal.push('lyteCalOtherDecadeCell');
+		}
+
+		if (todayYear === year) {
+			classVal.push('lyteDrillCalCurrentYear');
+		}
+
+		if (selectedYear === year.toString()) {
+			classVal.push('lyteCalYearSel')
+		}
+
+		return {
+			year: year,
+			emptyBlock: false,
+			class: classVal.join(' ')
+		}
+	}
+
+    setActiveDecadeCell(result) {
+		var currentDate = this.getData( 'ltPropCurrentDate' ),
+		format = this.getData( 'ltPropFormat' ),
+		currentDateObj = this.stringToDate( currentDate, format ),
+		previousActiveDate = this.getData( 'previousActiveCellDate' ),
+		todayYear = this.getCurrentYear(),
+		yearToUse = !isNaN( previousActiveDate ) ? +previousActiveDate : ( currentDateObj !== 'Invalid Date' ? currentDateObj.getFullYear() : todayYear ),
+		firstCell = result[ 0 ][ 0 ], firstRenderedYear = firstCell.year, lastCell = result[ result.length - 1 ][ result[ result.length - 1 ].length - 1 ], lastRenderedYear = lastCell.year, activeCellIndex;
+
+		if (yearToUse >= firstRenderedYear && yearToUse <= lastRenderedYear) {
+			result[Math.floor((yearToUse - firstRenderedYear) / 4)][(yearToUse - firstRenderedYear) % 4].class += ' lyteCalNavCell';
+		}
+		else {
+			if (yearToUse % 10 === 9) {
+				activeCellIndex = Math.abs(yearToUse - firstRenderedYear) < Math.abs(yearToUse - lastRenderedYear) ? 0 : 10;
+			}
+			else if (yearToUse % 10 === 0) {
+				activeCellIndex = Math.abs(yearToUse - firstRenderedYear) < Math.abs(yearToUse - lastRenderedYear) ? 1 : 11;
+			}
+			else {
+				activeCellIndex = (yearToUse % 10) + 1;
+			}
+
+
+			result[Math.floor(activeCellIndex / 4)][activeCellIndex % 4].class += ' lyteCalNavCell';
+		}
+	}
+
+    buildNavigationalUI() {
+		var type = this.getData( 'ltPropHeaderType' );
+
+		if (this.isDropdownHeader()) {
+			this.buildYears();
+		}
+	}
+
+    init() {
+		this.findISO();
+	}
+
+    setCalendarIdsForAria() {
+		this.setData( 'headerId', this.generateRandomId() );
+		this.setData( 'monthDropdownId', this.generateRandomId() );
+		this.setData( 'yearDropdownId', this.generateRandomId() );
+		this.setData( 'monthAriaObj', { 'aria-labelledby': this.getData( 'monthDropdownId' ) } );
+		this.setData( 'yearAriaObj', { 'aria-labelledby': this.getData( 'yearDropdownId' ) } );
+	}
+
+    revertToSelected() {
+		var from = new Date( this.getData( 'viewDate' ).getTime() ), 
+		cur = this.getData( 'ltPropCurrentDate' ),
+		format = this.getData( 'ltPropFormat' ),
+		curDate = cur ? this.stringToDate( cur, format ) : this.toDate(),
+		today = this.toDate(), event = {};
+
+		if( curDate === 'Invalid Date' ) {
+			return ;
+		}
+		
+		curDate.setDate(1);
+
+		var to = new Date(curDate.getTime());
+
+		this.setData('viewDate', curDate);
+		this.setAndBuildView('dateView', event);
+
+		if (to.getMonth() === today.getMonth() && to.getFullYear() === today.getFullYear()) {
+			this.setData('showToday', false);
+		}
+		else {
+			this.setData('showToday', true);
+		}
+		
+		if( this.getData('ltPropAlwaysShowToday') ){
+			this.setData( 'showToday',true );
+		}
+		if( this.getMethods( 'onNavigate' ) 
+			&& ( from.getMonth() !== to.getMonth() 
+			|| from.getFullYear() !== to.getFullYear() ) 
+		) {
+			this.executeMethod('onNavigate', event, this.getDateFromFormat(from, this.getData('ltPropFormat')), this.getDateFromFormat(to, this.getData('ltPropFormat')), this);
+		}
+	}
+
+    addContainerClass() {
+		var type = this.getData( 'ltPropHeaderType' ),
+		classVal = [ 'lyteCalendarPopup' ];
+
+		if (type === 'drilldown') {
+			classVal.push('lyteDrillDownCalendar');
+		}
+
+		this.setData( 'containerClass', classVal.join( ' ' ) );
+	}
+
+    checkForMoment() {
+		this.isMomentSupported = (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default()) && (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default().moment) ? true : false; 
+		this.isHavingTimezone = this.isMomentSupported && !!_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default().moment()._timezone;
+	}
+
+    buildViewDate() {
+		if(this.isIso){
+			var viewDate = this.isoToDate( this.getData('ltPropIso') );
+		}else{
+			var viewDate = this.determineViewDateFromUserInput();
+		}
+
+		if( viewDate === 'Invalid Date' ) {
+			viewDate = this.toDate();
+		}
+
+		viewDate.setDate( 1 );
+		this.setData( 'viewDate', viewDate );
+	}
+
+    determineViewDateFromUserInput() {
+		var viewDate, selectionType = this.getData( 'ltPropSelectionType' ), currentWeek, startDay;
+
+		if( selectionType === 'week' ) {
+			currentWeek = this.getData( 'ltPropCurrentWeek' ) || [];
+
+			startDay = currentWeek[ 0 ];
+
+			viewDate = startDay ? 
+						this.stringToDate( startDay, this.getData( 'ltPropFormat' ) ) 
+						: this.toDate();
+		}
+		else {
+			viewDate = this.getData( 'ltPropCurrentDate' ) ? 
+						this.stringToDate( this.getData( 'ltPropCurrentDate' ), this.getData( 'ltPropFormat' ) ) 
+						: this.toDate();
+		}
+		
+		return viewDate;
+	}
+
+    initializeCalendar() {
+		
+		this.buildNavigationalUI();
+		this.decideView();
+			
+	}
+
+    decideView() {
+		var selectionType = this.getData('ltPropSelectionType') || 'day';
+
+		if (selectionType === 'day' || selectionType === 'week') {
+			this.setAndBuildView('dateView', undefined, true);
+		}
+		else if (selectionType === 'month') {
+			this.setAndBuildView('monthView', undefined, true);
+		}
+		else if( selectionType === 'year' ){
+			this.setAndBuildView( 'decadeView', undefined, true );
+		}
+		else{
+			this.setAndBuildView( 'dateView', undefined, true );
+		}
+	}
+
+    isDrilldown() {
+		var type = this.getData( 'ltPropHeaderType' );
+
+		return type === 'drilldown';
+	}
+
+    didConnect() {
+
+		if (!this.getData('navYield') && this.isDropdownHeader()) {
+			this.setData('monthDD', this.getMonthDropdown());
+			this.setData('yearDD', this.getYearDropdown());
+			this.setData('callFrmDidcnct', true);
+		}
+
+		if( this.getMethods('onDateHover') || this.getMethods('onMonthHover') || this.getMethods('onYearHover') ){
+			this.addListenerForHoverEvent();
+		}
+
+		this.addBoxClassToAllDropdowns();
+	}
+
+    addBoxClassToAllDropdowns( ){
+		var dropdown = this.getData('ltPropDropdown');
+
+		if( dropdown && dropdown.boxClass ){
+			var list = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default()(this.$node).find('lyte-dropdown');
+
+			for( var i=0;i<list.length;i++ ){
+				var elem = list[i];
+				
+				var dropbox = this.getDropBox( elem );
+				if( dropbox && dropbox.classList ){
+					_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default()( dropbox ).addClass( dropdown.boxClass );
+				}
+			}
+		}
+	}
+
+    getDropBox( dropdown ){
+		var that = dropdown.component;
+
+		var box = that.childComp;
+
+		if (!box) {
+			box = that.$node.querySelector('lyte-drop-box');
+		}
+
+		return box;
+	}
+
+    addListenerForHoverEvent() {
+		var parDiv = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default()('div.lyteCalTableRowGroup')[0];
+		parDiv.addEventListener('mouseover', function( event ){
+			var viewType = this.getData('viewType');
+			if( event.target.classList.contains('lyteCalTableCell') ){
+				var target = event.target;
+				if( this.getMethods('onDateHover') && viewType === 'dateView' ){
+					this.executeMethod('onDateHover', event, target.getAttribute('data-date'), this);
+				}
+				else if( this.getMethods('onMonthHover') && viewType === 'monthView' ){
+					var currentSelectedMonth = this.getData('monthSystemValues').indexOf(target.getAttribute('data-date')) + 1;
+					this.executeMethod('onMonthHover', event, currentSelectedMonth, this);
+				}
+				else if( this.getMethods('onYearHover') && viewType === 'decadeView' ){
+					this.executeMethod('onYearHover', event, target.getAttribute('data-date'), this);
+				}
+			}
+		}.bind(this));
+	}
+
+    isDropdownHeader() {
+		var type = this.getData( 'ltPropHeaderType' );
+
+		return type === 'picklist' || type === 'dropdown';
+	}
+
+    getYearDropdown() {
+		var type = this.getData( 'ltPropHeaderType' ), 
+		ret = this.$node.querySelector( '.lyteCalYearDD' );
+
+		if (type === 'picklist') {
+			ret = ret.querySelector('lyte-dropdown');
+		}
+
+		return ret;
+	}
+
+    getMonthDropdown() {
+		return this.$node.querySelector( '.lyteCalMonthDD' );
+	}
+
+    isWithinAllowedYears(date) {
+		var year = date.getFullYear();
+
+		if (year >= 1900 && year <= 2100) {
+			return true;
+		}
+
+		return false;
+	}
+
+    changeCurrentDate(set, val, event) {
+		var inter, to, from = new Date( this.getData( 'viewDate' ).getTime() ), 
+		fromDate, toDate, formattedDate, format = this.getData( 'ltPropFormat' ),
+		isYYFormat = this.isYYFormat();
+
+		if (set === 'Y') {
+			inter = this.getData('viewDate');
+			if (this.isIso) {
+				formattedDate = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default().moment(this.getData('viewDate'));
+				isYYFormat = false;
+			} else {
+				formattedDate = this.moment(this.getDateFromFormat(inter, format), format);
+			}
+
+			if (this.isMomentSupported) {
+				if (val > 0) {
+					to = this.moment(formattedDate, format).add(val, 'fullYear', isYYFormat).getDObj();
+				}
+				else {
+					to = this.moment(formattedDate, format).add(val, 'fullYear', isYYFormat).getDObj();
+				}
+			}
+			else {
+				inter.setYear(inter.getFullYear() + val)
+				to = new Date(inter.getTime())
+			}
+
+			this.setData('viewDate', to);
+			this.buildDateView();
+		}
+		else if (set === 'M') {
+			inter = this.getData('viewDate');
+			if (this.isIso) {
+				formattedDate = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default().moment(this.getData('viewDate'));
+				isYYFormat = false;
+			} else {
+				formattedDate = this.moment(this.getDateFromFormat(inter, format), format);
+			}
+			if (this.isMomentSupported) {
+				if (val > 0) {
+					to = formattedDate.add(val, 'month', isYYFormat).getDObj();
+				}
+				else {
+					to = formattedDate.add(val, 'month', isYYFormat).getDObj();
+				}
+			}
+			else {
+				inter.setMonth(inter.getMonth() + val)
+				to = new Date(inter.getTime())
+			}
+
+			this.setData('viewDate', to)
+			this.buildDateView();
+		}
+
+		fromDate = this.getDateFromFormat(from, this.getData('ltPropFormat'));
+		toDate = this.getDateFromFormat(to, this.getData('ltPropFormat'));
+
+		if (this.getMethods('onNavigate')) {
+			this.executeMethod('onNavigate', event, fromDate, toDate, this)
+		}
+	}
+
+    changeCurrentYear(val, event) {
+		var viewDate = this.getData( 'viewDate' ),
+		isMomentSupported = this.isMomentSupported,
+		fullYear = viewDate.getFullYear(),
+		format = this.getData( 'ltPropFormat' ),
+		isYYFormat = this.isYYFormat(),
+		formattedDate = this.getDateFromFormat( viewDate, format ),
+		fromDate = formattedDate,
+		toDate;
+		if( isMomentSupported ) {
+			format = this.getRelevantFormat( format );
+			if(this.isIso){
+				formattedDate = this.moment(this.getData('viewDate'));
+				isYYFormat = false;
+			} else {
+				formattedDate = this.moment(formattedDate, format);
+			}
+			viewDate = formattedDate.add(val, 'fullYear', isYYFormat).getDObj();
+		}
+		else {
+			viewDate.setFullYear(fullYear + val);
+		}
+
+		toDate = this.getDateFromFormat(viewDate, format);
+
+		this.setData('viewDate', viewDate);
+
+		if (this.getMethods('onNavigate')) {
+			this.executeMethod('onNavigate', event, fromDate, toDate, this);
+		}
+	}
+
+    changeCurrentDecade(val, event) {
+		var viewDate = this.getData( 'viewDate' ),
+		format = this.getData( 'ltPropFormat' ),
+		isMomentSupported = this.isMomentSupported,
+		formattedDate = this.getDateFromFormat( viewDate, format ),
+		isYYFormat = this.isYYFormat(),
+		currentYear = viewDate.getFullYear(),
+		fromDate = formattedDate,
+		toDate;
+
+		format = this.getRelevantFormat(format);
+
+		if (isMomentSupported) {
+			if (this.isIso) {
+				formattedDate = this.moment(this.getData('viewDate'));
+				isYYFormat = false;
+			} else {
+				formattedDate = this.moment(formattedDate, format);
+			}
+			// viewDate = formattedDate.add( val, 'fullYear', isYYFormat ).getDObj();
+			viewDate = formattedDate.add(val * 10, 'fullYear', isYYFormat).getDObj();
+		}
+		else {
+			viewDate.setFullYear(currentYear + 10 * val);
+		}
+
+		toDate = this.getDateFromFormat(viewDate, format);
+		this.setData('viewDate', viewDate);
+
+		if (this.getMethods('onNavigate')) {
+			this.executeMethod('onNavigate', event, fromDate, toDate, this);
+		}
+	}
+
+    /** 
+	 * Get the proper calendar date item that was clicked
+	 * @param {Element} elem - represents the element that was clickedd
+	 *
+	 */
+    getProper(elem) {
+		while( elem 
+			&& !elem.classList.contains( 'lyteCalTableCell' ) 
+		) {
+			elem = elem.parentElement;
+		}
+
+		return elem;
+	}
+
+    convertToLang(val) {
+		var i18n = this.getData( 'ltPropI18n' ),
+		format = this.getData( 'ltPropFormat' );
+
+		if (i18n) {
+			return this.moment(val, format).i18N(format);
+		}
+
+		return val;
+	}
+
+    moveToPrevious(val, event) {
+		var viewType = this.getData( 'viewType' );
+
+		if (viewType === 'dateView') {
+			this.navigationButtonPressed = true;
+			this.changeCurrentDate(val, -1, event);
+		}
+		else if (viewType === 'monthView') {
+			this.changeCurrentYear(-1, event);
+			this.buildMonthView();
+		}
+		else if (viewType === 'decadeView') {
+			this.changeCurrentDecade(-1, event);
+			this.buildDecadeView();
+		}
+	}
+
+    moveToNext(val, event) {
+
+		var viewType = this.getData('viewType');
+
+		if (viewType === 'dateView') {
+			this.navigationButtonPressed = true;
+			this.changeCurrentDate(val, 1, event);
+		}
+		else if (viewType === 'monthView') {
+			this.changeCurrentYear(1, event);
+			this.buildMonthView();
+		}
+		else if (viewType === 'decadeView') {
+			this.changeCurrentDecade(1, event);
+			this.buildDecadeView();
+		}
+	}
+
+    changeToMonthView(event) {
+		this.setAndBuildView( 'monthView', event );
+	}
+
+    changeToDecadeView(event) {
+		this.setAndBuildView( 'decadeView', event );
+	}
+
+    selectHighlightedCell(event) {
+		var viewType = this.getData( 'viewType' ),
+		headerType = this.getData( 'ltPropHeaderType' );
+
+		if (headerType !== 'drilldown' || viewType === 'dateView') {
+			this.makeSelection(event);
+		}
+		else if (viewType === 'monthView') {
+			this.monthSelected(event);
+		}
+		else {
+			this.yearSelected(event);
+		}
+	}
+
+    selectDate(event) {
+		var isMultiple = this.getData( 'ltPropMultiple' );
+
+		if (isMultiple) {
+			this.selectMultiple(event);
+		}
+		else {
+			this.selectSingle(event);
+		}
+	}
+
+    selectMultiple(event) {
+		var dateCell = this.getProper( event.target );
+
+		if (this.terminateSelection(this.fireBeforeCallback(event, dateCell))) {
+			return;
+		}
+
+		if (this.alreadySelected(dateCell)) {
+			this.removeSelectedCell(dateCell);
+			this.removeSelected(dateCell);
+
+			if (this.getMethods('onDateRemoved')) {
+				this.executeMethod('onDateRemoved', event, dateCell.getAttribute('data-date'), this);
+			}
+		}
+		else {
+			this.selectCell(event);
+		}
+	}
+
+    terminateSelection(beforeCallbackReturnValue) {
+		return beforeCallbackReturnValue === false;
+	}
+
+    fireBeforeCallback(event, dateCell) {
+		if( this.alreadySelected( dateCell ) ) {
+			return this.fireBeforeRemove( event, dateCell );
+		}
+
+		return this.fireBeforeAdd( event, dateCell );
+	}
+
+    fireBeforeRemove(event, dateCell) {
+		if( this.getMethods( 'onBeforeRemove' ) ) {
+			return this.executeMethod( 'onBeforeRemove', event, dateCell.getAttribute( 'data-date' ), this );
+		}
+	}
+
+    fireBeforeAdd(event, dateCell) {
+		if( this.getMethods( 'onBeforeAdd' ) ) {
+			return this.executeMethod( 'onBeforeAdd', event, dateCell.getAttribute( 'data-date' ), this );
+		}
+	}
+
+    alreadySelected(cell) {
+		return cell.classList.contains( 'lyteCalSel' );
+	}
+
+    removeSelected(cell) {
+		var dateToRemove = cell.getAttribute( 'data-date' ),
+		selectedDates = this.getData( 'ltPropCurrentDates' ) || [],
+		indexToRemove = selectedDates.indexOf( dateToRemove );
+
+		if( !!~indexToRemove ) {
+			this.$addon.arrayUtils( selectedDates, 'removeAt', indexToRemove );
+		}
+	}
+
+    selectSingle(event) {
+		this.removeDayHighlights();
+		this.selectCell( event );
+	}
+
+    selectCell(event) {
+		var target = this.getProper( event.target );
+		
+		this.setSelected( target );
+
+		target.classList.add('lyteCalSel');
+		target.setAttribute('aria-selected', 'true');
+		target.setAttribute('tabindex', '1');
+
+		if (this.getMethods('onDateSelected')) {
+			this.executeMethod('onDateSelected', event, target.getAttribute('data-date'), this);
+		}
+	}
+
+    setSelected(cell) {
+		var isMultiple = this.getData( 'ltPropMultiple' ),
+		curDate = this.convertToLang( cell.getAttribute( 'data-date' ) );
+
+		if( this.getData('ltPropTransitMonthOnDateSel') && this.getData('viewDate').getMonth() !== _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default().moment(curDate,this.getData('ltPropFormat')).get('month') ){
+			if( isMultiple ) {
+				this.$addon.arrayUtils( this.getData( 'ltPropCurrentDates' ), 'push', curDate );
+			}
+			else {
+				this.setData('ltPropCurrentDate', curDate);
+			}
+			return;
+		}
+
+		this.setData('preventObs', true);
+
+		if( isMultiple ) {
+			this.$addon.arrayUtils( this.getData( 'ltPropCurrentDates' ), 'push', curDate );
+		}
+		else {
+			this.setData('ltPropCurrentDate', curDate);
+		}
+		
+		this.setData( 'preventObs', false );
+	}
+
+    monthSelected(event) {
+		var viewDate = this.getData('viewDate'),
+			currentYear = viewDate.getFullYear(),
+			target = this.getProper(event.target),
+			currentSelectedMonth = target.getAttribute('data-date'),
+			isDrilldown = this.getData('ltPropHeaderType') === 'drilldown';
+
+		currentSelectedMonth = this.getData('monthSystemValues').indexOf(currentSelectedMonth) + 1;
+
+		this.setData('viewDate', new Date(currentSelectedMonth + '/1/' + currentYear));
+
+		if (isDrilldown) {
+			this.setAndBuildView('dateView', event);
+		}
+
+		this.removeMonthHighlight();
+		this.addMonthHighlight(target);
+
+		this.setData('ltPropCurrentMonth', currentSelectedMonth);
+
+		if (this.getMethods('onMonthSelected')) {
+			this.executeMethod('onMonthSelected', event, (currentSelectedMonth || "").toString(), this);
+		}
+
+		this.focusActiveCell();
+	}
+
+    removeMonthHighlight() {
+		var month = this.$node.querySelector( '.lyteCalMonthSel' );
+
+		if (month) {
+			month.classList.remove('lyteCalMonthSel');
+			month.removeAttribute('aria-selected');
+		}
+	}
+
+    addMonthHighlight(cell) {
+		cell.classList.add( 'lyteCalMonthSel' );
+		cell.setAttribute( 'aria-selected', 'true' );
+	}
+
+    yearSelected(event) {
+		var viewDate = this.getData( 'viewDate' ),
+		target = this.getProper( event.target ),
+		currentSelectedYear = target.getAttribute( 'data-date' ),
+		isDrilldown = this.getData( 'ltPropHeaderType' ) === 'drilldown';
+
+		viewDate.setYear(currentSelectedYear);
+		this.setData('viewDate', viewDate);
+
+		if (isDrilldown) {
+			this.setAndBuildView('monthView', event);
+		}
+
+		this.removeYearHighlight();
+		this.addYearHighlight(target);
+
+		this.setData('ltPropCurrentYear', currentSelectedYear);
+
+		if (this.getMethods('onYearSelected')) {
+			this.executeMethod('onYearSelected', event, currentSelectedYear, this);
+		}
+
+		this.focusActiveCell();
+	}
+
+    removeYearHighlight() {
+		var year = this.$node.querySelector( '.lyteCalYearSel' );
+
+		if (year) {
+			year.classList.remove('lyteCalYearSel');
+			year.removeAttribute('aria-selected');
+		}
+	}
+
+    addYearHighlight(cell) {
+		cell.classList.add( 'lyteCalYearSel' );
+		cell.setAttribute( 'aria-selected', 'true' );
+	}
+
+    focusDrillDownButton() {
+		var button = this.$node.querySelector( '.lyteDrillCalHeaderButton' );
+
+		if (button) {
+			button.focus();
+		}
+	}
+
+    makeSelection(event) {
+		var selectionType = this.getData( 'ltPropSelectionType' );
+
+		if (selectionType === 'day') {
+			this.selectDate(event);
+		}
+		else {
+			this.selectWeek(event);
+		}
+	}
+
+    selectWeek(event) {
+		if( !event ){
+			var dateCell = this.$node.querySelector('.lyteCalToday');
+		}
+		else {
+			var dateCell = this.getProper( event.target );
+		}
+
+		var firstDayOfWeek = this.getFirstSelectableDay( dateCell ).getAttribute( 'data-date' ),
+		lastDayOfWeek = this.getLastSelectableDay( dateCell ).getAttribute( 'data-date' );
+
+		if( this.getData('ltPropTransitMonthOnDateSel') && this.getData('viewDate').getMonth() !== _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default().moment(firstDayOfWeek,this.getData('ltPropFormat')).get('month') ){
+			this.setData( 'ltPropCurrentWeek', [ this.convertToLang( firstDayOfWeek ), this.convertToLang( lastDayOfWeek ) ] );
+			return;
+		}
+
+		this.removeDayHighlights();
+		this.addWeekHighlight(dateCell);
+
+		this.setData( 'preventObs', true );
+		this.setData('ltPropCurrentWeek', [this.convertToLang(firstDayOfWeek), this.convertToLang(lastDayOfWeek)]);
+		this.setData( 'preventObs', false );
+
+		if (this.getMethods('onWeekSelected')) {
+			this.executeMethod('onWeekSelected', event, firstDayOfWeek, lastDayOfWeek, this);
+		}
+	}
+
+    removeDayHighlights() {
+		this.removeSelectedCell();
+		this.removeWeekHighlight();
+	}
+
+    removeSelectedCell(cell) {
+		var node = cell || this.getSelectedCell();
+
+		if (node) {
+			node.classList.remove('lyteCalSel');
+			node.removeAttribute('aria-selected');
+			node.setAttribute('tabindex', '-1');
+		}
+	}
+
+    getSelectedCell() {
+		return this.$node.querySelector( '.lyteCalSel' );
+	}
+
+    removeWeekHighlight() {
+		var highlightedDays = this.$node.querySelectorAll( '.lyteCalWeekSel' );
+		var highlightedWeekNum = this.$node.querySelectorAll('.lyteCalWeekNumberSel');
+
+		for( var i = 0; i < highlightedDays.length; i++ ) {
+			highlightedDays[ i ].classList.remove( 'lyteCalWeekSel' );
+			highlightedDays[ i ].removeAttribute( 'aria-selected' );
+		} 
+
+		for( var i = 0; i < highlightedWeekNum.length; i++ ) {
+			highlightedWeekNum[ i ].classList.remove( 'lyteCalWeekNumberSel' );
+			highlightedWeekNum[ i ].removeAttribute( 'aria-selected' );
+		} 
+		
+	}
+
+    addWeekHighlight(dateCell) {
+		var firstSelectableDayOfWeek = this.getFirstSelectableDay( dateCell );
+
+		var day = firstSelectableDayOfWeek;
+
+		if( this.getData('ltPropWeekNumber') ){
+			var parent = dateCell.parentElement;
+			var target = parent.querySelector('.lyteWeekNumberGrid');
+
+			if( target ){
+				target.classList.add('lyteCalWeekNumberSel');
+				target.setAttribute( 'aria-selected', 'true' );
+			}
+		}
+
+		do {
+			day.classList.add( 'lyteCalWeekSel' );
+			day.setAttribute( 'aria-selected', 'true' );
+
+			day = day.nextElementSibling;
+		}while( day && day.getAttribute( 'data-selectable' ) === 'true' );
+	}
+
+    getFirstSelectableDay(cell) {
+		var rowCells = cell.parentElement.children;
+
+		for( var i = 0; i < rowCells.length; i++ ) {
+			if( rowCells[ i ].getAttribute( 'data-selectable' ) === "true" ) {
+				return rowCells[ i ];
+			}
+		}
+	}
+
+    getLastSelectableDay(cell) {
+		var rowCells = cell.parentElement.children;
+
+		for( var i = rowCells.length - 1; i > -1; i-- ) {
+			if( rowCells[ i ].getAttribute( 'data-selectable' ) === "true" ) {
+				return rowCells[ i ];
+			}
+		}
+	}
+
+    getCurrentWeekNumber(currentDateObj) {
+		var curDateObj = new Date( currentDateObj );	//clone
+		var weekNumCriteria = this.getData('ltPropWeekNumCriteria');
+		var startDate = 1;
+		var startWeekDay = this.getData('ltPropStartWeekDay');
+		var weekNum = 0;
+
+		startWeekDay = startWeekDay == undefined ? 1 : startWeekDay;
+
+		switch( weekNumCriteria ){
+			case 1:
+				startDate = 1;
+				break;
+
+			case 2:
+				//find first thursday date( can provide option for user to select 'any' day instead of thursday )
+				startDate = this.getDateOfFirstDay( currentDateObj.getFullYear(), 4 ); // 4 -> thursday
+				break;
+
+			case 3: 
+				//find first full week's first date
+				startDate = this.getDateOfFirstDay( currentDateObj.getFullYear(), startWeekDay); 
+				break;
+
+		}
+
+		var startDateObj = new Date( currentDateObj.getFullYear(), 0, startDate );
+
+		this.getDateObjToStartDay( curDateObj );
+		this.getDateObjToStartDay( startDateObj );
+
+		var itrDateObj = new Date( startDateObj );
+
+		while (itrDateObj <= curDateObj) {
+			if (itrDateObj.getDay() === startWeekDay) { 
+				weekNum += 1;
+			}
+			itrDateObj.setDate(itrDateObj.getDate() + 1); 
+		}
+
+		return weekNum;
+	}
+
+    getDateOfFirstDay(year, day) {
+		var currDateObj = new Date( year, 0, 1 );
+		for( var i=0; i<7; i++ ){
+			if( currDateObj.getDay() === day ){
+				break;
+			}  
+			currDateObj.setDate( currDateObj.getDate()+1 );
+		}
+
+		return currDateObj.getDate();
+	}
+
+    getDateObjToStartDay(curDateObj) {
+		var startOfWeekDay = this.getData('ltPropStartWeekDay');
+		startOfWeekDay = startOfWeekDay == undefined ? 1 : startOfWeekDay;
+
+		for( var it=0;it<7;it++ ){
+			if( curDateObj.getDay() == startOfWeekDay ){
+				return;
+			}
+			curDateObj.setDate( curDateObj.getDate() - 1 );
+		}
+	}
+
+    addHolidays( ){
+		var holidays = this.getData('ltPropHolidays');
+		var format = this.getData('ltPropFormat');
+		if( !holidays || !holidays.length ){
+			return;
+		}
+
+		for( var i=0;i<holidays.length;i++ ){
+			var cur = holidays[i];
+			var curDate = this.stringToDate( holidays[i], format );
+			var cell = this.$node.querySelector( 'div[data-date="' + cur + '"]' );
+			if( !cell ){
+				continue;
+			}
+			
+			var isDisabled = cell.classList.contains('lyteCalendarDisabledDate');
+			cell.classList.add('lyteCalHoliday');
+
+			if( this.getData('ltPropDisableHolidays') && !isDisabled ){
+				cell.classList.add('lyteCalendarDisabledDate');
+			}
+
+			if( this.getData('ltPropHighlightWeekendHolidays') && this.isWeekend( curDate ) ){
+				cell.classList.add('lyteCalWeekendHoliday');
+			}
+		}
+
+	}
+
+    removeExistingHolidays( ){
+		var cells = this.$node.querySelectorAll( '.lyteCalHoliday' ),
+		disabledDates = this.getDisabledDates();
+
+		for( var i=0;i<cells.length;i++ ){
+			var currentProcessedDate = this.stringToDate( cells[i].getAttribute('data-date'), this.getData('ltPropFormat') );
+
+			cells[i].classList.remove('lyteCalHoliday');
+
+			if( this.getData('ltPropDisableHolidays') && cells[i].classList.contains('lyteCalendarDisabledDate') && !this.isDisabled( currentProcessedDate, disabledDates ) ){
+				cells[i].classList.remove('lyteCalendarDisabledDate');
+			}
+
+			if( this.getData('ltPropHighlightWeekendHolidays') && cells[i].classList.contains('lyteCalWeekendHoliday') ){
+				cells[i].classList.remove('lyteCalWeekendHoliday');
+			}
+		}
+	}
+
+    static actions(arg1) {
+        return Object.assign(super.actions({
+            changeToMonthView: function( event ) {
+                this.changeToMonthView( event );
+                this.focusDrillDownButton();	
+            },
+
+            changeToMonthViewOnKeys: function( event ) {
+                var keyCode = event.keyCode,
+                SPACE_KEY = 32,
+                ENTER_KEY = 13;
+
+                if( keyCode === ENTER_KEY || keyCode === SPACE_KEY ) {
+                    this.changeToMonthView( event );
+                    this.focusDrillDownButton();	
+                }
+            },
+
+            changeToDecadeView: function( event ) {
+                this.changeToDecadeView( event );
+                this.focusActiveCell();
+            },
+
+            changeToDecadeViewOnKeys: function( event ) {
+                var keyCode = event.keyCode,
+                SPACE_KEY = 32,
+                ENTER_KEY = 13;
+
+                if( keyCode === ENTER_KEY || keyCode === SPACE_KEY ) {
+                    this.changeToDecadeView( event );
+                    this.focusActiveCell();
+                }
+            },
+
+            // Detecting a one finger swipe
+            record: function( event ) {
+                // This is stupid
+                this.setData( 'prev', false );
+
+                if( event.touches.length > 1 ) {
+                    this.setData( 'prev', true );
+
+                    return ;
+                }
+
+                var touch = event.targetTouches[ 0 ],
+                cords = {
+                    x: touch.clientX,
+                    y: touch.clientY
+                },
+                start = this.toDate().getTime();
+
+                this.setData( 'cords', cords );
+                this.setData( 'start', start );
+            },
+
+            decide: function( event ) {
+                var prev = this.getData( 'prev' );
+
+                // prev will be false only when you do a single finger swipe
+                // Multi finger swipes return out of execution
+                if( prev ) {
+                    return ;
+                }
+
+                var start = this.getData( 'cords' ),
+                x = start.x, y = start.y,
+                touch = event.changedTouches[ 0 ],
+                diffX = x - touch.clientX,
+                diffY = y - touch.clientY,
+                parent = this.$node.querySelector( '.lyteCalendarPopup' ),
+                rect = parent.getBoundingClientRect(),
+                width = rect.width,
+                height = rect.height,
+                xTolerance = width * 0.2,
+                yTolerance = height * 0.15,
+                begin = this.getData( 'start' ),
+                delay = ( this.toDate().getTime() ) - begin;
+
+                if( yTolerance > Math.abs( diffY ) 
+                    && xTolerance < Math.abs( diffX ) 
+                    && delay < 1000 
+                ) {
+                    if( diffX < 0 ) {
+                        this.changeCurrentDate( "M", -1, event );
+                    }
+                    else if( diffX > 0 ) {
+                        this.changeCurrentDate( "M", 1, event );
+                    }
+                }
+                
+            },
+
+            previousOnKeys: function( val, event ) {
+                var ENTER_KEY = 13, SPACE_KEY = 32, keyCode = event.keyCode;
+
+                if( event.keyCode === ENTER_KEY || event.keyCode === SPACE_KEY ) {
+                    this.moveToPrevious( val, event );
+                }
+
+            },
+
+            nextOnKeys: function( val, event ) {
+                var ENTER_KEY = 13, SPACE_KEY = 32, keyCode = event.keyCode;
+
+                if( keyCode === ENTER_KEY || keyCode === SPACE_KEY ) {
+                    this.moveToNext( val, event );
+                }
+            },
+
+            previous: function( val, event ) {
+                this.moveToPrevious( val, event );
+            },
+
+            next: function( val, event ) {
+                this.moveToNext( val, event );
+            },
+
+            yearSelected: function( event ) {
+                this.yearSelected( event );
+            },
+
+            monthSelected: function( event ) {
+                this.monthSelected( event );
+            },
+
+            dateSelected: function( event ) {
+                if( event.button !== 0 ) {
+                    return ;
+                }
+
+                this.makeSelection( event );
+            },
+
+            performNavigation: function( event ) {
+                var keyCode = event.keyCode,
+                ARROW_UP = 38,
+                ARROW_DOWN = 40,
+                ARROW_LEFT = 37,
+                ARROW_RIGHT = 39,
+                SPACE_KEY = 32, 
+                ENTER_KEY = 13,
+                HOME_KEY = 36,
+                END_KEY = 35,
+                PAGE_UP = 33,
+                PAGE_DOWN = 34,
+                MONTH = 'M',
+                navDirection, cellsToMove, cell = event.target, actionType;
+
+                if( this.getData( 'ltPropDisableNavigation' ) ) {
+                    return ;
+                }
+
+                switch( keyCode ) {
+                    case ARROW_UP:
+                        navDirection = 'previous';
+                        actionType = 'up';
+                        cellsToMove = this.getCellsToMove( navDirection, actionType );
+                        this.moveBackward( event, navDirection, cellsToMove );
+                        event.preventDefault();
+                        break;
+
+                    case ARROW_DOWN:
+                        navDirection = 'next';
+                        actionType = 'down';
+                        cellsToMove = this.getCellsToMove( navDirection, actionType );
+                        this.moveForward( event, navDirection, cellsToMove );
+                        event.preventDefault();
+                        break;
+
+                    case ARROW_LEFT:
+                        navDirection = 'previous';
+                        cellsToMove = -1;
+                        this.moveBackward( event, navDirection, cellsToMove );
+                        event.preventDefault();
+                        break;
+
+                    case ARROW_RIGHT:
+                        navDirection = 'next';
+                        cellsToMove = 1;
+                        this.moveForward( event, navDirection, cellsToMove );
+                        event.preventDefault();
+                        break;
+                    case SPACE_KEY:
+                    case ENTER_KEY:
+                        if( this.isDisabledCell( cell ) ) {
+                            return ;
+                        }
+
+                        this.selectHighlightedCell( event );
+                        event.preventDefault();
+                        break;
+                    case HOME_KEY:
+                        navDirection = 'previous';
+                        this.moveToFirstCell( event, navDirection );
+                        event.preventDefault();
+                        break;
+                    case END_KEY:
+                        navDirection = 'next';
+                        this.moveToLastCell( event, navDirection );
+                        event.preventDefault();
+                        break;
+                    case PAGE_UP:
+                        this.previousNavigation( MONTH, event );
+                        event.preventDefault();
+                        break;
+                    case PAGE_DOWN:
+                        this.nextNavigation( MONTH, event );
+                        event.preventDefault();
+                        break;
+                }
+            },
+
+            today: function( event ) {
+                this.revert( event );
+                this.focusActiveCell();
+            },
+
+            todayOnKey: function( event ) {
+                var keyCode = event.keyCode,
+                SPACE_KEY = 32,
+                ENTER_KEY = 13;
+
+                if( keyCode === ENTER_KEY || keyCode === SPACE_KEY ) {
+                    this.revert( event );
+                    this.focusActiveCell();
+                }
+            },
+
+            curWeek: function( event ) {
+                //should entire row be focused? its been selected for now
+                
+                this.revert( event );
+                this.selectWeek();
+                // this.focusActiveRow();
+            },
+
+            curWeekOnKey: function( event ) {
+                var keyCodes = event.keyCode;
+
+                if( keyCodes === 13 || keyCodes === 32 ) {
+                    this.revert( event );
+                    this.selectWeek();
+                    // this.focusActiveRow();
+
+                }
+            },
+
+            curMonth: function( event ) {
+                this.revertToMonth( event );
+                // this.focusActiveCell();
+            },
+
+            curMonthOnKey: function( event ) {
+                var keycode = event.keyCode;
+
+                if( keycode === 13 || keycode === 32 ) {
+                    this.revertToMonth( event );
+                    // this.focusActiveCell();
+                }
+            },
+
+            curYear: function( event ) {
+                this.revertToYear( event );
+                // this.focusActiveCell();
+            },
+
+            curYearOnKey: function( event ) {
+                var keycode = event.keyCode;
+
+                if( keycode === 13 || keycode === 32 ) {
+                    this.revertToYear( event );
+                    // this.focusActiveCell();
+                }
+            }
+        }), arg1);
+    }
+
+    static methods(arg1) {
+        return Object.assign(super.methods({
+            optionSelected : function(prop,event,selected,comp){
+                this.navigationButtonPressed = true;
+
+                if(prop == 'M') {
+                    // var index = comp.getData('ltPropOptions').indexOf(selected);
+                    var index = this.getData('monthNames').indexOf(selected);
+
+                    this.changeCurrentDate(prop, index - this.getData('viewDate').getMonth(),event);
+                }
+                else if(prop == 'Y') {
+                    this.changeCurrentDate(prop, parseInt(selected) - this.getData('viewDate').getFullYear(),event);
+                }
+            },
+
+            setClass: function( ev, comp ) {
+                var drop = comp.childComp,
+                rtl = window._lyteUiUtils.getRTL(),
+                dir = rtl ? 'right' : 'left',
+                arrow = drop.querySelector( '.lyteArrow' );
+
+                drop.classList.add( 'lyteCalendarDropdown' )
+                arrow.style[ dir ] = '20%';
+
+                if( rtl ) {
+                    arrow.style.left = 'auto';
+                }
+            }
+        }), arg1);
+    }
+
+    static observers(arg1) {
+        return Object.assign(super.observers({
+            changeBodyContainerClass: function() {
+                var container = this.$node.querySelector( '.lyteCalTableContainer' ),
+                viewType = this.getData( 'viewType' ),
+                selectionType = this.getData( 'ltPropSelectionType' );
+				var isDrilldown = this.isDrilldown();
+
+                if( isDrilldown ) {
+                    if( viewType === 'dateView' ) {
+                        container.classList.remove( 'lyteDrillCalMonthView' );
+                        container.classList.remove( 'lyteDrillCalYearView' );
+                    }
+                    else if( viewType === 'monthView' ) {
+                        container.classList.add( 'lyteDrillCalMonthView' );
+                        container.classList.remove( 'lyteDrillCalYearView' );
+                    }
+                    else if( viewType === 'decadeView' ) {
+                        container.classList.remove( 'lyteDrillCalMonthView' );
+                        container.classList.add( 'lyteDrillCalYearView' );
+                    }
+                }
+
+				this.removeSelectionStyles();
+				if( !isDrilldown ){
+					if( selectionType === 'day' ) {
+						container.classList.add( 'lyteCalDaySelType' );
+					}
+					else if( selectionType === 'week' ) {
+						container.classList.add( 'lyteCalWeekSelType' );
+					}
+					else if( selectionType === 'month' ) {
+						container.classList.add( 'lyteCalMonthSelType' );
+					}
+					else if( selectionType === 'year' ){
+						container.classList.add( 'lyteCalYearSelType' );
+					}
+					else {
+						this.setData('ltPropSelectionType','day');
+						container.classList.add( 'lyteCalDaySelType' );
+					}
+				}
+				else if( viewType === 'dateView' ){
+					if( selectionType === 'day' ) {
+						container.classList.add( 'lyteCalDaySelType' );
+					}
+					else if( selectionType === 'week' ) {
+						container.classList.add( 'lyteCalWeekSelType' );
+					}
+					else{
+						this.setData('ltPropSelectionType','day');
+						container.classList.add( 'lyteCalDaySelType' );
+					}
+				}
+
+				this.setShowYearAccToView();
+                
+            }.observes( 'viewType', 'ltPropSelectionType' ).on( 'didConnect' ),
+
+
+			yearObserver: function() {
+				this.setShowYearAccToView();
+			}.observes( 'ltPropYear' ),
+
+            activateNavigation: function() {
+                if( !this.getData( 'ltPropActivateNavigation' ) ) {
+                    return ;
+                }
+
+                this.activateRelevantCell();
+
+                this.setData( 'ltPropActivateNavigation', false );
+
+            }.observes( 'ltPropActivateNavigation' ),
+
+            setMonthAndYearDropdown : function(){
+                if(!this.getData('navYield') && this.isDropdownHeader() && this.getData('monthDD') && this.getData('yearDD')){
+                    var monthHeaders = this.getData('monthHeader').split( ' ' ),
+                    format = this.getData( 'ltPropMonthHeaderFormat' ), 
+                    lmd = /MMMM YYYY/ig,
+                    ld = /MMM YYYY/ig,
+                    monthArray = [],
+                    monthNames, value;
+
+                    if(arguments[0].item == "callFrmDidcnct"){
+                        if(lmd.test( format )){
+                            monthNames = this.getData('monthNames');
+                        }
+                        else if(ld.test(format)){
+                            monthNames = this.getData('shortHands');
+                        }
+                        for(var i=0;i<monthNames.length; i++){
+                            monthArray[i] = window._lyteUiUtils.i18n(monthNames[i]);
+                        }
+                        this.setData('monthNames',monthArray);
+                    }
+
+                    value = parseInt( monthHeaders[ 1 ] );
+
+                    this.removeOutOfRangeOption();
+                    
+                    if( this.outOfRange( value ) ) {
+                        this.addOutOfRangeOption( value );
+                    }
+                    // this.getData('monthDD').component.setData('ltPropOptions',monthArray);
+                    this.getData('monthDD').component.setData('ltPropSelected',monthHeaders[0]);
+                    this.getData('yearDD').component.setData('ltPropSelected',monthHeaders[1]);
+                }
+            }.observes('monthHeader','callFrmDidcnct'),
+
+            startWeekDayObserver: function() {
+                this.changeDaysOfWeek();
+            }.observes( 'ltPropStartWeekDay' ),
+
+            monthHeaderObserver: function() {
+                this.buildDateViewHeader();
+            }.observes( 'monthNames.[]' ),
+
+            numberOfRowsChange: function() {
+                // https://stackoverflow.com/questions/19727905/in-javascript-is-it-expensive-to-use-try-catch-blocks-even-if-an-exception-is-n
+                // No penalty in chrome >= 60
+                var numberOfRows = this.getData( 'ltPropNumberOfRows' );
+
+                try {
+                    if( numberOfRows < 5 ) {
+                        throw "Calendar failed to render. The number of rows should be greater than 4.";
+                    }
+                }
+                catch( e ) {
+                    console.error( e );
+                    return ;
+                }
+
+                this.setDatesFunction();
+            }.observes( 'ltPropNumberOfRows' ),
+
+            setDates: function( arg ) {
+                if( this.__ignoremin && arg.item == "ltPropMinDate" ){
+                    return;
+                }
+                this.setDatesFunction();
+            }.observes( 
+                'ltPropStartDate', 
+                'ltPropEndDate', 
+                'changeData', 
+                'ltPropMinDate', 
+                'ltPropMaxDate',
+                'ltPropFormat',
+                'ltPropStartWeekDay'
+            ),
+
+            executeViewDateChanges : function() {
+                if( this.getMethods( 'onViewdateChange' ) ) {
+                    this.executeMethod( 'onViewdateChange', this, this.getData( 'viewDate' ) );
+                }
+            }.observes( 'viewDate' ),
+
+            initFn: function() {
+                var self = this;
+                
+                this.addContainerClass();
+                this.checkForMoment();		
+                this.buildViewDate();
+                this.changeDaysOfWeek();
+                this.initializeCalendar();
+                this.setCalendarIdsForAria();
+
+                // set revert
+                this.$node.revertToToday = function() {
+                    self.revert();
+                };
+
+                this.$node.focusCalendar = function() {
+                    self.setData( 'ltPropActivateNavigation', true );
+                }
+
+                this.$node.revertToSelected = function() {
+                    self.revertToSelected();
+                }
+
+                // This is being internally used by CRM for their calendar
+                this.$node.getDateArray = function( viewDate ) {
+                    self.setData( 'viewDate', viewDate );
+                    self.buildDateViewContent();
+
+                    return self.getData( 'matrix' );
+                }
+
+            }.observes( 'currentDatechanged' ).on( 'init' ),
+
+            selectionTypeObserver: function() {
+				/* if an user changes ltPropSelectionType they want ltPropCurrentvalues to be preserved for other header types too*/
+
+                // if( !this.isDrilldown() ) {
+                //     this.data.ltPropCurrentDate = '';
+                //     this.data.ltPropCurrentWeek = [];
+                //     this.data.ltPropCurrentMonth = '';
+                //     this.data.ltPropCurrentYear = '';
+                // }
+
+                this.decideView();
+            }.observes( 'ltPropSelectionType' ),
+
+            changeIso : function(){
+                
+                this.isIso = true;
+                var newDate = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default().moment(this.getData('ltPropIso')).getDObj();
+                this.setData( 'viewDate', newDate );
+                if( this.isDropdownHeader() ) {
+                    this.buildYears();	
+                }
+                this.data.ltPropCurrentDate = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default().moment(this.getData('ltPropIso')).format(this.getData('ltPropFormat'),this.isYYFormat());
+                this.buildDateView();
+            }.observes('ltPropIso'),
+
+            changeViewDate: function( val ) {
+                this.isIso = false;
+                var cur = this.getData( 'ltPropCurrentDate' );
+
+                if( this.getData( 'preventObs' ) ) {
+                    return ;
+                }
+
+                // Current Date is set to empty
+                if( !cur ) {
+                    this.removeSelectedCell();
+                    return ;
+                }
+
+                // Bad current date
+                if( this.stringToDate( cur, this.getData( 'ltPropFormat' ) ) === 'Invalid Date' ) {
+                    this.removeSelectedCell();
+                    return ;
+                }
+
+                var val = this.getData( 'ltPropCurrentDate' );
+                var newDate = this.stringToDate( val, this.getData( 'ltPropFormat' ) );
+                newDate.setDate( 1 );
+
+                // if( type === 'dropdown' && !this.isWithinAllowedYears( newDate ) ) {
+                // 	return ;
+                // }
+
+                this.setData( 'viewDate', newDate );
+                if(this.isMomentSupported){
+                    this.data.ltPropIso = this.moment(newDate).format();
+                }
+                this.isFromCurrentDateObserver = true;
+                this.buildDateView();
+            }.observes( 'ltPropCurrentDate' ),
+
+            selectedDatesChanged: function() {
+                if( this.getData( 'preventObs' ) ) {
+                    return ;
+                }
+
+                // Handling invalid dates is a bit expensive
+
+                this.isFromCurrentDateObserver = true;
+                this.buildDateView();
+
+            }.observes( 'ltPropCurrentDates.[]' ),
+
+            disabledDatesChanged: function() {
+                this.isFromCurrentDateObserver = true;
+                this.buildDateView();
+            }.observes( 'ltPropDisabledDates.[]' ),
+
+            monthHeaderFormatObserver: function() {
+                this.buildDateViewHeader();
+            }.observes( 'ltPropMonthHeaderFormat' ),
+
+            weekNumberObserver: function() {
+                var parCalendar = this.$node;
+
+                if( this.getData('ltPropWeekNumber') && this.getData('viewType') === 'dateView' ){
+					if( !parCalendar.classList.contains('lyteWeekNumContainer')){
+                    	parCalendar.classList.add( 'lyteWeekNumContainer' );
+					}
+                }
+                else {
+                    parCalendar.classList.remove( 'lyteWeekNumContainer' );
+                }
+
+            }.observes( 'ltPropWeekNumber', 'viewType' ).on( 'didConnect' ),
+
+			holidayObs: function( ){
+				this.removeExistingHolidays();
+				this.addHolidays();
+			}.observes( 'ltPropHolidays' ),
+
+			curWeekObs: function( ){
+				if( this.getData('ltPropSelectionType') !== 'week' || this.getData( 'preventObs' ) || this.getData('isoFlag') ){
+					return;
+				}
+				
+				var cur = this.getData( 'ltPropCurrentWeek' );
+				if( !cur || !cur.length || cur.length < 2 ){
+					this.removeDayHighlights();
+					return;
+				}
+		
+				var viewDate = this.stringToDate( cur[0], this.getData( 'ltPropFormat' ) );
+				if( viewDate === 'Invalid Date' ){
+					this.removeDayHighlights();
+					return;
+				}
+		
+				viewDate.setDate(1);
+				this.setData( 'viewDate', viewDate );
+		
+				this.isFromCurrentDateObserver = true;
+				this.buildDateView();
+			}.observes( 'ltPropCurrentWeek' )
+        }), arg1);
+    }
+
+    _() {
+        _;
+    }
+}
+
+LyteCalendarComponent._template = "<template tag-name=\"lyte-calendar\"> <div class=\"{{containerClass}}\" ontouchstart=\"{{action('record',event)}}\" ontouchend=\"{{action('decide',event)}}\"> <div class=\"lyteCalendarView\"> <div> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{navYield}}\" is=\"case\" lc-id=\"lc_id_0\"> <lyte-yield yield-name=\"navigator\"></lyte-yield> </template><template default=\"\"> <div class=\"lyteCalendarNavigator {{if(ifEquals(ltPropHeaderAlignType,&quot;centerdate&quot;),&quot;lyteCalHeaderCenterAlign&quot;,&quot;&quot;)}}\"> <span id=\"{{monthDropdownId}}\" class=\"lyteVisuallyHidden\">{{lyteUiI18n(\"lyte.calendar.choose.month\")}}</span> <span id=\"{{yearDropdownId}}\" class=\"lyteVisuallyHidden\">{{lyteUiI18n(\"lyte.calendar.choose.year\")}}</span> <span class=\"lyteVisuallyHidden\" aria-live=\"polite\" id=\"{{headerId}}\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(viewType,'===','dateView')}}\" is=\"case\" lc-id=\"lc_id_0\"> <span>{{lyteUiGetMonthOrYear(monthHeader,\"M\")}}</span><span>{{lyteUiGetMonthOrYear(monthHeader,\"Y\")}}</span> </template><template case=\"{{expHandlers(viewType,'===','monthView')}}\" is=\"case\" lc-id=\"lc_id_1\"> <span>{{currentYear}}</span> </template><template default=\"\"> <span>{{decadeStart}} - {{decadeEnd}}</span> </template></template> </span> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{ifNotEquals(ltPropHeaderAlignType,&quot;centerdate&quot;)}}\" is=\"case\" lc-id=\"lc_id_0\"> <span class=\"lyteCalsCalMon\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(expHandlers(ltPropHeaderType,'===','dropdown'),'||',expHandlers(ltPropHeaderType,'===','picklist'))}}\" is=\"case\" lc-id=\"lc_id_0\"> <lyte-dropdown lt-prop-aria-button=\"{{monthAriaObj}}\" lt-prop-freeze=\"false\" lt-prop=\"{{stringify(ltPropDropdown)}}\" on-show=\"{{method('setClass')}}\" class=\"lyteCalMonthDD\" on-option-selected=\"{{method('optionSelected','M')}}\"> <template is=\"registerYield\" yield-name=\"yield\"> <lyte-drop-box> <lyte-drop-body> <template items=\"{{monthNames}}\" item=\"item\" index=\"index\" is=\"for\" _new=\"true\"> <lyte-drop-item data-value=\"{{item}}\">{{item}}</lyte-drop-item> </template> </lyte-drop-body> </lyte-drop-box> </template> </lyte-dropdown> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(ltPropHeaderType,'===','dropdown')}}\" is=\"case\" lc-id=\"lc_id_0\"> <lyte-dropdown lt-prop-aria-button=\"{{yearAriaObj}}\" lt-prop-freeze=\"false\" lt-prop=\"{{stringify(ltPropDropdown)}}\" on-show=\"{{method('setClass')}}\" class=\"lyteCalYearDD\" on-option-selected=\"{{method('optionSelected','Y')}}\"> <template is=\"registerYield\" yield-name=\"yield\"> <lyte-drop-box> <lyte-drop-body> <template items=\"{{years}}\" item=\"item\" index=\"index\" is=\"for\" _new=\"true\"> <lyte-drop-item data-value=\"{{item}}\">{{item}}</lyte-drop-item> </template> </lyte-drop-body> </lyte-drop-box> </template> </lyte-dropdown> </template><template default=\"\"> <lyte-picklist lt-prop-options=\"{{years}}\" lt-prop-dropdown=\"{&quot;freeze&quot;: false, &quot;callout&quot;: true}\" class=\"lyteCalYearDD\" on-option-select=\"{{method('optionSelected','Y')}}\" on-show=\"{{method('setClass')}}\"> </lyte-picklist> </template></template> </template><template case=\"{{expHandlers(ltPropHeaderType,'===','drilldown')}}\" is=\"case\" lc-id=\"lc_id_1\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(viewType,'===','dateView')}}\" is=\"case\" lc-id=\"lc_id_0\"> <span aria-label=\"{{lyteUiI18n('lyte.calendar.monthview.drilldown.button')}}\" tabindex=\"0\" role=\"button\" class=\"lyteDrillCalHeaderButton\" onclick=\"{{action('changeToMonthView',event)}}\" onkeydown=\"{{action('changeToMonthViewOnKeys',event)}}\"> <span class=\"lyteCalsCalMonth\">{{lyteUiGetMonthOrYear(monthHeader,\"M\")}}</span> <span class=\"lyteCalsCalYear\">{{lyteUiGetMonthOrYear(monthHeader,\"Y\")}}</span> </span> </template><template case=\"{{expHandlers(viewType,'===','monthView')}}\" is=\"case\" lc-id=\"lc_id_1\"> <span aria-label=\"{{lyteUiI18n('lyte.calendar.decadeview.drilldown.button')}}\" tabindex=\"0\" role=\"button\" class=\"lyteDrillCalHeaderButton\" onclick=\"{{action('changeToDecadeView',event)}}\" onkeydown=\"{{action('changeToDecadeViewOnKeys',event)}}\"> <span class=\"lyteCalsCalYear\">{{currentYear}}</span> </span> </template><template case=\"{{expHandlers(viewType,'===','decadeView')}}\" is=\"case\" lc-id=\"lc_id_2\"> <span class=\"lyteDrillCalHeaderButton lyteDrillCalYearListHeader\"> {{decadeStart}} - {{decadeEnd}} </span> </template></template> </template><template case=\"{{expHandlers(expHandlers(ltPropSelectionType,'===','month'),'||',expHandlers(ltPropSelectionType,'===','year'))}}\" is=\"case\" lc-id=\"lc_id_2\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(viewType,'===','monthView')}}\" is=\"case\" lc-id=\"lc_id_0\"> <span> <span class=\"lyteCalsCalYear\">{{currentYear}}</span> </span> </template><template case=\"{{expHandlers(viewType,'===','decadeView')}}\" is=\"case\" lc-id=\"lc_id_1\"> <span class=\"lyteDrillCalHeaderButton lyteDrillCalYearListHeader\"> {{decadeStart}} - {{decadeEnd}} </span> </template></template> </template><template default=\"\"> <span class=\"lyteCalsCalMonth\">{{lyteUiGetMonthOrYear(monthHeader,\"M\")}}</span> <span class=\"lyteCalsCalYear\">{{lyteUiGetMonthOrYear(monthHeader,\"Y\")}}</span> </template></template> </span> </template></template> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{ifNotEquals(ltPropHeaderType,&quot;dropdown&quot;)}}\" is=\"case\" lc-id=\"lc_id_0\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(expHandlers(showYear,'&amp;&amp;',expHandlers(ltPropSelectionType,'!==','month')),'&amp;&amp;',expHandlers(ltPropSelectionType,'!==','year'))}}\" is=\"case\" lc-id=\"lc_id_0\"> <span role=\"button\" tabindex=\"0\" class=\"lyteCalNav lyteCalyearNavLft\" onclick=\"{{action('previous','Y',event)}}\" onkeydown=\"{{action('previousOnKeys','Y',event)}}\"> <span class=\"lyteVisuallyHidden\">{{lyteUiI18n('lyte.calendar.previous.year')}}</span> </span> </template></template> </template></template> <span role=\"button\" class=\"lyteCalNav lyteCaldLft {{lyteUiDisableCalendarNav(viewDate,'previous')}}\" tabindex=\"0\" onclick=\"{{action('previous','M',event)}}\" onkeydown=\"{{action('previousOnKeys','M',event)}}\"> <span class=\"lyteVisuallyHidden\">{{lyteUiI18n('lyte.calendar.previous.month')}}</span> </span> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{ifEquals(ltPropHeaderAlignType,&quot;centerdate&quot;)}}\" is=\"case\" lc-id=\"lc_id_0\"> <span class=\"lyteCalsCalMon\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(expHandlers(ltPropHeaderType,'===','dropdown'),'||',expHandlers(ltPropHeaderType,'===','picklist'))}}\" is=\"case\" lc-id=\"lc_id_0\"> <lyte-dropdown lt-prop-aria-button=\"{{monthAriaObj}}\" lt-prop-freeze=\"false\" lt-prop=\"{{stringify(ltPropDropdown)}}\" on-show=\"{{method('setClass')}}\" class=\"lyteCalMonthDD\" on-option-selected=\"{{method('optionSelected','M')}}\"> <template is=\"registerYield\" yield-name=\"yield\"> <lyte-drop-box> <lyte-drop-body> <template items=\"{{monthNames}}\" item=\"item\" index=\"index\" is=\"for\" _new=\"true\"> <lyte-drop-item data-value=\"{{item}}\">{{item}}</lyte-drop-item> </template> </lyte-drop-body> </lyte-drop-box> </template> </lyte-dropdown> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(ltPropHeaderType,'===','dropdown')}}\" is=\"case\" lc-id=\"lc_id_0\"> <lyte-dropdown lt-prop-aria-button=\"{{yearAriaObj}}\" lt-prop-freeze=\"false\" lt-prop=\"{{stringify(ltPropDropdown)}}\" on-show=\"{{method('setClass')}}\" class=\"lyteCalYearDD\" on-option-selected=\"{{method('optionSelected','Y')}}\"> <template is=\"registerYield\" yield-name=\"yield\"> <lyte-drop-box> <lyte-drop-body> <template items=\"{{years}}\" item=\"item\" index=\"index\" is=\"for\" _new=\"true\"> <lyte-drop-item data-value=\"{{item}}\">{{item}}</lyte-drop-item> </template> </lyte-drop-body> </lyte-drop-box> </template> </lyte-dropdown> </template><template default=\"\"> <lyte-picklist lt-prop-options=\"{{years}}\" lt-prop-dropdown=\"{&quot;freeze&quot;: false, &quot;callout&quot;: true}\" class=\"lyteCalYearDD\" on-option-select=\"{{method('optionSelected','Y')}}\" on-show=\"{{method('setClass')}}\"> </lyte-picklist> </template></template> </template><template case=\"{{expHandlers(ltPropHeaderType,'===','drilldown')}}\" is=\"case\" lc-id=\"lc_id_1\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(viewType,'===','dateView')}}\" is=\"case\" lc-id=\"lc_id_0\"> <span aria-label=\"{{lyteUiI18n('lyte.calendar.monthview.drilldown.button')}}\" tabindex=\"0\" role=\"button\" class=\"lyteDrillCalHeaderButton\" onclick=\"{{action('changeToMonthView',event)}}\" onkeydown=\"{{action('changeToMonthViewOnKeys',event)}}\"> <span class=\"lyteCalsCalMonth\">{{lyteUiGetMonthOrYear(monthHeader,\"M\")}}</span> <span class=\"lyteCalsCalYear\">{{lyteUiGetMonthOrYear(monthHeader,\"Y\")}}</span> </span> </template><template case=\"{{expHandlers(viewType,'===','monthView')}}\" is=\"case\" lc-id=\"lc_id_1\"> <span aria-label=\"{{lyteUiI18n('lyte.calendar.decadeview.drilldown.button')}}\" tabindex=\"0\" role=\"button\" class=\"lyteDrillCalHeaderButton\" onclick=\"{{action('changeToDecadeView',event)}}\" onkeydown=\"{{action('changeToDecadeViewOnKeys',event)}}\"> <span class=\"lyteCalsCalYear\">{{currentYear}}</span> </span> </template><template case=\"{{expHandlers(viewType,'===','decadeView')}}\" is=\"case\" lc-id=\"lc_id_2\"> <span class=\"lyteDrillCalHeaderButton lyteDrillCalYearListHeader\"> {{decadeStart}} - {{decadeEnd}} </span> </template></template> </template><template case=\"{{expHandlers(expHandlers(ltPropSelectionType,'===','month'),'||',expHandlers(ltPropSelectionType,'===','year'))}}\" is=\"case\" lc-id=\"lc_id_2\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(viewType,'===','monthView')}}\" is=\"case\" lc-id=\"lc_id_0\"> <span> <span class=\"lyteCalsCalYear\">{{currentYear}}</span> </span> </template><template case=\"{{expHandlers(viewType,'===','decadeView')}}\" is=\"case\" lc-id=\"lc_id_1\"> <span class=\"lyteDrillCalHeaderButton lyteDrillCalYearListHeader\"> {{decadeStart}} - {{decadeEnd}} </span> </template></template> </template><template default=\"\"> <span class=\"lyteCalsCalMonth\">{{lyteUiGetMonthOrYear(monthHeader,\"M\")}}</span> <span class=\"lyteCalsCalYear\">{{lyteUiGetMonthOrYear(monthHeader,\"Y\")}}</span> </template></template> </span> </template></template> <span role=\"button\" class=\"lyteCalNav lyteCaldRgt {{lyteUiDisableCalendarNav(viewDate,'next')}}\" tabindex=\"0\" onkeydown=\"{{action('nextOnKeys','M',event)}}\" onclick=\"{{action('next','M',event)}}\"> <span class=\"lyteVisuallyHidden\">{{lyteUiI18n('lyte.calendar.next.month')}}</span> </span> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{ifNotEquals(ltPropHeaderType,&quot;dropdown&quot;)}}\" is=\"case\" lc-id=\"lc_id_0\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(expHandlers(showYear,'&amp;&amp;',expHandlers(ltPropSelectionType,'!==','month')),'&amp;&amp;',expHandlers(ltPropSelectionType,'!==','year'))}}\" is=\"case\" lc-id=\"lc_id_0\"> <span role=\"button\" class=\"lyteCalNav lyteCalyearNavRgt\" tabindex=\"0\" onkeydown=\"{{action('nextOnKeys','Y',event)}}\" onclick=\"{{action('next','Y',event)}}\"> <span class=\"lyteVisuallyHidden\">{{lyteUiI18n('lyte.calendar.next.year')}}</span> </span> </template></template> </template></template> </div> </template></template> </div> <div class=\"lyteCalTableContainer\" role=\"grid\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{ltPropBodyYield}}\" is=\"case\" lc-id=\"lc_id_0\"> <lyte-yield yield-name=\"body\"></lyte-yield> </template><template default=\"\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(viewType,'===','dateView')}}\" is=\"case\" lc-id=\"lc_id_0\"> <div role=\"row\" class=\"lyteCalTableRowHeader\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{ltPropWeekNumber}}\" is=\"case\" lc-id=\"lc_id_0\"> <div role=\"columnheader\" class=\"lyteCalTableCellHeader lyteWeekNumberGrid\"><span>{{ltPropWeekNumHeader}}</span></div> </template></template> <template items=\"{{daysOfWeek}}\" item=\"day\" index=\"idod\" is=\"for\" _new=\"true\"> <div role=\"columnheader\" aria-label=\"{{day.title}}\" class=\"{{day.class}}\" id=\"{{day.id}}\">{{lyteUiI18n(day.day)}}</div> </template> </div> </template></template> <div class=\"lyteCalTableRowGroup\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(viewType,'===','dateView')}}\" is=\"case\" lc-id=\"lc_id_0\"> <template items=\"{{matrix}}\" item=\"vector\" index=\"rowid\" is=\"for\" _new=\"true\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(lyteUiCheckEmpty(vector),'!')}}\" is=\"case\" lc-id=\"lc_id_0\"> <div class=\"lyteCalTableRow\" role=\"row\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{ltPropWeekNumber}}\" is=\"case\" lc-id=\"lc_id_0\"> <div role=\"gridcell\" tabindex=\"-1\" class=\"{{weeknum[rowid].class}}\" lt-prop-title=\"Week Number\" lt-prop-tooltip-config=\"{&quot;position&quot; : &quot;right&quot;, &quot;appearance&quot; : &quot;box&quot;}\"><span>{{if(ifNotEquals(weeknum[rowid].val,0),weeknum[rowid].val,'')}}</span></div> </template></template> <template items=\"{{vector}}\" item=\"date\" index=\"cellid\" is=\"for\" _new=\"true\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(lyteUiCheckInRange(ltPropMinDate,ltPropMaxDate,date.val,ltPropFormat),'&amp;&amp;',expHandlers(lyteUiDisabledDates(date,ltPropDisabledDates),'!'))}}\" is=\"case\" lc-id=\"lc_id_0\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{date.emptyBlock}}\" is=\"case\" lc-id=\"lc_id_0\"> <div role=\"gridcell\" class=\"lyteCalEmpty\" data-selectable=\"false\"></div> </template><template default=\"\"> <div role=\"gridcell\" tabindex=\"-1\" id=\"{{date.id}}\" aria-labelledby=\"{{concat(date.id,' ',headerId,' ',daysOfWeek[cellid]['id'])}}\" onkeydown=\"{{action('performNavigation',event)}}\" onclick=\"{{action('dateSelected',event)}}\" class=\"{{date.clsname}}\" data-date=\"{{date.val}}\" data-selectable=\"true\"><span class=\"lyteCalDateSpan\">{{date.date}}</span></div> </template></template> </template><template default=\"\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{date.emptyBlock}}\" is=\"case\" lc-id=\"lc_id_0\"> <div role=\"gridcell\" class=\"lyteCalEmpty\" data-selectable=\"false\"></div> </template><template default=\"\"> <div role=\"gridcell\" tabindex=\"-1\" id=\"{{date.id}}\" aria-labelledby=\"{{concat(date.id,' ',headerId,' ',daysOfWeek[cellid]['id'])}}\" aria-disabled=\"true\" onkeydown=\"{{action('performNavigation',event)}}\" data-date=\"{{date.val}}\" class=\"{{date.clsname}}\" data-selectable=\"false\"><span class=\"lyteCalDateSpan\">{{date.date}}</span></div> </template></template> </template></template> </template> </div> </template></template> </template> </template><template case=\"{{expHandlers(viewType,'===','monthView')}}\" is=\"case\" lc-id=\"lc_id_1\"> <template items=\"{{monthViewData}}\" item=\"row\" index=\"rowIndex\" is=\"for\" _new=\"true\"> <div class=\"lyteCalTableRow\"> <template items=\"{{row}}\" item=\"column\" index=\"columnIndex\" is=\"for\" _new=\"true\"> <div aria-label=\"{{lyteUiI18n(lyteUiGetLinearIndex(ariaMonthNames,rowIndex,columnIndex))}}\" role=\"gridcell\" tabindex=\"-1\" onkeydown=\"{{action('performNavigation',event)}}\" onclick=\"{{action('monthSelected',event)}}\" class=\"{{column['class']}}\" data-date=\"{{column['systemValue']}}\"> {{column['displayValue']}} </div> </template> </div> </template> </template><template case=\"{{expHandlers(viewType,'===','decadeView')}}\" is=\"case\" lc-id=\"lc_id_2\"> <template items=\"{{decadeViewData}}\" item=\"row\" index=\"rowIndex\" is=\"for\" _new=\"true\"> <div class=\"lyteCalTableRow\"> <template items=\"{{row}}\" item=\"column\" index=\"columnIndex\" is=\"for\" _new=\"true\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(column.emptyBlock,'!')}}\" is=\"case\" lc-id=\"lc_id_0\"> <div role=\"gridcell\" tabindex=\"-1\" onkeydown=\"{{action('performNavigation',event)}}\" onclick=\"{{action('yearSelected',event)}}\" class=\"lyteCalTableCell {{column.class}}\" data-date=\"{{column.year}}\"> {{column.year}} </div> </template><template default=\"\"> <div role=\"gridcell\" class=\"lyteCalEmpty\"> </div> </template></template> </template> </div> </template> </template></template> </div> </template></template> </div> <div> <div class=\"lyteCalBtns\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(expHandlers(showToday,'&amp;&amp;',ltPropShowToday),'&amp;&amp;',expHandlers(viewType,'===','monthView'))}}\" is=\"case\" lc-id=\"lc_id_0\"> <p role=\"button\" tabindex=\"0\" onkeydown=\"{{action('curMonthOnKey',event)}}\" class=\"lyteCalCurrentDate\"><a onclick=\"{{action('curMonth',event)}}\">{{lyteUiI18n('Current Month')}}</a></p> </template><template case=\"{{expHandlers(expHandlers(showToday,'&amp;&amp;',ltPropShowToday),'&amp;&amp;',expHandlers(viewType,'===','decadeView'))}}\" is=\"case\" lc-id=\"lc_id_1\"> <p role=\"button\" tabindex=\"0\" onkeydown=\"{{action('curYearOnKey',event)}}\" class=\"lyteCalCurrentDate\"><a onclick=\"{{action('curYear',event)}}\">{{lyteUiI18n('Current Year')}}</a></p> </template><template case=\"{{expHandlers(expHandlers(expHandlers(showToday,'&amp;&amp;',ltPropShowToday),'&amp;&amp;',expHandlers(viewType,'===','dateView')),'&amp;&amp;',expHandlers(ltPropSelectionType,'===','week'))}}\" is=\"case\" lc-id=\"lc_id_2\"> <p role=\"button\" tabindex=\"0\" onkeydown=\"{{action('curWeekOnKey',event)}}\" class=\"lyteCalCurrentDate\"><a onclick=\"{{action('curWeek',event)}}\">{{lyteUiI18n('Current Week')}}</a></p> </template><template case=\"{{expHandlers(showToday,'&amp;&amp;',ltPropShowToday)}}\" is=\"case\" lc-id=\"lc_id_3\"> <p role=\"button\" tabindex=\"0\" onkeydown=\"{{action('todayOnKey',event)}}\" class=\"lyteCalCurrentDate\"><a onclick=\"{{action('today',event)}}\">{{lyteUiI18n('today')}}</a></p> </template></template> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{ltPropYield}}\" is=\"case\" lc-id=\"lc_id_0\"> <lyte-yield yield-name=\"footer\"></lyte-yield> </template></template> </div> </div> </div> </div> </template>";;
+LyteCalendarComponent._dynamicNodes = [{"t":"a","p":[1]},{"t":"s","p":[1,1,1,1],"c":{"lc_id_0":{"dN":[{"t":"i","p":[1],"in":0,"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{"dN":[{"t":"a","p":[1],"cn":"default"},{"t":"a","p":[1,1],"cn":"default"},{"t":"tX","p":[1,1,0],"cn":"default"},{"t":"a","p":[1,3],"cn":"default"},{"t":"tX","p":[1,3,0],"cn":"default"},{"t":"a","p":[1,5],"cn":"default"},{"t":"s","p":[1,5,1],"c":{"lc_id_0":{"dN":[{"t":"tX","p":[1,0],"cn":"lc_id_0"},{"t":"tX","p":[2,0],"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true},"lc_id_1":{"dN":[{"t":"tX","p":[1,0],"cn":"lc_id_1"}],"cdp":{"t":"a","p":[1]},"dcn":true}},"d":{"dN":[{"t":"tX","p":[1,0],"cn":"default"},{"t":"tX","p":[1,2],"cn":"default"}]},"dc":{"lc_id_0":{},"lc_id_1":{},"default":{}},"hd":true,"co":["lc_id_0","lc_id_1"],"in":4,"sibl":[3],"cn":"default"},{"t":"s","p":[1,7],"c":{"lc_id_0":{"dN":[{"t":"s","p":[1,1],"c":{"lc_id_0":{"dN":[{"t":"a","p":[1],"cn":"lc_id_0"},{"t":"r","p":[1,1],"dN":[{"t":"a","p":[1,1,1]},{"t":"f","p":[1,1,1],"dN":[{"t":"a","p":[1]},{"t":"tX","p":[1,0]},{"t":"cD","p":[1],"in":0}],"dc":[0],"hc":true,"trans":true,"in":2,"sibl":[1]},{"t":"cD","p":[1,1],"in":1,"sibl":[0]},{"t":"cD","p":[1],"in":0}],"dc":[2,1,0],"hc":true,"trans":true,"in":2,"sibl":[1],"cn":"lc_id_0"},{"t":"cD","p":[1],"in":1,"sibl":[0],"cn":"lc_id_0"},{"t":"s","p":[3],"c":{"lc_id_0":{"dN":[{"t":"a","p":[1],"cn":"lc_id_0"},{"t":"r","p":[1,1],"dN":[{"t":"a","p":[1,1,1]},{"t":"f","p":[1,1,1],"dN":[{"t":"a","p":[1]},{"t":"tX","p":[1,0]},{"t":"cD","p":[1],"in":0}],"dc":[0],"hc":true,"trans":true,"in":2,"sibl":[1]},{"t":"cD","p":[1,1],"in":1,"sibl":[0]},{"t":"cD","p":[1],"in":0}],"dc":[2,1,0],"hc":true,"trans":true,"in":1,"sibl":[0],"cn":"lc_id_0"},{"t":"cD","p":[1],"in":0,"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{"dN":[{"t":"a","p":[1],"cn":"default"},{"t":"cD","p":[1],"in":0,"cn":"default"}]},"dc":{"lc_id_0":{"dc":[1,0],"hc":true,"trans":true},"default":{"dc":[0],"hc":true,"trans":true}},"hd":true,"co":["lc_id_0"],"hc":true,"trans":true,"in":0,"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true},"lc_id_1":{"dN":[{"t":"s","p":[1],"c":{"lc_id_0":{"dN":[{"t":"a","p":[1],"cn":"lc_id_0"},{"t":"tX","p":[1,1,0],"cn":"lc_id_0"},{"t":"tX","p":[1,3,0],"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true},"lc_id_1":{"dN":[{"t":"a","p":[1],"cn":"lc_id_1"},{"t":"tX","p":[1,1,0],"cn":"lc_id_1"}],"cdp":{"t":"a","p":[1]},"dcn":true},"lc_id_2":{"dN":[{"t":"tX","p":[1,1],"cn":"lc_id_2"},{"t":"tX","p":[1,3],"cn":"lc_id_2"}],"cdp":{"t":"a","p":[2]},"dcn":true}},"d":{},"dc":{"lc_id_0":{},"lc_id_1":{},"lc_id_2":{}},"hd":true,"co":["lc_id_0","lc_id_1","lc_id_2"],"cn":"lc_id_1"}],"cdp":{"t":"a","p":[1]},"dcn":true},"lc_id_2":{"dN":[{"t":"s","p":[1],"c":{"lc_id_0":{"dN":[{"t":"tX","p":[1,1,0],"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true},"lc_id_1":{"dN":[{"t":"tX","p":[1,1],"cn":"lc_id_1"},{"t":"tX","p":[1,3],"cn":"lc_id_1"}],"cdp":{"t":"a","p":[1]},"dcn":true}},"d":{},"dc":{"lc_id_0":{},"lc_id_1":{}},"hd":true,"co":["lc_id_0","lc_id_1"],"cn":"lc_id_2"}],"cdp":{"t":"a","p":[2]},"dcn":true}},"d":{"dN":[{"t":"tX","p":[1,0],"cn":"default"},{"t":"tX","p":[3,0],"cn":"default"}]},"dc":{"lc_id_0":{"dc":[2,1,0],"hc":true,"trans":true},"lc_id_1":{},"lc_id_2":{},"default":{}},"hd":true,"co":["lc_id_0","lc_id_1","lc_id_2"],"hc":true,"trans":true,"in":0,"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{},"dc":{"lc_id_0":{"dc":[0],"hc":true,"trans":true}},"hd":true,"co":["lc_id_0"],"hc":true,"trans":true,"in":3,"sibl":[2],"cn":"default"},{"t":"s","p":[1,9],"c":{"lc_id_0":{"dN":[{"t":"s","p":[1],"c":{"lc_id_0":{"dN":[{"t":"a","p":[1],"cn":"lc_id_0"},{"t":"tX","p":[1,1,0],"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{},"dc":{"lc_id_0":{}},"hd":true,"co":["lc_id_0"],"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{},"dc":{"lc_id_0":{}},"hd":true,"co":["lc_id_0"],"in":2,"sibl":[1],"cn":"default"},{"t":"a","p":[1,11],"cn":"default"},{"t":"tX","p":[1,11,1,0],"cn":"default"},{"t":"s","p":[1,13],"c":{"lc_id_0":{"dN":[{"t":"s","p":[1,1],"c":{"lc_id_0":{"dN":[{"t":"a","p":[1],"cn":"lc_id_0"},{"t":"r","p":[1,1],"dN":[{"t":"a","p":[1,1,1]},{"t":"f","p":[1,1,1],"dN":[{"t":"a","p":[1]},{"t":"tX","p":[1,0]},{"t":"cD","p":[1],"in":0}],"dc":[0],"hc":true,"trans":true,"in":2,"sibl":[1]},{"t":"cD","p":[1,1],"in":1,"sibl":[0]},{"t":"cD","p":[1],"in":0}],"dc":[2,1,0],"hc":true,"trans":true,"in":2,"sibl":[1],"cn":"lc_id_0"},{"t":"cD","p":[1],"in":1,"sibl":[0],"cn":"lc_id_0"},{"t":"s","p":[3],"c":{"lc_id_0":{"dN":[{"t":"a","p":[1],"cn":"lc_id_0"},{"t":"r","p":[1,1],"dN":[{"t":"a","p":[1,1,1]},{"t":"f","p":[1,1,1],"dN":[{"t":"a","p":[1]},{"t":"tX","p":[1,0]},{"t":"cD","p":[1],"in":0}],"dc":[0],"hc":true,"trans":true,"in":2,"sibl":[1]},{"t":"cD","p":[1,1],"in":1,"sibl":[0]},{"t":"cD","p":[1],"in":0}],"dc":[2,1,0],"hc":true,"trans":true,"in":1,"sibl":[0],"cn":"lc_id_0"},{"t":"cD","p":[1],"in":0,"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{"dN":[{"t":"a","p":[1],"cn":"default"},{"t":"cD","p":[1],"in":0,"cn":"default"}]},"dc":{"lc_id_0":{"dc":[1,0],"hc":true,"trans":true},"default":{"dc":[0],"hc":true,"trans":true}},"hd":true,"co":["lc_id_0"],"hc":true,"trans":true,"in":0,"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true},"lc_id_1":{"dN":[{"t":"s","p":[1],"c":{"lc_id_0":{"dN":[{"t":"a","p":[1],"cn":"lc_id_0"},{"t":"tX","p":[1,1,0],"cn":"lc_id_0"},{"t":"tX","p":[1,3,0],"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true},"lc_id_1":{"dN":[{"t":"a","p":[1],"cn":"lc_id_1"},{"t":"tX","p":[1,1,0],"cn":"lc_id_1"}],"cdp":{"t":"a","p":[1]},"dcn":true},"lc_id_2":{"dN":[{"t":"tX","p":[1,1],"cn":"lc_id_2"},{"t":"tX","p":[1,3],"cn":"lc_id_2"}],"cdp":{"t":"a","p":[2]},"dcn":true}},"d":{},"dc":{"lc_id_0":{},"lc_id_1":{},"lc_id_2":{}},"hd":true,"co":["lc_id_0","lc_id_1","lc_id_2"],"cn":"lc_id_1"}],"cdp":{"t":"a","p":[1]},"dcn":true},"lc_id_2":{"dN":[{"t":"s","p":[1],"c":{"lc_id_0":{"dN":[{"t":"tX","p":[1,1,0],"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true},"lc_id_1":{"dN":[{"t":"tX","p":[1,1],"cn":"lc_id_1"},{"t":"tX","p":[1,3],"cn":"lc_id_1"}],"cdp":{"t":"a","p":[1]},"dcn":true}},"d":{},"dc":{"lc_id_0":{},"lc_id_1":{}},"hd":true,"co":["lc_id_0","lc_id_1"],"cn":"lc_id_2"}],"cdp":{"t":"a","p":[2]},"dcn":true}},"d":{"dN":[{"t":"tX","p":[1,0],"cn":"default"},{"t":"tX","p":[3,0],"cn":"default"}]},"dc":{"lc_id_0":{"dc":[2,1,0],"hc":true,"trans":true},"lc_id_1":{},"lc_id_2":{},"default":{}},"hd":true,"co":["lc_id_0","lc_id_1","lc_id_2"],"hc":true,"trans":true,"in":0,"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{},"dc":{"lc_id_0":{"dc":[0],"hc":true,"trans":true}},"hd":true,"co":["lc_id_0"],"hc":true,"trans":true,"in":1,"sibl":[0],"cn":"default"},{"t":"a","p":[1,15],"cn":"default"},{"t":"tX","p":[1,15,1,0],"cn":"default"},{"t":"s","p":[1,17],"c":{"lc_id_0":{"dN":[{"t":"s","p":[1],"c":{"lc_id_0":{"dN":[{"t":"a","p":[1],"cn":"lc_id_0"},{"t":"tX","p":[1,1,0],"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{},"dc":{"lc_id_0":{}},"hd":true,"co":["lc_id_0"],"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{},"dc":{"lc_id_0":{}},"hd":true,"co":["lc_id_0"],"in":0,"cn":"default"}]},"dc":{"lc_id_0":{"dc":[0],"hc":true,"trans":true},"default":{"dc":[3,1],"hc":true,"trans":true}},"hd":true,"co":["lc_id_0"],"hc":true,"trans":true,"in":3,"sibl":[2]},{"t":"s","p":[1,1,3,1],"c":{"lc_id_0":{"dN":[{"t":"i","p":[1],"in":0,"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{"dN":[{"t":"s","p":[1],"c":{"lc_id_0":{"dN":[{"t":"s","p":[1,1],"c":{"lc_id_0":{"dN":[{"t":"tX","p":[1,0,0],"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{},"dc":{"lc_id_0":{}},"hd":true,"co":["lc_id_0"],"sibl":[0],"cn":"lc_id_0"},{"t":"a","p":[1,3],"cn":"lc_id_0"},{"t":"f","p":[1,3],"dN":[{"t":"a","p":[1]},{"t":"tX","p":[1,0]}],"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{},"dc":{"lc_id_0":{}},"hd":true,"co":["lc_id_0"],"sibl":[0],"cn":"default"},{"t":"s","p":[3,1],"c":{"lc_id_0":{"dN":[{"t":"a","p":[1],"cn":"lc_id_0"},{"t":"f","p":[1],"dN":[{"t":"s","p":[1],"c":{"lc_id_0":{"dN":[{"t":"s","p":[1,1],"c":{"lc_id_0":{"dN":[{"t":"a","p":[1],"cn":"lc_id_0"},{"t":"tX","p":[1,0,0],"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{},"dc":{"lc_id_0":{}},"hd":true,"co":["lc_id_0"],"sibl":[0],"cn":"lc_id_0"},{"t":"a","p":[1,3],"cn":"lc_id_0"},{"t":"f","p":[1,3],"dN":[{"t":"s","p":[1],"c":{"lc_id_0":{"dN":[{"t":"s","p":[1],"c":{"lc_id_0":{"dN":[],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{"dN":[{"t":"a","p":[1],"cn":"default"},{"t":"tX","p":[1,0,0],"cn":"default"}]},"dc":{"lc_id_0":{},"default":{}},"hd":true,"co":["lc_id_0"],"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{"dN":[{"t":"s","p":[1],"c":{"lc_id_0":{"dN":[],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{"dN":[{"t":"a","p":[1],"cn":"default"},{"t":"tX","p":[1,0,0],"cn":"default"}]},"dc":{"lc_id_0":{},"default":{}},"hd":true,"co":["lc_id_0"],"cn":"default"}]},"dc":{"lc_id_0":{},"default":{}},"hd":true,"co":["lc_id_0"]}],"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{},"dc":{"lc_id_0":{}},"hd":true,"co":["lc_id_0"]}],"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true},"lc_id_1":{"dN":[{"t":"a","p":[1],"cn":"lc_id_1"},{"t":"f","p":[1],"dN":[{"t":"a","p":[1,1]},{"t":"f","p":[1,1],"dN":[{"t":"a","p":[1]},{"t":"tX","p":[1,1]}]}],"cn":"lc_id_1"}],"cdp":{"t":"a","p":[1]},"dcn":true},"lc_id_2":{"dN":[{"t":"a","p":[1],"cn":"lc_id_2"},{"t":"f","p":[1],"dN":[{"t":"a","p":[1,1]},{"t":"f","p":[1,1],"dN":[{"t":"s","p":[1],"c":{"lc_id_0":{"dN":[{"t":"a","p":[1],"cn":"lc_id_0"},{"t":"tX","p":[1,1],"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{"dN":[]},"dc":{"lc_id_0":{},"default":{}},"hd":true,"co":["lc_id_0"]}]}],"cn":"lc_id_2"}],"cdp":{"t":"a","p":[2]},"dcn":true}},"d":{},"dc":{"lc_id_0":{},"lc_id_1":{},"lc_id_2":{}},"hd":true,"co":["lc_id_0","lc_id_1","lc_id_2"],"cn":"default"}]},"dc":{"lc_id_0":{"dc":[0],"hc":true,"trans":true},"default":{}},"hd":true,"co":["lc_id_0"],"hc":true,"trans":true,"in":2,"sibl":[1]},{"t":"s","p":[1,1,5,1,1],"c":{"lc_id_0":{"dN":[{"t":"a","p":[1],"cn":"lc_id_0"},{"t":"a","p":[1,0],"cn":"lc_id_0"},{"t":"tX","p":[1,0,0],"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true},"lc_id_1":{"dN":[{"t":"a","p":[1],"cn":"lc_id_1"},{"t":"a","p":[1,0],"cn":"lc_id_1"},{"t":"tX","p":[1,0,0],"cn":"lc_id_1"}],"cdp":{"t":"a","p":[1]},"dcn":true},"lc_id_2":{"dN":[{"t":"a","p":[1],"cn":"lc_id_2"},{"t":"a","p":[1,0],"cn":"lc_id_2"},{"t":"tX","p":[1,0,0],"cn":"lc_id_2"}],"cdp":{"t":"a","p":[2]},"dcn":true},"lc_id_3":{"dN":[{"t":"a","p":[1],"cn":"lc_id_3"},{"t":"a","p":[1,0],"cn":"lc_id_3"},{"t":"tX","p":[1,0,0],"cn":"lc_id_3"}],"cdp":{"t":"a","p":[3]},"dcn":true}},"d":{},"dc":{"lc_id_0":{},"lc_id_1":{},"lc_id_2":{},"lc_id_3":{}},"hd":true,"co":["lc_id_0","lc_id_1","lc_id_2","lc_id_3"],"in":1,"sibl":[0]},{"t":"s","p":[1,1,5,1,3],"c":{"lc_id_0":{"dN":[{"t":"i","p":[1],"in":0,"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{},"dc":{"lc_id_0":{"dc":[0],"hc":true,"trans":true}},"hd":true,"co":["lc_id_0"],"hc":true,"trans":true,"in":0},{"type":"dc","trans":true,"hc":true,"p":[3,2,0]}];;
+
+LyteCalendarComponent._observedAttributes = [
+    "ltPropStartDate",
+    "ltPropEndDate",
+    "ltPropCurrentDate",
+    "ltPropFormat",
+    "ltPropYear",
+    "ltPropMonthHeaderFormat",
+    "daysOfWeek",
+    "ariaMonthNames",
+    "monthSystemValues",
+    "monthNames",
+    "shortHands",
+    "todayName",
+    "viewDate",
+    "changeData",
+    "ltPropYield",
+    "ltPropMinDate",
+    "ltPropMaxDate",
+    "ltPropStartWeekDay",
+    "navYield",
+    "selectDate",
+    "currentDatechanged",
+    "ltPropFillRows",
+    "ltPropFillRowsVariants",
+    "ltPropNumberOfRows",
+    "callFrmDidcnct",
+    "monthDD",
+    "yearDD",
+    "years",
+    "ltPropHeaderType",
+    "ltPropDropdown",
+    "cords",
+    "start",
+    "prev",
+    "tt",
+    "showToday",
+    "monthViewTableArray",
+    "ltPropBodyYield",
+    "ltPropShowToday",
+    "ltPropI18n",
+    "ltPropActivateNavigation",
+    "ltPropDisableNavigation",
+    "ltPropPreventAddingRows",
+    "ltPropSelectionType",
+    "ltPropWeekends",
+    "ltPropCurrentWeek",
+    "ltPropCurrentMonth",
+    "ltPropCurrentYear",
+    "ltPropDisabledDates",
+    "ltPropCurrentDates",
+    "ltPropMultiple",
+    "headerId",
+    "monthDropdownId",
+    "yearDropdownId",
+    "ltPropIso",
+    "ltPropWeekNumCriteria",
+    "ltPropHolidays",
+    "ltPropDisableWeekends",
+    "ltPropDisableHolidays",
+    "ltPropWeekNumber",
+    "ltPropAlwaysShowToday",
+    "ltPropHighlightWeekendHolidays",
+    "ltPropTimeZone",
+    "ltPropDisabledDays",
+    "ltPropHeaderAlignType",
+    "ltPropWeekNumHeader",
+    "showYear",
+    "ltPropCurrentDisplayMonth",
+    "ltPropCurrentDisplayYear",
+    "ltPropCurrentDisplayDecade",
+    "ltPropTransitMonthOnDateSel"
+];
+
+/**
+ * @syntax nonYielded
+ * <lyte-calendar></lyte-calendar>
+ */
+
+/**
+ * @syntax yielded
+ * <lyte-calendar>
+ *     <template is="registerYield" yield-name="footer">
+ *         <span>Footer Of The Calendar</span>
+ *     </template>
+ * </lyte-calendar>
+ */
+
+
+
+LyteCalendarComponent.register("lyte-calendar", {
+    hash: "LyteCalendarComponent_13",
+    refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
+});
+
+
+/***/ }),
+
+/***/ 25683228:
 /*!*************************************************************************************!*\
   !*** ./node_modules/@zoho/lyte-ui-component/components/javascript/lyte-dropdown.js ***!
   \*************************************************************************************/
@@ -1373,12 +5016,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "LyteDropdownComponent": () => (/* binding */ LyteDropdownComponent)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/core/index.js */ 56505143);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/component.js */ 50761997);
-/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js */ 19978124);
-/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_plugins_lyte_search_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/plugins/lyte-search.js */ 57616523);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_plugins_lyte_search_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_zoho_lyte_ui_component_plugins_lyte_search_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/@slyte/core/index.js */ 76928134);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_helpers_helpers_dev_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/helpers/helpers-dev.js */ 53520025);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/component.js */ 40876002);
+/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js */ 92838254);
+/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_plugins_lyte_search_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/plugins/lyte-search.js */ 62857239);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_plugins_lyte_search_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_zoho_lyte_ui_component_plugins_lyte_search_js__WEBPACK_IMPORTED_MODULE_4__);
 
 var _ = {};
 
@@ -1395,6 +5039,7 @@ var _ = {};
         return _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__.LyteUiComponentComponentRegistry;
     }
 });
+
 
 
 
@@ -1688,7 +5333,7 @@ class LyteDropdownComponent extends _node_modules_zoho_lyte_ui_component_compone
 		}
 
 		if( type === 'multisearch' && tab ) {
-			_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( tab ).removeSearch();
+			_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default()( tab ).removeSearch();
 		}
 
 		delete this.childComp;
@@ -1866,11 +5511,11 @@ class LyteDropdownComponent extends _node_modules_zoho_lyte_ui_component_compone
 
 		if (body === 'noyield') {
 			if (oldValue) {
-				_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()(box).removeClass(oldValue);
+				_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default()(box).removeClass(oldValue);
 			}
 
 			if (cls) {
-				_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()(box).addClass(cls);
+				_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default()(box).addClass(cls);
 			}
 		}
 
@@ -1881,11 +5526,11 @@ class LyteDropdownComponent extends _node_modules_zoho_lyte_ui_component_compone
 			button = this.$node.querySelector('lyte-drop-button');
 
 		if (oldValue) {
-			_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()(button).removeClass(oldValue);
+			_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default()(button).removeClass(oldValue);
 		}
 
 		if (cls) {
-			_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()(button).addClass(cls);
+			_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default()(button).addClass(cls);
 		}
 	}
 
@@ -1983,7 +5628,7 @@ class LyteDropdownComponent extends _node_modules_zoho_lyte_ui_component_compone
 			this.setData( 'ltPropShow', false );
 			drop.toggle();
 
-			_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.measure( function() {
+			_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default().fastdom.measure( function() {
 				tab.focus();
 				var pos = drop.getBoundingClientRect();
 
@@ -2671,7 +6316,7 @@ class LyteDropdownComponent extends _node_modules_zoho_lyte_ui_component_compone
     isFocusable(element) {
 		var tabIndex;
 
-		element = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()(element);
+		element = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default()(element);
 
 		if (!window._lyteDropdown.isVisible(element.get(0)) || element.is(":disabled")) {
 			return false;
@@ -3741,7 +7386,7 @@ class LyteDropdownComponent extends _node_modules_zoho_lyte_ui_component_compone
 			}, boundingRects;
 
 		if (scope !== 'window') {
-			element = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()(this.$node).closest(scope).get(0);
+			element = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default()(this.$node).closest(scope).get(0);
 
 			if (element) {
 				boundingRects = element.getBoundingClientRect();
@@ -3839,7 +7484,7 @@ class LyteDropdownComponent extends _node_modules_zoho_lyte_ui_component_compone
 			type === 'multisearch'
 			&& head !== 'yield'
 		) {
-			_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()(this.$node.querySelector('.lyteDropdownTextField')).search({
+			_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default()(this.$node.querySelector('.lyteDropdownTextField')).search({
 				scope: link,
 				trim: this.getData( 'ltPropTrimSearchText' ),
 				searchDelay: undefined,
@@ -3903,7 +7548,7 @@ class LyteDropdownComponent extends _node_modules_zoho_lyte_ui_component_compone
 			return;
 		}
 
-		var parents = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()(this.$node).parents(), scrollableParents, lyteScrollBarParents, that = this;
+		var parents = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default()(this.$node).parents(), scrollableParents, lyteScrollBarParents, that = this;
 
 		scrollableParents = parents.filter(this.isScrollable);
 		lyteScrollBarParents = parents.filter(this.isLyteScrollBar);
@@ -3913,8 +7558,8 @@ class LyteDropdownComponent extends _node_modules_zoho_lyte_ui_component_compone
 		});
 
 		scrollableParents.each(function (index, item) {
-			_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()(item).data('lyte-scrollTop', item.scrollTop);
-			_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()(item).data('lyte-scrollLeft', item.scrollLeft);
+			_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default()(item).data('lyte-scrollTop', item.scrollTop);
+			_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default()(item).data('lyte-scrollLeft', item.scrollLeft);
 		});
 
 		this.scrollableParents = scrollableParents;
@@ -3940,8 +7585,8 @@ class LyteDropdownComponent extends _node_modules_zoho_lyte_ui_component_compone
 	}
 
     isScrollable(index, item) {
-		var overflowY = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()(item).css('overflow-y'),
-			overflowX = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()(item).css('overflow-x');
+		var overflowY = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default()(item).css('overflow-y'),
+			overflowX = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default()(item).css('overflow-x');
 
 		if ((item.clientWidth < item.scrollWidth && (overflowX === 'auto' || overflowX === 'scroll')) || (item.clientHeight < item.scrollHeight && (overflowY === 'auto' || overflowY === 'scroll'))) {
 			return true;
@@ -3955,8 +7600,8 @@ class LyteDropdownComponent extends _node_modules_zoho_lyte_ui_component_compone
 	}
 
     resetScroll() {
-		var scrollTop = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()(this).data('lyte-scrollTop'),
-			scrollLeft = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()(this).data('lyte-scrollLeft');
+		var scrollTop = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default()(this).data('lyte-scrollTop'),
+			scrollLeft = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default()(this).data('lyte-scrollLeft');
 
 		this.scrollTop = scrollTop;
 		this.scrollLeft = scrollLeft;
@@ -4549,7 +8194,7 @@ class LyteDropdownComponent extends _node_modules_zoho_lyte_ui_component_compone
 
 		// People have search inside the drop-box in multisearch
 		if (!window._lyteUiUtils.isMobile) {
-			_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.measure(function () {
+			_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default().fastdom.measure(function () {
 
 				if (!this.$node) {
 					return;
@@ -4925,7 +8570,7 @@ class LyteDropdownComponent extends _node_modules_zoho_lyte_ui_component_compone
 	}
 
     hideGroup(item) {
-		var group = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()(item).parent(), visibleItems;
+		var group = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default()(item).parent(), visibleItems;
 
 		if (!group.get(0) || group.get(0).tagName !== 'LYTE-DROP-GROUP') {
 			return;
@@ -4939,7 +8584,7 @@ class LyteDropdownComponent extends _node_modules_zoho_lyte_ui_component_compone
 	}
 
     showGroup(item) {
-		var group = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()(item).parent(), visibleItems;
+		var group = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default()(item).parent(), visibleItems;
 
 		if (!group.get(0) || group.get(0).tagName !== 'LYTE-DROP-GROUP') {
 			return;
@@ -6006,7 +9651,7 @@ LyteDropdownComponent._observedAttributes = [
 ];
 
 window.addEventListener('scroll', function (event) {
-	_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.measure(function () {
+	_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default().fastdom.measure(function () {
 		var elm = window._lyteDropdown.getVisibleDropbox(),
 			tempele = elm,
 			isAnimate,
@@ -7065,7 +10710,7 @@ window._lyteDropdown = {
 			scope = comp.getData('ltPropScope'), parent, boundingRects;
 
 		if (scope !== 'window') {
-			parent = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()(comp.$node).closest(scope).get(0);
+			parent = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_3___default()(comp.$node).closest(scope).get(0);
 
 			if (parent) {
 				boundingRects = parent.getBoundingClientRect();
@@ -7316,7 +10961,7 @@ if (!window._lyteUiUtils.registeredCustomElements['lyte-drop-group']) {
 
 
 LyteDropdownComponent.register("lyte-dropdown", {
-    hash: "LyteDropdownComponent_245",
+    hash: "LyteDropdownComponent_12",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });
 
@@ -7327,7 +10972,7 @@ LyteDropdownComponent.register("lyte-dropdown", {
 
 /***/ }),
 
-/***/ 97686034:
+/***/ 31525416:
 /*!**********************************************************************************!*\
   !*** ./node_modules/@zoho/lyte-ui-component/components/javascript/lyte-input.js ***!
   \**********************************************************************************/
@@ -7338,10 +10983,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "LyteInputComponent": () => (/* binding */ LyteInputComponent)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/core/index.js */ 56505143);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/component.js */ 50761997);
-/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js */ 19978124);
-/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/@slyte/core/index.js */ 76928134);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_calendar_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-calendar.js */ 30543180);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_wormhole_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-wormhole.js */ 2589694);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_dropdown_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-dropdown.js */ 25683228);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/component.js */ 40876002);
+/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js */ 92838254);
+/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5__);
 
 var _ = {};
 
@@ -7354,6 +11002,9 @@ var _ = {};
         return _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__.Component;
     }
 });
+
+
+
 
 
 
@@ -7452,25 +11103,25 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
     }
 
     englishDate() {
-        if( (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment) && this.data ){
+        if( (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment) && this.data ){
             var format = this.data.ltPropFormat,
             date = this.data.ltPropCurrentDate,
             final = '';
 
             if( date ){
-                final = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment( date, format, { i18n : true } ).format( format );
+                final = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment( date, format, { i18n : true } ).format( format );
             } 
             this.setData( 'ltPropConvertedDate', final );
         }
     }
 
     englishTime() {
-        if( (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment) && this.data ){
+        if( (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment) && this.data ){
             var final = this.data.ltPropDefaultTime;
 
             if( this.data.ltPropTimeFormat == 12 ){
                 var format = 'hh:mm A';
-                final = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment( final, format, { i18n : true } ).format( format );
+                final = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment( final, format, { i18n : true } ).format( format );
             }
             this.setData( 'ltPropConvertedTime', final );
         }
@@ -7525,10 +11176,10 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
                 */                
                 this.executeMethod('afterRender', this.$node);
             }
-            _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.measure( function(){
+            _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().fastdom.measure( function(){
                 this._dir = window._lyteUiUtils.getRTL();
                 if( this._dir ) {
-                    _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.mutate( function(){
+                    _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().fastdom.mutate( function(){
                         this.$node.classList.add( 'lyteRTL' );
                         if( this.$node.calendarDiv ) {
                             this.$node.calendarDiv.classList.add( 'lyteRTL' );
@@ -7594,7 +11245,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
             }
         }
 
-        var is_contains_target = this.data.ltPropAria ? _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( tgt ).hasClass( 'lyteInputCalendarIcon' ) : this.$node.contains( tgt ),
+        var is_contains_target = this.data.ltPropAria ? _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( tgt ).hasClass( 'lyteInputCalendarIcon' ) : this.$node.contains( tgt ),
         is_target_is_calendar = calendarComp.contains( tgt );
 
         if( !is_contains_target && !is_target_is_calendar ) {         
@@ -7611,9 +11262,9 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
             return;
         }
         var thisCalendar = this.$node.calendarDiv;
-         _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.mutate(function(){
+         _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().fastdom.mutate(function(){
             event && event.type == "orientationchange" ? setTimeout( this.setCss.bind( this ), 500 ) : this.setCss();
-             _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.measure(function(){
+             _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().fastdom.measure(function(){
                 var boundary = this.data.ltPropBoundary, input = this.$node.getBoundingClientRect(), wwidth = window.innerWidth;
                 if(thisCalendar && event && event.type == 'scroll' && !thisCalendar.classList.contains('lyteCalendarHidden')){
                     if((boundary.hasOwnProperty('left') ? ( this.rtlfunc.call( this, 'left', input, wwidth ) < boundary.left) : false) || (boundary.hasOwnProperty('right') ? ( this.rtlfunc.call( this, 'right', input, wwidth ) > boundary.right) : false)  || (boundary.hasOwnProperty('top') ? (input.top < boundary.top) : false)  || (boundary.hasOwnProperty('bottom') ? (input.bottom > boundary.bottom) : false))      
@@ -7705,9 +11356,9 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
         __doc[ __add ]( isTch ? 'touchmove' : "mousemove", __this.__rmove = __this.textareaResize.bind( __this ), true );
         __doc[ __add ]( isTch ? 'touchend' : 'mouseup', __this.__rend = __this.mouseup.bind( __this ), true );
 
-        _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( $node ).addClass( 'resizeStart' ).css( __obj );
-        _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( textarea ).css( __obj1 ).parent().css( __obj3 );
-        _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( label ).css( __obj2 );
+        _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( $node ).addClass( 'resizeStart' ).css( __obj );
+        _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( textarea ).css( __obj1 ).parent().css( __obj3 );
+        _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( label ).css( __obj2 );
 
         evt.preventDefault();
         return false;
@@ -7721,7 +11372,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
        __this = this,
        $node = __this.$node;
 
-        _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( $node ).removeClass( 'resizeStart' );
+        _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( $node ).removeClass( 'resizeStart' );
 
        __doc[ __remove ]( isTch ? "touchmove" : "mousemove", __this.__rmove, true );
        __doc[ __remove ]( isTch ? "touchend" : "mouseup", __this.__rend, true );
@@ -7787,8 +11438,8 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
           __setData.ltPropHeight = __obj.height + 'px';
        }
 
-       _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( $node ).css( __obj1 );
-       _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( textarea ).css( __obj );
+       _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( $node ).css( __obj1 );
+       _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( textarea ).css( __obj );
 
        __this._prevent = true;
        __this.setData( __setData );
@@ -7798,7 +11449,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
 
     heightFunc() {
         if( !this._prevent ){
-            _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( 'input,textarea', this.$node ).eq( 0 ).css( 'height', this.getData( 'ltPropHeight' ) ); 
+            _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( 'input,textarea', this.$node ).eq( 0 ).css( 'height', this.getData( 'ltPropHeight' ) ); 
         }
      }
 
@@ -7810,7 +11461,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
 
     appearanceFun() {
         var type = this.data.ltPropType, 
-        $node = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( this.$node );
+        $node = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( this.$node );
 
         if( this.getData( 'ltPropAppearance' ) == 'box' ) {
             if(type =='search') {
@@ -7828,7 +11479,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
     }
 
     directionfun() {
-        var $node = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( this.$node );
+        var $node = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( this.$node );
 
         if( this.data.ltPropDirection == 'vertical' ){
             $node.addClass( 'vertical' ).removeClass( 'horizontal' );
@@ -8388,7 +12039,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
         if( is_i18n ){
             var format = this._assCalendar.component.getRelevantFormat( format );
 
-            return _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment( tdate ).i18N( format ); 
+            return _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment( tdate ).i18N( format ); 
         } else {
             return this._assCalendar.component.getDateFromFormat(tdate, format);
         }
@@ -8502,8 +12153,8 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
 
     getCorrectTime(timeFormat) {
 
-        if( (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment) ){
-            var date = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment();
+        if( (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment) ){
+            var date = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment();
             if( timeFormat == 12 ){
                 return date.i18N( "hh:mm A" );
             } else{
@@ -8541,7 +12192,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
             if( this._emptytimeValue ){
                 return;
             }
-            _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.mutate(function(){
+            _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().fastdom.mutate(function(){
                var selectedField = this.getData('selectedField');
                 if(!selectedField.prop || input.selectionStart > 3){
                     // settting initial selection if input is not focused
@@ -8635,7 +12286,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
             value = arg.newValue;
         }else{
             value = this.getData('ltPropDefaultTime');
-            if( ( val == undefined || type == 'datetime' ) && !value && (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment) && ( type == "time" ? this.data.ltPropPlaceholder : ( this.data.ltPropTimePlaceholder || this.data.ltPropCommonPlaceholder ) ) ){
+            if( ( val == undefined || type == 'datetime' ) && !value && (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment) && ( type == "time" ? this.data.ltPropPlaceholder : ( this.data.ltPropTimePlaceholder || this.data.ltPropCommonPlaceholder ) ) ){
                 this._emptytimeValue = true;
                 if( type == 'datetime' ){
                     this.checkCommonPlaceHolder();
@@ -8861,7 +12512,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
         position = this.getData( 'ltPropPosition' ),
         offsets = par.getBoundingClientRect(),
         scope = this.data.ltPropScope,
-        scopeElement = scope ? _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( this.$node ).closest( scope ).get( 0 ) : void 0,
+        scopeElement = scope ? _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( this.$node ).closest( scope ).get( 0 ) : void 0,
         scopeBcr = scopeElement ? scopeElement.getBoundingClientRect() : void 0;
 
         if( scopeBcr ){
@@ -9198,7 +12849,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
 
                 if( this.data.ltPropAria ){
                     try{
-                        _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( __node.calendarDiv ).trapFocus();
+                        _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( __node.calendarDiv ).trapFocus();
                     }catch( err ){};
                 }
             },
@@ -9208,7 +12859,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
                    this._hideCalendar();
              },
              hide : function(){
-                _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( this.$node ).removeClass( 'lyteInputDropdownOpen' );
+                _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( this.$node ).removeClass( 'lyteInputDropdownOpen' );
                 if(this.getMethods('onHide')){
                    /**
                     * @method onHide
@@ -9229,7 +12880,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
                 }
              },
              show : function(){
-                _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( this.$node ).addClass( 'lyteInputDropdownOpen' );
+                _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( this.$node ).addClass( 'lyteInputDropdownOpen' );
                 if(this.getMethods('onShow')){
                    /**
                     * @method onShow
@@ -9254,7 +12905,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
                 delete this._emptytimeValue;
                 this.setData('ltPropDefaultTime', arguments[1].trim());
 
-                _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( 'input', this.$node ).get( -1 ).focus();
+                _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( 'input', this.$node ).get( -1 ).focus();
              },
 
              scroll : function(){
@@ -9280,7 +12931,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
              },
 
              calendarNavigate : function( arg1, arg2, arg3, arg4 ){
-                _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.measure( this.setCss.bind( this ) );
+                _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().fastdom.measure( this.setCss.bind( this ) );
                 if( this.getMethods( 'onNavigate' ) ) {
                    /**
                     * @method onNavigate
@@ -9301,7 +12952,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
              },
 
              viewChange : function( evt, viewType, _this ){
-                _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.measure( this.setCss.bind( this ) );
+                _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().fastdom.measure( this.setCss.bind( this ) );
                    /**
                     * @method onViewChange
                     * @condition ltPropType date,datetime
@@ -9436,7 +13087,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
 
          this.setData('ltPropDefaultTime', final);
          // restore current selection
-         _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.mutate(function(){
+         _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().fastdom.mutate(function(){
              input.selectionStart = start;
              input.selectionEnd = end;
          })
@@ -9632,7 +13283,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
            }
            var newVal,
            allow;
-           if( (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment) && (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment.lyteMoment.prototype.add) ){
+           if( (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment) && (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment.lyteMoment.prototype.add) ){
               var momentFormat = timeFormat == 12 ? "hh:mm A" : "HH:mm",
               moment;
               inputVal = inputVal.replace( meridian.AM, 'AM' ).replace( meridian.PM, 'PM' );
@@ -9640,7 +13291,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
               if( this.data.ltPropTimezoneHandling && this.data.ltPropCurrentDate ){
                   moment = this.check_dst( inputVal, true );
               } else {
-                  moment = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment( inputVal, momentFormat );
+                  moment = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment( inputVal, momentFormat );
               }
 
               if( moment.validate() ){
@@ -9682,7 +13333,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
           }
           this.setData('ltPropDefaultTime', final);
           // restore current selection
-          _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.mutate(function(){
+          _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().fastdom.mutate(function(){
               input.selectionStart = start;
               input.selectionEnd = end;
           })
@@ -9706,7 +13357,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
          }
          var newVal,
          allow;
-         if( (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment) && (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment.lyteMoment.prototype.subtract) ){
+         if( (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment) && (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment.lyteMoment.prototype.subtract) ){
             var momentFormat = timeFormat == 12 ? "hh:mm A" : "HH:mm",
             moment;
             inputVal = inputVal.replace( meridian.AM, 'AM' ).replace( meridian.PM, 'PM' );
@@ -9714,7 +13365,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
             if( this.data.ltPropTimezoneHandling && this.data.ltPropCurrentDate ){
                 moment = this.check_dst( inputVal, true );
             } else {
-                moment = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment( inputVal, momentFormat );
+                moment = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment( inputVal, momentFormat );
             }
 
             if( moment.validate() ){
@@ -9752,7 +13403,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
         }
         this.setData('ltPropDefaultTime', final);
         // restore current selection
-        _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.mutate(function(){
+        _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().fastdom.mutate(function(){
             input.selectionStart = start;
             input.selectionEnd = end;
         })
@@ -9791,11 +13442,11 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
 
     setRangeByMoment(input, range, key) {
        var start, end;
-       if( (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment) ){
+       if( (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment) ){
            var format = this.data.ltPropFormat, 
            value = input.value,
            is_i18n = this.data.ltPropCalendarProperties.i18n,
-           moment = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment( value, this._assCalendar.component.getRelevantFormat( format ), {
+           moment = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment( value, this._assCalendar.component.getRelevantFormat( format ), {
              i18n : is_i18n
            }),
            ns = is_i18n ? 'i18N' : 'format';
@@ -9828,7 +13479,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
          Array.from( document.getElementsByTagName( 'lyte-input' ) ).forEach( function( item ){
              var cal_div = item.calendarDiv;
 
-             if( item != this.$node && cal_div && !_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( cal_div ).hasClass( 'lyteCalendarHidden' ) ){
+             if( item != this.$node && cal_div && !_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( cal_div ).hasClass( 'lyteCalendarHidden' ) ){
                  item.component._hideCalendar();
              }
          }.bind( this ) );
@@ -9838,7 +13489,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
 
          var cal = this.$node.calendarDiv;
 
-         if( !cal || _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( cal ).hasClass( 'lyteCalendarHidden' ) ){
+         if( !cal || _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( cal ).hasClass( 'lyteCalendarHidden' ) ){
              return;
          }
 
@@ -9883,7 +13534,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
          });
 
          if( this.data.ltPropAria ){
-             _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( 'input,textarea', inputs ).attr( "aria-expanded", "false" );
+             _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( 'input,textarea', inputs ).attr( "aria-expanded", "false" );
           }
 
          if( comp.getMethods( 'onCalendarClose' ) ) {
@@ -9904,7 +13555,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
              var exst_active = document.activeElement;
 
              if( exst_active == document.body || __calendar.contains( exst_active ) ){
-                 _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( '.lyteInputCalendarIcon', this.$node ).focus();
+                 _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( '.lyteInputCalendarIcon', this.$node ).focus();
              }
 
              this.setData( "isExpanded", "false" );
@@ -9935,9 +13586,9 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
           this.setData( 'ltPropBindToBody', true );   
       }
       this.$node.calendarDiv.classList.remove('lyteCalendarHidden')
-      _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.measure( this.scrollFunc.bind( this ) );
+      _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().fastdom.measure( this.scrollFunc.bind( this ) );
       // initial selection
-      _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.mutate(function(){
+      _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().fastdom.mutate(function(){
          if( !this.data.ltPropReadonly ){
               // if( !this.data.ltPropPreventSelection ){
               //    input.selectionStart = 0;
@@ -9953,7 +13604,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
           }
 
           if( this.data.ltPropAria ){
-             _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( 'input,textarea', this.$node ).attr( "aria-expanded", "true" );
+             _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( 'input,textarea', this.$node ).attr( "aria-expanded", "true" );
           }
 
           // if( !this.data.ltPropCalendarProperties.disableNavigation ){
@@ -10081,7 +13732,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
                          if( this._assCalendar.component.checkDate( time ) ){
                              this.setData('ltPropCurrentDate', this.getDateFromFormat(time, this.getData('ltPropFormat')));
                          }
-                         _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.measure( this.findCalendarRange.bind( this, {}, input, true ) )
+                         _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().fastdom.measure( this.findCalendarRange.bind( this, {}, input, true ) )
                      } else {
                          if((input.selectionEnd == input.value.length && (keyCode == 39 || (!evt.shiftKey && keyCode == 9))) || (input.selectionStart == 0 && (keyCode == 37 || (evt.shiftKey && keyCode == 9)))){
                              return
@@ -10112,7 +13763,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
                                      start = end = Math.abs( ( returned[ 0 ] + returned[ 1 ] ) * 0.5 )
                                  }
                              }
-                             _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.measure( this.findCalendarRange.bind( this, {}, input ) );
+                             _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().fastdom.measure( this.findCalendarRange.bind( this, {}, input ) );
                              if( this.data.ltPropPreventSelection ){
                                  return;
                              }
@@ -10176,7 +13827,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
              return;
          }
 
-         if( _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( $node.calendarDiv ).hasClass( 'lyteCalendarHidden' ) || !this.data.ltPropBindToBody ){
+         if( _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( $node.calendarDiv ).hasClass( 'lyteCalendarHidden' ) || !this.data.ltPropBindToBody ){
              this.showCalendar( event, input );
          }
     }
@@ -10263,7 +13914,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
     }
 
     open_cal_for_icon(evt) {
-         if(  _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( this.$node.calendarDiv ).hasClass( 'lyteCalendarHidden' ) || !this.data.ltPropBindToBody ){
+         if(  _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( this.$node.calendarDiv ).hasClass( 'lyteCalendarHidden' ) || !this.data.ltPropBindToBody ){
              this.showCalendar( evt, this.$node.getElementsByTagName( 'input' )[ 0 ] );
          }
     }
@@ -10451,7 +14102,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
                         
                         var calendar_elem = this.$node.calendarDiv;
 
-                        if( !this.data.ltPropAria && ( !calendar_elem || _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( calendar_elem ).hasClass( 'lyteCalendarHidden' ) ) ){
+                        if( !this.data.ltPropAria && ( !calendar_elem || _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( calendar_elem ).hasClass( 'lyteCalendarHidden' ) ) ){
                             this.showCalendar( evt, input);
                         }
                     }
@@ -10496,7 +14147,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
                         } else {
                             form = "HH:mm";
                         }
-                        if( value && (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment) && !_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment( value, form ).validate() ){
+                        if( value && (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment) && !_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment( value, form ).validate() ){
                             _this.value = this.data.ltPropDefaultTime;
                         }
                     }
@@ -10519,7 +14170,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
 
 
                     if( /enter/i.test( evt.key ) ){
-                        if( this.data.ltPropAria && _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( this.dropbox ).hasClass( 'lyteDropdownHidden' ) ){
+                        if( this.data.ltPropAria && _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( this.dropbox ).hasClass( 'lyteDropdownHidden' ) ){
                             this.open_dropdown();
                             // evt.preventDefault();
                             evt.stopPropagation();
@@ -10532,7 +14183,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
                     var selectedField = this.getData('selectedField'), meridian = this.getData('meridian'), timeFormat = this.getData('ltPropTimeFormat'), flag = true, oriDrop = this.getData('originalData'), rendered = this.getData('dropdownData'),
                     keyCode = window._lyteUiUtils.getCorrectNumberCode( evt.which || evt.keyCode ),
                     prev_nav = this.data.ltPropPreventDropdownNavigation,
-                    is_drop_open =  this.dropbox && !_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( this.dropbox ).hasClass( 'lyteDropdownHidden' );
+                    is_drop_open =  this.dropbox && !_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( this.dropbox ).hasClass( 'lyteDropdownHidden' );
 
                     if( !prev_nav && is_drop_open && /38|40|13/.test( keyCode ) ){
                         return;
@@ -10628,7 +14279,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
                             !dontcall && this.fixSelection.call(this, 0, this.getData('selectedField'), input);
                          if(flag)
                             {
-                                _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.mutate(function(){
+                                _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().fastdom.mutate(function(){
                                     // restore current selection
                                     input.selectionStart = start;
                                     input.selectionEnd = end;
@@ -10662,7 +14313,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
            } else {
                form = "HH:mm";
            }
-           if( value && _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment( value, form ).validate() ){
+           if( value && _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment( value, form ).validate() ){
                var ret = this._getCrctHour( _this.value, format, meridian );
                this.setData( 'ltPropDefaultTime', ret ? ret : this._findNearest( _this.value, format ) );
                delete this._emptytimeValue;
@@ -10678,7 +14329,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
 
     check_dst(arr, check, return_value) {
        var Lc = this.$addon.objectUtils,
-       moment = (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment),
+       moment = (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment),
        _this = this,
        data = _this.data,
        date = data.ltPropCurrentDate,
@@ -10686,7 +14337,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
        timeFormat = data.ltPropTimeFormat == 12,
        __format = timeFormat ? 'hh:mm A' : 'HH:mm',
        fn = function( item ){            
-           return _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment( date + ' ' + item.time, format + ' ' + __format ).format( __format ) != item.time;
+           return _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment( date + ' ' + item.time, format + ' ' + __format ).format( __format ) != item.time;
        },
        common = function( item ){
            if( item.className ){
@@ -10700,7 +14351,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
 
        if( check ){
            if( date ){
-               var __moment = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment( date + ' ' + arr, format + ' ' + __format  );
+               var __moment = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment( date + ' ' + arr, format + ' ' + __format  );
                if( return_value ){
                    return __moment.format( __format );
                }
@@ -10709,7 +14360,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
            if( return_value ){
                return arr;
            }
-           return _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().moment( arr, __format  );
+           return _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default().moment( arr, __format  );
        }
 
        if( date ){
@@ -10745,7 +14396,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
                     this.setData( 'resize', to_value );
 
                     if( !to_value ){
-                        _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( this.$node ).addClass( 'lyteTextareaNoResize' );
+                        _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( this.$node ).addClass( 'lyteTextareaNoResize' );
                     }
 
                     if( __horizontal && !__vertical ){
@@ -10791,7 +14442,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
             input_wrap_obs : function( arg ){
                 var oldValue = ( arg || { oldValue : "" } ).oldValue,
                 newValue = this.data.ltPropInputWrapperClass,
-                __$node = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( this.$node );
+                __$node = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( this.$node );
 
                 __$node.removeClass( oldValue ).addClass( newValue );
 
@@ -10949,7 +14600,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
                 var calendar = this.$node.calendarDiv,
                 pos = this.data.pos;
 
-                _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( calendar ).removeClass( 'lyteInputCalendarUp lyteInputCalendarDown' ).addClass( 'lyteInputCalendar' + ( /up/i.test( pos ) ? 'Up' : 'Down' ) );
+                _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( calendar ).removeClass( 'lyteInputCalendarUp lyteInputCalendarDown' ).addClass( 'lyteInputCalendar' + ( /up/i.test( pos ) ? 'Up' : 'Down' ) );
 
                 if( this.getMethods( 'onPositionChanged' )) {
                    /**
@@ -10981,7 +14632,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
                      });
 
                      if( !arg ){
-                         _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( this.$node ).addClass( 'lyteInputWithPasswordToggleButton' );
+                         _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( this.$node ).addClass( 'lyteInputWithPasswordToggleButton' );
                      }
                  }
 
@@ -10992,7 +14643,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
                var data = this.data;
 
                if( data.ltPropAria ){
-                   var elems = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( "input,textarea", this.$node ),
+                   var elems = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( "input,textarea", this.$node ),
                    aria1 = "ltPropAriaAttributes",
                    aria2 = "ltPropTimeAriaAttributes";
 
@@ -11021,7 +14672,7 @@ class LyteInputComponent extends _node_modules_zoho_lyte_ui_component_components
                    var obj = {};
                    obj[ key ] = newValue;
 
-                   window._lyteUiUtils.setAttribute( _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( 'input,textarea', this.$node ).get( /time/i.test( arg.item ) ? -1 : 0 ), obj, {} );
+                   window._lyteUiUtils.setAttribute( _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_5___default()( 'input,textarea', this.$node ).get( /time/i.test( arg.item ) ? -1 : 0 ), obj, {} );
                }
 
             }.observes( 'ltPropAriaAttributes.*', 'ltPropTimeAriaAttributes.*' )
@@ -11256,7 +14907,7 @@ LyteInputComponent.register("lyte-input", {
 
 /***/ }),
 
-/***/ 1658409:
+/***/ 76875979:
 /*!***************************************************************************************!*\
   !*** ./node_modules/@zoho/lyte-ui-component/components/javascript/lyte-messagebox.js ***!
   \***************************************************************************************/
@@ -11267,22 +14918,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "LyteMessageboxComponent": () => (/* binding */ LyteMessageboxComponent)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/core/index.js */ 56505143);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_helpers_helpers_dev_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/helpers/helpers-dev.js */ 60488310);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_wormhole_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-wormhole.js */ 57986490);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/component.js */ 50761997);
-/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js */ 19978124);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/@slyte/core/index.js */ 76928134);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_helpers_helpers_dev_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/helpers/helpers-dev.js */ 53520025);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_wormhole_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-wormhole.js */ 2589694);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/component.js */ 40876002);
+/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js */ 92838254);
 /* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4__);
 
 var _ = {};
 
 (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__._defineProperty)(_, {
-    "Component": function() {
-        return _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__.Component;
-    },
-
     "prop": function() {
         return _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop;
+    },
+
+    "Component": function() {
+        return _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__.Component;
     }
 });
 
@@ -11754,14 +15405,1130 @@ LyteMessageboxComponent._observedAttributes = [
 
 
 LyteMessageboxComponent.register("lyte-messagebox", {
-    hash: "LyteMessageboxComponent_15",
+    hash: "LyteMessageboxComponent_5",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });
 
 
 /***/ }),
 
-/***/ 57986490:
+/***/ 75036620:
+/*!************************************************************************************!*\
+  !*** ./node_modules/@zoho/lyte-ui-component/components/javascript/lyte-tooltip.js ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "LyteTooltipComponent": () => (/* binding */ LyteTooltipComponent)
+/* harmony export */ });
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/@slyte/core/index.js */ 76928134);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/component.js */ 40876002);
+/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js */ 92838254);
+/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2__);
+
+var _ = {};
+
+(0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__._defineProperty)(_, {
+  "prop": function() {
+    return _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop;
+  },
+
+  "Component": function() {
+    return _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__.Component;
+  }
+});
+
+
+
+
+
+/**
+ * Tooltip is a component used to show information related to an element
+ * @component lyte-tooltip
+ * @version 1.0.0
+ */
+
+/*
+  todo =>  // If the tooltip is invoked when the trigger element receives focus, then it is dismissed when it no longer has focus (onBlur). If the tooltip is invoked with mouseIn, then it is dismissed with on mouseOut.
+
+  tooltip animation support
+
+  , re using created tooltip span
+*/
+
+class LyteTooltipComponent extends _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__.Component {
+  constructor() {
+    super();
+  }
+
+  init() {
+
+    if( this.getMethods( 'beforeRender' ) ){
+            /**
+             * @method beforeRender
+             * @version 1.0.1
+             */
+            this.executeMethod( 'beforeRender', this.$node );
+        }
+  }
+
+  rtlfunc(lft, bcr, ww) {
+    if( this._dir && lft != 'top' && lft != 'clientY' ) {
+      if( bcr ) {
+        if( lft == 'right' ) {
+          return ww - bcr.left;
+        } else if( lft == 'clientX' ) {
+          return ww - bcr.clientX;
+        }
+        return ww - bcr.right;
+      } else if( lft == 'left' ) {
+        return 'right';
+      } else if( lft == 'right' ) {
+        return 'left';
+      }
+    }
+    return bcr ? bcr[ lft ] : lft;
+  }
+
+  data(arg1) {
+
+    var default_values = window._lyteUiUtils.getDefault( 'lyte-tooltip' );
+
+    return Object.assign(super.data({
+      //user data
+      /**
+       * @componentProperty {string} ltPropId=''
+       * @version 1.0.0
+       */
+      ltPropId : (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)('string', {default : default_values.id || '' }),
+      /**
+       * @componentProperty {string} ltPropClass=''
+       * @version 1.0.0
+       */
+      ltPropClass : (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)('string', {default : default_values.class || '' }),
+      /**
+       * @componentProperty {boolean} ltPropKeepAlive=false
+       * @version 1.0.0
+       */
+      ltPropKeepAlive : (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)('boolean', {default : default_values.keepAlive || false }),
+      ltPropKeepAlive : (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)("boolean", {default : default_values.keepAlive || false }),
+
+      /**
+       * @typedef {object} tooltipConfig
+       * @property {left | right | top | bottom | topright | bottomright | topleft | bottomleft | followcursor} position
+       * @property {box | callout} appearance=callout
+       * @property {number} margin=0
+       * @maxValue 20
+       * @property {number} showdelay=0
+       * @property {number} hidedelay=0
+       * @property {number} maxdisplaytime=5000
+       * @property {boolean} keeptooltip=false
+       * @property {boolean} hideOnClick=true
+       */
+
+      /**
+       * @componentProperty {tooltipConfig} ltPropTooltipConfig
+       * @default {}
+       * @version 2.2.20
+       */
+      ltPropTooltipConfig : (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'object', { default : default_values.tooltipConfig || {} } ),
+
+      /**
+       * @componentProperty {string} ltPropIgnoreClass="lyteTooltipIgnore"
+       * @version 3.28.2
+       **/
+
+      ltPropIgnoreClass : (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string', { default : default_values.ignoreClass || "lyteTooltipIgnore" } ),
+
+      /**
+       * @componentProperty {boolean} ltPropAria=false
+       * @version 3.45.0
+       **/
+
+       ltPropAria : (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { default : default_values.aria || false } ),
+
+      // system data
+
+      tooltips : (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'object', { default : {} } )
+    }), arg1);
+  }
+
+  focusev(evt) {
+
+    var fastdom = (_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom);
+
+    fastdom.mutate( function(){
+        this.$node.trigger( evt.type == "focus" ? evt.target : document.body );
+    }.bind( this ) );
+  }
+
+  didConnect() {
+
+      this._dir = window._lyteUiUtils.getRTL();
+
+      var tooltips = Array.from( document.body.getElementsByTagName( 'lyte-tooltip' ) );
+
+      tooltips.forEach( function( item ){
+        if( item != this.$node ){
+           document.body.removeChild( item );
+        }
+      }.bind( this ) );
+
+      this._mousemove = this.mousemove.bind( this );  
+      this._mousedown = this.mousedown.bind( this );
+      this._mouseup = this.mouseup.bind( this );
+      this._keydown = this.keydown.bind( this );
+      this._toolscroll = this.tooltipScroll.bind( this );
+
+      document.addEventListener( 'mousemove', this._mousemove, true ); 
+      window.addEventListener('scroll', this._toolscroll , true); 
+      document.addEventListener( 'keydown', this._keydown, true);
+      document.addEventListener( 'mousedown', this._mousedown, true );
+      document.addEventListener( 'touchstart', this._mousedown );
+
+      if( this.data.ltPropAria ){
+         this.bind_aria();
+      }
+
+      if( this.getMethods( 'afterRender' ) ) {
+            /**
+             * @method afterRender
+             * @version 1.0.1
+             */
+          this.executeMethod('afterRender', this.$node);
+      }
+      /**
+       * @utility trigger
+       * @version 3.2.0
+       */
+      this.$node.trigger = function( node ){
+        this.mousemove( { target : node || document.body } );
+      }.bind( this )
+
+  }
+
+  bind_aria() {
+         this._focusev = this.focusev.bind( this );
+
+         [ 'focus', 'blur' ].forEach( function( item ){
+            document.addEventListener( item, this._focusev, true );
+         }.bind( this ) );
+  }
+
+  remove_aria() {
+      [ 'focus', 'blur' ].forEach( function( item ){
+         document.removeEventListener( item, this._focusev, true );
+      }.bind( this ) );
+  }
+
+  tooltipScroll(event) {
+    var vis =  this.data.tooltips;
+
+     for( var i in vis ){
+        vis[ i ].classList.add( 'lyteTooltipHidden' );
+     }
+  }
+
+  mousedown(evt) {
+      this._mousedownFlag = true;
+      var target = evt.target.correspondingElement || evt.target,
+      $target = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( target ),
+      isTch = /touch/i.test( evt.type );
+
+      if( ( isTch && evt.touches.length > 1 ) ){
+          return;
+      }
+
+      if( $target.hasClass( 'lyteSliderHandler' ) ){
+         delete this.prevTooltipNode;
+         this._slider = true;   
+      } 
+
+      if( $target.hasClass( 'lyteTooltip' ) ){
+         var act_node = target.nodeName1;
+         this.hover_process( act_node );
+         this.closeAllTooltip( act_node, true );
+      } else {
+         this.closeAllTooltip( void 0, true );
+      }
+
+      if( target.closest( '[draggable=""],[draggable="true"]' ) ){
+         delete this._mousedownFlag;
+         this.__dragging = true;
+      } else {
+        delete this.__dragging;
+         document.addEventListener( isTch ? 'touchend' : 'mouseup', this._mouseup, true );
+      }
+  }
+
+  mouseup(evt) {
+      delete this._mousedownFlag;
+      document.removeEventListener( evt.type, this._mouseup, true );
+
+      if( this._slider ){
+         delete this._slider;
+         var target = evt.target.correspondingElement || evt.target;
+
+         if( _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( target ).hasClass( 'lyteSliderHandler' ) ){
+            this.mousemove( { target : target } );
+         }
+      }
+  }
+
+  keydown(evt) {
+     delete  this.prevTooltipNode;
+     this.closeAllTooltip();
+  }
+
+  tooltipOpenCallback(arg1, arg2) {
+      if( arg1.onTooltipShow ) {
+          arg1.onTooltipShow.apply(this, arguments)     
+      }
+      if(this.getMethods( 'onTooltipShow' ) ) {
+          /**
+           * @method onTooltipShow
+           * @version 1.0.2
+           */
+          this.executeMethod( 'onTooltipShow', arg1, arg2, arg1.tooltip );
+      }
+  }
+
+  tooltipCloseCallback(arg1) {
+      if( arg1.onTooltipHide ) {
+          arg1.onTooltipHide.apply(this, arguments)     
+      }
+     if(this.getMethods( 'onTooltipHide' ) ) {
+          /**
+           * @method onTooltipHide
+           * @version 1.0.2
+           */
+          this.executeMethod( 'onTooltipHide', arg1 );
+      }
+  }
+
+  didDestroy() {
+
+        var rel = "removeEventListener",
+        doc = document;
+
+        window[ rel ]('scroll', this._toolscroll , true);
+        doc[ rel ]('mousemove', this._mousemove, true);
+        doc[ rel ]('mousedown', this._mousedown, true);
+        doc[ rel ]('touchstart', this._mousedown);
+        doc[ rel ]( 'keydown', this._keydown, true );
+
+        if( this.data.ltPropAria ){
+           this.remove_aria();
+        }
+        
+        var exsttools = this.data.tooltips;
+
+        for( var i in exsttools ){
+          var current = exsttools[ i ];
+
+           delete current.nodeName1.tooltipSpan;
+           delete current.nodeName1.tooltip;
+           if( current.parentNode ){
+            doc.body.removeChild( current );
+          }
+        }
+        delete this.$node.trigger; 
+
+        [ '_toolscroll', '_mousedown', '_keydown', '_mousemove', '_focusev', '__reuse' ].forEach( function( item ){
+           delete this[ item ];
+        }.bind( this ) );
+
+        this.data.tooltips = []; 
+        this.data.tooltips = {};
+  }
+
+  propertySetting(nodeName1) {
+      var config = nodeName1.getAttribute( 'lt-prop-tooltip-config' ) || '{}',
+      __config = nodeName1.tooltip.config;
+
+      // if( config ){
+          var config = JSON.parse( config );
+          for( var key in config ){
+              __config[ key ] = config[ key ];
+          }
+      // }
+  }
+
+  createTooltip(event, span, flag) {
+      if( flag ){
+         this.followcursor( event, span );
+      } else {
+         this.nonFollowcursor( event, span );
+      }
+      if( !this.getData( 'ltPropKeepAlive' ) ){
+        var tooltip = span.nodeName1.tooltip;
+        if( ( tooltip.config.keeptooltip != true && tooltip.config.keeptooltip != 'true' ) ) {
+            tooltip.maxdisp = setTimeout( this.removeTooltip.bind( this, span ) , tooltip.config.maxdisplaytime );
+        }
+      }
+  }
+
+  followcursor(event, span) {
+    // here tooltip changes its position on every mousemov. so fastdom can't  be used here
+      if( document.body.contains( span ) ){
+            // span.innerText = span.nodeName1.tooltip.title; 
+            if( !span._callbackHandled ) {
+                this.tooltipOpenCallback( span.nodeName1, span );
+                span._callbackHandled = true;
+            }     
+            if( span.classList.contains( 'lyteTooltipHidden' ) ){
+              span.classList.remove( 'lyteTooltipHidden' );
+              _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.measure( this._followcursor.bind( this, event,span ) );
+            } else {
+              this._followcursor( event, span );
+            }
+        }
+  }
+
+  _followcursor(evt, span) {
+      if( !this.data.tooltips[ span._random ] ){
+        return;
+      }
+      var bcr = span.getBoundingClientRect(),
+      nodeBcr = span.nodeName1.getBoundingClientRect(),
+      scrollLeft = ( window.pageXOffset || document.documentElement.scrollLeft ) * ( this._dir ? -1 : 1 ),
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop,
+      iW = window.innerWidth,
+      iH = window.innerHeight,
+      margin = Math.min( 20, parseInt( span.nodeName1.tooltip.config.margin ) ),
+      leftToSet = this.rtlfunc.call( this, 'clientX', evt, iW ),
+      topToSet = ( evt.clientY + scrollTop + 5 + margin ),
+      topCheck;
+
+      if( leftToSet + bcr.width > iW ){
+        if( leftToSet - bcr.width > 0 ){
+           leftToSet = leftToSet - bcr.width;
+        } else {
+          var midFrmRgt = iW - ( this.rtlfunc( 'left', nodeBcr, iW ) + nodeBcr.width / 2 ),
+          midFrmLeft = iW - midFrmRgt;
+
+          if( midFrmRgt > bcr.width / 2 && midFrmLeft > bcr.width / 2 ){
+              leftToSet = midFrmLeft - bcr.width * 0.5;
+          } else {
+             leftToSet = Math.max( 0, iW - bcr.width );
+          }
+          topCheck = true;
+        }
+      }
+
+      span.style[ this.rtlfunc.call( this, 'left' ) ] = ( leftToSet + scrollLeft ) +'px';
+      span.style.top = topToSet + 'px';
+      if( topCheck ){
+         _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.measure( function(){
+            if( !this.data.tooltips[ span._random ] ){
+              return;
+            }
+            bcr = span.getBoundingClientRect();
+            if( bcr.bottom > iH ){
+               if( evt.clientY > (  iH - evt.clientY ) ){
+                  span.style.top = ( evt.clientY - bcr.height - margin - 5 + scrollTop ) + 'px'
+               }
+            }
+         }.bind( this ) )
+      }
+  }
+
+  createsupp(span) {
+     var inn = document.createElement( 'span' );
+     inn.classList.add( 'lyteTooltipInnerSpan' );
+     span.classList.add( 'lyteInnerToolAdded' );
+     return span.appendChild( inn );
+  }
+
+  rightalign(
+    innWidth,
+    xscroll,
+    newLeft,
+    spanClientRect,
+    span,
+    prevent,
+    event,
+    lt,
+    cls1,
+    cls2,
+    ddct,
+    divWidth,
+    appearance
+  ) {
+      if( ( innWidth + xscroll ) < ( newLeft + spanClientRect.width ) )
+             {
+               span.classList.remove( cls1 );
+               if( !prevent ){
+                  this.nonFollowcursor( event, span, cls2 , true );
+                }
+               return true
+            }
+        else{
+            if( newLeft < xscroll ){
+               if( appearance ){
+                  var inn = this.createsupp( span );
+                  inn.style[ lt ] = divWidth * .75 - ( ddct ) + 'px';
+               }
+               span.style[ lt ] = 0;
+            } else{
+              span.style[ lt ] = newLeft + 'px';
+            }
+        }
+  }
+
+  refresh(evt, span) {
+    var tooltip = span.nodeName1.tooltip,
+    config = tooltip.config;
+
+    span.textContent = tooltip.title = span.nodeName1.getAttribute( 'lt-prop-title' );
+
+    this.clear_time( tooltip );
+
+    this.createTooltip( evt, span );
+  }
+
+  clear_time(tooltip, arr) {
+    ( arr || [ 'maxdisp', 'settime', 'bodyTimeout' ] ).forEach( function( item ){
+         clearTimeout( tooltip[ item ] );
+         delete tooltip[ item ];
+    });
+  }
+
+  nonFollowcursor(event, span, position, prevent) {
+        var appearance = span.nodeName1.tooltip.config.appearance == "callout", dum;
+        span.classList.remove( 'lyteTooltipHidden' );
+        position = position || span.nodeName1.tooltip.config.position || ( /focus/i.test( ( event.type || 'focus' ) ) ? 'bottom' : "" );
+        dum = position || "bottom";
+        if( appearance ){
+          span.classList.add( "lyte" + dum[ 0 ].toUpperCase() + dum.slice( 1 ) )
+        }
+        if( !span._callbackHandled ) {
+                this.tooltipOpenCallback( span.nodeName1, span );
+                span._callbackHandled = true;
+            } 
+         _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.measure(function(){
+              // calculating page off set 
+            if(  !( span.nodeName1 || {} ).tooltip ){
+              return;
+            }
+            var xscroll = ( window.pageXOffset || document.documentElement.scrollLeft ) * ( this._dir ? -1 : 1 );
+            var yscroll = window.pageYOffset || document.documentElement.scrollTop, innWidth = window.innerWidth,  innHeight= window.innerHeight;  
+            var spanClientRect = span.getBoundingClientRect();
+            var nodeClientRect = span.nodeName1.getBoundingClientRect();
+            var left = this.rtlfunc( 'left', nodeClientRect, innWidth ) + xscroll;
+            var topPos = nodeClientRect.top + yscroll;
+            var __config = span.nodeName1.tooltip.config,
+            margin = Math.min( parseInt( __config.margin ), 20 );
+            var toolwid = span.offsetWidth,
+            tool_hgt = span.offsetHeight;
+            var divWidth = nodeClientRect.width;
+            var wid = nodeClientRect.height;
+            var lt = this.rtlfunc( 'left' ),
+            sty = window.getComputedStyle( span ),
+            isContentBox = /content-box/.test( sty.boxSizing ),
+            padLeft = isContentBox ? parseFloat( sty.paddingLeft ) : 0,
+            padRight = isContentBox ? parseFloat( sty.paddingRight ) : 0,
+            padTop = isContentBox ? parseFloat( sty.paddingTop ) : 0,
+            padBottom = isContentBox ? parseFloat( sty.paddingBottom ) : 0,
+            ddct, calloutstyle,
+            $span = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( span );
+            if( appearance ) {
+                calloutstyle = window.getComputedStyle( span, ':before' );
+                ddct = parseFloat( calloutstyle.getPropertyValue( 'width' ) ) / 2 * 1.414;
+                if( isNaN( ddct ) || !ddct ) {
+                    ddct = parseFloat( window.getComputedStyle( span, position == "left" ? ":before" : ":after" ).getPropertyValue( 'border-left-width' ) )
+                }
+            } else {
+                ddct = 0;
+            }
+            switch(position.toLowerCase())
+              {
+                case 'right' :
+                 {
+                    left += ddct;
+                    var newLeft = left + divWidth + margin;
+                    span.style.top=( topPos + wid / 2 - tool_hgt / 2 )+'px';
+                    if( ( innWidth + xscroll ) < ( newLeft + spanClientRect.width ))
+                      {
+                         if( !prevent ){
+                            if( innWidth - ( left + divWidth - xscroll - ddct ) < ( left - ddct - xscroll ) ){
+                                span.classList.remove('lyteRight');
+                                this.nonFollowcursor.call( this, event, span,'left', true );
+                                break;
+                            }
+                        }
+                        span.style[ lt ] = newLeft + 'px';
+                        span.style.width = ( innWidth - newLeft - padLeft - padRight ) + 'px';
+                        // span.style.top = this.calculateHeight( spanClientRect, textWid, span, padTop, padBottom ) + 'px';
+                        _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.mutate( function(){
+                          _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.measure( function(){
+                              span.style.top = ( topPos + wid / 2 - span.offsetHeight / 2 ) + 'px';
+                          })
+                        })
+                      }
+                    else{
+                      span.style[ lt ] = newLeft + 'px';
+                    }
+                    break; 
+                 }
+                 case 'left' :
+                   {
+                      left -= ddct;
+                      var newLeft = left - margin - toolwid;
+                      span.style.top=( topPos + wid / 2 - tool_hgt / 2 ) + 'px';
+                      if( newLeft < xscroll )
+                        {
+                           if( !prevent ){
+                               if( left + ddct - xscroll < innWidth - ( left + ddct - xscroll + divWidth ) ){
+                                 span.classList.remove('lyteLeft');
+                                 this.nonFollowcursor.call(this,event, span,'right', true);
+                                 break;
+                               }
+                            }
+                            span.style[ lt ] = 0 + 'px';
+                            span.style.width = ( left - xscroll - padLeft - padRight ) + 'px';
+                            // span.style.top = this.calculateHeight( spanClientRect, textWid, span, padTop, padBottom ) + 'px';
+                             _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.mutate( function(){
+                                _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.measure( function(){
+                                    span.style.top = ( topPos + wid / 2 - span.offsetHeight / 2 ) + 'px';
+                                })
+                              })
+                        }
+                      else{
+                           span.style[ lt ] = newLeft + 'px';
+                      }  
+                      break;  
+                   }
+                case 'bottom' :
+                  {
+                    topPos += ddct;
+                    var newTop = ( topPos + wid + margin ), newLeft = left + divWidth / 2 - toolwid / 2;
+                    if( ( yscroll + innHeight ) < ( newTop + tool_hgt ) ) {
+                        span.classList.remove('lyteBottom');
+                         if( !prevent ){
+                            this.nonFollowcursor.call(this,event, span,'top', true);
+                            break;
+                          }
+                    }
+                    newLeft = this.horicheck( newLeft, xscroll, innWidth, spanClientRect, span, nodeClientRect, lt, ddct, appearance );
+                    span.style[ lt ] = newLeft + 'px';
+                    span.style.top = newTop + 'px';     
+                    break;  
+                  }     
+                case 'top' :
+                  {
+                    topPos -= ddct;
+                    var newTop = topPos - margin - tool_hgt, newLeft = left + divWidth / 2 - toolwid / 2;
+                    if( newTop < yscroll ) {
+                       span.classList.remove('lyteTop');
+                        if( !prevent ){
+                          this.nonFollowcursor.call(this,event, span,'bottom', true);
+                          break;
+                        }
+                    } 
+                    newLeft = this.horicheck( newLeft, xscroll, innWidth, spanClientRect, span, nodeClientRect, lt, ddct, appearance );
+                    span.style[ lt ] = newLeft + 'px';
+                    // span.style.top = newTop + 'px';   
+                    _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.mutate( function(){
+                          _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().fastdom.measure( function(){
+                              span.style.top = ( topPos - margin - span.offsetHeight ) + 'px';
+                          })
+                        })
+                    break;     
+                  }
+                 case 'bottomright' :
+                  {
+                    topPos += ddct;
+                    var newLeft = left + divWidth * .75 - ( appearance ? parseFloat( calloutstyle[ lt ] ) + ddct : 0.2 * toolwid ),
+                    newTop = topPos + wid + margin;
+                    if( this.rightalign( innWidth, xscroll, newLeft, spanClientRect, span, prevent, event, lt, 'lyteBottomright', 'bottomleft', ddct, divWidth, appearance ) ){
+                       $span.removeClass('lyteBottomright');
+                       break;
+                    }     
+                   if( ( innHeight + yscroll ) < ( newTop + spanClientRect.height ) ) 
+                       {
+                         $span.removeClass('lyteBottomright');
+                         if( prevent ){
+                            $span.addClass( 'lyteTopright' ).css( 'top', ( topPos - ddct - tool_hgt - margin ) );
+                         } else {
+                            this.nonFollowcursor( event, span,'topright', true );
+                         }
+                         break
+                       }
+                     else{
+                        span.style.top = newTop + 'px';
+                     }  
+                    break; 
+                  }
+                case 'topright' :
+                  {
+                    topPos -= ddct;
+                    var newLeft = left + divWidth * .75 - ( appearance ? parseFloat( calloutstyle[ lt ] ) + ddct : 0.2 * toolwid ),
+                    newTop = topPos - tool_hgt - margin;
+                    
+                    if( this.rightalign( innWidth, xscroll, newLeft, spanClientRect, span, prevent, event, lt, 'lyteTopright', 'topleft', ddct, divWidth, appearance ) ){
+                       $span.removeClass( 'lyteTopright' );
+                       break;
+                    } 
+
+                    if( newTop < yscroll ){
+                       $span.removeClass( 'lyteTopright' );
+                       if( prevent ){
+                          $span.addClass( 'lyteBottomright' ).css( 'top', topPos + ( 2 * ddct ) + wid + margin );
+                       } else {
+                          this.nonFollowcursor( event, span, 'bottomright', true );
+                       }
+                    } else {
+                       $span.css( 'top', newTop );
+                    }
+                    break;     
+                 }
+                case 'bottomleft' :
+                   {
+                     topPos += ddct;
+                     var newLeft = left + divWidth *.25 - ( appearance ? parseFloat( calloutstyle[ lt ] ) : 0.8 * toolwid ) + 'px',
+                     newTop =(topPos+wid+margin)+'px';
+                     if(parseInt(newLeft) < xscroll)
+                        {
+                            span.classList.remove('lyteBottomleft');
+                            if( !prevent ){
+                                this.nonFollowcursor.call(this,event, span,'bottomright', true);
+                            }
+                            break;
+                        }
+                    else{
+                        span.style[ lt ] = newLeft;
+                    } 
+                    if(( innHeight + yscroll ) < ( parseInt( newTop ) + tool_hgt ) )
+                        {
+                            $span.removeClass( 'lyteBottomleft' );
+                            if( prevent ){
+                               $span.addClass( 'lyteTopleft' ).css( 'top', ( topPos - ddct - tool_hgt - margin ) );
+                            } else {
+                              this.nonFollowcursor( event, span, 'topleft', true );
+                            }
+                            break
+                       }
+                     else{
+                        span.style.top = newTop;
+                     } 
+                     break; 
+                    }
+                 case 'topleft' :
+                    {
+                        topPos -= ddct;
+                        var newLeft = left + divWidth *.25 - ( appearance ? parseFloat( calloutstyle[ lt ] ) : 0.8 * toolwid ) + 'px',
+                        newTop = ( topPos - tool_hgt - margin )+'px';
+                        
+                        if(parseInt(newLeft)< xscroll) {
+                            $span.removeClass('lyteTopleft');
+                            if( prevent ){
+                               $span.addClass('lyteTopright').css( lt, left + divWidth * .75 - ( appearance ? parseFloat( calloutstyle[ lt ] ) + ddct : 0.2 * toolwid ) );
+                            } else {
+                               this.nonFollowcursor( event, span,'topright', true);
+                            }
+                            break;
+                        } else {
+                          span.style[ lt ] = newLeft;
+                        } 
+                        
+                        if( parseInt( newTop ) < yscroll ) {   
+                            $span.removeClass( 'lyteTopleft' );
+                            
+                            if( prevent ){
+                                $span.addClass( 'lyteBottomleft' ).css( 'top', topPos + wid + margin + 2 * ddct );
+                            } else {
+                                this.nonFollowcursor( event, span, 'bottomleft', true );
+                            }
+                            break;
+                         } else {
+                            $span.css( 'top', newTop );
+                         }
+                        break;    
+                       }
+                default:
+                   {
+                      var tooltop = ddct;
+                      var newLeft = this.rtlfunc.call( this, 'clientX', event, innWidth ) - toolwid / 2 + xscroll;
+                      var newTop = topPos + tooltop + wid + margin;
+                      if( ( innHeight + yscroll ) < ( newTop + tool_hgt ) ) {
+                          span.classList.remove('lyteBottom');
+                          if( !prevent ){
+                            this.nonFollowcursor.call(this,event, span,'top', true);
+                            break;
+                          }
+                       }
+                      newLeft = this.horicheck( newLeft, xscroll, innWidth, spanClientRect, span, nodeClientRect, lt, ddct, appearance );
+                      span.style[ lt ] = newLeft + 'px';
+                      span.style.top = newTop + 'px';   
+                   }
+                }
+               span.style[ this.rtlfunc( 'right' ) ] = 'auto'; 
+
+               var __startclass = __config.startClass,
+               __endClass = __config.endClass,
+               __animationClass = __config.animationClass;
+
+               if( __startclass ){
+                  var $span = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( span ).addClass( __startclass );
+
+                  window.requestAnimationFrame( function(){
+                    $span.addClass( __animationClass );
+                    window.requestAnimationFrame( function(){
+                      window.requestAnimationFrame( function(){
+                        $span.addClass( __endClass );
+                      });
+                    });
+                  });
+               }
+          }.bind(this))
+    // }.bind(this))
+  }
+
+  horicheck(
+    newLeft,
+    xscroll,
+    innWidth,
+    spanClientRect,
+    span,
+    nodeClientRect,
+    lt,
+    ddct,
+    appearance
+  ) {
+      var flag, flag2
+      if( newLeft < xscroll ){
+         newLeft = xscroll;
+         flag = true
+      }else if( innWidth + xscroll < newLeft + spanClientRect.width ) {
+          newLeft = innWidth - spanClientRect.width + xscroll;
+          flag2 = true;
+      }
+
+       if( ( flag || flag2 ) && appearance ){
+         var inn = this.createsupp( span ), nodeleft = this.rtlfunc( 'left', nodeClientRect, innWidth ),
+         leftVal;
+         if( flag ){
+            var lft = this.rtlfunc( 'left', nodeClientRect, innWidth );
+            inn.style[ lt ] =  ( Math.min( spanClientRect.width, nodeClientRect.width ) + Math.min( lft , 0 ) )/ 2 + Math.max( 0, lft ) + 'px';
+         } else {
+            var rgt = innWidth - this.rtlfunc( 'right', nodeClientRect, innWidth );
+            inn.style[ lt ] = spanClientRect.width - ( Math.max( 0 , rgt ) + ( Math.min( spanClientRect.width, nodeClientRect.width ) + Math.min( rgt, 0 ) ) / 2 ) + 'px';
+         }
+      }
+      return newLeft
+  }
+
+  closeAllTooltip(current, frm_down) {
+
+    var tooltips = this.data.tooltips;
+
+    for( var key in tooltips ){
+      var item = tooltips[ key ];
+      if( item.nodeName1 != current ){
+          var tooltip = item.nodeName1.tooltip;
+
+          if( !tooltip ){
+             this.removeTooltip( item );
+             continue;
+          }
+
+          if( frm_down && !tooltip.config.hideOnClick ){
+             continue;
+          }
+
+          if( tooltip.bodyTimeout == void 0 ){
+            tooltip.bodyTimeout = setTimeout( this.removeTooltip.bind( this ), tooltip.config.hidedelay, item );
+          }
+      }
+    }
+  }
+
+  removeTooltip(span) {
+        if( span.parentNode == document.body ){
+            var node = span.nodeName1;
+              
+            if( !node ){
+               return;
+            }
+
+            var tooltip = node.tooltip || {},
+            config = tooltip.config || {},
+            __endClass = config.endClass || "",
+            __reuse = config.reuse,
+            fn = function(){
+                if( __reuse ){
+                  var span_style = span.style;
+
+                  span_style.opacity = "0";
+                  span_style.pointerEvents = "none";
+                } else {
+                  document.body.removeChild( span );
+                }
+                clearTimeout( span.__animetime );
+
+                _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( span ).off( 'transitionend' );
+            };
+
+            this.clear_time( tooltip );
+
+            if( this.prevTooltipNode == node ){
+               delete this.prevTooltipNode;
+            }
+
+            delete node.tooltipSpan;
+            delete node.tooltip;
+            delete span.nodeName1;
+
+            node.setAttribute( 'aria-expanded', "false" );
+
+             if( __endClass ){
+                _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( span ).removeClass( __endClass ).on( 'transitionend', fn );
+                span.__animetime = setTimeout( fn, config.maxAnimationLimit );
+             } else {
+                fn();
+             }
+
+            this.tooltipCloseCallback( node );
+            delete this.data.tooltips[ span._random ];
+        }
+  }
+
+  hover_process(node) {
+    var tooltip = ( node || {} ).tooltip;
+    if( tooltip ){
+        this.clear_time( tooltip );
+    }
+  }
+
+  mousemove(event) {
+        if( this._mousedownFlag ) {
+          return
+        }
+
+        if( this.__dragging ){
+            if( event.buttons ){
+              return;
+            }
+            delete this.__dragging;
+        }
+
+        var nodeName1 = event.target.correspondingElement || event.target;
+
+        while(nodeName1 && nodeName1.tagName != 'BODY' && nodeName1 != document && nodeName1.tagName != 'HTML' ){
+            
+            var title = nodeName1.getAttribute ? nodeName1.getAttribute( 'lt-prop-title' ) : "",
+            Jnode = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( nodeName1 );
+
+            if( Jnode.hasClass( 'lyteTooltip' ) ){
+              var target_node = nodeName1.nodeName1 || {};
+              if( ( ( target_node.tooltip || {} ).config || {} ).hidedelay ){
+                this.hover_process( target_node );
+                return this.closeAllTooltip( target_node );
+              }
+            }
+
+            if( Jnode.hasClass( this.data.ltPropIgnoreClass ) ){
+                delete this.prevTooltipNode;
+                nodeName1 = document.body;
+                break;
+            }
+
+            if( title ){
+
+                  if( nodeName1.getAttribute( 'title' ) ){
+                      nodeName1.removeAttribute( 'title' );
+                  }
+
+                  nodeName1.tooltip = nodeName1.tooltip || {};
+
+                  nodeName1.tooltip.config = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default().extend( { reuse : false, position : '', appearance : 'callout', margin : 0, showdelay : 0, hidedelay : 0, maxdisplaytime : 5000, keeptooltip : false, aria : false, hideOnClick : true, startClass : "", endClass : "", animationClass : "", maxAnimationLimit : 2000 }, this.data.ltPropTooltipConfig || {} );
+                  nodeName1.tooltip.title = title;
+
+                  this.propertySetting( nodeName1 );
+
+                  var tooltip = nodeName1.tooltip,
+                  __config = tooltip.config,
+                  is_reuse = __config.reuse;
+
+                  if( this.prevTooltipNode != nodeName1 && ( !tooltip.tooltipSpan || is_reuse ) ){
+                      this.prevTooltipNode = nodeName1;
+                      var is_exist = this.__reuse,
+                      is_really_exist = is_reuse && is_exist,
+                      span = is_really_exist ? is_exist : document.createElement( 'span' ),
+                      Jobj = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( span ),
+                      toolclass = Jnode.attr( 'lt-prop-tooltip-class' ),
+                      ltPropId = __config.id || this.getData( 'ltPropId' ), 
+                      ltPropClass = this.getData( 'ltPropClass' ),
+                      randomId = Date.now() + 'lytetooltip';
+
+                      if( is_exist ){
+                          this.removeTooltip( span );
+                      }
+
+                      this.data.tooltips[ randomId ] = span;
+                      span._random = randomId;
+
+                      if( !is_exist ){
+                        if( is_reuse ){
+                           this.__reuse =  span;
+                        }
+                      } else {
+                        Jobj.attr( 'class', 'lyteTooltip' );
+                      }
+
+                      if( ltPropId ) {
+                         Jobj.attr( 'id', ltPropId );
+                      }
+                      if( ltPropClass ) {
+                         Jobj.addClass( ltPropClass );
+                      }  
+
+                      !is_really_exist && Jobj.addClass( 'lyteTooltip lyteTooltipHidden' );
+                      if( this._dir ) {
+                         Jobj.addClass( 'lyteRTL' );
+                      }
+
+                      Jobj.attr( 'style', Jnode.attr( 'lt-prop-tooltip-style' ) || '' );
+
+                      if( !span.style.borderColor ){ 
+                          span.style.borderColor = span.style.backgroundColor;
+                      }
+
+                      if( tooltip.config.appearance == 'callout' && tooltip.config.position != "followcursor" ) {
+                        Jobj.addClass( 'lyteTooltipCallout' );
+                        if( !tooltip.config.hideOnClick ){
+                          tooltip.refresh = this.refresh.bind( this );
+                        }
+                      }
+
+                      tooltip.tooltipSpan = span;
+                      span.nodeName1 = nodeName1;
+                      
+                      Jobj.addClass( toolclass || '' );
+
+                      if( tooltip.config.aria ){
+                        var __obj = {
+                          role : "tooltip",
+                          "aria-hidden" : "false"
+                        };
+                        Jobj.attr( __obj );
+
+                        nodeName1.setAttribute( 'aria-expanded', 'true' );
+                      }
+
+                      tooltip.settime = setTimeout( this.createTooltip.bind( this ), tooltip.config.showdelay, event, span, tooltip.config.position == 'followcursor' );
+                      span.textContent = tooltip.title; 
+
+                      !is_really_exist && window._lyteUiUtils.appendChild( document.body, span );
+                  } else if( tooltip.config.position == 'followcursor' && this.prevTooltipNode == nodeName1 && tooltip.tooltipSpan ){
+                      var span = tooltip.tooltipSpan;
+
+                      _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( span ).css({
+                         opacity : "",
+                         pointerEvents : ""
+                      });
+
+                      this.clear_time( tooltip, [ 'maxdisp', 'settime' ] );
+
+                      if( !span._callbackHandled ){
+                        tooltip.settime = setTimeout( this.createTooltip.bind( this ), tooltip.config.showdelay, event, span, true );
+                      } else {
+                        this.followcursor( event, span );
+                      }
+                  } else if( tooltip.tooltipSpan && tooltip.tooltipSpan.style.display == 'none' ) {
+                      
+                      _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default()( tooltip.tooltipSpan ).css({
+                         display : "",
+                         opacity : "",
+                         pointerEvents : ""
+                      });
+
+                      this.clear_time( tooltip );
+                      
+                      tooltip.settime = setTimeout( this.createTooltip.bind( this ),  tooltip.config.showdelay,event,  tooltip.tooltipSpan,  tooltip.config.position == 'followcursor' );
+                  } else {
+                      this.prevTooltipNode = nodeName1;
+                  } 
+                  this.closeAllTooltip( nodeName1 );    
+                  break;       
+                }
+              else {
+                nodeName1 = nodeName1.parentNode;
+              }  
+        }
+      if(nodeName1 && ( [ 'BODY', 'HTML' ].indexOf( nodeName1.tagName ) != -1 ) && this.prevTooltipNode != nodeName1 ){
+          delete this.prevTooltipNode;
+          this.closeAllTooltip();
+      } 
+  }
+
+  static observers(arg1) {
+    return Object.assign(super.observers({
+      aria_obs : function( arg ){
+          if( arg.newValue ){
+             this.bind_aria();
+          } else {
+             this.remove_aria();
+          }
+      }.observes( 'ltPropAria' )
+    }), arg1);
+  }
+
+  _() {
+    _;
+  }
+}
+
+LyteTooltipComponent._template = "<template tag-name=\"lyte-tooltip\"> </template>";;
+LyteTooltipComponent._dynamicNodes = [];;
+
+LyteTooltipComponent._observedAttributes = [
+  "ltPropId",
+  "ltPropClass",
+  "ltPropKeepAlive",
+  "ltPropTooltipConfig",
+  "ltPropIgnoreClass",
+  "ltPropAria",
+  "tooltips"
+];
+
+( function(){
+   var doc = document,
+   __fn = function(){
+      var name = 'lyte-tooltip';
+
+      if( !doc.querySelector( name ) ){
+          window._lyteUiUtils.appendChild( doc.body, doc.createElement( name ) );
+      }
+   };
+
+   if( /complete|interactive/i.test( doc.readyState ) ){
+      __fn();
+   } else {
+      doc.addEventListener( 'DOMContentLoaded', __fn );
+   }
+
+})();
+
+
+/**
+ * @syntax nonYielded
+ * <lyte-tooltip></lyte-tooltip>
+ */
+
+
+LyteTooltipComponent.register("lyte-tooltip", {
+  hash: "LyteTooltipComponent_14",
+  refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
+});
+
+
+/***/ }),
+
+/***/ 2589694:
 /*!*************************************************************************************!*\
   !*** ./node_modules/@zoho/lyte-ui-component/components/javascript/lyte-wormhole.js ***!
   \*************************************************************************************/
@@ -11772,8 +16539,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "LyteWormholeComponent": () => (/* binding */ LyteWormholeComponent)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/core/index.js */ 56505143);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/component.js */ 50761997);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/@slyte/core/index.js */ 76928134);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/component.js */ 40876002);
 
 var _ = {};
 
@@ -12037,13 +16804,13 @@ LyteWormholeComponent._observedAttributes = [
 
 
 LyteWormholeComponent.register("lyte-wormhole", {
-    hash: "LyteWormholeComponent_16",
+    hash: "LyteWormholeComponent_6",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });
 
 /***/ }),
 
-/***/ 49405404:
+/***/ 52924117:
 /*!*********************!*\
   !*** ./app-init.js ***!
   \*********************/
@@ -12054,8 +16821,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "app": () => (/* binding */ app)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _app_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.js */ 3548204);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _app_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.js */ 51088060);
 
 var _ = {};
 
@@ -12077,7 +16844,7 @@ var app = new _app_js__WEBPACK_IMPORTED_MODULE_1__.ErmApp({
 
 /***/ }),
 
-/***/ 3548204:
+/***/ 51088060:
 /*!****************!*\
   !*** ./app.js ***!
   \****************/
@@ -12088,13 +16855,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ErmApp": () => (/* binding */ ErmApp)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_addon_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/addon.js */ 5888064);
-/* harmony import */ var _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/core/index.js */ 21984420);
-/* harmony import */ var _data_store_db__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./data-store/db */ 85658738);
-/* harmony import */ var _components_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/component */ 57373778);
-/* harmony import */ var _router_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./router/router */ 99442756);
-/* harmony import */ var _services_ServiceProvider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./services/ServiceProvider */ 53025444);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_addon_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/addon.js */ 8193521);
+/* harmony import */ var _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/core/index.js */ 93425939);
+/* harmony import */ var _data_store_db__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./data-store/db */ 87899682);
+/* harmony import */ var _components_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/component */ 54338305);
+/* harmony import */ var _router_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./router/router */ 11607809);
+/* harmony import */ var _services_ServiceProvider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./services/ServiceProvider */ 76246865);
 
 var _ = {};
 
@@ -12107,20 +16874,20 @@ var _ = {};
         return _node_modules_zoho_lyte_ui_component_addon_js__WEBPACK_IMPORTED_MODULE_2__.LyteUiComponentAddon;
     },
 
-    "ErmDb": function() {
-        return _data_store_db__WEBPACK_IMPORTED_MODULE_3__.ErmDb;
+    "ErmComponentRegistry": function() {
+        return _components_component__WEBPACK_IMPORTED_MODULE_3__.ErmComponentRegistry;
     },
 
-    "ServiceProvider": function() {
-        return _services_ServiceProvider__WEBPACK_IMPORTED_MODULE_4__.ServiceProvider;
+    "ErmDb": function() {
+        return _data_store_db__WEBPACK_IMPORTED_MODULE_4__.ErmDb;
     },
 
     "ErmRouter": function() {
         return _router_router__WEBPACK_IMPORTED_MODULE_5__.ErmRouter;
     },
 
-    "ErmComponentRegistry": function() {
-        return _components_component__WEBPACK_IMPORTED_MODULE_6__.ErmComponentRegistry;
+    "ServiceProvider": function() {
+        return _services_ServiceProvider__WEBPACK_IMPORTED_MODULE_6__.ServiceProvider;
     }
 });
 
@@ -12135,10 +16902,10 @@ class ErmApp extends _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_
     lookups(){
         return [
             _node_modules_zoho_lyte_ui_component_addon_js__WEBPACK_IMPORTED_MODULE_2__.LyteUiComponentAddon,
-            {component : _components_component__WEBPACK_IMPORTED_MODULE_6__.ErmComponentRegistry},
+            {component : _components_component__WEBPACK_IMPORTED_MODULE_3__.ErmComponentRegistry},
             {router : _router_router__WEBPACK_IMPORTED_MODULE_5__.ErmRouter},
-            {db : _data_store_db__WEBPACK_IMPORTED_MODULE_3__.ErmDb},
-            {ServiceProvider: _services_ServiceProvider__WEBPACK_IMPORTED_MODULE_4__.ServiceProvider}
+            {db : _data_store_db__WEBPACK_IMPORTED_MODULE_4__.ErmDb},
+            {ServiceProvider: _services_ServiceProvider__WEBPACK_IMPORTED_MODULE_6__.ServiceProvider}
         ];
     }
 
@@ -12156,7 +16923,7 @@ ErmApp.register({
 
 /***/ }),
 
-/***/ 57373778:
+/***/ 54338305:
 /*!*********************************!*\
   !*** ./components/component.js ***!
   \*********************************/
@@ -12167,8 +16934,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ErmComponentRegistry": () => (/* binding */ ErmComponentRegistry)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/component/index.js */ 26633);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/component/index.js */ 5660422);
 
 var _ = {};
 
@@ -12212,7 +16979,7 @@ ErmComponentRegistry.register({
 
 /***/ }),
 
-/***/ 85658738:
+/***/ 87899682:
 /*!**************************!*\
   !*** ./data-store/db.js ***!
   \**************************/
@@ -12224,10 +16991,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ErmDb": () => (/* binding */ ErmDb),
 /* harmony export */   "Schema": () => (/* binding */ Schema)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _node_modules_slyte_data_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/data/index.js */ 73416229);
-/* harmony import */ var _node_modules_slyte_data_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/data/index.js */ 4474264);
-/* harmony import */ var _node_modules_slyte_data_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/data/index.js */ 67372236);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_slyte_data_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/data/index.js */ 90712993);
+/* harmony import */ var _node_modules_slyte_data_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@slyte/data/index.js */ 16840942);
+/* harmony import */ var _node_modules_slyte_data_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/@slyte/data/index.js */ 15017381);
 
 var _ = {};
 
@@ -12266,7 +17033,7 @@ let Schema = ErmDb.Schema;
 
 /***/ }),
 
-/***/ 23200907:
+/***/ 45491693:
 /*!**************************************************************!*\
   !*** ./node_modules/@zoho/lyte-dom/modules/lyte-dom-ajax.js ***!
   \**************************************************************/
@@ -12934,7 +17701,7 @@ let Schema = ErmDb.Schema;
 
 /***/ }),
 
-/***/ 76361426:
+/***/ 13013518:
 /*!****************************************************************!*\
   !*** ./node_modules/@zoho/lyte-dom/modules/lyte-dom-events.js ***!
   \****************************************************************/
@@ -13699,7 +18466,7 @@ let Schema = ErmDb.Schema;
 
 /***/ }),
 
-/***/ 22235237:
+/***/ 81333620:
 /*!*******************************************************************!*\
   !*** ./node_modules/@zoho/lyte-dom/modules/lyte-dom-traversal.js ***!
   \*******************************************************************/
@@ -15107,7 +19874,7 @@ let Schema = ErmDb.Schema;
 
 /***/ }),
 
-/***/ 19978124:
+/***/ 92838254:
 /*!***************************************************************!*\
   !*** ./node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js ***!
   \***************************************************************/
@@ -16753,15 +21520,15 @@ function dataAttr( elem, key, data ) {
 	if( isBundler ) {
 
 		if( addTraversalModule ) {
-			__webpack_require__( /*! ./lyte-dom-traversal.js */ 22235237 )( $L, lyteDomObj );
+			__webpack_require__( /*! ./lyte-dom-traversal.js */ 81333620 )( $L, lyteDomObj );
 		}
 		
 		if( addEventsModule ) {
-			__webpack_require__( /*! ./lyte-dom-events.js */ 76361426 )( $L, lyteDomObj );
+			__webpack_require__( /*! ./lyte-dom-events.js */ 13013518 )( $L, lyteDomObj );
 		}
 
 		if( addAjaxModule ) {
-			__webpack_require__( /*! ./lyte-dom-ajax.js */ 23200907 )( $L, lyteDomObj );
+			__webpack_require__( /*! ./lyte-dom-ajax.js */ 45491693 )( $L, lyteDomObj );
 		}
     }
 
@@ -16772,7 +21539,7 @@ function dataAttr( elem, key, data ) {
 
 /***/ }),
 
-/***/ 5888064:
+/***/ 8193521:
 /*!*******************************************************!*\
   !*** ./node_modules/@zoho/lyte-ui-component/addon.js ***!
   \*******************************************************/
@@ -16783,16 +21550,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "LyteUiComponentAddon": () => (/* binding */ LyteUiComponentAddon)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/core/index.js */ 52193885);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/component.js */ 50761997);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_helpers_exportable_helpers_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/helpers/exportable-helpers.js */ 63465505);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_helpers_helpers_dev_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/helpers/helpers-dev.js */ 60488310);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_helpers_utilityFn_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/helpers/utilityFn.js */ 33084052);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_helpers_eventListeners_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/helpers/eventListeners.js */ 35312679);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/core/index.js */ 78187831);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/component.js */ 40876002);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_helpers_exportable_helpers_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/helpers/exportable-helpers.js */ 40632800);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_helpers_helpers_dev_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/helpers/helpers-dev.js */ 53520025);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_helpers_utilityFn_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/helpers/utilityFn.js */ 23937546);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_helpers_eventListeners_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/helpers/eventListeners.js */ 69278428);
 /* harmony import */ var _node_modules_zoho_lyte_ui_component_components_helpers_eventListeners_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_node_modules_zoho_lyte_ui_component_components_helpers_eventListeners_js__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_helpers_tableNavigation_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/helpers/tableNavigation.js */ 87329985);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_helpers_lyte_copy2clip_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/helpers/lyte-copy2clip.js */ 6669686);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_helpers_tableNavigation_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/helpers/tableNavigation.js */ 49921744);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_helpers_lyte_copy2clip_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/helpers/lyte-copy2clip.js */ 20222362);
 /* harmony import */ var _node_modules_zoho_lyte_ui_component_components_helpers_lyte_copy2clip_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_node_modules_zoho_lyte_ui_component_components_helpers_lyte_copy2clip_js__WEBPACK_IMPORTED_MODULE_8__);
 
 var _ = {};
@@ -16907,7 +21674,7 @@ LyteUiComponentAddon.register({
 
 /***/ }),
 
-/***/ 50761997:
+/***/ 40876002:
 /*!**********************************************************************!*\
   !*** ./node_modules/@zoho/lyte-ui-component/components/component.js ***!
   \**********************************************************************/
@@ -16919,8 +21686,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Component": () => (/* binding */ Component),
 /* harmony export */   "LyteUiComponentComponentRegistry": () => (/* binding */ LyteUiComponentComponentRegistry)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/component/index.js */ 26633);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/component/index.js */ 5660422);
 
 var _ = {};
 
@@ -16967,7 +21734,7 @@ class Component extends LyteUiComponentComponentRegistry.Component {
 
 /***/ }),
 
-/***/ 35312679:
+/***/ 69278428:
 /*!***********************************************************************************!*\
   !*** ./node_modules/@zoho/lyte-ui-component/components/helpers/eventListeners.js ***!
   \***********************************************************************************/
@@ -17064,7 +21831,7 @@ class Component extends LyteUiComponentComponentRegistry.Component {
 
 /***/ }),
 
-/***/ 63465505:
+/***/ 40632800:
 /*!***************************************************************************************!*\
   !*** ./node_modules/@zoho/lyte-ui-component/components/helpers/exportable-helpers.js ***!
   \***************************************************************************************/
@@ -17189,7 +21956,7 @@ function stringify( obj ){
 
 /***/ }),
 
-/***/ 60488310:
+/***/ 53520025:
 /*!********************************************************************************!*\
   !*** ./node_modules/@zoho/lyte-ui-component/components/helpers/helpers-dev.js ***!
   \********************************************************************************/
@@ -17200,11 +21967,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "_lyteUiUtils": () => (/* binding */ utils)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/component.js */ 50761997);
-/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/component/index.js */ 26633);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_helpers_exportable_helpers_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/helpers/exportable-helpers.js */ 63465505);
-/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js */ 19978124);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/component.js */ 40876002);
+/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@slyte/component/index.js */ 5660422);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_helpers_exportable_helpers_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/helpers/exportable-helpers.js */ 40632800);
+/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js */ 92838254);
 /* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4__);
 
 var _ = {};
@@ -18757,7 +23524,7 @@ var utils = window._lyteUiUtils;
 
 /***/ }),
 
-/***/ 6669686:
+/***/ 20222362:
 /*!***********************************************************************************!*\
   !*** ./node_modules/@zoho/lyte-ui-component/components/helpers/lyte-copy2clip.js ***!
   \***********************************************************************************/
@@ -18912,7 +23679,7 @@ var utils = window._lyteUiUtils;
 
 /***/ }),
 
-/***/ 87329985:
+/***/ 49921744:
 /*!************************************************************************************!*\
   !*** ./node_modules/@zoho/lyte-ui-component/components/helpers/tableNavigation.js ***!
   \************************************************************************************/
@@ -18920,7 +23687,7 @@ var utils = window._lyteUiUtils;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js */ 19978124);
+/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js */ 92838254);
 /* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_0__);
 
 
@@ -19119,7 +23886,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 33084052:
+/***/ 23937546:
 /*!******************************************************************************!*\
   !*** ./node_modules/@zoho/lyte-ui-component/components/helpers/utilityFn.js ***!
   \******************************************************************************/
@@ -19127,7 +23894,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js */ 19978124);
+/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js */ 92838254);
 /* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_0__);
 
 
@@ -19573,7 +24340,2022 @@ window._lyteUiUtils.convert_diacritics = function( str ){
 
 /***/ }),
 
-/***/ 57616523:
+/***/ 90763180:
+/*!********************************************************************************!*\
+  !*** ./node_modules/@zoho/lyte-ui-component/plugins/lyte-moment-additional.js ***!
+  \********************************************************************************/
+/***/ ((module, exports, __webpack_require__) => {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( cb ){
+	if( true ){
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(/*! @zoho/lyte-dom */ 92838254) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (cb),
+		__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+		(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+} )( function( $L ){
+	if( $L && $L.moment ) {
+		var proto = $L.moment.lyteMoment.prototype;
+		var standardDate = [
+			{ val : 'YYYY-MM-DD', regex : /^(\d{4}-\d{2}-\d{2})/ },
+			{ val : 'GGGG-['+ proto.week + ']WW-E', regex : new RegExp( '\^(\\d{4}-'+ proto.week + '\\d{2}-\\d)' ) },
+			{ val : 'GGGG-['+ proto.week + ']WW', regex : new RegExp( '\^(\\d{4}-'+ proto.week + '\\d{2})' ) },
+			{ val : 'YYYY-DDD', regex : /^(\d{4}-\d{3})/ },
+			{ val : 'YYYY-MM', regex : /^(\d{4}-\d{2})/ },
+			{ val : 'YYYYMMDD', regex : /^(\d{8})/},
+			{ val : 'GGGG['+ proto.week + ']WWE', regex : new RegExp( '\^(\\d{4}'+ proto.week + '\\d{2}\\d)' ) },
+			{ val : 'GGGG['+ proto.week + ']WW', regex : new RegExp( '\^(\\d{4}'+ proto.week + '\\d{2})' ) },
+			{ val : 'YYYYDDD', regex : /^(\d{4}\d{3})/ }
+		],
+		standardTime = [
+			{ val : 'HH:mm:ss.SSSS', regex : /^\d{2}:\d{2}:\d{2}\.[0-9]{1,}$/ },
+			{ val : 'HH:mm:ss,SSSS', regex : /^\d{2}:\d{2}:\d{2},[0-9]{1,}$/ },
+			{ val : 'HH:mm:ss', regex : /^\d{2}:\d{2}:\d{2}$/ },
+			{ val : 'HH:mm', regex : /^\d{2}:\d{2}$/ },
+			{ val : 'HHmmss.SSSS', regex : /^\d{6}\.[0-9]{1,}$/ },
+			{ val : 'HHmmss,SSSS', regex : /^\d{6},[0-9]{1,}$/ },
+			{ val : 'HHmmss', regex : /^\d{6}$/ },
+			{ val : 'HHmm', regex : /^\d{4}$/ },
+			{ val : 'HH', regex : /^\d{2}$/ }
+		];
+		function constructFormatCopy( arg, isTime ) {
+			var cpForm = this.formats.slice(), obj = {}, dummy = arg, isWEG = new RegExp(  this.week + '|G|E' , 'i' ).test( arg );
+			for( var i = 0; i < cpForm.length; i++ ) {
+				var cur = cpForm[ i ];
+				if( isTime != cur.time ) {
+					continue;
+				}
+				if( cur.regex.test( dummy ) && isWEG == !!cur.isWEG && !this.isDef( obj[ cur.type ] ) ) {
+					if( cur.ignore && !cur.ignore.test( dummy ) ) {
+						var dd = this.dayArr[ obj.month ] || 30;
+						if( parseInt( dummy.match( cur.regex )[ 0 ] ) < dd ){
+							continue;
+						}
+					}
+					if( cur.str ) {
+						var matches = this.find( cur.array, dummy.replace( /(Y|G)+/, '' ) ).mon;
+						if( matches ){
+							arg = this.replace( arg, matches, false, cur.val );
+							obj[ cur.type ] = cur.array ? this.find( cur.array, matches ).index : matches;
+						}
+					} else {
+						var matches = dummy.match( cur.regex )[ 0 ];
+						arg = this.replace( arg, cur.regex, cur.suff, cur.val );
+						obj[ cur.type ] = parseInt( matches );
+						if( cur.type == 'week' ) {
+							arg = this.replace( arg, new RegExp( this.week + '(?=\\\[' + this.week + ')') );
+						}
+					}
+					dummy = dummy.replace( matches, '' );
+				}
+			}
+			return arg;
+		}
+
+		function iterate( array, arg ) {
+			for( var i = 0; i < array.length; i++ ) {
+				if( array[ i ].regex.test( arg ) ) {
+					return array[ i ];
+				}
+			}
+		}
+
+		function get_day( month, year ){
+			var dayArr = this.dayArr,
+			isLeap = this.isLeap( year );
+
+			return dayArr[ month ] + ( month == 1 && isLeap ? 1 : 0 );
+		}
+
+		function constructFormat( arg ) {
+			var dateFormat = iterate.call( this, standardDate, arg ), timeFormat;
+			if( dateFormat ) {
+				timeFormat = iterate.call( this, standardTime, arg.replace( dateFormat.regex, '' ) );
+				if( timeFormat ) {
+					arg = dateFormat.val + timeFormat.val;
+				} else {
+					arg = constructFormatCopy.call( this, arg.replace( dateFormat.regex, dateFormat.val ), true );
+				}
+			} else {
+				arg = constructFormatCopy.call( this, arg )
+				arg = constructFormatCopy.call( this, arg, true )
+			}
+			return arg;
+		}
+
+		proto.additional = true;
+
+		$L.extend( proto, {
+
+			 inbuiltFormats : {
+			 	localDatetime: 'YYYY-MM-DDTHH:mm',            
+		        localSecondDatetime: 'YYYY-MM-DDTHH:mm:ss',
+		        localMillisecondDatetime: 'YYYY-MM-DDTHH:mm:ss.SSS',   
+		        defaultDate: 'YYYY-MM-DD',                             
+		        defaultTime: 'HH:mm',                                
+		        defaultTimeSecond: 'HH:mm:ss',                 
+		        defaultTimeMillisecond: 'HH:mm:ss.SSS',           
+		        defaultWeek: 'GGGG-[W]WW',    
+		        defaultMonth: 'YYYY-MM'
+			 },
+
+			get : function( arg ){
+				if( arg ){
+					return this[ arg ]();
+				}
+			},
+
+			set : function( arg, val ) {
+				if( arg ) {
+					if( val.constructor == Object ) {
+						for( var key in val ) {
+							this[ key ]( val[ key ] );
+						}
+						return this
+					} else {
+						return this[ arg ]( val );
+					}
+				}
+			},
+
+			constructFormat : constructFormat,
+
+			i18N : i18N
+		})
+
+		new Array( { prop : 'date', array : [ proto.weekLong, proto.weekShort, proto.weekMid] }, { prop : 'day', array : [ proto.weekLong, proto.weekShort, proto.weekMid] } , { prop : 'month', array : [ proto.shortMon, proto.longMon ] }, { prop : 'year'}, { prop : 'fullYear' }, { prop : 'hours' }, { prop : 'minutes' }, { prop : 'seconds' }, { prop : 'milliseconds' },{ prop : 'UTCMilliseconds' }, { prop : 'time' } ).forEach( function( val ) {
+			
+			proto[ val.prop ] = function( arg ){
+				if( this.validate() ) {
+					var dob = this.toDate();
+					var prop = val.prop[ 0 ].toUpperCase() + val.prop.slice( 1 );
+					if( this.isDef( arg ) ) {
+						if( arg.constructor == String ) {
+							for( var i = 0; i < val.array.length; i++ ) {
+								var ret = this.find( val.array[ i ], arg )
+								if( ret.mon ) {
+									arg = ret.index;
+									break;
+								}
+							}
+						} else if( arg.constructor == Number && Math.floor( arg ) != arg ) {
+							if( val.prop == 'year' ) {
+								val.prop = 'month';
+								arg = Math.round( arg * 12 );
+							} else {
+								arg = Math.round( arg )
+							}
+						}
+						if( val.prop == 'day' ) {
+							dob.setDate( dob.getDate() + ( arg - dob.getDay() ) );
+						} else{
+							dob[ 'set' + prop ]( arg );
+						}
+						return this;
+					} else {
+						return dob[ 'get' + prop ]();
+					}
+				}
+			}
+		});
+
+		$L.extend( proto, {
+			week : function( arg ) {
+				if( this.validate() ) {
+					var dob = this.toDate();
+					if( this.isDef( arg ) ) {
+						dob.setDate( dob.getDate() + ( arg - this.week() ) * 7 );
+						return this;
+					} else{
+						return this.getWeekReverse( dob, 1 ).week;
+					}
+				}
+			},
+
+			quarter : function( arg ) {
+				if( this.validate() ) {
+					var dob = this.toDate();
+					if( this.isDef( arg ) ) {
+						var mon = dob.getMonth();
+						dob.setMonth( dob.getMonth() + ( arg - this.quarter() ) * 3 );
+						return this;
+					} else{
+						return Math.ceil( dob.getMonth() / 3 );
+					}
+				}
+			},
+
+			add : function( val, prop, cyclic ) {
+
+				if( val < 0 ){
+					return this.subtract( Math.abs( val ), prop, cyclic );
+				}
+
+				if( this.validate() ) {
+					var dob = this.toDate();
+					if( this.isDef( prop ) ) {
+					 	var old_time = dob.getTimezoneOffset(),
+					 	newmoment = this.set( prop, this.get( prop ) + val );
+					 	if( cyclic ){
+							return convertCyclic.call( this, newmoment );
+						}
+						return newmoment;
+					}
+				}
+			},
+
+			subtract : function( val, prop, cyclic ) {
+
+				if( val < 0 ){
+					return this.add( Math.abs( val ), prop, cyclic );
+				}
+
+				if( this.validate() ) {
+					var dob = this.toDate();
+					if( this.isDef( prop ) ) {
+						var newmoment = this.set( prop, this.get( prop ) - val );
+						if( cyclic ){
+							return convertCyclic.call( this, newmoment );
+						}
+						return newmoment;
+					}
+				}
+			},
+
+			modify : function( val, prop, cyclic ){
+
+				if( this.validate() ){
+
+					if( prop == "month" ){
+						if( val > 0 ){
+							add_value.call( this, val );
+						} else {
+							deduct_value.call( this, Math.abs( val ) );
+						}
+					} else{
+						this.add( val, prop, cyclic );
+					}
+
+					if( cyclic ){
+						convertCyclic.call( this, this );
+					}
+
+					return this;
+				}
+			},
+
+			startOf : function( prop ){
+				if( this.validate() ){
+					var dob = this.toDate(),
+					flag,
+					format = this.format(),
+					replace = [],
+					year = Number( format.slice( 0, 4 ) ),
+					month = Number( format.slice( 5, 7 ) ),
+					date = Number( format.slice( 8, 10 ) ),
+					hour = Number( format.slice( 11, 13 ) ),
+					minute = Number( format.slice( 14, 16 ) ),
+					second = Number( format.slice( 17, 19 ) ),
+					milliseconds = dob.getMilliseconds(),
+					to_deduct = 0,
+					old_time = this.timezoneOffset( dob );
+
+					prop = ( prop || "" ).toLowerCase();
+
+					if( prop == "week" ){
+						var weekLong = this.weekLong,
+						name = this.format( 'dddd' ),
+						wod = this.wod,
+						__index = weekLong.indexOf( name ),
+						diff = ( __index - wod + 7 ) % 7;
+						to_deduct = diff * 24 * 60 * 60 * 1e3;
+						flag = true;
+						prop = "hour";
+					}
+
+					switch( prop ){
+						case "year" : {
+							flag = true;
+						}
+						case "month" : {
+							if( flag ){
+								to_deduct += this.totdate( month - 1, this.isLeap( year ) ) * 24 * 60 * 60 * 1e3;
+							}
+							flag = true;
+						}
+						case "date" : 
+						case "day" : {
+							if( flag ){
+								to_deduct += ( date - 1 ) * 24 * 60 * 60 * 1e3;
+							}
+							flag = true;
+						}
+						case "hour" : {
+							if( flag ){
+								to_deduct += hour * 60 * 60 * 1e3;
+							}
+							flag = true;
+						}
+						case "minute" : {
+							if( flag ){
+								to_deduct += minute * 60 * 1e3;
+							}
+							flag = true;
+						}
+						case "second" : {
+							if( flag ){
+								to_deduct += second * 1e3;
+							}
+						}
+					}
+
+					if( to_deduct ){
+						dob.setTime( dob.getTime() - to_deduct - milliseconds );
+
+						var new_time = this.timezoneOffset( dob ),
+						diff = new_time - old_time;
+
+						if( diff ){
+							dob.setTime( dob.getTime() + diff * 60 * 1e3 );
+						}
+					}
+
+					return this;
+				}
+			},
+
+			endOf : function( prop ){
+				if( this.validate() ){
+
+					this.startOf( prop );
+
+					var dob = this.toDate(),
+					format = this.format(),
+					replace = [],
+					year = Number( format.slice( 0, 4 ) ),
+					month = Number( format.slice( 5, 7 ) ),
+					date = Number( format.slice( 8, 10 ) ),
+					hour = Number( format.slice( 11, 13 ) ),
+					minute = Number( format.slice( 14, 16 ) ),
+					second = Number( format.slice( 17, 19 ) ),
+					milliseconds = dob.getMilliseconds(),
+					to_add = 0,
+					old_time = this.timezoneOffset( dob );
+
+					prop = ( prop || "" ).toLowerCase();
+
+					if( prop == "week" ){
+						to_add += 7 * 24 * 60 * 60 * 1e3;
+					}
+
+					switch( prop ){
+						case "year" : {
+							to_add += this.totdate( 12, this.isLeap( year ) ) * 24 * 60 * 60 * 1e3;
+						}
+						break;
+						case "month" : {
+							var is_leap = this.isLeap( year );
+
+							to_add += ( this.totdate( month, is_leap ) - this.totdate( month - 1, is_leap ) ) * 24 * 60 * 60 * 1e3;	
+						}
+						break;
+						case "date" : 
+						case "day" : {
+							to_add += ( 24 - hour ) * 60 * 60 * 1e3;
+						}
+						break;
+						case "hour" : {
+							to_add += ( 60 - minute ) * 60 * 1e3;
+						}
+						break
+						case "minute" : {
+							to_add += ( 60 - second ) * 1e3;
+						}
+						break;
+						case 'second' : {
+							to_add += 1e3;
+						}
+					}
+
+					if( to_add ){
+						dob.setTime( dob.getTime() + to_add - 1 );
+
+						var new_time = this.timezoneOffset( dob ),
+						diff = new_time - old_time;
+
+						if( diff ){
+							dob.setTime( dob.getTime() + diff * 60 * 1e3 );
+						}
+					}
+
+					return this;
+				}
+			},
+
+			fromNow : function( arg, to_accurate ){
+				if( this.validate() ){
+					var today = this,
+					past_date = $L.moment( arg );
+
+					if( !past_date.validate() ){
+						return;
+					}
+
+					var old_time = today.get( 'time' ),
+					new_time = past_date.get(  'time' ),
+					diff = parseInt( ( new_time - old_time ) / 1000 ),
+					past = diff < 0,
+					limits = { years : { val : 320 * 24 * 60 * 60, conv : 365 * 24 * 60 * 60 }, months : { val : 26 * 24 * 60 * 60, conv : 30 * 24 * 60 * 60 }, days : { val : 22 * 60 * 60, conv : 24 * 60 * 60 }, hours : { val : 45 * 60, conv : 60 * 60 }, minutes : { val : 44, conv : 60 }, seconds : { val : 0, conv : 1 } },
+					timestamp = new_time - old_time,
+					ns1 = to_accurate ? 'conv' : 'val',
+					ns2 = to_accurate ? 'floor' : 'round',
+					fn = function( _diff, obj ){
+						var key,
+						value;
+
+						for( key in limits ){
+							if( _diff >= limits[ key ][ ns1 ] ) {
+								window.val = Math[ ns2 ]( _diff / limits[ key ].conv );
+								value = val;
+
+								var new_diff = _diff - val * limits[ key ].conv;
+								if( new_diff > 0 ){
+									fn( new_diff, obj );
+								}
+								break;
+							}
+						}
+
+						obj[ key ] = { value : value };
+
+						return {
+							property : key,
+							value : value
+						};
+					},
+					obj = { past : past, timestamp : timestamp };
+
+					diff = Math.abs( diff ); 
+
+					return $L.extend( obj, fn( diff, obj ) );
+				}
+			},
+
+			isDst : function(){
+
+				if( this.validate() ){
+					var __start = $L.moment( this ).startOf( 'day' ),
+					__end = $L.moment( this ).endOf( 'day' );
+
+					this.__start = __start;
+					this.__end = __end;
+					
+					return __start.format( 'Z' ) != __end.format( 'Z' );
+				}
+
+				return false;
+			},
+
+			dstPoint : function( time_format, increment ){
+				if( this.validate() && this.isDst() ){
+					var start = $L.moment( this.__start ),
+					format = start.format( 'Z' ),
+					change,
+					count = 0,
+					limit;
+
+					increment = increment || 30;
+					limit = 1440 / increment;
+					time_format = time_format || "HH:mm:ss";
+
+					while( count < limit ){
+						var new_format = start.add( increment, 'minutes' ).format( 'Z' ),
+						rgx = /(\+|\-)(\d{2}):(\d{2})$/;
+						if( format !=  new_format ){
+							var diff = this.convertTimeZone( format.match( rgx ) ) - this.convertTimeZone( new_format.match( rgx ) );
+
+							change = {
+								moment : $L.moment( start ).subtract( 1, 'seconds' ),
+								time : start.add( 1, 'day' ).subtract( diff, 'minutes' ).format( time_format ),
+								value : diff,
+								timeZoneOld : format,
+								timeZoneNew : new_format
+							};
+
+							break;
+						}
+						count++;
+					}	
+
+					return change;
+				}
+			},
+
+			getWeekDays : function( start, end ){
+
+				if( this.validate() ){
+					start = start == void 0 ? 1 : start;
+					end = end == void 0 ? 5 : end;
+
+					if( end < start ){
+						end += 7;
+					}
+
+					var dobj = this.getDObj(),
+					__time = dobj.getTime(),
+					__day = dobj.getDay(),
+					final = [],
+					diff = end - start,
+					off = __day - start,
+					one_day = 24 * 60 * 60 * 1e3;
+
+					for( var i = 0; i <= diff; i++ ){
+						final.push( $L.moment( new Date( __time - ( off - i ) * one_day ) ) );
+					}
+
+					return final;
+				}
+			}
+		} );
+
+		function convertCyclic( newmoment ){
+			var dob = this.toDate();
+			
+			dob.setFullYear( parseInt( this.getCorrectYear( this.crctLength( Number( this.format( 'YYYY' ) ) % 100, 2 ) ) ) );
+			return this;
+		}
+
+		function i18N( format, callBack, convert_numbers ){
+			if( this.validate() ){
+
+				if( callBack == true ){
+					convert_numbers = callBack;
+					callBack = void 0;
+				} else if( format == true ){
+					convert_numbers = format;
+					format = void 0;
+				}
+
+				format = format || "YYYY-MM-DDTHH:mm:ssZ";
+
+				var parsed = this.parseFormat( this.replaceTxt( format ) ).reverse();
+				format = format.replace( /{{|}}/g, '' );
+
+				if( convert_numbers ){
+					convert_numbers = window._lyteUiUtils ? window._lyteUiUtils.i18n( "1" ) != "1" : false;
+				}
+
+				parsed.forEach( function( item ){
+					var __format = item.format,
+					value = __format.val,
+					formatted = this.format( value ),
+					i18ned = window._lyteUiUtils && !/^[0-9]$/.test( formatted || "" ) ? window._lyteUiUtils.i18n( formatted ) : formatted,
+					index = item.index;
+
+					if( convert_numbers && !__format.str ){
+						for( var i = 0; i < 10; i++ ){
+							i18ned = i18ned.replace( new RegExp( i, "g" ) , window._lyteUiUtils.i18n( i.toString() ) );
+						}
+					}
+
+					format = format.slice( 0, index ) + ( callBack ? callBack( formatted, i18ned, value ) : i18ned ) + format.slice( index + value.length );
+				}.bind( this ) );
+
+				return format;
+			}
+		}
+
+		function add_value( value ){
+
+			var ref_date = parseInt( this.format( 'DD' ) );
+
+			while( value-- ){
+				var ref_moment = $L.moment( this ).endOf( 'month' ), 
+				cur_end = parseInt( ref_moment.format( 'DD' ) ),
+				end = parseInt( ref_moment.add( 1, 'milliseconds' ).endOf( 'month' ).format( 'DD' ) ),
+				to_add = Math.max( cur_end, ref_date ) - ref_date + Math.min( ref_date, end );
+
+				this.add( to_add, 'day' );
+			}
+
+		}
+
+		function deduct_value( value ){
+			
+			var ref_date = parseInt( this.format( 'DD' ) );
+
+			while( value-- ){
+				var ref_moment = $L.moment( this ).startOf( 'month' ), 
+				cur_date = parseInt( this.format( 'DD' ) ),
+				end = parseInt( ref_moment.subtract( 1, 'milliseconds' ).format( 'DD' ) ),
+				to_subtract = cur_date + Math.max( 0, end - ref_date );
+
+				this.subtract( to_subtract, 'day' );
+			}
+		}
+
+	}
+} );
+
+/***/ }),
+
+/***/ 11076785:
+/*!***************************************************************************!*\
+  !*** ./node_modules/@zoho/lyte-ui-component/plugins/lyte-moment-basic.js ***!
+  \***************************************************************************/
+/***/ ((module, exports, __webpack_require__) => {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( cb ){
+	if( true ){
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(/*! @zoho/lyte-dom */ 92838254) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (cb),
+		__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+		(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+} )( function( $L ){
+	if( $L ){
+		var shortMon = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ],
+		longMon = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'  ],
+		weekLong = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+		weekMid = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+		weekShort = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+		dayArr = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ],
+		week = 'W', wod = 1,
+		lm = "lyteMoment",
+		uLimit = 19,
+		lLimit = 80,
+		timeZoneOffsets = {"Etc/GMT+12":-720,"Etc/GMT+11":-660,"Pacific/Midway":-660,"Pacific/Niue":-660,"Pacific/Pago_Pago":-660,"Pacific/Samoa":-660,"US/Samoa":-660,"America/Adak":-540,"America/Atka":-540,"Etc/GMT+10":-600,"HST":-600,"Pacific/Honolulu":-600,"Pacific/Johnston":-600,"Pacific/Rarotonga":-600,"Pacific/Tahiti":-600,"SystemV/HST10":-600,"US/Aleutian":-540,"US/Hawaii":-600,"Pacific/Marquesas":-510,"AST":-480,"America/Anchorage":-480,"America/Juneau":-480,"America/Metlakatla":-480,"America/Nome":-480,"America/Sitka":-480,"America/Yakutat":-480,"Etc/GMT+9":-540,"Pacific/Gambier":-540,"SystemV/YST9":-540,"SystemV/YST9YDT":-480,"US/Alaska":-480,"America/Ensenada":-420,"America/Los_Angeles":-420,"America/Santa_Isabel":-420,"America/Tijuana":-420,"America/Vancouver":-420,"Canada/Pacific":-420,"Etc/GMT+8":-480,"Mexico/BajaNorte":-420,"PST":-480,"PST8PDT":-420,"Pacific/Pitcairn":-480,"SystemV/PST8":-480,"SystemV/PST8PDT":-420,"US/Pacific":-420,"America/Boise":-360,"America/Cambridge_Bay":-360,"America/Chihuahua":-360,"America/Creston":-420,"America/Dawson":-420,"America/Dawson_Creek":-420,"America/Denver":-360,"America/Edmonton":-360,"America/Fort_Nelson":-420,"America/Hermosillo":-420,"America/Inuvik":-360,"America/Mazatlan":-360,"America/Ojinaga":-360,"America/Phoenix":-420,"America/Shiprock":-360,"America/Whitehorse":-420,"America/Yellowknife":-360,"Canada/Mountain":-360,"Canada/Yukon":-420,"Etc/GMT+7":-420,"MST":-420,"MST7MDT":-360,"Mexico/BajaSur":-360,"Navajo":-360,"PNT":-420,"SystemV/MST7":-420,"SystemV/MST7MDT":-360,"US/Arizona":-420,"US/Mountain":-360,"America/Bahia_Banderas":-300,"America/Belize":-360,"America/Chicago":-300,"America/Costa_Rica":-360,"America/El_Salvador":-360,"America/Guatemala":-360,"America/Indiana/Knox":-300,"America/Indiana/Tell_City":-300,"America/Knox_IN":-300,"America/Managua":-360,"America/Matamoros":-300,"America/Menominee":-300,"America/Merida":-300,"America/Mexico_City":-300,"America/Monterrey":-300,"America/North_Dakota/Beulah":-300,"America/North_Dakota/Center":-300,"America/North_Dakota/New_Salem":-300,"America/Rainy_River":-300,"America/Rankin_Inlet":-300,"America/Regina":-360,"America/Resolute":-300,"America/Swift_Current":-360,"America/Tegucigalpa":-360,"America/Winnipeg":-300,"CST":-360,"CST6CDT":-300,"Canada/Central":-300,"Canada/Saskatchewan":-360,"Chile/EasterIsland":-360,"Etc/GMT+6":-360,"Mexico/General":-300,"Pacific/Easter":-360,"Pacific/Galapagos":-360,"SystemV/CST6":-360,"SystemV/CST6CDT":-300,"US/Central":-300,"US/Indiana-Starke":-300,"America/Atikokan":-300,"America/Bogota":-300,"America/Cancun":-300,"America/Cayman":-300,"America/Coral_Harbour":-300,"America/Detroit":-240,"America/Eirunepe":-300,"America/Fort_Wayne":-240,"America/Grand_Turk":-240,"America/Guayaquil":-300,"America/Havana":-240,"America/Indiana/Indianapolis":-240,"America/Indiana/Marengo":-240,"America/Indiana/Petersburg":-240,"America/Indiana/Vevay":-240,"America/Indiana/Vincennes":-240,"America/Indiana/Winamac":-240,"America/Indianapolis":-240,"America/Iqaluit":-240,"America/Jamaica":-300,"America/Kentucky/Louisville":-240,"America/Kentucky/Monticello":-240,"America/Lima":-300,"America/Louisville":-240,"America/Montreal":-240,"America/Nassau":-240,"America/New_York":-240,"America/Nipigon":-240,"America/Panama":-300,"America/Pangnirtung":-240,"America/Port-au-Prince":-240,"America/Porto_Acre":-300,"America/Rio_Branco":-300,"America/Thunder_Bay":-240,"America/Toronto":-240,"Brazil/Acre":-300,"Canada/Eastern":-240,"Cuba":-240,"EST":-300,"EST5EDT":-240,"Etc/GMT+5":-300,"IET":-240,"Jamaica":-300,"SystemV/EST5":-300,"SystemV/EST5EDT":-240,"US/East-Indiana":-240,"US/Eastern":-240,"US/Michigan":-240,"America/Anguilla":-240,"America/Antigua":-240,"America/Aruba":-240,"America/Asuncion":-240,"America/Barbados":-240,"America/Blanc-Sablon":-240,"America/Boa_Vista":-240,"America/Campo_Grande":-240,"America/Caracas":-240,"America/Cuiaba":-240,"America/Curacao":-240,"America/Dominica":-240,"America/Glace_Bay":-180,"America/Goose_Bay":-180,"America/Grenada":-240,"America/Guadeloupe":-240,"America/Guyana":-240,"America/Halifax":-180,"America/Kralendijk":-240,"America/La_Paz":-240,"America/Lower_Princes":-240,"America/Manaus":-240,"America/Marigot":-240,"America/Martinique":-240,"America/Moncton":-180,"America/Montserrat":-240,"America/Port_of_Spain":-240,"America/Porto_Velho":-240,"America/Puerto_Rico":-240,"America/Santiago":-240,"America/Santo_Domingo":-240,"America/St_Barthelemy":-240,"America/St_Kitts":-240,"America/St_Lucia":-240,"America/St_Thomas":-240,"America/St_Vincent":-240,"America/Thule":-180,"America/Tortola":-240,"America/Virgin":-240,"Atlantic/Bermuda":-180,"Brazil/West":-240,"Canada/Atlantic":-180,"Chile/Continental":-240,"Etc/GMT+4":-240,"PRT":-240,"SystemV/AST4":-240,"SystemV/AST4ADT":-180,"America/St_Johns":-90,"CNT":-90,"Canada/Newfoundland":-90,"AGT":-180,"America/Araguaina":-180,"America/Argentina/Buenos_Aires":-180,"America/Argentina/Catamarca":-180,"America/Argentina/ComodRivadavia":-180,"America/Argentina/Cordoba":-180,"America/Argentina/Jujuy":-180,"America/Argentina/La_Rioja":-180,"America/Argentina/Mendoza":-180,"America/Argentina/Rio_Gallegos":-180,"America/Argentina/Salta":-180,"America/Argentina/San_Juan":-180,"America/Argentina/San_Luis":-180,"America/Argentina/Tucuman":-180,"America/Argentina/Ushuaia":-180,"America/Bahia":-180,"America/Belem":-180,"America/Buenos_Aires":-180,"America/Catamarca":-180,"America/Cayenne":-180,"America/Cordoba":-180,"America/Fortaleza":-180,"America/Godthab":-120,"America/Jujuy":-180,"America/Maceio":-180,"America/Mendoza":-180,"America/Miquelon":-120,"America/Montevideo":-180,"America/Nuuk":-120,"America/Paramaribo":-180,"America/Punta_Arenas":-180,"America/Recife":-180,"America/Rosario":-180,"America/Santarem":-180,"America/Sao_Paulo":-180,"Antarctica/Palmer":-180,"Antarctica/Rothera":-180,"Atlantic/Stanley":-180,"BET":-180,"Brazil/East":-180,"Etc/GMT+3":-180,"America/Noronha":-120,"Atlantic/South_Georgia":-120,"Brazil/DeNoronha":-120,"Etc/GMT+2":-120,"America/Scoresbysund":0,"Atlantic/Azores":0,"Atlantic/Cape_Verde":-60,"Etc/GMT+1":-60,"Africa/Abidjan":0,"Africa/Accra":0,"Africa/Bamako":0,"Africa/Banjul":0,"Africa/Bissau":0,"Africa/Casablanca":0,"Africa/Conakry":0,"Africa/Dakar":0,"Africa/El_Aaiun":0,"Africa/Freetown":0,"Africa/Lome":0,"Africa/Monrovia":0,"Africa/Nouakchott":0,"Africa/Ouagadougou":0,"Africa/Sao_Tome":0,"Africa/Timbuktu":0,"America/Danmarkshavn":0,"Antarctica/Troll":120,"Atlantic/Canary":60,"Atlantic/Faeroe":60,"Atlantic/Faroe":60,"Atlantic/Madeira":60,"Atlantic/Reykjavik":0,"Atlantic/St_Helena":0,"Eire":60,"Etc/GMT":-0,"Etc/GMT+0":-0,"Etc/GMT-0":-0,"Etc/GMT0":-0,"Etc/Greenwich":-0,"Etc/UCT":-0,"Etc/UTC":-0,"Etc/Universal":-0,"Etc/Zulu":-0,"Europe/Belfast":60,"Europe/Dublin":60,"Europe/Guernsey":60,"Europe/Isle_of_Man":60,"Europe/Jersey":60,"Europe/Lisbon":60,"Europe/London":60,"GB":60,"GB-Eire":60,"GMT":0,"GMT0":0,"Greenwich":0,"Iceland":0,"Portugal":60,"UCT":0,"UTC":0,"Universal":0,"WET":60,"Zulu":0,"Africa/Algiers":60,"Africa/Bangui":60,"Africa/Brazzaville":60,"Africa/Ceuta":120,"Africa/Douala":60,"Africa/Kinshasa":60,"Africa/Lagos":60,"Africa/Libreville":60,"Africa/Luanda":60,"Africa/Malabo":60,"Africa/Ndjamena":60,"Africa/Niamey":60,"Africa/Porto-Novo":60,"Africa/Tunis":60,"Arctic/Longyearbyen":120,"Atlantic/Jan_Mayen":120,"CET":120,"ECT":120,"Etc/GMT-1":60,"Europe/Amsterdam":120,"Europe/Andorra":120,"Europe/Belgrade":120,"Europe/Berlin":120,"Europe/Bratislava":120,"Europe/Brussels":120,"Europe/Budapest":120,"Europe/Busingen":120,"Europe/Copenhagen":120,"Europe/Gibraltar":120,"Europe/Ljubljana":120,"Europe/Luxembourg":120,"Europe/Madrid":120,"Europe/Malta":120,"Europe/Monaco":120,"Europe/Oslo":120,"Europe/Paris":120,"Europe/Podgorica":120,"Europe/Prague":120,"Europe/Rome":120,"Europe/San_Marino":120,"Europe/Sarajevo":120,"Europe/Skopje":120,"Europe/Stockholm":120,"Europe/Tirane":120,"Europe/Vaduz":120,"Europe/Vatican":120,"Europe/Vienna":120,"Europe/Warsaw":120,"Europe/Zagreb":120,"Europe/Zurich":120,"MET":120,"Poland":120,"ART":120,"Africa/Blantyre":120,"Africa/Bujumbura":120,"Africa/Cairo":120,"Africa/Gaborone":120,"Africa/Harare":120,"Africa/Johannesburg":120,"Africa/Khartoum":120,"Africa/Kigali":120,"Africa/Lubumbashi":120,"Africa/Lusaka":120,"Africa/Maputo":120,"Africa/Maseru":120,"Africa/Mbabane":120,"Africa/Tripoli":120,"Africa/Windhoek":120,"Asia/Amman":180,"Asia/Beirut":180,"Asia/Damascus":180,"Asia/Famagusta":180,"Asia/Gaza":180,"Asia/Hebron":180,"Asia/Jerusalem":180,"Asia/Nicosia":180,"Asia/Tel_Aviv":180,"CAT":120,"EET":180,"Egypt":120,"Etc/GMT-2":120,"Europe/Athens":180,"Europe/Bucharest":180,"Europe/Chisinau":180,"Europe/Helsinki":180,"Europe/Kaliningrad":120,"Europe/Kiev":180,"Europe/Mariehamn":180,"Europe/Nicosia":180,"Europe/Riga":180,"Europe/Sofia":180,"Europe/Tallinn":180,"Europe/Tiraspol":180,"Europe/Uzhgorod":180,"Europe/Vilnius":180,"Europe/Zaporozhye":180,"Israel":180,"Libya":120,"Africa/Addis_Ababa":180,"Africa/Asmara":180,"Africa/Asmera":180,"Africa/Dar_es_Salaam":180,"Africa/Djibouti":180,"Africa/Juba":180,"Africa/Kampala":180,"Africa/Mogadishu":180,"Africa/Nairobi":180,"Antarctica/Syowa":180,"Asia/Aden":180,"Asia/Baghdad":180,"Asia/Bahrain":180,"Asia/Istanbul":180,"Asia/Kuwait":180,"Asia/Qatar":180,"Asia/Riyadh":180,"EAT":180,"Etc/GMT-3":180,"Europe/Istanbul":180,"Europe/Kirov":180,"Europe/Minsk":180,"Europe/Moscow":180,"Europe/Simferopol":180,"Indian/Antananarivo":180,"Indian/Comoro":180,"Indian/Mayotte":180,"Turkey":180,"W-SU":180,"Asia/Tehran":270,"Iran":270,"Asia/Baku":240,"Asia/Dubai":240,"Asia/Muscat":240,"Asia/Tbilisi":240,"Asia/Yerevan":240,"Etc/GMT-4":240,"Europe/Astrakhan":240,"Europe/Samara":240,"Europe/Saratov":240,"Europe/Ulyanovsk":240,"Europe/Volgograd":240,"Indian/Mahe":240,"Indian/Mauritius":240,"Indian/Reunion":240,"NET":240,"Asia/Kabul":270,"Antarctica/Mawson":300,"Asia/Aqtau":300,"Asia/Aqtobe":300,"Asia/Ashgabat":300,"Asia/Ashkhabad":300,"Asia/Atyrau":300,"Asia/Dushanbe":300,"Asia/Karachi":300,"Asia/Oral":300,"Asia/Qyzylorda":300,"Asia/Samarkand":300,"Asia/Tashkent":300,"Asia/Yekaterinburg":300,"Etc/GMT-5":300,"Indian/Kerguelen":300,"Indian/Maldives":300,"PLT":300,"Asia/Calcutta":330,"Asia/Colombo":330,"Asia/Kolkata":330,"IST":330,"Asia/Kathmandu":345,"Asia/Katmandu":345,"Antarctica/Vostok":360,"Asia/Almaty":360,"Asia/Bishkek":360,"Asia/Dacca":360,"Asia/Dhaka":360,"Asia/Kashgar":360,"Asia/Omsk":360,"Asia/Qostanay":360,"Asia/Thimbu":360,"Asia/Thimphu":360,"Asia/Urumqi":360,"BST":360,"Etc/GMT-6":360,"Indian/Chagos":360,"Asia/Rangoon":390,"Asia/Yangon":390,"Indian/Cocos":390,"Antarctica/Davis":420,"Asia/Bangkok":420,"Asia/Barnaul":420,"Asia/Ho_Chi_Minh":420,"Asia/Hovd":420,"Asia/Jakarta":420,"Asia/Krasnoyarsk":420,"Asia/Novokuznetsk":420,"Asia/Novosibirsk":420,"Asia/Phnom_Penh":420,"Asia/Pontianak":420,"Asia/Saigon":420,"Asia/Tomsk":420,"Asia/Vientiane":420,"Etc/GMT-7":420,"Indian/Christmas":420,"VST":420,"Asia/Brunei":480,"Asia/Choibalsan":480,"Asia/Chongqing":480,"Asia/Chungking":480,"Asia/Harbin":480,"Asia/Hong_Kong":480,"Asia/Irkutsk":480,"Asia/Kuala_Lumpur":480,"Asia/Kuching":480,"Asia/Macao":480,"Asia/Macau":480,"Asia/Makassar":480,"Asia/Manila":480,"Asia/Shanghai":480,"Asia/Singapore":480,"Asia/Taipei":480,"Asia/Ujung_Pandang":480,"Asia/Ulaanbaatar":480,"Asia/Ulan_Bator":480,"Australia/Perth":480,"Australia/West":480,"CTT":480,"Etc/GMT-8":480,"Hongkong":480,"PRC":480,"Singapore":480,"Australia/Eucla":525,"Asia/Chita":540,"Asia/Dili":540,"Asia/Jayapura":540,"Asia/Khandyga":540,"Asia/Pyongyang":540,"Asia/Seoul":540,"Asia/Tokyo":540,"Asia/Yakutsk":540,"Etc/GMT-9":540,"JST":540,"Japan":540,"Pacific/Palau":540,"ROK":540,"ACT":570,"Australia/Adelaide":570,"Australia/Broken_Hill":570,"Australia/Darwin":570,"Australia/North":570,"Australia/South":570,"Australia/Yancowinna":570,"AET":600,"Antarctica/DumontDUrville":600,"Antarctica/Macquarie":600,"Asia/Ust-Nera":600,"Asia/Vladivostok":600,"Australia/ACT":600,"Australia/Brisbane":600,"Australia/Canberra":600,"Australia/Currie":600,"Australia/Hobart":600,"Australia/Lindeman":600,"Australia/Melbourne":600,"Australia/NSW":600,"Australia/Queensland":600,"Australia/Sydney":600,"Australia/Tasmania":600,"Australia/Victoria":600,"Etc/GMT-10":600,"Pacific/Chuuk":600,"Pacific/Guam":600,"Pacific/Port_Moresby":600,"Pacific/Saipan":600,"Pacific/Truk":600,"Pacific/Yap":600,"Australia/LHI":630,"Australia/Lord_Howe":630,"Antarctica/Casey":660,"Asia/Magadan":660,"Asia/Sakhalin":660,"Asia/Srednekolymsk":660,"Etc/GMT-11":660,"Pacific/Bougainville":660,"Pacific/Efate":660,"Pacific/Guadalcanal":660,"Pacific/Kosrae":660,"Pacific/Norfolk":660,"Pacific/Noumea":660,"Pacific/Pohnpei":660,"Pacific/Ponape":660,"SST":660,"Antarctica/McMurdo":720,"Antarctica/South_Pole":720,"Asia/Anadyr":720,"Asia/Kamchatka":720,"Etc/GMT-12":720,"Kwajalein":720,"NST":720,"NZ":720,"Pacific/Auckland":720,"Pacific/Fiji":720,"Pacific/Funafuti":720,"Pacific/Kwajalein":720,"Pacific/Majuro":720,"Pacific/Nauru":720,"Pacific/Tarawa":720,"Pacific/Wake":720,"Pacific/Wallis":720,"NZ-CHAT":765,"Pacific/Chatham":765,"Etc/GMT-13":780,"MIT":780,"Pacific/Apia":780,"Pacific/Enderbury":780,"Pacific/Fakaofo":780,"Pacific/Tongatapu":780,"Etc/GMT-14":840,"Pacific/Kiritimati":840,"UT":0,"EDT":-240,"CDT":-300,"MDT":-360,"PDT":-420},
+		
+		timezone_regex = new RegExp( '(' + Object.keys( timeZoneOffsets ).join('|') + ')' ),
+
+		default_timezone,
+		default_offset,
+
+		is_IE,
+
+		formats = [
+			{ val :'YYYY', type : 'year', regex : /\d{4}/, len : 4 },
+			{ val : 'GGGG', type : 'year', regex : /\d{4}/, len : 4, isWEG : true }, 
+			{ val : 'gggg', type : 'year', regex : /\d{4}/, len : 4, isWEG : true }, 
+			{ val : 'YY', type : 'year', regex : /\d{2}/, len : 2 }, 
+			{ val : 'GG', type : 'year', regex : /\d{2}/, len : 2, isWEG : true}, 
+			{ val : 'gg', type : 'year', regex : /\d{2}/, len : 2, isWEG : true}, 
+			{ val : 'MMMM', type : "month", regex : /[A-z]{3,}/, long : true, str : true, array : longMon }, 
+			{ val : 'MMM', str : true, type : "month", regex : /[A-z]{3,}/, array : shortMon }, 
+			{ val : 'Mo', suff : true, type : "month", regex : /\d{1,2}(?=st|nd|rd|th)/, max : 12 }, 
+			{ val : 'MM', type : "month", regex : /\d{2}/, len : 2, max : 12, alt : true }, 
+			{ val : 'M', type : "month", regex : /\d{1,2}/, max : 12 }, 
+			{ val : 'DDDD', type : 'date', regex : /\d{3}/, len : 3, year : true }, 
+			{ val : 'DDDo', type : 'date', suff : true, regex : /\d{1,3}(?=st|nd|rd|th)/, len : 3, year : true, ignore : /\d{3}(?=st|nd|rd|th)/ }, 
+			{ val : 'DDD', type : 'date', regex : /\d{1,3}/, year : true, ignore : /\d{3}/}, 
+			{ val : 'Do', type : 'date', suff : true , regex : /\d{1,2}(?=st|nd|rd|th)/ }, 
+			{ val : 'DD', type : 'date', regex : /\d{2}/, len : 2, alt : true }, 
+			{ val : 'D', type : 'date', regex : /\d{1,2}/ }, 
+			{ val : '[' + week + ']Wo', type : 'week', suff : true, regex : new RegExp('\[' + week + '\]\d{1,2}(?=st|nd|th|rd)'), isWEG : true },
+			{ val : '[' + week + ']wo', ignore : 1, type : 'week', suff : true, regex : new RegExp('\[' + week + '\]\d{1,2}(?=st|nd|th|rd)'), isWEG : true }, 
+			{ val : '[' + week + ']WW', type : 'week', regex : new RegExp( week +'(\\d{2})'), len : 2, isWEG : true, match : 1 }, 
+			{ val : '[' + week + ']ww', ignore : 1, type : 'week', regex : new RegExp( week +'(\\d{2})'), len : 2, isWEG : true, match : 1 }, 
+			{ val : '[' + week + ']W', type : 'week', regex : new RegExp( week +'(\\d{1,2})'), isWEG : true, match : 1 }, 
+			{ val : '[' + week + ']w', ignore : 1, type : 'week', regex : new RegExp( week +'(\\d{1,2})'), isWEG : true, match : 1 }, 
+			{ val : 'Wo', type : 'week', pref : 0, suff : true, regex : new RegExp('\[' + week + '\]\d{1,2}(?=st|nd|th|rd)'), isWEG : true },
+			{ val : 'wo', type : 'week', pref : 0, ignore : 1, suff : true, regex : new RegExp('\[' + week + '\]\d{1,2}(?=st|nd|th|rd)'), isWEG : true }, 
+			{ val : 'WW', type : 'week', pref : 0, regex : new RegExp( '(\\d{2})'), len : 2, isWEG : true, match : 1 }, 
+			{ val : 'ww', type : 'week', pref : 0, ignore : 1, regex : new RegExp( '(\\d{2})'), len : 2, isWEG : true, match : 1 }, 
+			{ val : 'W', type : 'week', pref : 0, regex : new RegExp( '(\\d{1,2})'), isWEG : true, match : 1 }, 
+			{ val : 'w', type : 'week', pref : 0, ignore : 1, regex : new RegExp( '(\\d{1,2})'), isWEG : true, match : 1 }, 
+			{ val : 'E', type : 'day', regex : /\d{1}/, isWEG : true }, 
+			{ val : 'e', type : 'day', regex : /\d{1}/, isWEG : true, local : true }, 
+			{ val : 'A', type : 'meridian', regex : /AM|PM/, str : true, time : true },
+			{ val : 'a', type : 'meridian', regex : /am|pm/, str : true, time : true, lower : true },
+			{ val : 'ZZ', type : 'timezone', regex : /(\+|\-)(\d{2})(\d{2})$/, time : true, len : 2 },
+			{ val : 'Z', type : 'timezone', regex : /(\+|\-)(\d{2}):(\d{2})$/, time : true, len : 2 },
+			{ val : 'HH', type : 'hour', regex : /\d{2}/, railway : true, time : true, len : 2, max : 23 },
+			{ val : 'H', type : 'hour', regex : /\d{1,2}/, railway : true, time : true, max : 23 },
+			{ val : 'hh', type : 'hour', regex : /\d{2}/, time : true, len : 2, max : 12, min : 1 },
+			{ val : 'h', type : 'hour', regex : /\d{1,2}/, time : true, max : 12, min : 1 },
+			{ val : 'kk', type : 'hour', regex : /\d{2}/, railway : true, time : true, len : 2, max : 24, deduct : -1 },
+			{ val : 'k', type : 'hour', regex : /\d{1,2}/, railway : true, time : true, max : 24, deduct : -1 },
+			{ val : 'mm', type : 'minute', regex : /\d{2}/, time : true, len : 2, max : 59 },
+			{ val : 'm', type : 'minute', regex : /\d{1,2}/, time : true, max : 59 },
+			{ val : 'ss', type : 'second', regex : /\d{2}/, time : true, len : 2, max : 59 },
+			{ val : 's', type : 'second', regex : /\d{1,2}/, time : true, max : 59 },
+			{ val : 'S', type : 'millisecond', regex : /[0-9]{1,}/, time : true, valForm : /[S]+/ },
+			{ val : 'zz', type : 'timezone', regex : timezone_regex, str : true, time : true },
+			{ val : 'z', type : 'timezone', regex : timezone_regex, str : true, time : true },
+			{ val : 'X', type : 'timestamp', regex : /\d{10}/, time : true},
+			{ val : 'x', type : 'timestamp', regex : /\d{13,}/, time : true, milli : true}, 
+			{ val : 'dddd', type : "longdate", regex : /[A-z]{3,}/, long : true, str : true, array : weekLong },
+			{ val : 'ddd', type : "longdate", regex : /[A-z]{3}/, str : true, array : weekMid },
+			{ val : 'dd', type : "longdate", regex : /[A-z]{2}/, str : true, array : weekShort },
+			{ val : 'do', type : "longdate", regex : /\d{1}(?=st|nd|rd|th)/, suff : true},
+			{ val : 'd', type : 'longdate', regex : /\d{1}/ },
+			{ val : 'Qo', type : 'quarter', regex : /\d{1}(?=st|nd|rd|th)/, suff : true }, 
+			{ val : 'Q', type : 'quarter', regex : /\d{1}/ }
+			];
+
+			( function(){
+			try{
+				new Date().toLocaleString( "en-US", { timeZone: 'Europe/London' } )
+				//    new Intl.DateTimeFormat('en-US', {
+				//   year: 'numeric', month: 'numeric', day: 'numeric',
+				//   hour: 'numeric', minute: 'numeric', second: 'numeric',
+				//   timeZone: 'Europe/London'
+				// }).format( new Date() );
+			} catch( e ){
+				is_IE = true;
+			}
+			})();
+
+		function convert_frm_i18n( format, arg, number_conversion, callback ){
+
+			var parsed = this.parseFormat( this.replaceTxt( format ) ).reverse();
+			format = format.replace( /{{|}}/g, '' );
+
+			parsed.forEach( function( item ){
+				var arr = item.format.array || [],
+				fn = window._lyteUiUtils;
+
+				if( item.format.type == 'meridian' ){
+					arr = item.format.lower ? [ 'am', 'pm' ] : [ 'AM', 'PM' ];
+				}
+
+				if( number_conversion && !item.format.str && fn && fn.i18n( "1" ) != "1" ){
+					arr = [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" ];
+				}
+
+				Array.from( arr ).reverse().forEach( function( _item ){
+					var conv = fn ? fn.i18n( _item ) : _item ;
+
+					if( callback ){
+						conv = callback( arg, _item, conv, item.format.val ) || conv;
+					}
+
+					if( _item == conv ){
+						return;
+					}
+
+					arg = replace_original( arg, _item, conv );
+				});
+			});
+			return arg;
+		}
+
+		function replace_original( arg, original, i18n ){
+			var index = arg.indexOf( i18n );
+			if( index != -1 ){
+				return replace_original( arg.replace( i18n, original ), original, i18n );
+			}
+			return arg;
+		}
+
+		function lyteMoment( arg, format, uL, lL ){
+
+			if( arg ){
+				this._arg = arg; 
+			}
+			this._format = format;
+			var ret = isEmpty( arg ),
+			convert_i18n,
+			i18n_callback,
+			ignore_timezone,
+			instance_timezone,
+			instance_offset,
+			number_conversion,
+			__wod;
+
+			if( ret ) {
+				arg = new Date();
+			}
+
+			if( uL && uL.constructor == Object ){
+				lL = uL.lL;
+				convert_i18n = uL.i18n;
+				i18n_callback = uL.i18n_callback;
+				ignore_timezone = uL.ignore_timezone;
+				instance_timezone = uL.timezone;
+				instance_offset = uL.timezoneOffset;
+				__wod = uL.wod;
+				number_conversion = uL.number_conversion;
+				uL = uL.uL;
+			}
+
+			if( !ignore_timezone ){
+				this.timezone( instance_timezone || default_timezone, instance_offset == void 0 ? default_offset : instance_offset );
+			}
+
+			if( convert_i18n && format && arg && arg.constructor == String ){
+				arg = convert_frm_i18n.call( this, format, arg, number_conversion, i18n_callback );
+			}
+
+			this.uL = uL == undefined ? uLimit : uL;
+			this.lL = lL == undefined ? lLimit : lL;
+			this.wod = __wod == void 0 ? wod : __wod;
+
+			if( !( isDef( uL ) && isDef( lL ) ) ){
+				if( uL ){
+					this.alt = true;		
+				} else { 
+					this.alt = false;
+				}
+			}
+			this._isValid = validate.call( this, arg, format )
+		}
+
+		function isDef( arg ) {
+			return arg != undefined;
+		}
+
+		function totdate( month, isLeap1, day ){
+			var total = 0;
+			for(var i = 0; i < month; i++ ) {
+				total += dayArr[ i ];
+				if( isLeap1 && i == 1 ) {
+					total += 1;
+				}
+			} 
+			return total + ( day || 0 );
+		}
+
+		function isEmpty( arg ){
+			if( !arg ){
+				return true;
+			}
+			var cons = arg.constructor;
+			if( cons == Array && !cons.length ){
+				return true;
+			} else if( cons == Object && !Object.keys( arg ).length ){
+				return true;
+			}
+			return false;
+
+		}
+
+		function isLeap( year ) {
+			year = year + '';
+			if( year.length == 2 ) {
+				year = getCorrectYear( parseInt( year ) );
+			}
+			year = parseInt( year );
+			return ( ( year % 4 == 0 ) && ( year % 100 != 0 ) ) || ( year % 400 == 0 );
+		}
+
+		function nthconv( date ) {
+				if( date > 3 && date < 21 ) {
+					return 'th'
+				}
+				switch ( date % 10 ) {
+				case 1 :  return "st";
+					case 2 :  return "nd";
+					case 3 :  return "rd";
+				default : return "th";
+				}
+		}
+
+		function replaceTxt( format ) {
+			var matches = format.match( /{{/ ), matches1 = format.match( /}}/ );
+			if( !( matches && matches1 ) ) {
+				return format;
+			}
+			format = format.replace( format.slice( matches.index, matches1.index + 2 ), function( arg ){
+				var ret = ""
+				for( var j = 0; j < arg.length - 4; j++ ) {
+					ret += '*';
+				}
+				return ret;
+			} )
+			return replaceTxt( format );
+		}
+
+		function parseFormat( format, validate ) { 
+			var forCopy = formats, order = [],
+			prev;
+			for( var i = 0; i < forCopy.length; i++ ) {
+				var cur = forCopy[ i ];
+				if( !format.length ) {
+					break;
+				}
+				if( format.indexOf( cur.val ) > -1 ) {
+					if( validate && cur.alt ){
+						prev = true;
+						continue;
+					}
+
+					cur = $L.extend( true, {}, cur );
+
+					if( prev ){
+						cur.val = forCopy[ i - 1 ].val;
+					}
+					prev = false;
+					order.push( { format : cur, index : format.indexOf( cur.val ) });
+					format = format.replace( cur.val, Math.pow( 10, cur.val.length - 1 ) );
+					i--;
+					continue;
+				} 
+			}
+			return order.sort(function( a, b ){
+					return a.index - b.index
+				});
+		}
+
+		function fmReplace( arg, arr ) {
+			var length = 0;
+			for( var i = 0; i < arr.length; i++ ) {
+				arg = arg.slice( 0, arr[ i ].index + length ) + arr[ i ].format.val + lm + arg.slice( arr[ i ].index + length + arr[ i ].format.val.length );
+				length += 10;
+			}
+			return arg;
+		}
+
+		function replace( arg, val, suff, rep ) {
+			arg = arg.replace( val, rep || "" );
+			if( suff ) {
+				arg = arg.replace( /st|nd|rd|th/, '' )
+			}
+			return arg;
+		}
+
+		function find( array, val ){
+			array = array || [];
+
+			var crct, i,
+			__length = array.length;
+
+			for( i = 0; i < __length; i++ ) {
+				var __cur = array[ i ];
+
+				if( new RegExp( __cur ).test( val ) ) {
+					crct = __cur;
+					break;
+				}
+			}
+			return  { mon : crct, index : i };
+		}
+
+		function getMonth( val, suff, str, long ) {
+			var mon;
+			if( str ) {
+				var ret = find( long ? longMon : shortMon, val );
+				mon = ret.mon;
+				val = ret.index;
+				if( !mon || val > 11 ){
+					val = "Invalid";
+				}
+			} else {
+				val = parseInt( val ) - 1;
+				if( val > 11 ) {
+					val = 'Invalid';
+				} 
+			}
+
+			return { val : val, mon : mon };
+		}
+
+		function convertTimeZone( arg ) {
+			var ret,
+			hour = parseInt( arg[ 2 ] ),
+			minute = parseInt( arg[ 3 ] );
+
+			ret = hour * 60 + minute;
+			return arg[ 1 ] == '+' ? ( ret * -1 ) : ret;
+		}
+
+		function convertRailway( hour, pm ) {
+			if( pm && hour < 12 ) {
+				hour += 12;
+			} else if( hour == 12 && !pm ) {
+				hour = 0;
+			}
+			return hour;
+		}
+
+		function getDay( val, isLeap ) {
+			var val = parseInt( val ), ini = 0, ind = 0, inc = dayArr[ 0 ];
+			if( val > ( 365 + ( isLeap ? 1 : 0 ) ) ){
+				return {};
+			}
+			while( ini + inc < val ) {
+				ini += inc;
+				ind++;
+				inc = dayArr[ ind ]
+				if( isLeap && ind == 1 ) {
+					inc += 1;
+				}
+			}
+			return { day : val - ini , mon : ind };
+		}
+
+		function getWeek( obj ) {
+			if( obj.day != undefined || obj.week ) {
+				// var dtt = new Date( obj.year , 0 ,1 );
+				// if( !validate.call( this, dtt ) ) {
+				// 	return {};
+				// }
+				// var dt = dtt.getDay(), isLeap1 = isLeap( obj.year || dtt.getFullYear() ),
+				// total = wod + obj.week == 1 ? ( obj.day - dt + wod ) : ( obj.week == 2 ? ( 7 + wod - dt + obj.day ) : ( 7 + wod - dt + obj.day + ( obj.week - 2 ) * 7 ) )
+				// if( total > ( 365 + ( isLeap1 ? 1 : 0 ) ) ) {
+				// 	var newStart = new Date( obj.year + 1 , 0 ,1 ).getDay();
+				// 	if( newStart > 4 ) {
+				// 		obj.year += 1;
+				// 		total = total - ( ( 365 + ( isLeap1 ? 1 : 0 ) ) );
+				// 	}
+				// }
+				// if( total > ( 365 + ( isLeap1 ? 1 : 0 ) ) || obj.day == 0 || obj.day > 7 ) {
+				// 	obj.month = obj.year = obj.date = 'Invalid';
+				// 	return;
+				// }
+				// var ret = getDay( total, isLeap1 );
+				// obj.month = ret.mon; obj.date = ret.day;
+
+				var start = new Date( obj.year, 0, 1 );
+				start.setDate( wod + ( ( obj.week || 1 ) - 1 ) * 7 + ( obj.day || 0 ) );
+
+				if( obj.year == start.getFullYear() ){
+					obj.month = start.getMonth();
+					obj.date = start.getDate();
+				} else {
+					obj.month = obj.date = "Invalid";
+				}
+			}
+
+			if( obj.year ) {
+				var yr = parseInt( obj.year );
+				if( yr < 100 ) {
+					obj.year = getCorrectYear( yr );
+				}
+			}
+			if( obj.month < 0 ) {
+				obj.month = 'Invalid';
+			}
+			if( obj.date < 1 ) {
+				obj.date = 'Invalid';
+			}
+		}
+
+		function getWeekReverse( dobj, ignore ){
+			var __wod = wod,
+			timezone = this._timezone;
+
+			if( timezone ){
+				dobj = new Date( $L.moment( dobj ).timezone( timezone ).format( 'YYYY-MM-DD' ) );
+			}
+
+			if( __wod ){
+				dobj = new Date( dobj );
+				dobj.setDate( dobj.getDate() - __wod );
+			}
+
+			var ret = __getWeekReverse( dobj, ignore );
+
+			return ret;
+		}
+
+		function __getWeekReverse( dobj, ignore ){
+			var year = dobj.getFullYear(),
+			is_leap = isLeap( year ),
+			month = dobj.getMonth(),
+			date = dobj.getDate(),
+			__week_start = 0,
+			__week_end = ( __week_start - 1 + 7 ) % 7,
+			year_start = new Date( year, 0, __week_start + 1 ),
+			startday = year_start.getDay(),
+			start_date = year_start.getDate(),
+			cur_day = dobj.getDay(),
+			total = totdate( month, is_leap ) + date,
+			days_without_ends = total - ( 7 - startday + __week_start ) - ( cur_day + 1 ),
+			__weeks = ( days_without_ends / 7 ) + 1;
+
+			if( month == 11 ){
+				var year_end = new Date( year, 11, 31 + __week_start ),
+				endday = year_end.getDay(),
+				enddate = year_end.getDate(),
+				exp_end = date + ( __week_end - endday + 7 ) % 7;
+
+				if( exp_end > 31 + __week_start ){
+					return {
+						week : 1,
+						day : cur_day
+					};
+				}
+			} 
+
+			__weeks++;
+
+			return {
+				week : __weeks,
+				day : cur_day
+			};
+		}
+
+		// function getWeekReverse( dobj, ignore ) {
+		// 	var isLeap1 = isLeap( dobj.getFullYear() ), month = dobj.getMonth(), date = dobj.getDate(),
+		// 	total = ignore ? 0 : - wod, startday = new Date( dobj.getFullYear(), 0 ).getDay();
+		// 	total += totdate( month, isLeap1 );
+
+		// 	if( !ignore ) {
+		// 		if( month == 0 && startday > 4 && date < 3 ){
+
+		// 			// isLeap1 = isLeap( dobj.getFullYear() - 1 );
+		// 			// total = total + 365 + ( isLeap1 ? 1 : 0 );
+		// 			// startday = new Date( dobj.getFullYear() - 1, 0 ).getDay();
+		// 			// repYear = true;
+
+		// 			var ret = getWeekReverse( new Date( dobj.getFullYear() - 1, 11, 31 ) );
+		// 			ret.repYear = true;
+		// 			ret.day = ret.day + date;
+
+		// 			return ret;
+		// 		} 
+		// 	}
+
+		// 		return { week : Math.ceil( ( total + startday + date ) / 7 ), day : dobj.getDay() + 1};
+		// }	
+
+		function getCorrectYear( year ){
+			var copyYear = year + '';
+			year = parseInt( year );
+
+			if( copyYear.length == 2 ){
+				var today = Number( $L.moment().format( 'YYYY' ) ),
+				prefix = parseInt( today / 100 ),
+				curTwodigit = today % 100,
+				upperLimit = ( curTwodigit + ( this.uL || uLimit ) ) % 100,
+				lowerLimit = ( curTwodigit - ( this.lL || lLimit ) + 100 ) % 100;
+
+				if( curTwodigit > lowerLimit ){
+					if( year < lowerLimit ){
+						year = ( prefix + 1 ) + '' + crctLength( year, 2 );
+					} else {
+						year = prefix + '' + crctLength( year, 2 );
+					}
+				} else {
+					if( year < lowerLimit ){
+						year = prefix + '' + crctLength( year, 2 );
+					} else {
+						year = ( prefix - 1 ) + '' + crctLength( year, 2 );
+					}
+				}
+			}
+			return year;
+		}
+
+		function valFormat( arg, format ){
+			var copyFormat = {}, 
+			ret, 
+			date,
+			__new = new Date(),
+			prseVal = parseFormat( replaceTxt( format ), true ), 
+			copyArg = arg,
+			format = format.replace(/{{|}}/g, ''),
+			copyFormat1 = format,
+			to_ret;
+
+			for( var i = 0; i < prseVal.length; i++ ) {
+				var ret, cur = prseVal[ i ].format;
+				switch( cur.type ) {
+					case 'date' :
+					case 'year':
+					case 'week' :
+					case 'day' : {
+						if( cur.regex.test(arg) ) {
+							if( cur.type == "year" ){
+								ret = arg.match( cur.regex )[ cur.match || 0 ];
+							} else {
+								ret = parseInt( arg.match( cur.regex )[ cur.match || 0 ] );
+							}
+							copyFormat[ cur.type ] = ret;
+							arg = replace( arg, cur.regex, cur.suff );
+							copyArg = replace( copyArg, cur.regex, cur.suff, cur.val );
+							if( cur.type == 'week' ) {
+								arg = replace( arg, week );
+							}
+							if( cur.type == 'day' && cur.local ) {
+								copyFormat.day++;
+							}
+							if( cur.year ) {
+								copyFormat.date = getDay( copyFormat.date ).day;
+							}
+						} else {
+							if( copyFormat.year && copyFormat.week ) {
+								copyFormat[ cur.type ] = wod;
+								format = format.replace( cur.val, '' );
+								copyFormat1 = copyFormat1.replace( cur.val, '' );
+							} else {
+								copyFormat[ cur.type ] = 'Invalid';
+							}
+						}
+						if( /date/i.test( cur.type ) ){
+							if( copyFormat[ cur.type ] == 0 ){
+								copyFormat[ cur.type ] = 'Invalid';
+							}
+						}
+						break;
+					}
+					case 'month' : {
+						if( cur.regex.test(arg) ) {
+							ret = getMonth( arg.match(  cur.regex )[ 0 ], cur.suff, cur.str, cur.long );
+							copyFormat.month = ret.val;
+							arg = replace( arg, ret.mon || ( cur.regex ), cur.suff );
+							copyArg = replace( copyArg, ret.mon || ( cur.regex ), cur.suff, cur.val );
+						} else {
+							copyFormat.month = 'Invalid';
+						}
+						if( copyFormat.month < 0 ){
+							copyFormat.month = 'Invalid';
+						}
+						break;
+					}
+					case 'quarter' : {
+						if( cur.regex.test(arg) ) {
+							ret = arg.match(  cur.regex )[ 0 ];
+							copyFormat.quarter = ret;
+							arg = replace( arg, ret, cur.suff );
+							copyArg = replace( copyArg, ret, cur.suff, cur.val );
+						}
+						break;
+					}
+					case 'longdate' : {
+						if( cur.regex.test(arg) ) {
+							if( cur.str ) {
+								ret = find( cur.array, arg.match(  cur.regex )[ 0 ] );
+							} else {
+								ret = parseInt( arg.match( cur.regex )[ 0 ] );
+							}
+							copyFormat.longdate = !isDef( ret.index ) ? ret : ret.index;
+							arg = replace( arg, ret.mon || ret, cur.suff )
+							copyArg = replace( copyArg, ret.mon || ret, cur.suff, cur.val );
+						}
+						break;
+					}
+					case 'hour' : 
+					case 'minute' : 
+					case 'second' :
+					case 'meridian' : {
+						if( cur.regex.test(arg) ) {
+							if( cur.str ) {
+								ret = arg.match( cur.regex )[ 0 ];
+							} else {
+								ret = parseInt( arg.match( cur.regex )[ 0 ] );
+								if( cur.railway ) {
+									copyFormat.railway = true;
+								}
+							}
+							if( cur.deduct ) {
+								ret--;
+							}
+
+							var __min = cur.min;
+
+							if( ( cur.max && ret > cur.max ) || ( __min != void 0 && ret < __min ) ) {
+								ret = 'Invalid';
+							}
+
+							copyFormat[ cur.type ] = ret;
+
+							arg = replace( arg, cur.regex );
+							copyArg = replace( copyArg, cur.regex, cur.suff, cur.val );
+						}
+						break;
+					}
+					case 'millisecond' : {
+						if( cur.regex.test(arg) ) {
+							ret = arg.match( cur.regex )[ 0 ];
+							copyFormat.millisecond = parseFloat( ret );
+							arg = replace( arg, ret ).replace(/[S]+/, '');
+							copyArg = replace( copyArg, cur.regex, cur.suff, cur.val );
+							copyFormat1 = copyFormat1.replace(/[S]+/, 'S');
+						}
+						break;
+					}
+					case 'timestamp' : {
+						if( cur.regex.test(arg) ) {
+							ret = parseInt( arg.match( cur.regex )[ 0 ] );
+							copyFormat.timestamp = ret * ( cur.milli ? 1 : 1000 );
+							arg = replace( arg, ret );
+							copyArg = replace( copyArg, ret, cur.suff, cur.val );
+						}
+						break;
+					}
+					case 'timezone' : {
+						if( cur.regex.test(arg) ) {
+							if( cur.str ) {
+								ret = arg.match( cur.regex )[ 0 ];
+								ret = -timeZoneOffsets[ ret ];
+							} else {
+								ret = convertTimeZone( arg.match( cur.regex ) )
+							}
+							copyFormat.timezone = ret;
+							arg = replace( arg, cur.regex );
+							copyArg = replace( copyArg, cur.regex, cur.suff, cur.val );
+						}
+						break;
+					}
+				}
+			format = format.replace( cur.valForm || cur.val, '' );
+			}
+				
+			// date = new Date( __new.getFullYear(), isDef( copyFormat.month ) ? copyFormat.month : __new.getMonth(), copyFormat.date || 1 );
+			// date = new Date( __new.getFullYear(), 0 );
+
+			date = new Date( __new.getFullYear(), isDef( copyFormat.month ) ? copyFormat.month : __new.getMonth(), copyFormat.date || 1, copyFormat.hour || ( copyFormat.meridian == "PM" ? 12 : 0 ), copyFormat.minute || 0, copyFormat.second || 0 );
+
+			if( isDef( copyFormat.day ) || isDef( copyFormat.week ) ){
+				var oriDate = copyFormat.date
+				if( !isDef( copyFormat.year ) ) {
+					copyFormat.year = date.getFullYear();
+				}
+				if( !isDef( copyFormat.day ) ) {
+					copyFormat.day = wod;
+				} 
+				getWeek.call( this, copyFormat );
+				if( isDef( oriDate ) ){
+					if( copyFormat.date > oriDate ) {
+						copyFormat.month++;
+					} 
+					copyFormat.date = oriDate;
+				}
+			}
+			if( isDef( copyFormat.longdate ) && copyFormat.day && copyFormat.day != copyFormat.longdate ) {
+				date.setFullYear( 'Invalid' );
+			} else if( isDef( copyFormat.year ) ) {
+				date.setFullYear( getCorrectYear( copyFormat.year ) );
+			}
+			if( isDef( copyFormat.month ) ) {
+				date.setMonth( copyFormat.month );
+			}
+			if( isDef( copyFormat.date ) ) {
+				date.setDate( copyFormat.date <= ( dayArr[ date.getMonth() ] + ( date.getMonth() == 1 && isLeap( date.getFullYear() ) ? 1 : 0 ) ) ? copyFormat.date : 'Invalid');
+			}
+			if( isDef( copyFormat.hour ) ) {
+				var mer = copyFormat.meridian;
+				date.setHours( copyFormat.railway ? convertRailway( copyFormat.hour, mer ? ( /pm/i.test( mer ) ) : ( copyFormat.hour > 11 ) ) : ( /pm/i.test( mer ) ? ( copyFormat.hour < 12 ? ( copyFormat.hour + 12 ) : copyFormat.hour ) : copyFormat.hour % 12 ) )
+			}
+			if( isDef( copyFormat.minute ) ) {
+				date.setMinutes( copyFormat.minute )
+			}
+			if( isDef( copyFormat.second ) ) {
+				date.setSeconds( copyFormat.second )
+			}
+			if( isDef( copyFormat.millisecond ) ){
+				date.setMilliseconds( copyFormat.millisecond )
+			}
+			if( isDef( copyFormat.timestamp ) ) {
+				date = new Date( copyFormat.timestamp )
+			}
+
+			if( validate.call( this, date ) ){
+				if( isDef( copyFormat.timezone ) ){
+					// to_ret = true;
+					var act_diff = date.getTimezoneOffset();
+
+					copyFormat.timezone -= act_diff;
+					date.setMinutes( date.getMinutes() + copyFormat.timezone );
+
+					var new_diff = date.getTimezoneOffset();
+
+					if( act_diff != new_diff ){
+
+						/* Daylight saving time causing many issues.
+								Here when we are passing wrong timezone date Ex. '2021-11-07T02:30:00-04:00' new date reads it correctly ( In -04:00 timezone machine ). But setting the timezone difference in setMinutes causing problem.
+							Dont know the exact fix. So wrote this as temporary fix. Assuming string contains timezone is readable in new Date()*/
+
+						var new_date = new Date( this._arg );
+						// May be we can create a date object by passing already available data
+
+						if( new_date.toString() == 'Invalid Date' ){
+							/* In this case can't do anything from moment side. Need to change the input date string */ 
+							date.setMinutes( date.getMinutes() - copyFormat.timezone );
+						} else{
+							date = new_date;
+						}
+					}
+
+				} else if( isDef( this._timezone ) ){
+					var ori_timezone = this.timezoneOffset( date );
+
+					copyFormat.timezone =  ori_timezone - date.getTimezoneOffset();
+					date.setMinutes( date.getMinutes() + copyFormat.timezone );
+
+					/*
+						* This below code is written for reading a time in different timezone without timezone present in date string.
+						* My machine is in Asia/Calcutta timezone 'Mar 11, 2022'. Niru <nirmala.b@zohocorp.com> reported this for input type date.
+						* Here DST changes on 'Mar 13, 2022 02:00 AM' in "US/Pacific" 
+						* ex . 'Mar 13, 2022 03:00 AM'
+						* In this case if i use normal functions setting hour 3 will automatically changes to hour 4 of -07:00 timezone
+						* To fix this issue after changing date again finding offset and subtracting the same for getting 3 of -07:00 timezone
+						*/
+
+					var new_timezone = this.timezoneOffset( date ),
+					diff = ori_timezone - new_timezone;
+
+					if( diff ){
+						date.setMinutes( date.getMinutes() - diff );
+					}
+
+					/*
+						* Here same as above
+						* 'Mar 13, 2022 02:59 AM' is an invalid date for "US/Pacific" timezone.
+						* correct output is generally assumed as 03:59 of -07:00 timezone
+						* if i deduct timezone change it goes to 01:59 of -08:00 timezone
+						* if converted hour and inputed hour are not matching we having an invalid hour value
+						* so here i am adding it again for getting 03:59 of -07:00 timezone value
+						*/
+
+					var __hour = copyFormat.hour;
+
+					if( isDef( __hour ) && __hour != parseInt( $L.moment( date ).format( 'h' ) ) ){
+						date.setMinutes( date.getMinutes() + diff );
+					}
+					/* ends */
+				}
+			}
+
+			var def_format = "YYYY-MM-DDTHH:mm:ssZ"; 
+
+			if( copyFormat1 != def_format && arg.length == format.length && copyFormat1 == copyArg && validate.call( this, date ) ) {
+				return this._isCorrectFormat = true;
+			} else if( !this._format || copyFormat1 == def_format ) {
+				return validate.call( this, new Date( this._arg ) );
+			}
+
+			return to_ret;
+		}
+
+		function crctLength( val, length, suff, deduct ) {
+			var sfx = ''
+			if( deduct ) {
+				val++;
+			}
+			if( suff ) {
+				sfx = nthconv( val );
+			}
+			if( length ) {
+				val = val.toString();
+				for( var i = 1; i < length; i++ ) {
+					if( val.length <= i ) {
+						val = '0' + val;
+					}
+				}
+			}
+			return val + sfx;
+		}
+
+		function getDObj(){
+			var date = this._dateObj,
+			timeZone = this._timezone;
+
+			if( timeZone ) {
+				if( this.is_IE ){
+					date.setMinutes( date.getMinutes() + date.getTimezoneOffset() - this.timezoneOffset( date ) );
+				} else{
+					var new_date = new Date( convert_timezone_DLS.call( this, date, timeZone ) );
+
+					if( validate.call( this, new_date, true ) ){
+						return new_date;
+					}
+				}
+			}
+			return date;
+		}
+
+		function setTimezoneName(date_obj, _this) {
+			var mod_obj;
+
+			try {  
+				if( _this._timezone ){ 
+					mod_obj = date_obj.toLocaleString('en-US', { timeZone: _this._timezone, timeZoneName: "long" }).split(/AM|PM/)[1];
+				} else {
+					mod_obj = new Date().toTimeString().match(/\(([^)]+)\)/)[1];	
+				}
+			} catch (err) {
+				mod_obj = new Date().toTimeString().match(/\(([^)]+)\)/)[1];
+			}
+			if( date_obj ){
+				return mod_obj.trim().match(/\b\w/g).join('');
+			} 
+			return mod_obj;
+		}
+
+		function convertFormat( arg ) {
+			var parseVal = parseFormat( replaceTxt( arg ) ), isWeek = {},
+			act_date = this.toDate(),
+			obj = this.split_date( act_date ),
+			fake_time,
+			create_fake = function(){
+				return new Date( act_date.getTime() + ( act_date.getTimezoneOffset() - obj.timezone ) * 1e3 * 60 );
+			}.bind( this );
+
+			arg = fmReplace( arg.replace(/{{|}}/g, ''), parseVal );
+			for( var i = 0; i < parseVal.length; i++ ) {
+				var ret, cur = parseVal[ i ].format;
+				switch( cur.type ) {
+					case "date" : {
+						arg = arg.replace( cur.val + lm, crctLength( ( cur.year ? totdate( obj.month - 1, isLeap( obj.year ), obj.date ) : obj.date ), cur.len, cur.suff ) )
+					}
+					break;
+					case "month" : {
+						if( cur.str ) {
+							arg = arg.replace( cur.val + lm, cur.array[ obj.month - 1 ] );
+						} else {
+							arg = arg.replace( cur.val + lm, crctLength( obj.month, cur.len, cur.suff ) );
+						}
+					}
+					break;
+					case "year" : {
+						arg = arg.replace( cur.val + lm, cur.len == 2 ? crctLength( obj.year % 100, 2 ) : ( ( obj.year + '' ).length == 4 ) ? obj.year : crctLength( obj.year, 4 ) );
+						isWeek.year = isWeek.year || [];
+						isWeek.year.push( cur );
+					}
+					break;
+					case "day" :
+					case "week" : {
+						isWeek.flag = true
+						isWeek[ cur.type ] = isWeek[ cur.type ] || [];
+						isWeek[ cur.type ].push( cur );
+					}	
+					break;
+					case "quarter" : {
+						arg = arg.replace( cur.val + lm, crctLength( Math.ceil( ( obj.month ) / 3 ), null , cur.suff ) )
+					}
+					break;
+					case 'longdate' : {
+						fake_time =  fake_time || create_fake();
+						var __day = fake_time.getDay();
+						if( cur.str ) {
+							arg = arg.replace( cur.val + lm, cur.array[ __day ]);
+						} else {
+							arg = arg.replace( cur.val + lm, crctLength( __day, null , cur.suff ) )
+						}
+					}
+					break;
+					case 'hour' : {
+						var hr = obj.hour;
+						arg = arg.replace( cur.val + lm, crctLength( !cur.railway ? ( hr > 12 ? hr % 12 : ( hr || 12 ) ) : hr, cur.len, null, cur.deduct ) )
+					}
+					break;
+					case 'minute' : {
+						arg = arg.replace( cur.val + lm, crctLength( obj.minute, cur.len ) );
+					}
+					break;
+					case 'second' : {
+						arg = arg.replace( cur.val + lm, crctLength( obj.second, cur.len ) );
+					}
+					break;
+					case 'millisecond' : {
+						arg = arg.replace( cur.val + lm, crctLength( act_date.getMilliseconds(), 3 ) ).replace( /\\S+/, '' )
+					}
+					break;
+					case 'timezone' : {
+						var val = '';
+						if( !cur.str ) {
+							var off = obj.timezone, hr = crctLength( Math.abs( parseInt( off / 60 ) ), 2 ), min = crctLength( Math.abs( off % 60 ), 2 ), sign = off <= 0 ? '+' : '-';
+							if( cur.val == 'ZZ' ) {
+								val = sign + hr + min;
+							} else {
+								val = sign + hr + ':' + min;
+							}
+						} else if( cur.val == "z" ){
+							val = obj.timezoneName || setTimezoneName(act_date, this) || "";
+						}
+						arg = arg.replace( cur.val + lm, val );
+					}
+					break;
+					case 'timestamp' : {
+						var val = '';
+						if( cur.val == 'X' ) {
+								val += parseInt( act_date.getTime() / 1000 )
+						} else {
+							val += act_date.getTime();
+						}
+						arg = arg.replace( cur.val + lm, val );
+					}
+					break;
+					case 'meridian' : {
+						var forr = obj.meridian;
+						if( cur.lower ) {
+							forr = forr.toLowerCase();
+						}
+						arg = arg.replace( cur.val + lm, forr );
+					}
+				}
+			}
+			if( isWeek.flag ) {
+				fake_time = fake_time || create_fake();
+				var ret = getWeekReverse( fake_time );
+				if( isWeek.week ){
+					for( var j = 0; j < isWeek.week.length; j++ ){
+						var __cur = isWeek.week[ j ],
+						__ret = getWeekReverse( fake_time, __cur.ignore );
+						arg = arg.replace( __cur.val + lm, ( __cur.pref == 0 ? "" : week ) + crctLength( __ret.week, __cur.len, __cur.suff ) );
+					}
+				}
+				if( isWeek.day ) {
+					for( var j = 0; j < isWeek.day.length; j++ ){
+						arg = arg.replace( isWeek.day[ j ].val + lm, ret.day - ( isWeek.day[ j ].local ? 1 : 0 ) );
+					}
+				}
+				if( ret.repYear && isWeek.year ) {
+					for( var j = 0; j < isWeek.year.length; j++ ){
+						arg = arg.replace( ( isWeek.year[ j ].len == 2 ? obj.year % 100 : obj.year ), ( isWeek.year[ j ].len == 2 ? obj.year % 100 : obj.year ) - 1 );
+					}
+				}
+			}
+			return arg.replace(/{{|}}/g, '');
+		}
+
+		function validate( arg, format ) {
+			var cons = arg.constructor;
+			
+			if( cons == Date || cons == ( new Date().constructor ) ) {
+				if( format != true ){
+					this._dateObj = arg;
+					this._isMoment = true;
+				}
+				if( arg.toString() == 'Invalid Date' ) {
+					return false;
+				} else {
+					return true;
+				}
+			} else if( typeof arg == "string" ) {
+				if( format ) {
+					var ret = valFormat.call( this, arg, format );
+					if( ret && this._isCorrectFormat ) {
+						this._format = format;
+					}
+					return ret;
+				} else {
+					if( this.constructFormat ){
+						return validate.call( this, arg, this.constructFormat.call( this, arg ) );
+					} else {
+						console.warn( 'Its not supported in lyte-moment-basic.js. Add lyte-moment-additional.js for format construction' );
+					}
+				}
+			} else if( Array.isArray( arg ) ) {
+				// new (Function.prototype.bind.apply(Date, [null].concat([1996,04,28])))
+				return validate.call( this, new Date( Date.parse( Date.apply( Date, cons ) ) ).getTime() );
+			} else if( typeof arg == "number" ) {
+				arg *= /^\d{10}$/.test( arg ) ? 1000 : 1;
+				return validate.call( this, new Date( arg ) );
+			} else if( arg._isMoment ) {
+
+				this.name_space = arg.name_space;
+				this.dls_check_map = arg.dls_check_map;
+				this._timezone = arg._timezone; 
+
+				return validate.call( this, arg._dateObj.getTime() );
+			}
+		}
+
+		function create_dls( date_obj, name ){
+			var date = date_obj.getDate(),
+			month = date_obj.getMonth() + 1,
+			year = date_obj.getFullYear(),
+			hour = date_obj.getHours(),
+			minute = date_obj.getMinutes(),
+			second = date_obj.getSeconds(),
+			str = crctLength( month, 2 ) + "/" + crctLength( date, 2 ) + "/" + year + ", " + crctLength( hour > 12 ? ( hour % 12 ) : ( hour || 12 ), 2 ) + ":" + crctLength( minute, 2 ) + ":" + crctLength( second, 2 ) + " " + ( hour > 11 ? 'PM' : "AM" ) + " ",
+			offset = -date_obj.getTimezoneOffset();
+
+			if( name == "long" ){
+				str += setTimezoneName();
+			} else {
+				str += ( "GMT" + ( offset >= 0 ? '+' : "" ) +  crctLength( parseInt( offset / 60 ), 2 ) + ":" + crctLength( offset % 60, 2 ) );
+			}
+
+			return str;
+		}
+
+		function convert_timezone_DLS( date_obj, name, short ){
+
+			short = short || "short";
+
+			var ns = date_obj.getTime() + '_' + name + "_" + short;
+
+			if( ns == this.name_space ){
+				return this.dls_check_map;
+			}
+
+			this.name_space = ns;
+
+			return ( this.dls_check_map = ( name ? date_obj.toLocaleString( "en-US", { timeZone: name, timeZoneName: short } ) : create_dls( date_obj, short ) ) );
+		}
+
+		lyteMoment.prototype = {
+
+			isDef : isDef, 
+
+			find : find,
+
+			totdate : totdate,
+
+			isLeap : isLeap,
+
+			dayArr : dayArr,
+
+			getDObj : getDObj,
+
+			getWeekReverse : getWeekReverse,
+
+			weekShort : weekShort,
+
+			weekMid : weekMid,
+
+			weekLong : weekLong,
+
+			longMon : longMon,
+
+			shortMon : shortMon,
+
+			week : week,
+
+			crctLength : crctLength,
+
+			formats : formats,
+
+			replace : replace,
+
+			inbuiltFormats : {},
+
+			getCorrectYear : getCorrectYear,
+
+			parseFormat : parseFormat,
+
+			replaceTxt : replaceTxt,
+
+			is_IE : is_IE,
+
+			convertTimeZone : convertTimeZone,
+
+			validate : function(){
+				return !!this._isValid;
+			},
+
+			toDate : function(){
+				return this._dateObj;
+			},
+
+			isSame : function( arg ){
+				if( this.validate() && arg && arg._isMoment && arg._isValid ) {
+					return this._dateObj.getTime() == arg._dateObj.getTime();
+				}
+				return false;
+			},
+
+			format : function( arg ) {
+				if( this.validate() ) {
+					arg = this.inbuiltFormats[ arg ] || arg || "YYYY-MM-DDTHH:mm:ssZ";
+					return convertFormat.call( this, arg );	
+				}
+			},
+
+			utc : function( arg ) {
+				return this.timezone( 'UTC' );
+			},
+
+			local : function( arg ){
+				return this.timezone( void 0 );
+			},
+
+			timezone : function( arg, off ){
+				this._timezone = arg;
+
+				if( isDef( off ) ){
+					if( typeof off == 'string' ){
+						timeZoneOffsets[ arg ] = -convertTimeZone( off.match( /(\+|\-)(\d{2}):(\d{2})$/ ) ); 
+					} else{
+						timeZoneOffsets[ arg ] = off;
+					}
+
+					this.is_IE = true;
+				}
+
+				return this;
+			},	
+
+			getCurrentTimeZone : function(){
+				return this._timezone;
+			},
+
+			parseDate : function( str, date_obj, timezone ){
+				var date_rgx = /(\d+)\/(\d+)\/(\d+),\s(\d+):(\d+):(\d+)\s(AM|PM)/,
+				match = str.match( date_rgx ),
+				obj = {
+					timezoneName : ""
+				},
+				gmt_rgx = /GMT(\+|-)(\d+):(\d+):(\d+)$/,
+				hr_min_rgx = /GMT(\+|-)(\d+):(\d+)$/,
+				hr_only_gmt = /GMT(\+|-)(\d+)$/,
+				end_rgx = /\s([A-Z]+)$/;
+
+				[ 'month', 'date', 'year', 'hour', 'minute', 'second' ].forEach( function( item, index ){
+					obj[ item ] = parseInt( match[ index + 1 ] );
+				});
+
+				obj.meridian = match[ 7 ];
+
+				var hr = obj.hour,
+				ns = {"ACDT":"GMT+10:30","ACST":"GMT+9:30","ACT":"GMT-5","ACWST":"GMT+8:45","ADT":"GMT-3","AEDT":"GMT+11","AEST":"GMT+10","AFT":"GMT+4:30","AKDT":"GMT-8","AKST":"GMT-9","AMST":"GMT-3","AMT":"GMT+4","ART":"GMT-3","AST":"GMT+3","AT":"GMT-4/GMT-3","AWST":"GMT+8","AZOST":"GMT+0","AZOT":"GMT-1","AZT":"GMT+4","BDT":"GMT+8","BIT":"GMT-12","BNT":"GMT+8","BOT":"GMT-4","BRST":"GMT-2","BRT":"GMT-3","BST":"GMT+11","BTT":"GMT+6","CAT":"GMT+2","CCT":"GMT+6:30","CDT":"GMT-4","CEST":"GMT+2","CET":"GMT+1","CHADT":"GMT+13:45","CHAST":"GMT+12:45","CHOST":"GMT+9","CHOT":"GMT+8","CHST":"GMT+10","CHUT":"GMT+10","CIST":"GMT-8","CIT":"GMT+8","CKT":"GMT-10","CLST":"GMT-3","CLT":"GMT-4","COST":"GMT-4","COT":"GMT-5","CST":"GMT+8","CT":"GMT-6/GMT-5","CVT":"GMT-1","CWST":"GMT+8:45","CXT":"GMT+7","DAVT":"GMT+7","DDUT":"GMT+10","EASST":"GMT-5","EAST":"GMT-6","EAT":"GMT+3","ECT":"GMT-5","EDT":"GMT-4","EEST":"GMT+3","EET":"GMT+2","EGST":"GMT+0","EGT":"GMT-1","EIT":"GMT+9","EST":"GMT-5","ET":"GMT-5/GMT-4","FET":"GMT+3","FJT":"GMT+12","FKST":"GMT-3","FKT":"GMT-4","FNT":"GMT-2","GALT":"GMT-6","GAMT":"GMT-9","GET":"GMT+4","GFT":"GMT-3","GILT":"GMT+12","GIT":"GMT-9","GMT":"GMT+0","GST":"GMT-2","GYT":"GMT-4","HADT":"GMT-9","HAST":"GMT-10","HKT":"GMT+8","HMT":"GMT+5","HOVST":"GMT+8","HOVT":"GMT+7","ICT":"GMT+7","IDT":"GMT+3","IOT":"GMT+6","IRDT":"GMT+4:30","IRKT":"GMT+8","IRST":"GMT+3:30","IST":"GMT+2","JST":"GMT+9","KGT":"GMT+6","KOST":"GMT+11","KRAT":"GMT+7","KST":"GMT+9","LHDT":"GMT+11","LHST":"GMT+10:30","LINT":"GMT+14","MAGT":"GMT+11","MART":"GMT-9:30","MAWT":"GMT+5","MDT":"GMT-6","MHT":"GMT+12","MIST":"GMT+11","MIT":"GMT-9:30","MMT":"GMT+6:30","MSK":"GMT+3","MST":"GMT+8","MT":"GMT-7/GMT-6","MUT":"GMT+4","MVT":"GMT+5","MYT":"GMT+8","NCT":"GMT+11","NDT":"GMT-2:30","NFT":"GMT+11","NPT":"GMT+5:45","NRT":"GMT+12","NST":"GMT-3:30","NT":"GMT-3:30","NUT":"GMT-11","NZDT":"GMT+13","NZST":"GMT+12","OMST":"GMT+6","ORAT":"GMT+5","PDT":"GMT-7","PET":"GMT-5","PETT":"GMT+12","PGT":"GMT+10","PHOT":"GMT+13","PhST":"GMT+8","PHT":"GMT+8","PKT":"GMT+5","PMDT":"GMT-2","PMST":"GMT-3","PONT":"GMT+11","PST":"GMT-8","PT":"GMT-8/GMT-7","PWT":"GMT+9","PYST":"GMT-3","PYT":"GMT-4","RET":"GMT+4","ROTT":"GMT-3","SAKT":"GMT+11","SAMT":"GMT+4","SAST":"GMT+2","SBT":"GMT+11","SCT":"GMT+4","SGT":"GMT+8","SLST":"GMT+5:30","SRET":"GMT+11","SRT":"GMT-3","SST":"GMT-11","SYOT":"GMT+3","TAHT":"GMT-10","TFT":"GMT+5","THA":"GMT+7","TJT":"GMT+5","TKT":"GMT+13","TLT":"GMT+9","TMT":"GMT+5","TOT":"GMT+13","TRT":"GMT+3","TVT":"GMT+12","ULAST":"GMT+9","ULAT":"GMT+8","USZ1":"GMT+2","UTC":"GMT+0","UYST":"GMT-2","UYT":"GMT-3","UZT":"GMT+5","VET":"GMT-4","VLAT":"GMT+10","VOLT":"GMT+4","VOST":"GMT+6","VUT":"GMT+11","WAKT":"GMT+12","WAST":"GMT+2","WAT":"GMT+1","WEST":"GMT+1","WET":"GMT+0","WFT":"GMT+12","WGST":"GMT-2","WIB":"GMT+7","WIT":"GMT+9","WST":"GMT+8","YAKT":"GMT+9","YEKT":"GMT+5"},
+				_this = this;
+
+				if( match[ 7 ] == 'PM' ){
+					if( hr != 12 ){
+						obj.hour += 12;
+					}
+				} else{
+					if( hr == 12 ){
+						obj.hour = 0;
+					}
+				}
+
+				function fn( str, frm_recursive, frm_long ){
+					if( gmt_rgx.test( str ) ){
+						var gmt_match = str.match( gmt_rgx );
+						obj.timezone = ( parseInt( gmt_match[ 2 ] ) * 60 + parseInt( gmt_match[ 3 ] ) ) * ( gmt_match[ 1 ] == '-' ? 1 : -1 );
+					} else if( hr_min_rgx.test( str ) ){
+						var gmt_match = str.match( hr_min_rgx );
+						obj.timezone = ( parseInt( gmt_match[ 2 ] ) * 60 + parseInt( gmt_match[ 3 ] ) ) * ( gmt_match[ 1 ] == '-' ? 1 : -1 );
+					} else if( hr_only_gmt.test( str ) ){
+						var gmt_match = str.match( hr_only_gmt );
+						obj.timezone = ( parseInt( gmt_match[ 2 ] ) * 60 ) * ( gmt_match[ 1 ] == '-' ? 1 : -1 );
+					} else{
+						if( frm_recursive ){
+							if( frm_long ){
+								var __cur = timeZoneOffsets[ frm_long ];
+								if( __cur ){
+									var final_str = "GMT",
+									hr = parseInt( __cur / 60 ),
+									min = Math.abs( __cur % 60 );
+
+									if( __cur > 0 ){
+										final_str += "+";
+									}
+
+									final_str += ( hr + ":" + min );
+
+									return fn( final_str, true );
+								}
+							}
+							obj.timezone = 0;
+						} else{
+							if( end_rgx.test( str ) ){
+
+								var clone = {
+									"AMT" : {
+										"Amazon Time" : "GMT-4",
+										"Armenia Time" : "GMT+4"
+									},
+									"AST" : {
+										"Atlantic Standard Time" : "GMT-4",
+										"Arabia Standard Time" : "GMT+3"
+									},
+									"BST" : {
+										"British Summer Time" : "GMT+1",
+										"Bangladesh Standard Time" : "GMT+6",
+										"Bougainville Standard Time" : "GMT+11"
+									},
+									"CDT" : {
+										"Central Daylight Time" : "GMT-5",
+										"Cuba Daylight Time" : "GMT-4"
+									},
+									"CST" : {
+										"Central Standard Time" : "GMT-6",
+										"Cuba Standard Time" : "GMT-5",
+										"China Standard Time" : "GMT+8"
+									},
+									"GST" : {
+										"Gulf Standard Time" : "GMT+4",
+										"South Georgia Time" : "GMT-2"
+									},
+									"IST" : {
+										"Indian Standard Time" : "GMT+5:30",
+										"Irish Standard Time" : "GMT+1",
+										"Israel Standard Time" : "GMT+2"
+									},
+									"MST" : {
+										"Mountain Standard Time" : "GMT-7",
+										"Malaysia Standard Time" : "GMT+8"
+									},
+									"WGST" : {
+										"West Greenland Time" : "GMT-3",
+										"West Greenland Summer Time" : "GMT-2"
+									}
+								},
+								value = str.match( end_rgx )[ 1 ],
+								clone_value = clone[ value ],
+								to_send = ns[ value ],
+								frm_long;
+
+								obj.timezoneName = value;
+
+								if( clone_value ){
+									var return_str = convert_timezone_DLS.call( _this, date_obj, timezone, 'long' );
+									for( var key in clone_value ){
+										if( return_str.indexOf( key ) != -1 ){
+											to_send = clone_value[ key ];
+											break;
+										}
+									}
+								} else if( !to_send ){
+									to_send = convert_timezone_DLS.call( _this, date_obj, timezone, 'long' );
+									frm_long = value;
+								} else {
+									var dual = [ 'AT', 'CT', 'ET', 'MT', 'PT' ];
+									if( dual.indexOf( value ) != -1 ){
+										to_send = to_send.replace( /\/(.+)/, '' );
+									}
+								}
+
+								fn( to_send, true, frm_long );
+							}
+						}
+					}
+				};
+
+				fn( str );
+
+				return obj;
+			},
+
+			split_date : function( date_obj ){
+				if( this.is_IE ){
+					var dobj = this.getDObj(),
+					hr = dobj.getHours(),
+					obj = {
+						year : dobj.getFullYear(),
+						month : dobj.getMonth() + 1,
+						date : dobj.getDate(),
+						hour : hr,
+						minute : dobj.getMinutes(),
+						second : dobj.getSeconds(),
+						meridian : hr > 11 ? "PM" : "AM",
+						timezone : this.timezoneOffset( date_obj )
+					};
+					return obj;
+				} else {
+					try{
+						var timezone_date = convert_timezone_DLS.call( this, date_obj, this._timezone ),
+						timezone_split = this.parseDate( timezone_date, date_obj, this._timezone );
+						return timezone_split;
+					} catch( e ){
+						this.is_IE = true;
+						return this.split_date( date_obj );
+					}
+				}
+			},
+
+			timezoneOffset : function( date_obj ){
+				if( isDef( this._timezone ) ){
+					if( this.is_IE ){
+						var value = timeZoneOffsets[ this._timezone ];
+						return -( isDef( value ) ? value : this._timezone );
+					}
+
+					var timezone_split = this.split_date( date_obj );
+
+					return timezone_split.timezone;
+				}
+
+				if( this.validate() ){
+					return this.toDate().getTimezoneOffset();
+				}
+
+				return new Date().getTimezoneOffset();
+			},
+
+			utcOffset : function( arg ) {
+				if( this._isValid ) {
+					return this.timezoneOffset( this.toDate() );
+				}
+			}	
+
+		}
+
+		$L.moment = function( arg, format, uL, lL ){
+			return new lyteMoment( arg, format, uL, lL );
+		}
+
+		$L.moment.lyteMoment = lyteMoment;
+
+		$L.moment.setLimits = function( a, b ){
+			uLimit = a;
+			lLimit = b;
+		}
+
+		$L.moment.setTimezone = function( arg, off ){
+			default_timezone = arg;
+			if( isDef( off ) ){
+				default_offset = off;
+			}
+		}
+
+		$L.moment.setWod = function( value ){
+			wod = value;
+		}
+	}
+} );
+
+/***/ }),
+
+/***/ 62857239:
 /*!*********************************************************************!*\
   !*** ./node_modules/@zoho/lyte-ui-component/plugins/lyte-search.js ***!
   \*********************************************************************/
@@ -19581,7 +26363,7 @@ window._lyteUiUtils.convert_diacritics = function( str ){
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( cb ){
   if( true ){
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(/*! @zoho/lyte-dom */ 19978124) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (cb),
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(/*! @zoho/lyte-dom */ 92838254) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (cb),
 		__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 		(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -19966,7 +26748,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 34317620:
+/***/ 29615327:
 /*!****************************!*\
   !*** ./router/maps/map.js ***!
   \****************************/
@@ -19977,14 +26759,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ErmMap": () => (/* binding */ ErmMap)
 /* harmony export */ });
-/* harmony import */ var _router_routes_home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../router/routes/home.js */ 85947163);
-/* harmony import */ var _router_routes_home_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../router/routes/home/index.js */ 15109247);
-/* harmony import */ var _router_routes_home_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../router/routes/home/details.js */ 82933275);
-/* harmony import */ var _router_routes_home_profile_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../router/routes/home/profile.js */ 3528349);
-/* harmony import */ var _router_routes_sign_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../router/routes/sign.js */ 53487529);
-/* harmony import */ var _router_routes_wildcard_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../router/routes/wildcard.js */ 30857568);
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/router/index.js */ 14504106);
+/* harmony import */ var _router_routes_home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../router/routes/home.js */ 56302595);
+/* harmony import */ var _router_routes_home_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../router/routes/home/index.js */ 88098444);
+/* harmony import */ var _router_routes_home_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../router/routes/home/details.js */ 29748659);
+/* harmony import */ var _router_routes_home_profile_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../router/routes/home/profile.js */ 83727442);
+/* harmony import */ var _router_routes_sign_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../router/routes/sign.js */ 79378899);
+/* harmony import */ var _router_routes_wildcard_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../router/routes/wildcard.js */ 45318946);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../node_modules/@slyte/router/index.js */ 19170786);
 
 
 
@@ -20040,7 +26822,7 @@ ErmMap.path = '../routes';
 
 /***/ }),
 
-/***/ 99442756:
+/***/ 11607809:
 /*!**************************!*\
   !*** ./router/router.js ***!
   \**************************/
@@ -20051,31 +26833,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ErmRouter": () => (/* binding */ ErmRouter)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/router/index.js */ 14504106);
-/* harmony import */ var _maps_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./maps/map */ 34317620);
-/* harmony import */ var _components_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/component */ 57373778);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@slyte/router/index.js */ 19170786);
+/* harmony import */ var _maps_map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./maps/map */ 29615327);
+/* harmony import */ var _components_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/component */ 54338305);
 
 var _ = {};
 
 (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__._defineProperty)(_, {
+  "ErmComponentRegistry": function() {
+    return _components_component__WEBPACK_IMPORTED_MODULE_1__.ErmComponentRegistry;
+  },
+
   "Router": function() {
-    return _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__.Router;
+    return _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_2__.Router;
   },
 
   "ErmMap": function() {
-    return _maps_map__WEBPACK_IMPORTED_MODULE_2__.ErmMap;
-  },
-
-  "ErmComponentRegistry": function() {
-    return _components_component__WEBPACK_IMPORTED_MODULE_3__.ErmComponentRegistry;
+    return _maps_map__WEBPACK_IMPORTED_MODULE_3__.ErmMap;
   }
 });
 
 
 
 
-class ErmRouter extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__.Router {
+class ErmRouter extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_2__.Router {
   constructor() {
     super(...arguments);
 
@@ -20091,7 +26873,7 @@ class ErmRouter extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MO
   }
 
   lookups() {
-    return [{ component: _components_component__WEBPACK_IMPORTED_MODULE_3__.ErmComponentRegistry }];
+    return [{ component: _components_component__WEBPACK_IMPORTED_MODULE_1__.ErmComponentRegistry }];
   }
 
   getComponentRegistry() {
@@ -20100,7 +26882,7 @@ class ErmRouter extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MO
 
   getConfig() {
     var config = {
-      baseMap: _maps_map__WEBPACK_IMPORTED_MODULE_2__.ErmMap,
+      baseMap: _maps_map__WEBPACK_IMPORTED_MODULE_3__.ErmMap,
       history: "html5",
     };
     return config;
@@ -20116,7 +26898,7 @@ class ErmRouter extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MO
 
 /***/ }),
 
-/***/ 53025444:
+/***/ 76246865:
 /*!*************************************!*\
   !*** ./services/ServiceProvider.js ***!
   \*************************************/
@@ -20127,11 +26909,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ServiceProvider": () => (/* binding */ ServiceProvider)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/core/index.js */ 10193561);
-/* harmony import */ var _components_javascript_toast_comp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../components/javascript/toast-comp */ 42596698);
-/* harmony import */ var _components_javascript_form_comp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../components/javascript/form-comp */ 49937256);
-/* harmony import */ var _components_javascript_alert_comp__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../components/javascript/alert-comp */ 33407950);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/core/index.js */ 64028528);
+/* harmony import */ var _components_javascript_toast_comp__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../components/javascript/toast-comp */ 51115378);
+/* harmony import */ var _components_javascript_form_comp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../components/javascript/form-comp */ 6162108);
+/* harmony import */ var _components_javascript_alert_comp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../components/javascript/alert-comp */ 92455636);
 
 var _ = {};
 
@@ -20140,16 +26922,16 @@ var _ = {};
     return _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_1__.Service;
   },
 
-  "FormComp": function() {
-    return _components_javascript_form_comp__WEBPACK_IMPORTED_MODULE_2__.FormComp;
-  },
-
   "AlertComp": function() {
-    return _components_javascript_alert_comp__WEBPACK_IMPORTED_MODULE_3__.AlertComp;
+    return _components_javascript_alert_comp__WEBPACK_IMPORTED_MODULE_2__.AlertComp;
   },
 
   "ToastComp": function() {
-    return _components_javascript_toast_comp__WEBPACK_IMPORTED_MODULE_4__.ToastComp;
+    return _components_javascript_toast_comp__WEBPACK_IMPORTED_MODULE_3__.ToastComp;
+  },
+
+  "FormComp": function() {
+    return _components_javascript_form_comp__WEBPACK_IMPORTED_MODULE_4__.FormComp;
   }
 });
 
@@ -20444,12 +27226,13 @@ class  ServiceProvider extends _node_modules_slyte_core_index_js__WEBPACK_IMPORT
     localStorage.setItem("users", JSON.stringify(updatedUsers));
     this.toast("Employee details updated successfully","success");}
     catch(e){
+      console.log(e);
       this.toast("ERROR! something went wrong","error");
     }
   }
 
   showFormComp(type,user){
-    this.$app.$component.render(_components_javascript_form_comp__WEBPACK_IMPORTED_MODULE_2__.FormComp,{"type":type,"user":user},"#popup",{clearOutlet : true}); 
+    this.$app.$component.render(_components_javascript_form_comp__WEBPACK_IMPORTED_MODULE_4__.FormComp,{"type":type,"user":user},"#popup",{clearOutlet : true}); 
   }
 
   deleteUser(empNo){
@@ -20463,7 +27246,7 @@ class  ServiceProvider extends _node_modules_slyte_core_index_js__WEBPACK_IMPORT
   }
 
   toast(m,t){
-    setTimeout(()=>{this.$app.$component.render(_components_javascript_toast_comp__WEBPACK_IMPORTED_MODULE_4__.ToastComp,{message:m,type:t},"#toast");},1000);
+    setTimeout(()=>{this.$app.$component.render(_components_javascript_toast_comp__WEBPACK_IMPORTED_MODULE_3__.ToastComp,{message:m,type:t},"#toast");},1000);
   }
 
   getRandomColor() {
@@ -20475,9 +27258,11 @@ class  ServiceProvider extends _node_modules_slyte_core_index_js__WEBPACK_IMPORT
     return colors[Math.floor(Math.random() * colors.length)];
   }
 
-  showAlert(h,c,perform){
-    this.$app.$component.render(_components_javascript_alert_comp__WEBPACK_IMPORTED_MODULE_3__.AlertComp,{header:h,content:c},"#toast",{
-      methods : {"perform": function(){ perform();}},
+  showAlert({header,content,cb} = {}){
+    this.$app.$component.render(_components_javascript_alert_comp__WEBPACK_IMPORTED_MODULE_2__.AlertComp,{header:header,content:content},"#toast",{
+      methods : {"perform": function(){ 
+        cb();
+      }},
       clearOutlet : true,
     });
   }
@@ -20490,7 +27275,7 @@ class  ServiceProvider extends _node_modules_slyte_core_index_js__WEBPACK_IMPORT
 
 /***/ }),
 
-/***/ 85947163:
+/***/ 56302595:
 /*!*******************************!*\
   !*** ./router/routes/home.js ***!
   \*******************************/
@@ -20501,8 +27286,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Home": () => (/* binding */ Home)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/router/index.js */ 14504106);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/router/index.js */ 19170786);
 
 var _ = {};
 
@@ -20538,7 +27323,7 @@ class Home extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_
     }
 
     getRequirements() {
-        arguments[1].push(Promise.all(/*! import() | components/javascript/home-comp */[__webpack_require__.e("vendors-node_modules_zoho_lyte-ui-component_components_javascript_lyte-table_js"), __webpack_require__.e("components_javascript_user-comp_js"), __webpack_require__.e("components/javascript/profile-comp"), __webpack_require__.e("components/javascript/home-comp")]).then(__webpack_require__.bind(__webpack_require__, /*! ../../components/javascript/home-comp */ 30003561)).then(function(res) {
+        arguments[1].push(Promise.all(/*! import() | components/javascript/home-comp */[__webpack_require__.e("vendors-node_modules_zoho_lyte-ui-component_components_javascript_lyte-table_js"), __webpack_require__.e("components_javascript_user-comp_js"), __webpack_require__.e("components/javascript/profile-comp"), __webpack_require__.e("components/javascript/home-comp")]).then(__webpack_require__.bind(__webpack_require__, /*! ../../components/javascript/home-comp */ 13039261)).then(function(res) {
             HomeComp = res.HomeComp;
         }));
     }
@@ -20550,7 +27335,7 @@ class Home extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_
 
 /***/ }),
 
-/***/ 82933275:
+/***/ 29748659:
 /*!***************************************!*\
   !*** ./router/routes/home/details.js ***!
   \***************************************/
@@ -20561,8 +27346,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Details": () => (/* binding */ Details)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/router/index.js */ 14504106);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/router/index.js */ 19170786);
 
 var _ = {};
 
@@ -20600,7 +27385,7 @@ class Details extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODU
   }
 
   getRequirements() {
-    arguments[1].push(Promise.all(/*! import() | components/javascript/details-comp */[__webpack_require__.e("vendors-node_modules_zoho_lyte-ui-component_components_javascript_lyte-table_js"), __webpack_require__.e("components_javascript_user-comp_js"), __webpack_require__.e("components/javascript/details-comp")]).then(__webpack_require__.bind(__webpack_require__, /*! ../../../components/javascript/details-comp */ 65266391)).then(function(res) {
+    arguments[1].push(Promise.all(/*! import() | components/javascript/details-comp */[__webpack_require__.e("vendors-node_modules_zoho_lyte-ui-component_components_javascript_lyte-table_js"), __webpack_require__.e("components_javascript_user-comp_js"), __webpack_require__.e("components/javascript/details-comp")]).then(__webpack_require__.bind(__webpack_require__, /*! ../../../components/javascript/details-comp */ 84027916)).then(function(res) {
       DetailsComp = res.DetailsComp;
     }));
   }
@@ -20612,7 +27397,7 @@ class Details extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODU
 
 /***/ }),
 
-/***/ 15109247:
+/***/ 88098444:
 /*!*************************************!*\
   !*** ./router/routes/home/index.js ***!
   \*************************************/
@@ -20623,8 +27408,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Index": () => (/* binding */ Index)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/router/index.js */ 14504106);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/router/index.js */ 19170786);
 
 var _ = {};
 
@@ -20663,7 +27448,7 @@ class Index extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE
     }
 
     getRequirements() {
-        arguments[1].push(__webpack_require__.e(/*! import() | components/javascript/admin-comp */ "components/javascript/admin-comp").then(__webpack_require__.bind(__webpack_require__, /*! ../../../components/javascript/admin-comp */ 13172170)).then(function(res) {
+        arguments[1].push(__webpack_require__.e(/*! import() | components/javascript/admin-comp */ "components/javascript/admin-comp").then(__webpack_require__.bind(__webpack_require__, /*! ../../../components/javascript/admin-comp */ 50496038)).then(function(res) {
             AdminComp = res.AdminComp;
         }));
     }
@@ -20675,7 +27460,7 @@ class Index extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE
 
 /***/ }),
 
-/***/ 3528349:
+/***/ 83727442:
 /*!***************************************!*\
   !*** ./router/routes/home/profile.js ***!
   \***************************************/
@@ -20686,8 +27471,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Profile": () => (/* binding */ Profile)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/router/index.js */ 14504106);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/router/index.js */ 19170786);
 
 var _ = {};
 
@@ -20719,7 +27504,7 @@ class Profile extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODU
     }
 
     getRequirements() {
-        arguments[1].push(Promise.all(/*! import() | components/javascript/profile-comp */[__webpack_require__.e("vendors-node_modules_zoho_lyte-ui-component_components_javascript_lyte-table_js"), __webpack_require__.e("components_javascript_user-comp_js"), __webpack_require__.e("components/javascript/profile-comp")]).then(__webpack_require__.bind(__webpack_require__, /*! ../../../components/javascript/profile-comp */ 48614070)).then(function(res) {
+        arguments[1].push(Promise.all(/*! import() | components/javascript/profile-comp */[__webpack_require__.e("vendors-node_modules_zoho_lyte-ui-component_components_javascript_lyte-table_js"), __webpack_require__.e("components_javascript_user-comp_js"), __webpack_require__.e("components/javascript/profile-comp")]).then(__webpack_require__.bind(__webpack_require__, /*! ../../../components/javascript/profile-comp */ 60375406)).then(function(res) {
             ProfileComp = res.ProfileComp;
         }));
     }
@@ -20731,7 +27516,7 @@ class Profile extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODU
 
 /***/ }),
 
-/***/ 53487529:
+/***/ 79378899:
 /*!*******************************!*\
   !*** ./router/routes/sign.js ***!
   \*******************************/
@@ -20742,8 +27527,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Sign": () => (/* binding */ Sign)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/router/index.js */ 14504106);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/router/index.js */ 19170786);
 
 var _ = {};
 
@@ -20781,7 +27566,7 @@ class Sign extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_
     }
 
     getRequirements() {
-        arguments[1].push(__webpack_require__.e(/*! import() | components/javascript/signin-comp */ "components/javascript/signin-comp").then(__webpack_require__.bind(__webpack_require__, /*! ../../components/javascript/signin-comp */ 56429359)).then(function(res) {
+        arguments[1].push(__webpack_require__.e(/*! import() | components/javascript/signin-comp */ "components/javascript/signin-comp").then(__webpack_require__.bind(__webpack_require__, /*! ../../components/javascript/signin-comp */ 97352214)).then(function(res) {
             SigninComp = res.SigninComp;
         }));
     }
@@ -20793,7 +27578,7 @@ class Sign extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_
 
 /***/ }),
 
-/***/ 30857568:
+/***/ 45318946:
 /*!***********************************!*\
   !*** ./router/routes/wildcard.js ***!
   \***********************************/
@@ -20804,8 +27589,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Wildcard": () => (/* binding */ Wildcard)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/router/index.js */ 14504106);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/router/index.js */ 19170786);
 
 var _ = {};
 
@@ -20846,7 +27631,7 @@ class Wildcard extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MOD
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ __webpack_require__.O(0, ["lyte"], () => (__webpack_exec__(49405404)));
+/******/ __webpack_require__.O(0, ["lyte"], () => (__webpack_exec__(52924117)));
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);

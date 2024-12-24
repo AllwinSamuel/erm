@@ -1,65 +1,77 @@
 <template tag-name="form-comp">
-  <div class="form-container">
-    <button class="form-btn--close" onclick="{{action('close')}}">X</button>  
-    <form>
-        <h2 lyte-if="{{type=='add'}}">ADD EMPLOYEE</h2>
-        <h2 lyte-else>UPDATE EMPLOYEE</h2>
-        <lyte-input lyte-if="{{type != 'update'}}" lt-prop-label = 'EmployeeNumber' lt-prop-placeholder = 'Enter EmployeeNumber'  lt-prop-class="form-input" lt-prop-value="{{lbind(employeeNumber)}}"></lyte-input>
-        <lyte-input lt-prop-label = 'Name' lt-prop-placeholder = 'Enter Name'  lt-prop-class="form-input" lt-prop-value="{{lbind(name)}}"></lyte-input>
-        <lyte-input lt-prop-label = 'Email'  lt-prop-placeholder = 'Enter Email' lt-prop-class="form-input" lt-prop-value="{{lbind(email)}}"></lyte-input>
-        <lyte-input lt-prop-label = 'Phone' lt-prop-placeholder = 'Enter Phone'  lt-prop-class="form-input" lt-prop-value="{{lbind(phone)}}"></lyte-input>
-        <lyte-input lt-prop-label = 'Address' lt-prop-placeholder = 'Enter Address' lt-prop-type="textarea" lt-prop-class="form-input" lt-prop-value="{{lbind(address)}}"></lyte-input>
-        <label for="department" >Department</label>
-        <lyte-dropdown lt-prop-id="department" lt-prop-class="form-input" lt-prop-selected="{{lbind(department)}}"  lt-prop-placeholder="Select A Department">
-          <template is="registerYield" yield-name="yield">
-              <lyte-drop-box>
-                  <lyte-drop-body>
-                      <lyte-drop-item data-value="IT">IT </lyte-drop-item>
-                      <lyte-drop-item data-value="HR">HR </lyte-drop-item>
-                      <lyte-drop-item data-value="Finance">Finance </lyte-drop-item>
-                      <lyte-drop-item data-value="Marketing">Marketing </lyte-drop-item>
-                  </lyte-drop-body>
-              </lyte-drop-box>
-          </template>
-        </lyte-dropdown>
-        <label for="role">Role</label>
-        <lyte-dropdown lt-prop-id="role" lt-prop-class="form-input" lt-prop-selected="{{lbind(role)}}" lt-prop-placeholder="Select A Role">
-          <template is="registerYield" yield-name="yield">
-              <lyte-drop-box>
-                  <lyte-drop-body>
-                      <lyte-drop-item data-value="Admin">Admin </lyte-drop-item>
-                      <lyte-drop-item data-value="Manager">Manager </lyte-drop-item>
-                      <lyte-drop-item data-value="Lead Developer">Lead Developer </lyte-drop-item>
-                      <lyte-drop-item data-value="Senior Developer">Senior Developer </lyte-drop-item>
-                      <lyte-drop-item data-value="Team Lead">Team Lead</lyte-drop-item>
-                  </lyte-drop-body>
-              </lyte-drop-box>
-          </template>
-        </lyte-dropdown>
-        <lyte-input lt-prop-label = 'Designation' lt-prop-placeholder = 'Enter Designation' lt-prop-class="form-input" lt-prop-value="{{lbind(designation)}}"></lyte-input>
-        <label for="gender">Gender</label>
-        <lyte-dropdown lt-prop-id="gender" lt-prop-class="form-input" lt-prop-selected="{{lbind(gender)}}" lt-prop-placeholder="Select A Gender">
-          <template is="registerYield" yield-name="yield">
-              <lyte-drop-box>
-                  <lyte-drop-body>
-                      <lyte-drop-item data-value="Male">Male </lyte-drop-item>
-                      <lyte-drop-item data-value="Female">Female </lyte-drop-item>
-                  </lyte-drop-body>
-              </lyte-drop-box>
-          </template>
-        </lyte-dropdown>
-        <div class="form-btns">
-        <lyte-button lt-prop-appearance="success" onclick="{{action('submit')}}">
-          <template is="registerYield" yield-name="text">
-              Submit
-          </template>
-        </lyte-button>
-        <lyte-button lt-prop-appearance="primary" onclick="{{action('reset')}}" >
-          <template is="registerYield" yield-name="text">
-              Reset
-          </template>
-        </lyte-button>
-       </div>
-    </form>
+  <div class="form-screen">
+    <div class="form-container">
+      <button class="form-btn--close" onclick="{{action('close')}}">X</button>  
+      <form>
+          <h2 lyte-if="{{type=='add'}}">ADD EMPLOYEE</h2>
+          <h2 lyte-else>UPDATE EMPLOYEE</h2>
+          
+          <lyte-input lyte-if="{{type != 'update'}}" lt-prop-label = 'EmployeeNumber' lt-prop-placeholder = 'Enter EmployeeNumber'  lt-prop-class="form-input" lt-prop-value="{{lbind(user.employeeNumber)}}"></lyte-input>
+          
+          <lyte-input lt-prop-label = 'Name' lt-prop-placeholder = 'Enter Name'  lt-prop-class="form-input" lt-prop-value="{{lbind(user.name)}}"></lyte-input>
+          
+          <lyte-input lt-prop-label = 'Email'  lt-prop-placeholder = 'Enter Email' lt-prop-class="form-input" lt-prop-value="{{lbind(user.email)}}"></lyte-input>
+          
+          <lyte-input lt-prop-label = 'Phone' lt-prop-placeholder = 'Enter Phone'  lt-prop-class="form-input" lt-prop-value="{{lbind(user.phone)}}"></lyte-input>
+          
+          <lyte-input lt-prop-label = 'Address' lt-prop-placeholder = 'Enter Address' lt-prop-type="textarea" lt-prop-class="form-input" lt-prop-value="{{lbind(user.address)}}"></lyte-input>
+          
+          <label for="department" >Department</label>
+          <lyte-dropdown lt-prop-id="department" lt-prop-class="form-input" lt-prop-selected="{{lbind(user.department)}}"  lt-prop-placeholder="Select A Department">
+            <template is="registerYield" yield-name="yield">
+                <lyte-drop-box>
+                    <lyte-drop-body>
+                        <lyte-drop-item data-value="IT">IT </lyte-drop-item>
+                        <lyte-drop-item data-value="HR">HR </lyte-drop-item>
+                        <lyte-drop-item data-value="Finance">Finance </lyte-drop-item>
+                        <lyte-drop-item data-value="Marketing">Marketing </lyte-drop-item>
+                    </lyte-drop-body>
+                </lyte-drop-box>
+            </template>
+          </lyte-dropdown>
+          
+          <label for="role">Role</label>
+          <lyte-dropdown lt-prop-id="role" lt-prop-class="form-input" lt-prop-selected="{{lbind(user.role)}}" lt-prop-placeholder="Select A Role">
+            <template is="registerYield" yield-name="yield">
+                <lyte-drop-box>
+                    <lyte-drop-body>
+                        <lyte-drop-item data-value="Admin">Admin </lyte-drop-item>
+                        <lyte-drop-item data-value="Manager">Manager </lyte-drop-item>
+                        <lyte-drop-item data-value="Lead Developer">Lead Developer </lyte-drop-item>
+                        <lyte-drop-item data-value="Senior Developer">Senior Developer </lyte-drop-item>
+                        <lyte-drop-item data-value="Team Lead">Team Lead</lyte-drop-item>
+                    </lyte-drop-body>
+                </lyte-drop-box>
+            </template>
+          </lyte-dropdown>
+          
+          <lyte-input lt-prop-label = 'Designation' lt-prop-placeholder = 'Enter Designation' lt-prop-class="form-input" lt-prop-value="{{lbind(user.designation)}}"></lyte-input>
+          
+          <label for="gender">Gender</label>
+          <lyte-dropdown lt-prop-id="gender" lt-prop-class="form-input" lt-prop-selected="{{lbind(user.gender)}}" lt-prop-placeholder="Select A Gender">
+            <template is="registerYield" yield-name="yield">
+                <lyte-drop-box>
+                    <lyte-drop-body>
+                        <lyte-drop-item data-value="Male">Male </lyte-drop-item>
+                        <lyte-drop-item data-value="Female">Female </lyte-drop-item>
+                    </lyte-drop-body>
+                </lyte-drop-box>
+            </template>
+          </lyte-dropdown>
+          
+          <div class="form-btns">
+            <lyte-button lt-prop-appearance="success" onclick="{{action('submit')}}">
+              <template is="registerYield" yield-name="text">
+                  Submit
+              </template>
+            </lyte-button>
+            <lyte-button lt-prop-appearance="primary" onclick="{{action('reset')}}" >
+              <template is="registerYield" yield-name="text">
+                  Reset
+              </template>
+            </lyte-button>
+          </div>
+      </form>
+    </div>
   </div>
 </template>

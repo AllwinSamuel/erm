@@ -1,7 +1,7 @@
 "use strict";
 (self["webpackChunkerm"] = self["webpackChunkerm"] || []).push([["components/javascript/admin-comp"],{
 
-/***/ 13172170:
+/***/ 50496038:
 /*!*********************************************!*\
   !*** ./components/javascript/admin-comp.js ***!
   \*********************************************/
@@ -11,9 +11,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "AdminComp": () => (/* binding */ AdminComp)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _list_comp_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./list-comp.js */ 84282785);
-/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/component/index.js */ 26633);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _list_comp_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./list-comp.js */ 59998556);
+/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/component/index.js */ 5660422);
 
 var _ = {};
 
@@ -65,14 +65,14 @@ AdminComp._observedAttributes = [];
 
 
 AdminComp.register("admin-comp", {
-    hash: "AdminComp_221",
+    hash: "AdminComp_21",
     refHash: "C_erm_app_0"
 }); 
 
 
 /***/ }),
 
-/***/ 84282785:
+/***/ 59998556:
 /*!********************************************!*\
   !*** ./components/javascript/list-comp.js ***!
   \********************************************/
@@ -82,11 +82,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ListComp": () => (/* binding */ ListComp)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_input_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-input.js */ 97686034);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_button_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-button.js */ 62028913);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_accordion_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-accordion.js */ 93535713);
-/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/component/index.js */ 26633);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_input_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-input.js */ 31525416);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_button_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-button.js */ 36040942);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_accordion_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-accordion.js */ 57456449);
+/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/component/index.js */ 5660422);
 
 var _ = {};
 
@@ -154,14 +154,14 @@ ListComp._observedAttributes = ["users", "updatedUsers"];
 
 
 ListComp.register("list-comp", {
-    hash: "ListComp_11",
+    hash: "ListComp_22",
     refHash: "C_erm_app_0"
 }); 
 
 
 /***/ }),
 
-/***/ 93535713:
+/***/ 57456449:
 /*!**************************************************************************************!*\
   !*** ./node_modules/@zoho/lyte-ui-component/components/javascript/lyte-accordion.js ***!
   \**************************************************************************************/
@@ -171,9 +171,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "LyteAccordionComponent": () => (/* binding */ LyteAccordionComponent)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/core/index.js */ 56505143);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/component.js */ 50761997);
-/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js */ 19978124);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/@slyte/core/index.js */ 76928134);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/component.js */ 40876002);
+/* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js */ 92838254);
 /* harmony import */ var _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_2__);
 
 var _ = {};
@@ -1373,7 +1373,7 @@ if( !window._lyteUiUtils.registeredCustomElements[ 'lyte-accordion-body' ] ) {
 
 
 LyteAccordionComponent.register("lyte-accordion", {
-    hash: "LyteAccordionComponent_6",
+    hash: "LyteAccordionComponent_23",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });
 

@@ -1,7 +1,7 @@
 "use strict";
 (self["webpackChunkerm"] = self["webpackChunkerm"] || []).push([["components/javascript/profile-comp"],{
 
-/***/ 53655717:
+/***/ 91537566:
 /*!**********************************************!*\
   !*** ./components/javascript/avatar-comp.js ***!
   \**********************************************/
@@ -11,8 +11,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "AvatarComp": () => (/* binding */ AvatarComp)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/component/index.js */ 26633);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/component/index.js */ 5660422);
 
 var _ = {};
 
@@ -71,14 +71,14 @@ AvatarComp._observedAttributes = ["name"];
 
 
 AvatarComp.register("avatar-comp", {
-    hash: "AvatarComp_17",
+    hash: "AvatarComp_19",
     refHash: "C_erm_app_0"
 }); 
 
 
 /***/ }),
 
-/***/ 48614070:
+/***/ 60375406:
 /*!***********************************************!*\
   !*** ./components/javascript/profile-comp.js ***!
   \***********************************************/
@@ -88,10 +88,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ProfileComp": () => (/* binding */ ProfileComp)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _avatar_comp_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./avatar-comp.js */ 53655717);
-/* harmony import */ var _user_comp_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./user-comp.js */ 15949220);
-/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/component/index.js */ 26633);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _avatar_comp_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./avatar-comp.js */ 91537566);
+/* harmony import */ var _user_comp_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./user-comp.js */ 60061424);
+/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/component/index.js */ 5660422);
 
 var _ = {};
 
@@ -146,7 +146,7 @@ ProfileComp._observedAttributes = ["user"];
 
 
 ProfileComp.register("profile-comp", {
-    hash: "ProfileComp_9",
+    hash: "ProfileComp_16",
     refHash: "C_erm_app_0"
 }); 
 

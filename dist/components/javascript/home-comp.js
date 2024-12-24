@@ -1,7 +1,7 @@
 "use strict";
 (self["webpackChunkerm"] = self["webpackChunkerm"] || []).push([["components/javascript/home-comp"],{
 
-/***/ 30003561:
+/***/ 13039261:
 /*!********************************************!*\
   !*** ./components/javascript/home-comp.js ***!
   \********************************************/
@@ -11,10 +11,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "HomeComp": () => (/* binding */ HomeComp)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _navbar_comp_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./navbar-comp.js */ 90068352);
-/* harmony import */ var _profile_comp_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./profile-comp.js */ 48614070);
-/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/component/index.js */ 26633);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _navbar_comp_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./navbar-comp.js */ 26037012);
+/* harmony import */ var _profile_comp_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./profile-comp.js */ 60375406);
+/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/component/index.js */ 5660422);
 
 var _ = {};
 
@@ -68,14 +68,14 @@ HomeComp._observedAttributes = [];
 
 
 HomeComp.register("home-comp", {
-    hash: "HomeComp_8",
+    hash: "HomeComp_15",
     refHash: "C_erm_app_0"
 }); 
 
 
 /***/ }),
 
-/***/ 90068352:
+/***/ 26037012:
 /*!**********************************************!*\
   !*** ./components/javascript/navbar-comp.js ***!
   \**********************************************/
@@ -85,9 +85,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "NavbarComp": () => (/* binding */ NavbarComp)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _avatar_comp_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./avatar-comp.js */ 53655717);
-/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/component/index.js */ 26633);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _avatar_comp_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./avatar-comp.js */ 91537566);
+/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/component/index.js */ 5660422);
 
 var _ = {};
 
@@ -152,7 +152,7 @@ NavbarComp._observedAttributes = ["user", "show"];
 
 
 NavbarComp.register("navbar-comp", {
-    hash: "NavbarComp_21",
+    hash: "NavbarComp_20",
     refHash: "C_erm_app_0"
 }); 
 

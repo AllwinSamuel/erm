@@ -1,7 +1,7 @@
 @import url("/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-input.css");
 @import url("/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-dropdown.css");
 @import url("/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-button.css");
-form-comp{
+.form-screen{
   position: fixed;
   top:0;
   left:0;

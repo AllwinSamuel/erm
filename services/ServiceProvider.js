@@ -290,6 +290,7 @@ class  ServiceProvider extends Service {
     localStorage.setItem("users", JSON.stringify(updatedUsers));
     this.toast("Employee details updated successfully","success");}
     catch(e){
+      console.log(e);
       this.toast("ERROR! something went wrong","error");
     }
   }
@@ -321,9 +322,11 @@ class  ServiceProvider extends Service {
     return colors[Math.floor(Math.random() * colors.length)];
   }
 
-  showAlert(h,c,perform){
-    this.$app.$component.render(AlertComp,{header:h,content:c},"#toast",{
-      methods : {"perform": function(){ perform();}},
+  showAlert({header,content,cb} = {}){
+    this.$app.$component.render(AlertComp,{header:header,content:content},"#toast",{
+      methods : {"perform": function(){ 
+        cb();
+      }},
       clearOutlet : true,
     });
   }

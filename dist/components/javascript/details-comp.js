@@ -1,7 +1,7 @@
 "use strict";
 (self["webpackChunkerm"] = self["webpackChunkerm"] || []).push([["components/javascript/details-comp"],{
 
-/***/ 65266391:
+/***/ 84027916:
 /*!***********************************************!*\
   !*** ./components/javascript/details-comp.js ***!
   \***********************************************/
@@ -11,10 +11,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "DetailsComp": () => (/* binding */ DetailsComp)
 /* harmony export */ });
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 56505143);
-/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_button_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-button.js */ 62028913);
-/* harmony import */ var _user_comp_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./user-comp.js */ 15949220);
-/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/@slyte/component/index.js */ 26633);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_zoho_lyte_ui_component_components_javascript_lyte_button_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/javascript/lyte-button.js */ 36040942);
+/* harmony import */ var _user_comp_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./user-comp.js */ 60061424);
+/* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/component/index.js */ 5660422);
 
 var _ = {};
 
@@ -71,7 +71,7 @@ DetailsComp._observedAttributes = [];
 
 
 DetailsComp.register("details-comp", {
-    hash: "DetailsComp_23",
+    hash: "DetailsComp_24",
     refHash: "C_erm_app_0"
 }); 
 

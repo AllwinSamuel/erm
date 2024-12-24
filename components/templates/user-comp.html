@@ -1,0 +1,23 @@
+<template tag-name="user-comp">
+  <lyte-table
+        lt-prop-yield = true lt-prop-border = true lt-prop-resize='{"horizontal": true, "vertical" : true}'>
+      <template is = 'registerYield' yield-name = 'yield'>
+          <lyte-table-structure>
+              <lyte-thead>
+                  <lyte-tr>  
+                          <lyte-th>Attibutes</lyte-th>
+                          <lyte-th>Values</lyte-th>
+                  </lyte-tr>
+              </lyte-thead>
+              <lyte-tbody>
+                      <lyte-tr lyte-for-in="{{user}} as value key">
+                              <lyte-td> {{key}} </lyte-td>
+                              <lyte-td> {{value}} </lyte-td>
+                      </lyte-tr>
+              </lyte-tbody>
+          </lyte-table-structure>
+      </template>
+  </lyte-table>
+  <lyte-yield yield-name="content">
+  </lyte-yield>
+</template>

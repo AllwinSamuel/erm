@@ -1,0 +1,55 @@
+{
+ "path": {
+  "/app-init.js": [
+   "/app-init.js",
+   "/lyte.js"
+  ],
+  "/components/javascript/admin-comp.js": [
+   "/components/javascript/admin-comp.js"
+  ],
+  "/components/javascript/details-comp.js": [
+   "/components/javascript/details-comp.js",
+   "/components_javascript_user-comp_js.js",
+   "/vendors-node_modules_zoho_lyte-ui-component_components_javascript_lyte-table_js.js"
+  ],
+  "/components/javascript/home-comp.js": [
+   "/components/javascript/home-comp.js",
+   "/components/javascript/profile-comp.js",
+   "/components_javascript_user-comp_js.js",
+   "/vendors-node_modules_zoho_lyte-ui-component_components_javascript_lyte-table_js.js"
+  ],
+  "/components/javascript/profile-comp.js": [
+   "/components/javascript/profile-comp.js",
+   "/components/javascript/home-comp.js",
+   "/components_javascript_user-comp_js.js",
+   "/vendors-node_modules_zoho_lyte-ui-component_components_javascript_lyte-table_js.js"
+  ],
+  "/components/javascript/signin-comp.js": [
+   "/components/javascript/signin-comp.js"
+  ],
+  "/components_javascript_user-comp_js.js": [
+   "/components_javascript_user-comp_js.js",
+   "/components/javascript/details-comp.js",
+   "/components/javascript/home-comp.js",
+   "/components/javascript/profile-comp.js",
+   "/vendors-node_modules_zoho_lyte-ui-component_components_javascript_lyte-table_js.js"
+  ],
+  "/lyte.js": [
+   "/lyte.js",
+   "/app-init.js"
+  ],
+  "/runtime.js": [
+   "/runtime.js",
+   "/app-init.js",
+   "/lyte.js"
+  ],
+  "/vendors-node_modules_zoho_lyte-ui-component_components_javascript_lyte-table_js.js": [
+   "/vendors-node_modules_zoho_lyte-ui-component_components_javascript_lyte-table_js.js",
+   "/components/javascript/details-comp.js",
+   "/components/javascript/home-comp.js",
+   "/components/javascript/profile-comp.js",
+   "/components_javascript_user-comp_js.js"
+  ]
+ },
+ "component": {}
+}

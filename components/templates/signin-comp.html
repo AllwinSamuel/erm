@@ -1,0 +1,22 @@
+<template tag-name="signin-comp">
+    <form>
+      <h1>LOGIN</h1>
+      <lyte-input lt-prop-placeholder = 'Enter UserName or EmployeeNumber' lt-prop-class="form-input" lt-prop-value="{{lbind(userName)}}"></lyte-input>
+      <lyte-input lt-prop-placeholder = 'Enter password' lt-prop-password-icon = true lt-prop-type="password" lt-prop-class="form-input" lt-prop-value="{{lbind(password)}}"></lyte-input>
+      <span lyte-if="{{lbind(errMsg)}}">{{errMsg}}</span>
+      <lyte-button lt-prop-appearance="success" onclick="{{action('submit',event)}}">
+        <template is="registerYield" yield-name="text">
+           Login
+        </template>
+      </lyte-button>
+    </form>
+    <!-- for testing purpose -->
+    <div>
+      <p>empno  - password - role</p>
+      <p>---------------------------------</p>
+      <p>emp101 - password - admin</p>
+      <p>emp104 - password - employee</p>
+      <p>emp106 - password - Manager</p>
+    </div>
+    <div id="toast"></div>
+</template>

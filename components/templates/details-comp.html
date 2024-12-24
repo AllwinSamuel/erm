@@ -1,0 +1,17 @@
+<template tag-name="details-comp">
+   <user-comp user="{{user}}">
+    <template lyte-if="{{show}}" is="yield" yield-name="content">
+      <lyte-button lt-prop-appearance="success" onclick="{{action('updateUser',user)}}">
+        <template is="registerYield" yield-name="text">
+            UPDATE
+        </template>
+    </lyte-button>
+    <lyte-button lt-prop-appearance="failure" onclick="{{action('deleteUser',user.employeeNumber)}}" onclick="{{action('updateUser',user)}}">
+      <template is="registerYield" yield-name="text">
+          DELETE
+      </template>
+  </lyte-button>
+    </template>
+   </user-comp>
+   <div id="popup"></div>
+</template>

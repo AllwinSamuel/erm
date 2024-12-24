@@ -1,0 +1,46 @@
+@import url('/node_modules/@zoho/lyte-ui-component/dist/components/styles/lyte-ui-table.css');
+@import url('/node_modules/@zoho/lyte-ui-component/dist/components/styles/lyte-ui-button.css');
+
+lyte-table{
+  max-width: 100vw;
+  color:white;
+}
+lyte-thead lyte-tr{
+   background-color: rgb(45, 119, 210);
+}
+lyte-thead lyte-th{
+    background-color: rgb(45, 119, 210);
+    color:white;
+}
+user-comp{
+  padding: 20px;
+  overflow: auto;
+}
+lyte-th{
+  color:white;
+}
+
+lyte-td , lyte-th{
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+details-comp user-comp lyte-td , lyte-th{
+  font-size: 1.4rem;
+  padding: 20px;
+}
+
+user-comp lyte-yield{
+  display:flex;
+  justify-content: end;
+  gap:10px;
+
+}
+
+user-comp lyte-yield button{
+  margin-top: 20px;
+  padding-block: 20px;
+  padding-inline: 50px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}

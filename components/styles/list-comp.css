@@ -1,0 +1,70 @@
+@import url("/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-accordion.css");
+@import url('/node_modules/@zoho/lyte-ui-component/dist/components/styles/lyte-ui-input.css');
+list-comp{
+  max-height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+lyte-accordion-body{
+  width: 100%;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  gap:30px;
+  margin-block: 20px;
+}
+.btn-add{
+  width: max-content;
+  height: 60px;
+  border-radius: 7px;
+  &:hover{
+    opacity: 1.1;
+  }
+}
+.list-input{
+  flex-grow: 1;
+  text-indent: 10px;
+  height: 60px;
+  border-radius: 7px;
+}
+.lyteField{
+  padding: 0;
+}
+
+lyte-accordion-header{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  margin-left: 20px;
+  font-size: 1.3rem;
+}
+lyte-icon.lyteAccordionArrow {
+  background-position: -42px 0;
+  width: 15px;
+  height: 10px;
+  position: absolute;
+  left: 10px;
+  top:20px;
+}
+
+list-comp lyte-accordion-body pre span{
+  display: inline-block;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+list-comp go-to{
+   background-color: rgb(74, 131, 166);
+   display: inline-block;
+   padding: 10px;
+   margin-top: 10px;
+   color: #ffffff;
+   border-radius: 7px;
+   transition: all 0.2s ease-in-out;
+   &:hover{
+    scale:1.1;
+   }
+}

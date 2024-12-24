@@ -1,0 +1,12 @@
+<template tag-name="alert-comp">
+  <lyte-alert lt-prop-wrapper-class = "sampleAlert" lt-prop = '{"buttons" : [{"type":"accept","text":"Ok","appearance":"success"},{"type":"reject","text":"Cancel","appearance":"failure"}]}' lt-prop-type="warning" lt-prop = '{"showCloseButton":true}' lt-prop-yield = "true" lt-prop-show="true" on-accept="{{method('perform')}}">
+		<template is = "registerYield" yield-name = "alert">
+				<lyte-alert-header>
+						{{header}}
+				</lyte-alert-header>
+				<lyte-alert-content>
+						{{content}}
+				</lyte-alert-content>
+		</template>
+	</lyte-alert>
+</template>

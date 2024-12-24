@@ -1,0 +1,10 @@
+details-comp{
+  padding: 30px;
+  display: flex;
+  background: rgb(193, 221, 231);
+  height: 100vh;
+}
+
+details-comp user-comp{
+  width: 100%;
+}

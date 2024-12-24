@@ -1,0 +1,42 @@
+added components/javascript/signin-comp.js
+
+added components/styles/signin-comp.css
+
+added components/templates/signin-comp.html
+
+Timing to complete init function0.028 s
+CliLocation :/opt/homebrew/lib/node_modules/@slyte/cli
+ CliVersion 1.0.0
+Timing to complete init function0 s
+Building components ....
+Build sucesss
+Building components ....
+file started /Users/allwin-pt7686/Desktop/slyte1/erm/assets/logout-svgrepo-com copy.svg
+file ended /Users/allwin-pt7686/Desktop/slyte1/erm/assets/logout-svgrepo-com copy.svg
+file started /Users/allwin-pt7686/Desktop/slyte1/erm/assets/lyte_note_sprite.svg
+file ended /Users/allwin-pt7686/Desktop/slyte1/erm/assets/lyte_note_sprite.svg
+Building mixins .....
+Building mixins .....
+Building mixins .....
+LiveServer running in 59645
+Total Building Time : 0.658 s
+Building completed
+Minified Count : 0
+Timing to complete init function0.041 s
+CliLocation :/opt/homebrew/lib/node_modules/@slyte/cli
+ CliVersion 1.0.0
+Timing to complete init function0 s
+Building components ....
+Build sucesss
+Building components ....
+file started /Users/allwin-pt7686/Desktop/slyte1/erm/assets/logout-svgrepo-com copy.svg
+file ended /Users/allwin-pt7686/Desktop/slyte1/erm/assets/logout-svgrepo-com copy.svg
+file started /Users/allwin-pt7686/Desktop/slyte1/erm/assets/lyte_note_sprite.svg
+file ended /Users/allwin-pt7686/Desktop/slyte1/erm/assets/lyte_note_sprite.svg
+Building mixins .....
+Building mixins .....
+Building mixins .....
+LiveServer running in 63770
+Total Building Time : 0.835 s
+Building completed
+Minified Count : 0

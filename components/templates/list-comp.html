@@ -1,0 +1,26 @@
+<template tag-name="list-comp">
+     <div class="wrapper">
+      <lyte-input lt-prop-class="list-input"  lt-prop-placeholder = "Search Employee Here.." oninput="{{action('search',event)}}"> </lyte-input>
+      <lyte-button lt-prop-class="btn-add"  lt-prop-appearance="success" onclick="{{action('addUser')}}">
+        <template is="registerYield" yield-name="text">
+            ADD EMPLOYEE +
+        </template>
+      </lyte-button>
+     </div>
+     <template lyte-for="{{updatedUsers}} as user index">
+        <lyte-accordion>
+          <template is="registerYield" yield-name="yield">
+            <lyte-accordion-item>
+              <lyte-accordion-header>{{user.name}}<lyte-icon class="lyteAccordionArrow"></lyte-icon></lyte-accordion-header>
+              <lyte-accordion-body>
+                 <pre>
+                  <span>EMPLOYEE NUMBER : {{user.employeeNumber}}</span>
+                  <span>EMPLOYEE ROLE   : {{user.role}}</span>
+                  <go-to lt-prop-route="home.details" lt-prop-dp='["{{user.employeeNumber}}"]'>View More</go-to>
+                 </pre>
+              </lyte-accordion-body>
+            </lyte-accordion-item>
+          </template>
+        </lyte-accordion> 
+     </template>
+</template>

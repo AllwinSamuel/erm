@@ -8,6 +8,10 @@ _defineProperty(_, {
 
     "Component": function() {
         return Component;
+    },
+
+    "Component": function() {
+        return Component;
     }
 });
 
@@ -51,6 +55,6 @@ AlertComp._observedAttributes = [];
 export {AlertComp};
 
 AlertComp.register("alert-comp", {
-    hash: "AlertComp_10",
+    hash: "AlertComp_5",
     refHash: "C_erm_app_0"
 }); 

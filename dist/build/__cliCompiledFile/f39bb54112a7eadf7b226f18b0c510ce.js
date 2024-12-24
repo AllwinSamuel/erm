@@ -16,6 +16,14 @@ _defineProperty(_, {
 
     "prop": function() {
         return prop;
+    },
+
+    "prop": function() {
+        return prop;
+    },
+
+    "Component": function() {
+        return Component;
     }
 });
 
@@ -3914,6 +3922,6 @@ LyteInputComponent._observedAttributes = [
 export { LyteInputComponent };
 
 LyteInputComponent.register("lyte-input", {
-    hash: "LyteInputComponent_5",
+    hash: "LyteInputComponent_9",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });

@@ -2,16 +2,16 @@ import { _defineProperty } from "@slyte/core/src/lyte-utils";
 var _ = {};
 
 _defineProperty(_, {
-  "Service": function() {
-    return Service;
+  "ToastComp": function() {
+    return ToastComp;
   },
 
   "AlertComp": function() {
     return AlertComp;
   },
 
-  "ToastComp": function() {
-    return ToastComp;
+  "Service": function() {
+    return Service;
   },
 
   "FormComp": function() {

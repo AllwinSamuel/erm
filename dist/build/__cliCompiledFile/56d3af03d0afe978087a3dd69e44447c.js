@@ -4,12 +4,13 @@ var _ = {};
 _defineProperty(_, {
     "Component": function() {
         return Component;
+    },
+
+    "Component": function() {
+        return Component;
     }
 });
 
-import "/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-input.js";
-import "/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-dropdown.js";
-import "/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-button.js";
 import {Component} from "/node_modules/@slyte/component/index.js";
 
 class FormComp extends Component {
@@ -94,6 +95,6 @@ FormComp._observedAttributes = ["user"];
 export {FormComp};
 
 FormComp.register("form-comp", {
-    hash: "FormComp_8",
+    hash: "FormComp_4",
     refHash: "C_erm_app_0"
 }); 

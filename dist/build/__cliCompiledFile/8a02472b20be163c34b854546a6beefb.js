@@ -8,6 +8,10 @@ _defineProperty(_, {
 
     "Component": function() {
         return Component;
+    },
+
+    "Component": function() {
+        return Component;
     }
 });
 
@@ -51,6 +55,6 @@ ToastComp._observedAttributes = [];
 export {ToastComp};
 
 ToastComp.register("toast-comp", {
-    hash: "ToastComp_9",
+    hash: "ToastComp_6",
     refHash: "C_erm_app_0"
 }); 

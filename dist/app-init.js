@@ -26910,24 +26910,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ServiceProvider": () => (/* binding */ ServiceProvider)
 /* harmony export */ });
 /* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
-/* harmony import */ var _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/core/index.js */ 64028528);
-/* harmony import */ var _components_javascript_toast_comp__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../components/javascript/toast-comp */ 51115378);
+/* harmony import */ var _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/@slyte/core/index.js */ 64028528);
+/* harmony import */ var _components_javascript_toast_comp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../components/javascript/toast-comp */ 51115378);
 /* harmony import */ var _components_javascript_form_comp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../components/javascript/form-comp */ 6162108);
 /* harmony import */ var _components_javascript_alert_comp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../components/javascript/alert-comp */ 92455636);
 
 var _ = {};
 
 (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__._defineProperty)(_, {
-  "Service": function() {
-    return _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_1__.Service;
+  "ToastComp": function() {
+    return _components_javascript_toast_comp__WEBPACK_IMPORTED_MODULE_1__.ToastComp;
   },
 
   "AlertComp": function() {
     return _components_javascript_alert_comp__WEBPACK_IMPORTED_MODULE_2__.AlertComp;
   },
 
-  "ToastComp": function() {
-    return _components_javascript_toast_comp__WEBPACK_IMPORTED_MODULE_3__.ToastComp;
+  "Service": function() {
+    return _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_3__.Service;
   },
 
   "FormComp": function() {
@@ -26940,7 +26940,7 @@ var _ = {};
 
 
 
-class  ServiceProvider extends _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_1__.Service {
+class  ServiceProvider extends _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_3__.Service {
   validateUser(user){
     var {userName , password} = user;
     var updatedData = [
@@ -27246,7 +27246,7 @@ class  ServiceProvider extends _node_modules_slyte_core_index_js__WEBPACK_IMPORT
   }
 
   toast(m,t){
-    setTimeout(()=>{this.$app.$component.render(_components_javascript_toast_comp__WEBPACK_IMPORTED_MODULE_3__.ToastComp,{message:m,type:t},"#toast");},1000);
+    setTimeout(()=>{this.$app.$component.render(_components_javascript_toast_comp__WEBPACK_IMPORTED_MODULE_1__.ToastComp,{message:m,type:t},"#toast");},1000);
   }
 
   getRandomColor() {

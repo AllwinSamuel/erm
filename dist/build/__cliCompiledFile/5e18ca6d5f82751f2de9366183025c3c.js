@@ -16,6 +16,14 @@ _defineProperty(_, {
 
     "Component": function() {
         return Component;
+    },
+
+    "prop": function() {
+        return prop;
+    },
+
+    "Component": function() {
+        return Component;
     }
 });
 
@@ -446,6 +454,6 @@ LyteButtonComponent._observedAttributes = [
 export { LyteButtonComponent };
 
 LyteButtonComponent.register("lyte-button", {
-    hash: "LyteButtonComponent_7",
+    hash: "LyteButtonComponent_10",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });

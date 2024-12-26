@@ -51,6 +51,6 @@ HomeComp._observedAttributes = [];
 export {HomeComp};
 
 HomeComp.register("home-comp", {
-    hash: "HomeComp_15",
+    hash: "HomeComp_31",
     refHash: "C_erm_app_0"
 }); 

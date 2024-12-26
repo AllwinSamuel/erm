@@ -1,0 +1,55 @@
+@import url("/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-input.css");
+@import url("/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-dropdown.css");
+@import url("/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-button.css");
+
+mailpanel-comp{
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+lyte-drop-item{
+  display: flex;
+  justify-content: space-between;
+}
+
+mailpanel-comp  form{
+  display:flex;
+  flex-direction: column;
+  width: 600px;
+  transform: translateY(-20%);
+}
+
+mailpanel-comp form lyte-dropdown{
+  max-width: 100%;
+}
+
+
+mailpanel-comp  form label{
+  margin-top: 30px;
+  font-size: large;
+  font-weight: 700;
+}
+
+
+mailpanel-comp  form .input , lyte-drop-button{
+  border: 2px solid #d6d6d6 !important;
+  height: 60px;
+  margin-top: 10px;
+
+}
+mailpanel-comp  form .input{
+  text-indent: 10px;
+}
+
+mailpanel-comp  form button{
+  display: block;
+  margin-left: auto;
+  margin-top: 30px;
+  width: 100px;
+  height: 60px;
+  border-radius: 5px;
+  font-size: large;
+  font-weight: 700;
+}

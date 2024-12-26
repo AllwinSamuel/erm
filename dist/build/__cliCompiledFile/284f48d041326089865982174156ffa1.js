@@ -49,6 +49,6 @@ AdminComp._observedAttributes = [];
 export {AdminComp};
 
 AdminComp.register("admin-comp", {
-    hash: "AdminComp_21",
+    hash: "AdminComp_10",
     refHash: "C_erm_app_0"
 }); 

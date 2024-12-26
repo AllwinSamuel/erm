@@ -4,9 +4,13 @@ class DetailsComp extends Component {
 	constructor() {
 		super();
 	}
+	init(){
+		this.setData("currentUser", JSON.parse(localStorage.getItem("auth")).empNo);
+	}
 
 	data() {
 		return {
+			currentUser:this.$app.prop("string"),
 		}	
 	}
 

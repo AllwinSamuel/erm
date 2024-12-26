@@ -2,10 +2,6 @@ import { _defineProperty } from "@slyte/core/src/lyte-utils";
 var _ = {};
 
 _defineProperty(_, {
-    "ViewConnector": function() {
-        return ViewConnector;
-    },
-
     "Schema": function() {
         return Schema;
     },
@@ -16,6 +12,10 @@ _defineProperty(_, {
 
     "one": function() {
         return one;
+    },
+
+    "ViewConnector": function() {
+        return ViewConnector;
     }
 });
 

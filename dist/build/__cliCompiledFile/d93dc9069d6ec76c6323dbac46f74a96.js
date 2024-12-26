@@ -6,20 +6,20 @@ _defineProperty(_, {
         return prop;
     },
 
-    "Component": function() {
-        return Component;
-    },
-
-    "LyteUiComponentComponentRegistry": function() {
-        return LyteUiComponentComponentRegistry;
-    },
-
     "LyteTableSortableMixin": function() {
         return LyteTableSortableMixin;
     },
 
     "LyteTableUtilsMixin": function() {
         return LyteTableUtilsMixin;
+    },
+
+    "Component": function() {
+        return Component;
+    },
+
+    "LyteUiComponentComponentRegistry": function() {
+        return LyteUiComponentComponentRegistry;
     }
 });
 
@@ -29,7 +29,6 @@ import { prop } from "/node_modules/@slyte/core/index.js";
 import { Component, LyteUiComponentComponentRegistry } from "/node_modules/@zoho/lyte-ui-component/components/component.js";
 import $L from "/node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js";
 
-/* @Slicer.otherframeworkStart */
 import "/node_modules/@zoho/lyte-ui-component/plugins/lyte-scrollbar.js";
 
 class LyteTableComponent extends includeMixins([LyteTableUtilsMixin, LyteTableSortableMixin], Component) {
@@ -364,7 +363,7 @@ class LyteTableComponent extends includeMixins([LyteTableUtilsMixin, LyteTableSo
                     for (var i = 0; i < diff; i++) {
                         __boundary.bottom += 1;
                         if (i >= diff - ltPropData.length) {
-                            this.$component.set(ltPropData[this._top], { body: ltPropContent[__boundary.bottom], index: __boundary.bottom })
+                            set(ltPropData[this._top], { body: ltPropContent[__boundary.bottom], index: __boundary.bottom })
                             topElem.dataOrder = __boundary.bottom;
                         }
                         __boundary.top = __boundary.bottom - ltPropData.length + 1;
@@ -407,7 +406,7 @@ class LyteTableComponent extends includeMixins([LyteTableUtilsMixin, LyteTableSo
                     }
                     __boundary.top -= 1;
                     if (i <= ltPropData.length - 1 + minDiff) {
-                        this.$component.set(ltPropData[this._bottom], { body: ltPropContent[ __boundary.top], index: __boundary.top })
+                        set(ltPropData[this._bottom], { body: ltPropContent[ __boundary.top], index: __boundary.top })
                         bottmElem.dataOrder = __boundary.top;
                     }
                     __boundary.bottom = __boundary.top + ltPropData.length - 1;
@@ -1766,11 +1765,11 @@ class LyteTableComponent extends includeMixins([LyteTableUtilsMixin, LyteTableSo
                             }
                         }
                         if( content[ top - 1 ] ){
-                            this.$component.set(data[cIndex], { index: data[cIndex].index, body: content[top - 1] });
+                            set(data[cIndex], { index: data[cIndex].index, body: content[top - 1] });
                             rows[ cIndex ].dataOrder = top - 1;
                         }
                     } else {
-                        this.$component.set(data[cIndex], { index: data[cIndex].index, body: content[i + 1] });
+                        set(data[cIndex], { index: data[cIndex].index, body: content[i + 1] });
                         rows[cIndex].dataOrder--;
                     }
                 }
@@ -1790,7 +1789,7 @@ class LyteTableComponent extends includeMixins([LyteTableUtilsMixin, LyteTableSo
             } else {
                 for (var i = dataIndex; i <= bottom; i++) {
                     var cIndex = (domIndex + (i - dataIndex) + data.length) % data.length;
-                    this.$component.set(data[cIndex], { index: data[cIndex].index, body: content[i + 1] });
+                    set(data[cIndex], { index: data[cIndex].index, body: content[i + 1] });
                 }
                 if (this._dummy) {
                     var _style = this._dummy.style;
@@ -1804,7 +1803,7 @@ class LyteTableComponent extends includeMixins([LyteTableUtilsMixin, LyteTableSo
 
                 for (var i = top; i <= bottom; i++) {
                     var cIndex = (this._top + i - top + rows.length) % rows.length;
-                    this.$component.set(data[cIndex], { index: data[cIndex].index, body: content[i == content.length ? (top - 1) : i] });
+                    set(data[cIndex], { index: data[cIndex].index, body: content[i == content.length ? (top - 1) : i] });
                     if (i == bottom) {
                         this.regex(rows[cIndex], true);
                         this._bottom = (this._bottom - 1 + data.length) % data.length;
@@ -1913,7 +1912,7 @@ class LyteTableComponent extends includeMixins([LyteTableUtilsMixin, LyteTableSo
                     }
                 }
 
-                this.$component.set(data[domIndex], { index: cIndex, body: content[cIndex] });
+                set(data[domIndex], { index: cIndex, body: content[cIndex] });
 
                 this.cellSet(dom, "translateY(0px)")
                 for (var j = 0; j < iteration; j++) {
@@ -2483,7 +2482,7 @@ if (!window._lyteUiUtils.registeredCustomElements['lyte-th']) {
 export { LyteTableComponent };
 
 LyteTableComponent.register("lyte-table", {
-    hash: "LyteTableComponent_18",
+    hash: "LyteTableComponent_7",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });
  

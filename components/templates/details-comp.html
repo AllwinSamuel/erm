@@ -6,7 +6,7 @@
             UPDATE
         </template>
     </lyte-button>
-    <lyte-button lt-prop-appearance="failure" onclick="{{action('deleteUser',user.employeeNumber)}}" onclick="{{action('updateUser',user)}}">
+    <lyte-button lyte-if="{{user.employeeNumber != currentUser}}" lt-prop-appearance="failure" onclick="{{action('deleteUser',user.employeeNumber)}}" onclick="{{action('updateUser',user)}}">
       <template is="registerYield" yield-name="text">
           DELETE
       </template>

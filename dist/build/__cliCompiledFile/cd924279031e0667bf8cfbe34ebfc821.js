@@ -20,7 +20,7 @@ class Home extends Route {
     }
     divert(){
         if(this.navigation.info.route == "home")
-        this.$app.$router.navigateTo("home.profile");
+        this.$app.$router.navigateTo("home.profile"); 
     }
     static actions(arg1) {
         return Object.assign(super.actions({

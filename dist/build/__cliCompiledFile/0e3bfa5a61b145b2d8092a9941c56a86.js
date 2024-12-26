@@ -12,6 +12,9 @@ import {Route} from "/node_modules/@slyte/router/index.js";
 let ProfileComp;
 
 class Profile extends Route {
+    beforeFetch(){
+        // this.$app.triggerEvent("routeChanged","home.profile");
+    }
     render(){
         return {
             outlet : "#outlet2",

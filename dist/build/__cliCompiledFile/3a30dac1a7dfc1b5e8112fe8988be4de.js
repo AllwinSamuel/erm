@@ -6,12 +6,12 @@ _defineProperty(_, {
         return Db;
     },
 
-    "RESTSerializer": function() {
-        return RESTSerializer;
-    },
-
     "RESTConnector": function() {
         return RESTConnector;
+    },
+
+    "RESTSerializer": function() {
+        return RESTSerializer;
     }
 });
 

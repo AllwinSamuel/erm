@@ -2,6 +2,8 @@ import {Home as Home} from '/router/routes/home.js';
 import {Index as Index} from '/router/routes/home/index.js';
 import {Details as Details} from '/router/routes/home/details.js';
 import {Profile as Profile} from '/router/routes/home/profile.js';
+import {SendMail as SendMail} from '/router/routes/home/sendMail.js';
+import {Inbox as Inbox} from '/router/routes/home/inbox.js';
 import {Sign as Sign} from '/router/routes/sign.js';
 import {Wildcard as Wildcard} from '/router/routes/wildcard.js';
 
@@ -22,7 +24,7 @@ class ErmMap extends RouterMap {
             path:'/',
             handler: Home
         },() => {
-            this.route("index",{
+            this.route("index", {
                 path:'/dashboard',
                 handler: Index
             });
@@ -32,6 +34,12 @@ class ErmMap extends RouterMap {
             });
             this.route("profile", {
                 handler: Profile
+            });
+            this.route("sendMail", {
+                handler: SendMail
+            });
+            this.route("inbox", {
+                handler: Inbox
             });
         });
         this.route("sign", {

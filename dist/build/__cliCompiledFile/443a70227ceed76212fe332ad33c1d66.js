@@ -76,7 +76,7 @@ import { appendChild, insertBefore, insertAfter,replaceWith } from "/node_module
 import { stringify, lyteUiGetValue, lyteUiReturnValueBy, lyteUiConcat, lyteUiI18n, lyteUiImageFile, lyteUiCapitalizeName, lyteUiFileSize, lyteUiOptGroupCheck, lyteUiIsObject, lyteUiReturnOnlyKey, lyteUiReturnOnlyValue } from "/node_modules/@zoho/lyte-ui-component/components/helpers/exportable-helpers.js";
 import $L from "/node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js";
 
-window._lyteUiUtils = window._lyteUiUtils || { version : "4.1.7" };
+window._lyteUiUtils = window._lyteUiUtils || { version : "4.1.2" };
 
 window._lyteUiUtils.cboxId = 0;
 window._lyteUiUtils.rbuttonId = 0;
@@ -527,28 +527,6 @@ _lyteUiUtils.lyteUiFileSize = function( curr, def, dgt ){
 		return "1 Byte";
 	}
 	return ( parseInt( curr / Math.pow( 1000 , idx ) * Math.pow( 10, dgt ) ) / Math.pow( 10, dgt ) ) + ' ' + sizes[ idx ];
-
-};
-
-_lyteUiUtils.lyteUiIsEmpty = function(input){
-
-	let type = typeof input;
-
-	switch (type){
-		case 'string':
-			return input === "";
-		case 'number':
-		case 'Bigint':
-			return input == '';
-		case 'object':
-			if( Array.isArray( input ) ){
-				return input.length === 0;
-			}else{
-				return Object.keys( input ).length === 0;
-			}
-		case 'undefined':
-			return true;
-	}
 
 };
 
@@ -1541,8 +1519,3 @@ LyteUiComponentComponentRegistry.registerHelper('lyteTourShowIconHelper' , funct
 	}
 	return false
 });
-
-
-var utils = window._lyteUiUtils;
-
-export { utils as _lyteUiUtils }

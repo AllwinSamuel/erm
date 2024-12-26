@@ -77,7 +77,7 @@ SigninComp._observedAttributes = ["userName", "password", "errMsg"];
 
 
 SigninComp.register("signin-comp", {
-    hash: "SigninComp_25",
+    hash: "SigninComp_22",
     refHash: "C_erm_app_0"
 }); 
 

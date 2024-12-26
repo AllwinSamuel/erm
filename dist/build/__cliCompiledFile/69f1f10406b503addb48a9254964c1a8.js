@@ -12,18 +12,6 @@ _defineProperty(_, {
 
     "LyteUiComponentComponentRegistry": function() {
         return LyteUiComponentComponentRegistry;
-    },
-
-    "prop": function() {
-        return prop;
-    },
-
-    "Component": function() {
-        return Component;
-    },
-
-    "LyteUiComponentComponentRegistry": function() {
-        return LyteUiComponentComponentRegistry;
     }
 });
 
@@ -1208,6 +1196,6 @@ if( !window._lyteUiUtils.registeredCustomElements[ 'lyte-accordion-body' ] ) {
 export { LyteAccordionComponent };
 
 LyteAccordionComponent.register("lyte-accordion", {
-    hash: "LyteAccordionComponent_8",
+    hash: "LyteAccordionComponent_12",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });

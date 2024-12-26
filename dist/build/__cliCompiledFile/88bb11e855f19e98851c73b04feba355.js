@@ -446,7 +446,7 @@ let LyteTableUtilsMixin = createCustomClass(function(arg1, overrides, LyteTableU
                 var index = this.getIndex( closestCell );
                 closestCell = this.get_nth_cell( cell.parentNode, index );
             }
-            return this.$node.contains( closestCell ) ? closestCell : undefined;
+            return closestCell;
         }
 
         isHeader(cell) {

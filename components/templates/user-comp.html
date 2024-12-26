@@ -11,8 +11,8 @@
               </lyte-thead>
               <lyte-tbody>
                       <lyte-tr lyte-for-in="{{user}} as value key">
-                              <lyte-td> {{key}} </lyte-td>
-                              <lyte-td> {{value}} </lyte-td>
+                              <lyte-td lyte-if="{{key != 'message'}}"> {{key}} </lyte-td>
+                              <lyte-td lyte-if="{{key != 'message'}}"> {{value}} </lyte-td>
                       </lyte-tr>
               </lyte-tbody>
           </lyte-table-structure>

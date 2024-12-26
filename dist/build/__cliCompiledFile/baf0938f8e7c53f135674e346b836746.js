@@ -12,28 +12,14 @@ _defineProperty(_, {
 
     "LyteUiComponentComponentRegistry": function() {
         return LyteUiComponentComponentRegistry;
-    },
-
-    "prop": function() {
-        return prop;
-    },
-
-    "Component": function() {
-        return Component;
-    },
-
-    "LyteUiComponentComponentRegistry": function() {
-        return LyteUiComponentComponentRegistry;
     }
 });
 
+import "/node_modules/@zoho/lyte-ui-component/components/helpers/helpers-dev.js";
 import { prop } from "/node_modules/@slyte/core/index.js";
 import { Component, LyteUiComponentComponentRegistry } from "/node_modules/@zoho/lyte-ui-component/components/component.js";
 import $L from "/node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js";
-
-/* @Slicer.otherframeworkStart */
 import "/node_modules/@zoho/lyte-ui-component/plugins/lyte-search.js";
-/*  @Slicer.otherframeworkEnd */
 
 window._lyteDropdownItemId = 0;
 window._lyteDropdownBodyId = 0;
@@ -5947,7 +5933,7 @@ export { LyteDropdownComponent };
 
 
 LyteDropdownComponent.register("lyte-dropdown", {
-    hash: "LyteDropdownComponent_6",
+    hash: "LyteDropdownComponent_17",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });
 

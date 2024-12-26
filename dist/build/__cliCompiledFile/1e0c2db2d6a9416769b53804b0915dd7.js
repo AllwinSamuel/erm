@@ -2,16 +2,16 @@ import { _defineProperty } from "@slyte/core/src/lyte-utils";
 var _ = {};
 
 _defineProperty(_, {
-  "ErmComponentRegistry": function() {
-    return ErmComponentRegistry;
-  },
-
   "Router": function() {
     return Router;
   },
 
   "ErmMap": function() {
     return ErmMap;
+  },
+
+  "ErmComponentRegistry": function() {
+    return ErmComponentRegistry;
   }
 });
 
@@ -30,7 +30,10 @@ class ErmRouter extends Router {
       }
     };
 
-    this.afterRouteNavigation = function (current) {};
+    this.afterRouteNavigation = function (current) {
+      if(["home.index","home.profile","home.sendMail","home.inbox"].includes(current.info.route))
+      this.$app.triggerEvent("routeChanged",current.info.route);
+    };
   }
 
   lookups() {

@@ -9,6 +9,14 @@ class NavbarComp extends Component {
 		if(role!= "Admin" && role!="Manager"){
 			 this.setData("show",false);
 		}
+		this.$app.addEventListener("routeChanged", (route) => {
+			var links = this.$node.querySelectorAll(".nav-link");
+			links.forEach((link) => link.classList.remove("active"));
+			const activeLink = Array.from(links).find((link) => link.dataset.route === route);
+			if (activeLink) {
+				activeLink.classList.add("active");
+			}
+		});
 	}
 	data() {
 		return {
@@ -29,7 +37,7 @@ class NavbarComp extends Component {
 				this.$app.$router.navigateTo("sign");
 			},
 			active:function(e){
-				document.querySelectorAll(".nav-link").forEach((link)=>link.classList.remove("active"));
+				this.$node.querySelectorAll(".nav-link").forEach((link)=>link.classList.remove("active"));
 				e.target.classList.add("active");
 			}
 		}

@@ -1092,6 +1092,6 @@ LyteTooltipComponent._observedAttributes = [
 export { LyteTooltipComponent };
 
 LyteTooltipComponent.register("lyte-tooltip", {
-  hash: "LyteTooltipComponent_14",
+  hash: "LyteTooltipComponent_16",
   refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });

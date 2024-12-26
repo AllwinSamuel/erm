@@ -4,17 +4,10 @@ var _ = {};
 _defineProperty(_, {
     "Component": function() {
         return Component;
-    },
-
-    "Component": function() {
-        return Component;
-    },
-
-    "Component": function() {
-        return Component;
     }
 });
 
+import "/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-messagebox.js";
 import {Component} from "/node_modules/@slyte/component/index.js";
 
 class ToastComp extends Component {
@@ -55,6 +48,6 @@ ToastComp._observedAttributes = [];
 export {ToastComp};
 
 ToastComp.register("toast-comp", {
-    hash: "ToastComp_6",
+    hash: "ToastComp_26",
     refHash: "C_erm_app_0"
 }); 

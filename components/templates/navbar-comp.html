@@ -1,9 +1,47 @@
 <template tag-name="navbar-comp">
-    <ul>
-        <li class="nav-avatar"><avatar-comp name={{user}}></avatar-comp></li>
-        <li><h1>ERM</h1></li>
-        <li ><go-to class="nav-link active" lt-prop-route="home" onclick="{{action('active',event)}}">Profile</go-to></li>
-        <li lyte-if="{{lbind(show)}}"><go-to class="nav-link" lt-prop-route="home.index" onclick="{{action('active',event)}}">Dashboard</go-to></li>
-        <li><button onclick="{{action('logout')}}"><img title="logout" src="../../assets/logout-svgrepo-com copy.svg" /></button></li>
-    </ul>
+  <ul>
+    <li class="nav-avatar"><avatar-comp name="{{user}}"></avatar-comp></li>
+    <li><h1>ERM</h1></li>
+    <li>
+      <go-to
+        class="nav-link"
+        lt-prop-route="home"
+        onclick="{{action('active',event)}}"
+        data-route="home.profile"
+        >Profile</go-to
+      >
+    </li>
+    <li lyte-if="{{lbind(show)}}">
+      <go-to
+        class="nav-link"
+        lt-prop-route="home.index"
+        onclick="{{action('active',event)}}"
+        data-route="home.index"
+        >Dashboard</go-to
+      >
+    </li>
+    <li lyte-if="{{lbind(show)}}">
+      <go-to
+        class="nav-link"
+        lt-prop-route="home.sendMail"
+        onclick="{{action('active',event)}}"
+        data-route="home.sendMail"
+        >SendMail</go-to
+      >
+    </li>
+    <li>
+      <go-to
+        class="nav-link"
+        lt-prop-route="home.inbox"
+        onclick="{{action('active',event)}}"
+        data-route="home.inbox"
+        >Inbox</go-to
+      >
+    </li>
+    <li>
+      <button onclick="{{action('logout')}}">
+        <img title="logout" src="../../assets/logout-svgrepo-com copy.svg" />
+      </button>
+    </li>
+  </ul>
 </template>

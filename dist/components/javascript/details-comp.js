@@ -32,9 +32,13 @@ class DetailsComp extends _node_modules_slyte_component_index_js__WEBPACK_IMPORT
     constructor() {
 		super();
 	}
+    init(){
+		this.setData("currentUser", JSON.parse(localStorage.getItem("auth")).empNo);
+	}
 
     data(arg1) {
 		return Object.assign(super.data({
+			currentUser:this.$app.prop("string"),
 		}), arg1);	
 	}
 
@@ -64,14 +68,14 @@ class DetailsComp extends _node_modules_slyte_component_index_js__WEBPACK_IMPORT
     }
 }
 
-DetailsComp._template = "<template tag-name=\"details-comp\"> <user-comp user=\"{{user}}\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{show}}\" is=\"case\" lc-id=\"lc_id_0\"><template is=\"yield\" yield-name=\"content\"> <lyte-button lt-prop-appearance=\"success\" onclick=\"{{action('updateUser',user)}}\"> <template is=\"registerYield\" yield-name=\"text\"> UPDATE </template> </lyte-button> <lyte-button lt-prop-appearance=\"failure\" onclick=\"{{action('deleteUser',user.employeeNumber)}}\"> <template is=\"registerYield\" yield-name=\"text\"> DELETE </template> </lyte-button> </template></template></template> </user-comp> <div id=\"popup\"></div> </template><style>details-comp{\n  padding: 30px;\n  display: flex;\n  background: rgb(193, 221, 231);\n  height: 100vh;\n}\n\ndetails-comp user-comp{\n  width: 100%;\n}</style>";;
-DetailsComp._dynamicNodes = [{"t":"a","p":[1]},{"t":"s","p":[1,1],"c":{"lc_id_0":{"dN":[{"t":"r","p":[0],"dN":[{"t":"a","p":[1]},{"t":"r","p":[1,1],"dN":[],"in":3,"sibl":[2]},{"t":"cD","p":[1],"in":2,"sibl":[1]},{"t":"a","p":[3]},{"t":"r","p":[3,1],"dN":[],"in":1,"sibl":[0]},{"t":"cD","p":[3],"in":0}],"dc":[2,0],"hc":true,"trans":true,"in":0,"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{},"dc":{"lc_id_0":{"dc":[0],"hc":true,"trans":true}},"hd":true,"co":["lc_id_0"],"hc":true,"trans":true,"in":1,"sibl":[0]},{"t":"cD","p":[1],"in":0},{"type":"dc","trans":true,"hc":true,"p":[1,0]}];;
-DetailsComp._observedAttributes = [];
+DetailsComp._template = "<template tag-name=\"details-comp\"> <user-comp user=\"{{user}}\"> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{show}}\" is=\"case\" lc-id=\"lc_id_0\"><template is=\"yield\" yield-name=\"content\"> <lyte-button lt-prop-appearance=\"success\" onclick=\"{{action('updateUser',user)}}\"> <template is=\"registerYield\" yield-name=\"text\"> UPDATE </template> </lyte-button> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(user.employeeNumber,'!=',currentUser)}}\" is=\"case\" lc-id=\"lc_id_0\"><lyte-button lt-prop-appearance=\"failure\" onclick=\"{{action('deleteUser',user.employeeNumber)}}\"> <template is=\"registerYield\" yield-name=\"text\"> DELETE </template> </lyte-button></template></template> </template></template></template> </user-comp> <div id=\"popup\"></div> </template><style>details-comp{\n  padding: 30px;\n  display: flex;\n  background: rgb(193, 221, 231);\n  height: 100vh;\n}\n\ndetails-comp user-comp{\n  width: 100%;\n}</style>";;
+DetailsComp._dynamicNodes = [{"t":"a","p":[1]},{"t":"s","p":[1,1],"c":{"lc_id_0":{"dN":[{"t":"r","p":[0],"dN":[{"t":"a","p":[1]},{"t":"r","p":[1,1],"dN":[],"in":2,"sibl":[1]},{"t":"cD","p":[1],"in":1,"sibl":[0]},{"t":"s","p":[3],"c":{"lc_id_0":{"dN":[{"t":"a","p":[0],"cn":"lc_id_0"},{"t":"r","p":[0,1],"dN":[],"in":1,"sibl":[0],"cn":"lc_id_0"},{"t":"cD","p":[0],"in":0,"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{},"dc":{"lc_id_0":{"dc":[0],"hc":true,"trans":true}},"hd":true,"co":["lc_id_0"],"hc":true,"trans":true,"in":0}],"dc":[1,0],"hc":true,"trans":true,"in":0,"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{},"dc":{"lc_id_0":{"dc":[0],"hc":true,"trans":true}},"hd":true,"co":["lc_id_0"],"hc":true,"trans":true,"in":1,"sibl":[0]},{"t":"cD","p":[1],"in":0},{"type":"dc","trans":true,"hc":true,"p":[1,0]}];;
+DetailsComp._observedAttributes = ["currentUser"];
 
 
 
 DetailsComp.register("details-comp", {
-    hash: "DetailsComp_24",
+    hash: "DetailsComp_188",
     refHash: "C_erm_app_0"
 }); 
 

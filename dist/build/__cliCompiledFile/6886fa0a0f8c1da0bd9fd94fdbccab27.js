@@ -56,6 +56,6 @@ AvatarComp._observedAttributes = ["name"];
 export {AvatarComp};
 
 AvatarComp.register("avatar-comp", {
-    hash: "AvatarComp_19",
+    hash: "AvatarComp_8",
     refHash: "C_erm_app_0"
 }); 

@@ -14,16 +14,16 @@ _defineProperty(_, {
         return ErmComponentRegistry;
     },
 
-    "ErmDb": function() {
-        return ErmDb;
+    "ServiceProvider": function() {
+        return ServiceProvider;
     },
 
     "ErmRouter": function() {
         return ErmRouter;
     },
 
-    "ServiceProvider": function() {
-        return ServiceProvider;
+    "ErmDb": function() {
+        return ErmDb;
     }
 });
 

@@ -1,0 +1,10 @@
+<template tag-name="inbox-comp">
+   <h1 lyte-if="{{message.length == 0 }}">No messages!</h1>
+   <template lyte-for="{{message}} as value index">
+       <div class="message-container">
+        <p>From:<span>{{value.sender}}</span></p>
+        <p>Message:</p>
+        <div>{{unescape(value.content)}}</div>
+       </div>
+   </template>
+</template>

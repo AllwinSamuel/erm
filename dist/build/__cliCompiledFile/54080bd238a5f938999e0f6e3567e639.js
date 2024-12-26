@@ -13,23 +13,15 @@ _defineProperty(_, {
 
 import "/node_modules/@zoho/lyte-ui-component/components/helpers/helpers-dev.js";
 import "/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-dropdown.js";
-//v4-calendar doesn't have the fix for DD-MM-YY format issue
 import { prop } from "/node_modules/@slyte/core/index.js";
 import { Component } from "/node_modules/@zoho/lyte-ui-component/components/component.js";
 
 import $L from "/node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js";
 
-/* @Slicer.otherframeworkStart */
 import "/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-tooltip.js";
-/*  @Slicer.otherframeworkEnd */
 
-/* @Slicer.otherframeworkStart */
 import "/node_modules/@zoho/lyte-ui-component/plugins/lyte-moment-basic.js";
-/*  @Slicer.otherframeworkEnd */
-
-/* @Slicer.otherframeworkStart */
 import "/node_modules/@zoho/lyte-ui-component/plugins/lyte-moment-additional.js";
-/*  @Slicer.otherframeworkEnd */
 
 /**
  * Renders a calendar
@@ -249,16 +241,6 @@ class LyteCalendarComponent extends Component {
 			} ),
 
 			/**
-			 * @componentProperty {object} ltPropFillRowsVariants
-			 * @default {top:true,bottom:true}
-			 * 
-			 */
-
-			'ltPropFillRowsVariants': prop( 'object', { 
-				'default': window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'fillRowsVariants', {'top':true,'bottom':true} ) 
-			} ),
-
-			/**
 			 * @componentProperty {number} ltPropNumberOfRows
 			 * @version 1.0.2
 			 * @default 6
@@ -334,7 +316,7 @@ class LyteCalendarComponent extends Component {
 
 			'ltPropWeekNumCriteria': prop( 'number', { 'default': 1 } ),
 
-			'ltPropHolidays': prop( 'array', { 'default': window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'holidays', [] ) } ),
+			'ltPropHolidays': prop( 'array', { 'default': [ ] } ),
 
 			'ltPropDisableWeekends': prop( 'boolean', { 'default': false } ),
 
@@ -349,7 +331,7 @@ class LyteCalendarComponent extends Component {
 
 			'ltPropTimeZone' : prop( 'string' ),
 
-			'ltPropDisabledDays' : prop( 'array', { 'default' : window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'disabledWeekDays', [] ) } ),
+			'ltPropDisabledDays' : prop( 'array', { default : window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'disabledWeekDays', [] ) } ),
 
 			'ltPropHeaderAlignType': prop( 'string', { 'default': '' } ),
 
@@ -361,9 +343,7 @@ class LyteCalendarComponent extends Component {
 
 			'ltPropCurrentDisplayYear': prop( 'string', { 'default': '' } ),
 
-			'ltPropCurrentDisplayDecade': prop( 'string', { 'default': '' } ),
-
-			'ltPropTransitMonthOnDateSel': prop('boolean', { 'default': window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'transitMonthOnDateSel', false ) } )
+			'ltPropCurrentDisplayDecade': prop( 'string', { 'default': '' } )
 		}), arg1);
 	}
 
@@ -409,22 +389,7 @@ class LyteCalendarComponent extends Component {
 		}
 
 		this.activateCell(newActiveCell);
-
-		var isCellDisabled = this.isCellDisabled( newActiveCell );
-		if( !isCellDisabled ){
-			this.focusActiveCell();
-		}
-		else{
-			this.move( event, navDirection, cellsToMove )
-		}
-	}
-
-    isCellDisabled( newActiveCell ){
-		if( newActiveCell.classList.contains('lyteCalendarDisabledDate') ){
-			return true;
-		}
-
-		return false
+		this.focusActiveCell();
 	}
 
     getCellFromSameView(cells, index) {
@@ -638,9 +603,7 @@ class LyteCalendarComponent extends Component {
 		var days = [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ], 
 		title = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ],
 		startDay = this.getData( 'ltPropStartWeekDay' ), i, result = [] ;
-		var weekend = this.getData('ltPropWeekends') || [];
-
-		startDay = startDay == undefined ? 1 : startDay;
+		var weekend = this.getData('ltPropWeekends');
 
 		for( i = 0; i < 7; i++ ) { 
 			var resClass = 'lyteCalTableCellHeader';
@@ -1067,8 +1030,6 @@ class LyteCalendarComponent extends Component {
 		var startDayOfMonth = this.getData( 'ltPropStartWeekDay' ), 
 		firstRowDays;
 
-		startDayOfMonth = startDayOfMonth == undefined ? 1 : startDayOfMonth;
-
 		if( firstday == 0 ) {
 			firstRowDays = startDayOfMonth === 0 ? 7 : startDayOfMonth;
 		}
@@ -1086,9 +1047,7 @@ class LyteCalendarComponent extends Component {
 	}
 
     getNumberToSubtract(firstday) {
-		var numberToSubtract, startDayOfMonth = this.getData( 'ltPropStartWeekDay' ) ;
-
-		startDayOfMonth = startDayOfMonth == undefined ? 1 : startDayOfMonth;
+		var numberToSubtract, startDayOfMonth = this.getData( 'ltPropStartWeekDay' );
 
 		if (firstday == 0) {
 			numberToSubtract = startDayOfMonth == 0 ? 0 : 7 - startDayOfMonth;
@@ -1164,18 +1123,10 @@ class LyteCalendarComponent extends Component {
 
     setDatesFunction() {
 		var fillRows = this.getData( 'ltPropFillRows' ), 
-		fillRowsVariants = this.getData( 'ltPropFillRowsVariants' ),
-		fillRowsTop = fillRowsVariants ? fillRowsVariants.top : false,
-		fillRowsBottom = fillRowsVariants ? fillRowsVariants.bottom : false,
 		reachedNextMonth = false,
 		cur = this.getData( 'viewDate' ),
 		month = cur.getMonth(), 
 		result = [], numberOfRows;
-
-		if( !fillRows ){
-			fillRowsTop = fillRowsBottom = false;
-		}
-
 
 		var weekNumber = this.getCurrentWeekNumber( cur );
 		var weekNumArr = [];
@@ -1198,7 +1149,7 @@ class LyteCalendarComponent extends Component {
 
 			for( var j = 0; j < 7; j++ ) {
 				if( 
-					( !fillRowsTop && month - 1 === calStartDate.getMonth() )
+					( !fillRows && month !== calStartDate.getMonth() )
 					|| ( fillRows && this.isYYFormat() && this.outsideBoundary( calStartDate ) && !this.isIso ) 
 				) {
 					result[ i ].push( { emptyBlock: true } );
@@ -1206,13 +1157,7 @@ class LyteCalendarComponent extends Component {
 					if (i != 0) {
 						reachedNextMonth = true;
 					}
-				}
-				else if( ( !fillRowsBottom && month + 1 === calStartDate.getMonth() ) ){
-					result[ i ].push( { emptyBlock: true } );
 
-					if (i != 0) {
-						reachedNextMonth = true;
-					}
 				}
 				else {
 					result[ i ].push( this.createDateCell( calStartDate, this.getCellClass( calStartDate ) ) );
@@ -2186,37 +2131,6 @@ class LyteCalendarComponent extends Component {
 		if( this.getMethods('onDateHover') || this.getMethods('onMonthHover') || this.getMethods('onYearHover') ){
 			this.addListenerForHoverEvent();
 		}
-
-		this.addBoxClassToAllDropdowns();
-	}
-
-    addBoxClassToAllDropdowns( ){
-		var dropdown = this.getData('ltPropDropdown');
-
-		if( dropdown && dropdown.boxClass ){
-			var list = $L(this.$node).find('lyte-dropdown');
-
-			for( var i=0;i<list.length;i++ ){
-				var elem = list[i];
-				
-				var dropbox = this.getDropBox( elem );
-				if( dropbox && dropbox.classList ){
-					$L( dropbox ).addClass( dropdown.boxClass );
-				}
-			}
-		}
-	}
-
-    getDropBox( dropdown ){
-		var that = dropdown.component;
-
-		var box = that.childComp;
-
-		if (!box) {
-			box = that.$node.querySelector('lyte-drop-box');
-		}
-
-		return box;
 	}
 
     addListenerForHoverEvent() {
@@ -2575,16 +2489,6 @@ class LyteCalendarComponent extends Component {
 		var isMultiple = this.getData( 'ltPropMultiple' ),
 		curDate = this.convertToLang( cell.getAttribute( 'data-date' ) );
 
-		if( this.getData('ltPropTransitMonthOnDateSel') && this.getData('viewDate').getMonth() !== $L.moment(curDate,this.getData('ltPropFormat')).get('month') ){
-			if( isMultiple ) {
-				this.$addon.arrayUtils( this.getData( 'ltPropCurrentDates' ), 'push', curDate );
-			}
-			else {
-				this.setData('ltPropCurrentDate', curDate);
-			}
-			return;
-		}
-
 		this.setData('preventObs', true);
 
 		if( isMultiple ) {
@@ -2707,17 +2611,9 @@ class LyteCalendarComponent extends Component {
 		var firstDayOfWeek = this.getFirstSelectableDay( dateCell ).getAttribute( 'data-date' ),
 		lastDayOfWeek = this.getLastSelectableDay( dateCell ).getAttribute( 'data-date' );
 
-		if( this.getData('ltPropTransitMonthOnDateSel') && this.getData('viewDate').getMonth() !== $L.moment(firstDayOfWeek,this.getData('ltPropFormat')).get('month') ){
-			this.setData( 'ltPropCurrentWeek', [ this.convertToLang( firstDayOfWeek ), this.convertToLang( lastDayOfWeek ) ] );
-			return;
-		}
-
 		this.removeDayHighlights();
 		this.addWeekHighlight(dateCell);
-
-		this.setData( 'preventObs', true );
 		this.setData('ltPropCurrentWeek', [this.convertToLang(firstDayOfWeek), this.convertToLang(lastDayOfWeek)]);
-		this.setData( 'preventObs', false );
 
 		if (this.getMethods('onWeekSelected')) {
 			this.executeMethod('onWeekSelected', event, firstDayOfWeek, lastDayOfWeek, this);
@@ -2809,8 +2705,6 @@ class LyteCalendarComponent extends Component {
 		var startWeekDay = this.getData('ltPropStartWeekDay');
 		var weekNum = 0;
 
-		startWeekDay = startWeekDay == undefined ? 1 : startWeekDay;
-
 		switch( weekNumCriteria ){
 			case 1:
 				startDate = 1;
@@ -2823,7 +2717,7 @@ class LyteCalendarComponent extends Component {
 
 			case 3: 
 				//find first full week's first date
-				startDate = this.getDateOfFirstDay( currentDateObj.getFullYear(), startWeekDay); 
+				startDate = this.getDateOfFirstDay( currentDateObj.getFullYear(), this.getData('ltPropStartWeekDay') ); 
 				break;
 
 		}
@@ -2859,61 +2753,11 @@ class LyteCalendarComponent extends Component {
 
     getDateObjToStartDay(curDateObj) {
 		var startOfWeekDay = this.getData('ltPropStartWeekDay');
-		startOfWeekDay = startOfWeekDay == undefined ? 1 : startOfWeekDay;
-
 		for( var it=0;it<7;it++ ){
 			if( curDateObj.getDay() == startOfWeekDay ){
 				return;
 			}
 			curDateObj.setDate( curDateObj.getDate() - 1 );
-		}
-	}
-
-    addHolidays( ){
-		var holidays = this.getData('ltPropHolidays');
-		var format = this.getData('ltPropFormat');
-		if( !holidays || !holidays.length ){
-			return;
-		}
-
-		for( var i=0;i<holidays.length;i++ ){
-			var cur = holidays[i];
-			var curDate = this.stringToDate( holidays[i], format );
-			var cell = this.$node.querySelector( 'div[data-date="' + cur + '"]' );
-			if( !cell ){
-				continue;
-			}
-			
-			var isDisabled = cell.classList.contains('lyteCalendarDisabledDate');
-			cell.classList.add('lyteCalHoliday');
-
-			if( this.getData('ltPropDisableHolidays') && !isDisabled ){
-				cell.classList.add('lyteCalendarDisabledDate');
-			}
-
-			if( this.getData('ltPropHighlightWeekendHolidays') && this.isWeekend( curDate ) ){
-				cell.classList.add('lyteCalWeekendHoliday');
-			}
-		}
-
-	}
-
-    removeExistingHolidays( ){
-		var cells = this.$node.querySelectorAll( '.lyteCalHoliday' ),
-		disabledDates = this.getDisabledDates();
-
-		for( var i=0;i<cells.length;i++ ){
-			var currentProcessedDate = this.stringToDate( cells[i].getAttribute('data-date'), this.getData('ltPropFormat') );
-
-			cells[i].classList.remove('lyteCalHoliday');
-
-			if( this.getData('ltPropDisableHolidays') && cells[i].classList.contains('lyteCalendarDisabledDate') && !this.isDisabled( currentProcessedDate, disabledDates ) ){
-				cells[i].classList.remove('lyteCalendarDisabledDate');
-			}
-
-			if( this.getData('ltPropHighlightWeekendHolidays') && cells[i].classList.contains('lyteCalWeekendHoliday') ){
-				cells[i].classList.remove('lyteCalWeekendHoliday');
-			}
 		}
 	}
 
@@ -3418,14 +3262,12 @@ class LyteCalendarComponent extends Component {
             }.observes( 'currentDatechanged' ).on( 'init' ),
 
             selectionTypeObserver: function() {
-				/* if an user changes ltPropSelectionType they want ltPropCurrentvalues to be preserved for other header types too*/
-
-                // if( !this.isDrilldown() ) {
-                //     this.data.ltPropCurrentDate = '';
-                //     this.data.ltPropCurrentWeek = [];
-                //     this.data.ltPropCurrentMonth = '';
-                //     this.data.ltPropCurrentYear = '';
-                // }
+                if( !this.isDrilldown() ) {
+                    this.data.ltPropCurrentDate = '';
+                    this.data.ltPropCurrentWeek = [];
+                    this.data.ltPropCurrentMonth = '';
+                    this.data.ltPropCurrentYear = '';
+                }
 
                 this.decideView();
             }.observes( 'ltPropSelectionType' ),
@@ -3511,36 +3353,7 @@ class LyteCalendarComponent extends Component {
                     parCalendar.classList.remove( 'lyteWeekNumContainer' );
                 }
 
-            }.observes( 'ltPropWeekNumber', 'viewType' ).on( 'didConnect' ),
-
-			holidayObs: function( ){
-				this.removeExistingHolidays();
-				this.addHolidays();
-			}.observes( 'ltPropHolidays' ),
-
-			curWeekObs: function( ){
-				if( this.getData('ltPropSelectionType') !== 'week' || this.getData( 'preventObs' ) || this.getData('isoFlag') ){
-					return;
-				}
-				
-				var cur = this.getData( 'ltPropCurrentWeek' );
-				if( !cur || !cur.length || cur.length < 2 ){
-					this.removeDayHighlights();
-					return;
-				}
-		
-				var viewDate = this.stringToDate( cur[0], this.getData( 'ltPropFormat' ) );
-				if( viewDate === 'Invalid Date' ){
-					this.removeDayHighlights();
-					return;
-				}
-		
-				viewDate.setDate(1);
-				this.setData( 'viewDate', viewDate );
-		
-				this.isFromCurrentDateObserver = true;
-				this.buildDateView();
-			}.observes( 'ltPropCurrentWeek' )
+            }.observes( 'ltPropWeekNumber', 'viewType' ).on( 'didConnect' )
         }), arg1);
     }
 
@@ -3575,7 +3388,6 @@ LyteCalendarComponent._observedAttributes = [
     "selectDate",
     "currentDatechanged",
     "ltPropFillRows",
-    "ltPropFillRowsVariants",
     "ltPropNumberOfRows",
     "callFrmDidcnct",
     "monthDD",
@@ -3621,8 +3433,7 @@ LyteCalendarComponent._observedAttributes = [
     "showYear",
     "ltPropCurrentDisplayMonth",
     "ltPropCurrentDisplayYear",
-    "ltPropCurrentDisplayDecade",
-    "ltPropTransitMonthOnDateSel"
+    "ltPropCurrentDisplayDecade"
 ];
 
 /**
@@ -3642,6 +3453,6 @@ LyteCalendarComponent._observedAttributes = [
 export { LyteCalendarComponent };
 
 LyteCalendarComponent.register("lyte-calendar", {
-    hash: "LyteCalendarComponent_13",
+    hash: "LyteCalendarComponent_15",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });

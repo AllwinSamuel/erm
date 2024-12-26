@@ -64,7 +64,7 @@ AlertComp._observedAttributes = [];
 
 
 AlertComp.register("alert-comp", {
-    hash: "AlertComp_7",
+    hash: "AlertComp_189",
     refHash: "C_erm_app_0"
 }); 
 
@@ -117,7 +117,7 @@ class FormComp extends _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_
 		return Object.assign(super.actions({
 			submit: function () {
 				try {
-					const { employeeNumber, name, email, phone, address, department, role, designation, gender, type } = this.data.user;
+					const { employeeNumber, name, email, phone, address, department, role, designation, gender, type } = this.data?.user;
 					if (!employeeNumber || !name || !email || !phone || !address || !department || !role || !designation || !gender) {
 						this.$app.$ServiceProvider.toast("All fields are required!", "error");
 						return;
@@ -137,18 +137,17 @@ class FormComp extends _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_
 							"Are you sure you want to add this employee?",
 							() => {
 								this.$app.$ServiceProvider.addUser(this.data.user);
-								this.$node.remove();
+								// this.$node.remove();
 							}
 						);
 					} else {
-						console.log(this.getData("user"));
 						this.$app.$ServiceProvider.showAlert(
 							 {
 							header:	"UPDATE EMPLOYEE!",
 							content: "Are you sure you want to update this employee " + "?",
 							cb: () => {
 								this.$app.$ServiceProvider.updateUser(this.getData("user"));
-								this.$node.remove();
+								// this.$node.remove();
 							}
 						}
 						);
@@ -176,14 +175,14 @@ class FormComp extends _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_
     }
 }
 
-FormComp._template = "<template tag-name=\"form-comp\"> <div class=\"form-screen\"> <div class=\"form-container\"> <button class=\"form-btn--close\" onclick=\"{{action('close')}}\">X</button> <form> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(type,'==','add')}}\" is=\"case\" lc-id=\"lc_id_0\"><h2>ADD EMPLOYEE</h2></template><template default=\"\"><h2>UPDATE EMPLOYEE</h2></template></template> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(type,'!=','update')}}\" is=\"case\" lc-id=\"lc_id_0\"><lyte-input lt-prop-label=\"EmployeeNumber\" lt-prop-placeholder=\"Enter EmployeeNumber\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(user.employeeNumber)}}\"></lyte-input></template></template> <lyte-input lt-prop-label=\"Name\" lt-prop-placeholder=\"Enter Name\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(user.name)}}\"></lyte-input> <lyte-input lt-prop-label=\"Email\" lt-prop-placeholder=\"Enter Email\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(user.email)}}\"></lyte-input> <lyte-input lt-prop-label=\"Phone\" lt-prop-placeholder=\"Enter Phone\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(user.phone)}}\"></lyte-input> <lyte-input lt-prop-label=\"Address\" lt-prop-placeholder=\"Enter Address\" lt-prop-type=\"textarea\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(user.address)}}\"></lyte-input> <label for=\"department\">Department</label> <lyte-dropdown lt-prop-id=\"department\" lt-prop-class=\"form-input\" lt-prop-selected=\"{{lbind(user.department)}}\" lt-prop-placeholder=\"Select A Department\"> <template is=\"registerYield\" yield-name=\"yield\"> <lyte-drop-box> <lyte-drop-body> <lyte-drop-item data-value=\"IT\">IT </lyte-drop-item> <lyte-drop-item data-value=\"HR\">HR </lyte-drop-item> <lyte-drop-item data-value=\"Finance\">Finance </lyte-drop-item> <lyte-drop-item data-value=\"Marketing\">Marketing </lyte-drop-item> </lyte-drop-body> </lyte-drop-box> </template> </lyte-dropdown> <label for=\"role\">Role</label> <lyte-dropdown lt-prop-id=\"role\" lt-prop-class=\"form-input\" lt-prop-selected=\"{{lbind(user.role)}}\" lt-prop-placeholder=\"Select A Role\"> <template is=\"registerYield\" yield-name=\"yield\"> <lyte-drop-box> <lyte-drop-body> <lyte-drop-item data-value=\"Admin\">Admin </lyte-drop-item> <lyte-drop-item data-value=\"Manager\">Manager </lyte-drop-item> <lyte-drop-item data-value=\"Lead Developer\">Lead Developer </lyte-drop-item> <lyte-drop-item data-value=\"Senior Developer\">Senior Developer </lyte-drop-item> <lyte-drop-item data-value=\"Team Lead\">Team Lead</lyte-drop-item> </lyte-drop-body> </lyte-drop-box> </template> </lyte-dropdown> <lyte-input lt-prop-label=\"Designation\" lt-prop-placeholder=\"Enter Designation\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(user.designation)}}\"></lyte-input> <label for=\"gender\">Gender</label> <lyte-dropdown lt-prop-id=\"gender\" lt-prop-class=\"form-input\" lt-prop-selected=\"{{lbind(user.gender)}}\" lt-prop-placeholder=\"Select A Gender\"> <template is=\"registerYield\" yield-name=\"yield\"> <lyte-drop-box> <lyte-drop-body> <lyte-drop-item data-value=\"Male\">Male </lyte-drop-item> <lyte-drop-item data-value=\"Female\">Female </lyte-drop-item> </lyte-drop-body> </lyte-drop-box> </template> </lyte-dropdown> <div class=\"form-btns\"> <lyte-button lt-prop-appearance=\"success\" onclick=\"{{action('submit')}}\"> <template is=\"registerYield\" yield-name=\"text\"> Submit </template> </lyte-button> <lyte-button lt-prop-appearance=\"primary\" onclick=\"{{action('reset')}}\"> <template is=\"registerYield\" yield-name=\"text\"> Reset </template> </lyte-button> </div> </form> </div> </div> </template><style>@import url(\"/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-input.css\");\n@import url(\"/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-dropdown.css\");\n@import url(\"/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-button.css\");\n.form-screen{\n  position: fixed;\n  top:0;\n  left:0;\n  width: 100vw;\n  height: 100vh;\n  background-color: rgba(0, 0, 0, 0.7);\n  z-index: 22;\n  display: flex;\n  justify-content: center;\n  overflow: auto;\n}\n.form-container{\n  position: relative;\n  background-color: rgb(255, 255, 255);\n  width:500px;\n  height: fit-content;\n  padding:30px;\n  margin-top: 40px;\n  border-radius: 15px;\n  h2{\n    margin-inline: auto;\n  }\n}\n.form-btn--close{\n  position: absolute;\n  right:5px;\n  top:10px;\n  width: 50px;\n  height: 50px;\n  font-size: larger;\n  background-color: inherit;\n  border: none;\n  cursor: pointer;\n}\n\nform-comp form{\n  display: flex;\n  flex-direction: column;\n  gap:20px;\n  height: fit-content;\n}\n\n.form-input{\n  width: 100%;\n  height: 40px;\n  text-indent: 5px;\n  border: 1px solid #d6d6d6 !important;\n}\n\nlyte-dropdown {\n  max-width: 100%;\n}\n\n.form-btns{\n  display: flex;\n  justify-content: center;\n  gap:30px;\n  margin-top: 10px;\n}\n\n.form-btns button{\n  width:150px;\n  height:40px;\n  border-radius: 8px;\n  font-size: 1.2rem;\n}\n\n.lyteField{\n  padding: 0;\n}\n</style>";;
+FormComp._template = "<template tag-name=\"form-comp\"> <div class=\"form-screen\"> <div class=\"form-container\"> <button class=\"form-btn--close\" onclick=\"{{action('close')}}\">X</button> <form> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(type,'==','add')}}\" is=\"case\" lc-id=\"lc_id_0\"><h2>ADD EMPLOYEE</h2></template><template default=\"\"><h2>UPDATE EMPLOYEE</h2></template></template> <template is=\"switch\" l-c=\"true\" _new=\"true\"><template case=\"{{expHandlers(type,'!=','update')}}\" is=\"case\" lc-id=\"lc_id_0\"><lyte-input lt-prop-label=\"EmployeeNumber\" lt-prop-placeholder=\"Enter EmployeeNumber\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(user.employeeNumber)}}\"></lyte-input></template></template> <lyte-input lt-prop-label=\"Name\" lt-prop-placeholder=\"Enter Name\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(user.name)}}\"></lyte-input> <lyte-input lt-prop-label=\"Email\" lt-prop-placeholder=\"Enter Email\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(user.email)}}\"></lyte-input> <lyte-input lt-prop-label=\"Phone\" lt-prop-placeholder=\"Enter Phone\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(user.phone)}}\"></lyte-input> <lyte-input lt-prop-label=\"Address\" lt-prop-placeholder=\"Enter Address\" lt-prop-type=\"textarea\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(user.address)}}\"></lyte-input> <label for=\"department\">Department</label> <lyte-dropdown lt-prop-id=\"department\" lt-prop-class=\"form-input\" lt-prop-selected=\"{{lbind(user.department)}}\" lt-prop-placeholder=\"Select A Department\"> <template is=\"registerYield\" yield-name=\"yield\"> <lyte-drop-box> <lyte-drop-body> <lyte-drop-item data-value=\"IT\">IT </lyte-drop-item> <lyte-drop-item data-value=\"HR\">HR </lyte-drop-item> <lyte-drop-item data-value=\"Finance\">Finance </lyte-drop-item> <lyte-drop-item data-value=\"Marketing\">Marketing </lyte-drop-item> </lyte-drop-body> </lyte-drop-box> </template> </lyte-dropdown> <label for=\"role\">Role</label> <lyte-dropdown lt-prop-id=\"role\" lt-prop-class=\"form-input\" lt-prop-selected=\"{{lbind(user.role)}}\" lt-prop-placeholder=\"Select A Role\"> <template is=\"registerYield\" yield-name=\"yield\"> <lyte-drop-box> <lyte-drop-body> <lyte-drop-item data-value=\"Admin\">Admin </lyte-drop-item> <lyte-drop-item data-value=\"Manager\">Manager </lyte-drop-item> <lyte-drop-item data-value=\"Lead Developer\">Lead Developer </lyte-drop-item> <lyte-drop-item data-value=\"Senior Developer\">Senior Developer </lyte-drop-item> <lyte-drop-item data-value=\"Team Lead\">Team Lead</lyte-drop-item> </lyte-drop-body> </lyte-drop-box> </template> </lyte-dropdown> <lyte-input lt-prop-label=\"Designation\" lt-prop-placeholder=\"Enter Designation\" lt-prop-class=\"form-input\" lt-prop-value=\"{{lbind(user.designation)}}\"></lyte-input> <label for=\"gender\">Gender</label> <lyte-dropdown lt-prop-id=\"gender\" lt-prop-placeholder=\"Select A Gender\" lt-prop-class=\"form-input\" lt-prop-selected=\"{{lbind(user.gender)}}\"> <template is=\"registerYield\" yield-name=\"yield\"> <lyte-drop-box> <lyte-drop-body> <lyte-drop-item data-value=\"Male\">Male </lyte-drop-item> <lyte-drop-item data-value=\"Female\">Female </lyte-drop-item> </lyte-drop-body> </lyte-drop-box> </template> </lyte-dropdown> <div class=\"form-btns\"> <lyte-button lt-prop-appearance=\"success\" onclick=\"{{action('submit')}}\"> <template is=\"registerYield\" yield-name=\"text\"> Submit </template> </lyte-button> <lyte-button lt-prop-appearance=\"primary\" onclick=\"{{action('reset')}}\"> <template is=\"registerYield\" yield-name=\"text\"> Reset </template> </lyte-button> </div> </form> </div> </div> </template><style>@import url(\"/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-input.css\");\n@import url(\"/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-dropdown.css\");\n@import url(\"/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-button.css\");\n.form-screen{\n  position: fixed;\n  top:0;\n  left:0;\n  width: 100vw;\n  height: 100vh;\n  background-color: rgba(0, 0, 0, 0.7);\n  z-index: 22;\n  display: flex;\n  justify-content: center;\n  overflow: auto;\n}\n.form-container{\n  position: relative;\n  background-color: rgb(255, 255, 255);\n  width:500px;\n  height: fit-content;\n  padding:30px;\n  margin-top: 40px;\n  border-radius: 15px;\n  h2{\n    margin-inline: auto;\n  }\n}\n.form-btn--close{\n  position: absolute;\n  right:5px;\n  top:10px;\n  width: 50px;\n  height: 50px;\n  font-size: larger;\n  background-color: inherit;\n  border: none;\n  cursor: pointer;\n}\n\nform-comp form{\n  display: flex;\n  flex-direction: column;\n  gap:20px;\n  height: max-content;\n}\n\nform-comp .form-input{\n  width: 100%;\n  height: 40px;\n  text-indent: 5px;\n  border: 1px solid #d6d6d6 !important;\n}\n\nlyte-dropdown {\n  max-width: 100%;\n}\n\n.form-btns{\n  display: flex;\n  justify-content: center;\n  gap:30px;\n  margin-top: 10px;\n}\n\n.form-btns button{\n  width:150px;\n  height:40px;\n  border-radius: 8px;\n  font-size: 1.2rem;\n}\n\n.lyteField{\n  padding: 0;\n}\n#gender{\n  height: 60px;\n}\n</style>";;
 FormComp._dynamicNodes = [{"t":"a","p":[1,1,1]},{"t":"s","p":[1,1,3,1],"c":{"lc_id_0":{"dN":[],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{"dN":[]},"dc":{"lc_id_0":{},"default":{}},"hd":true,"co":["lc_id_0"],"in":16,"sibl":[15]},{"t":"s","p":[1,1,3,3],"c":{"lc_id_0":{"dN":[{"t":"a","p":[0],"cn":"lc_id_0"},{"t":"cD","p":[0],"in":0,"cn":"lc_id_0"}],"cdp":{"t":"a","p":[0]},"dcn":true}},"d":{},"dc":{"lc_id_0":{"dc":[0],"hc":true,"trans":true}},"hd":true,"co":["lc_id_0"],"hc":true,"trans":true,"in":15,"sibl":[14]},{"t":"a","p":[1,1,3,5]},{"t":"cD","p":[1,1,3,5],"in":14,"sibl":[13]},{"t":"a","p":[1,1,3,7]},{"t":"cD","p":[1,1,3,7],"in":13,"sibl":[12]},{"t":"a","p":[1,1,3,9]},{"t":"cD","p":[1,1,3,9],"in":12,"sibl":[11]},{"t":"a","p":[1,1,3,11]},{"t":"cD","p":[1,1,3,11],"in":11,"sibl":[10]},{"t":"a","p":[1,1,3,15]},{"t":"r","p":[1,1,3,15,1],"dN":[{"t":"cD","p":[1,1,1],"in":5,"sibl":[4]},{"t":"cD","p":[1,1,3],"in":4,"sibl":[3]},{"t":"cD","p":[1,1,5],"in":3,"sibl":[2]},{"t":"cD","p":[1,1,7],"in":2,"sibl":[1]},{"t":"cD","p":[1,1],"in":1,"sibl":[0]},{"t":"cD","p":[1],"in":0}],"dc":[5,4,3,2,1,0],"hc":true,"trans":true,"in":10,"sibl":[9]},{"t":"cD","p":[1,1,3,15],"in":9,"sibl":[8]},{"t":"a","p":[1,1,3,19]},{"t":"r","p":[1,1,3,19,1],"dN":[{"t":"cD","p":[1,1,1],"in":6,"sibl":[5]},{"t":"cD","p":[1,1,3],"in":5,"sibl":[4]},{"t":"cD","p":[1,1,5],"in":4,"sibl":[3]},{"t":"cD","p":[1,1,7],"in":3,"sibl":[2]},{"t":"cD","p":[1,1,9],"in":2,"sibl":[1]},{"t":"cD","p":[1,1],"in":1,"sibl":[0]},{"t":"cD","p":[1],"in":0}],"dc":[6,5,4,3,2,1,0],"hc":true,"trans":true,"in":8,"sibl":[7]},{"t":"cD","p":[1,1,3,19],"in":7,"sibl":[6]},{"t":"a","p":[1,1,3,21]},{"t":"cD","p":[1,1,3,21],"in":6,"sibl":[5]},{"t":"a","p":[1,1,3,25]},{"t":"r","p":[1,1,3,25,1],"dN":[{"t":"cD","p":[1,1,1],"in":3,"sibl":[2]},{"t":"cD","p":[1,1,3],"in":2,"sibl":[1]},{"t":"cD","p":[1,1],"in":1,"sibl":[0]},{"t":"cD","p":[1],"in":0}],"dc":[3,2,1,0],"hc":true,"trans":true,"in":5,"sibl":[4]},{"t":"cD","p":[1,1,3,25],"in":4,"sibl":[3]},{"t":"a","p":[1,1,3,27,1]},{"t":"r","p":[1,1,3,27,1,1],"dN":[],"in":3,"sibl":[2]},{"t":"cD","p":[1,1,3,27,1],"in":2,"sibl":[1]},{"t":"a","p":[1,1,3,27,3]},{"t":"r","p":[1,1,3,27,3,1],"dN":[],"in":1,"sibl":[0]},{"t":"cD","p":[1,1,3,27,3],"in":0},{"type":"dc","trans":true,"hc":true,"p":[15,14,13,12,11,10,9,8,7,6,5,4,2,0]}];;
 FormComp._observedAttributes = ["user"];
 
 
 
 FormComp.register("form-comp", {
-    hash: "FormComp_8",
+    hash: "FormComp_25",
     refHash: "C_erm_app_0"
 }); 
 
@@ -254,7 +253,7 @@ ToastComp._observedAttributes = [];
 
 
 ToastComp.register("toast-comp", {
-    hash: "ToastComp_4",
+    hash: "ToastComp_26",
     refHash: "C_erm_app_0"
 }); 
 
@@ -865,7 +864,7 @@ LyteAlertComponent._observedAttributes = [
 
 
 LyteAlertComponent.register("lyte-alert", {
-    hash: "LyteAlertComponent_8",
+    hash: "LyteAlertComponent_24",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });
 
@@ -1325,7 +1324,7 @@ LyteButtonComponent._observedAttributes = [
 
 
 LyteButtonComponent.register("lyte-button", {
-    hash: "LyteButtonComponent_9",
+    hash: "LyteButtonComponent_13",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });
 
@@ -1369,23 +1368,15 @@ var _ = {};
 
 
 
-//v4-calendar doesn't have the fix for DD-MM-YY format issue
 
 
 
 
 
-/* @Slicer.otherframeworkStart */
 
-/*  @Slicer.otherframeworkEnd */
 
-/* @Slicer.otherframeworkStart */
 
-/*  @Slicer.otherframeworkEnd */
 
-/* @Slicer.otherframeworkStart */
-
-/*  @Slicer.otherframeworkEnd */
 
 /**
  * Renders a calendar
@@ -1605,16 +1596,6 @@ class LyteCalendarComponent extends _node_modules_zoho_lyte_ui_component_compone
 			} ),
 
 			/**
-			 * @componentProperty {object} ltPropFillRowsVariants
-			 * @default {top:true,bottom:true}
-			 * 
-			 */
-
-			'ltPropFillRowsVariants': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'object', { 
-				'default': window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'fillRowsVariants', {'top':true,'bottom':true} ) 
-			} ),
-
-			/**
 			 * @componentProperty {number} ltPropNumberOfRows
 			 * @version 1.0.2
 			 * @default 6
@@ -1690,7 +1671,7 @@ class LyteCalendarComponent extends _node_modules_zoho_lyte_ui_component_compone
 
 			'ltPropWeekNumCriteria': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'number', { 'default': 1 } ),
 
-			'ltPropHolidays': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'array', { 'default': window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'holidays', [] ) } ),
+			'ltPropHolidays': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'array', { 'default': [ ] } ),
 
 			'ltPropDisableWeekends': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'boolean', { 'default': false } ),
 
@@ -1705,7 +1686,7 @@ class LyteCalendarComponent extends _node_modules_zoho_lyte_ui_component_compone
 
 			'ltPropTimeZone' : (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string' ),
 
-			'ltPropDisabledDays' : (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'array', { 'default' : window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'disabledWeekDays', [] ) } ),
+			'ltPropDisabledDays' : (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'array', { default : window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'disabledWeekDays', [] ) } ),
 
 			'ltPropHeaderAlignType': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string', { 'default': '' } ),
 
@@ -1717,9 +1698,7 @@ class LyteCalendarComponent extends _node_modules_zoho_lyte_ui_component_compone
 
 			'ltPropCurrentDisplayYear': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string', { 'default': '' } ),
 
-			'ltPropCurrentDisplayDecade': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string', { 'default': '' } ),
-
-			'ltPropTransitMonthOnDateSel': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)('boolean', { 'default': window._lyteUiUtils.resolveDefaultValue( 'lyte-calendar', 'transitMonthOnDateSel', false ) } )
+			'ltPropCurrentDisplayDecade': (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__.prop)( 'string', { 'default': '' } )
 		}), arg1);
 	}
 
@@ -1765,22 +1744,7 @@ class LyteCalendarComponent extends _node_modules_zoho_lyte_ui_component_compone
 		}
 
 		this.activateCell(newActiveCell);
-
-		var isCellDisabled = this.isCellDisabled( newActiveCell );
-		if( !isCellDisabled ){
-			this.focusActiveCell();
-		}
-		else{
-			this.move( event, navDirection, cellsToMove )
-		}
-	}
-
-    isCellDisabled( newActiveCell ){
-		if( newActiveCell.classList.contains('lyteCalendarDisabledDate') ){
-			return true;
-		}
-
-		return false
+		this.focusActiveCell();
 	}
 
     getCellFromSameView(cells, index) {
@@ -1994,9 +1958,7 @@ class LyteCalendarComponent extends _node_modules_zoho_lyte_ui_component_compone
 		var days = [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ], 
 		title = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ],
 		startDay = this.getData( 'ltPropStartWeekDay' ), i, result = [] ;
-		var weekend = this.getData('ltPropWeekends') || [];
-
-		startDay = startDay == undefined ? 1 : startDay;
+		var weekend = this.getData('ltPropWeekends');
 
 		for( i = 0; i < 7; i++ ) { 
 			var resClass = 'lyteCalTableCellHeader';
@@ -2423,8 +2385,6 @@ class LyteCalendarComponent extends _node_modules_zoho_lyte_ui_component_compone
 		var startDayOfMonth = this.getData( 'ltPropStartWeekDay' ), 
 		firstRowDays;
 
-		startDayOfMonth = startDayOfMonth == undefined ? 1 : startDayOfMonth;
-
 		if( firstday == 0 ) {
 			firstRowDays = startDayOfMonth === 0 ? 7 : startDayOfMonth;
 		}
@@ -2442,9 +2402,7 @@ class LyteCalendarComponent extends _node_modules_zoho_lyte_ui_component_compone
 	}
 
     getNumberToSubtract(firstday) {
-		var numberToSubtract, startDayOfMonth = this.getData( 'ltPropStartWeekDay' ) ;
-
-		startDayOfMonth = startDayOfMonth == undefined ? 1 : startDayOfMonth;
+		var numberToSubtract, startDayOfMonth = this.getData( 'ltPropStartWeekDay' );
 
 		if (firstday == 0) {
 			numberToSubtract = startDayOfMonth == 0 ? 0 : 7 - startDayOfMonth;
@@ -2520,18 +2478,10 @@ class LyteCalendarComponent extends _node_modules_zoho_lyte_ui_component_compone
 
     setDatesFunction() {
 		var fillRows = this.getData( 'ltPropFillRows' ), 
-		fillRowsVariants = this.getData( 'ltPropFillRowsVariants' ),
-		fillRowsTop = fillRowsVariants ? fillRowsVariants.top : false,
-		fillRowsBottom = fillRowsVariants ? fillRowsVariants.bottom : false,
 		reachedNextMonth = false,
 		cur = this.getData( 'viewDate' ),
 		month = cur.getMonth(), 
 		result = [], numberOfRows;
-
-		if( !fillRows ){
-			fillRowsTop = fillRowsBottom = false;
-		}
-
 
 		var weekNumber = this.getCurrentWeekNumber( cur );
 		var weekNumArr = [];
@@ -2554,7 +2504,7 @@ class LyteCalendarComponent extends _node_modules_zoho_lyte_ui_component_compone
 
 			for( var j = 0; j < 7; j++ ) {
 				if( 
-					( !fillRowsTop && month - 1 === calStartDate.getMonth() )
+					( !fillRows && month !== calStartDate.getMonth() )
 					|| ( fillRows && this.isYYFormat() && this.outsideBoundary( calStartDate ) && !this.isIso ) 
 				) {
 					result[ i ].push( { emptyBlock: true } );
@@ -2562,13 +2512,7 @@ class LyteCalendarComponent extends _node_modules_zoho_lyte_ui_component_compone
 					if (i != 0) {
 						reachedNextMonth = true;
 					}
-				}
-				else if( ( !fillRowsBottom && month + 1 === calStartDate.getMonth() ) ){
-					result[ i ].push( { emptyBlock: true } );
 
-					if (i != 0) {
-						reachedNextMonth = true;
-					}
 				}
 				else {
 					result[ i ].push( this.createDateCell( calStartDate, this.getCellClass( calStartDate ) ) );
@@ -3542,37 +3486,6 @@ class LyteCalendarComponent extends _node_modules_zoho_lyte_ui_component_compone
 		if( this.getMethods('onDateHover') || this.getMethods('onMonthHover') || this.getMethods('onYearHover') ){
 			this.addListenerForHoverEvent();
 		}
-
-		this.addBoxClassToAllDropdowns();
-	}
-
-    addBoxClassToAllDropdowns( ){
-		var dropdown = this.getData('ltPropDropdown');
-
-		if( dropdown && dropdown.boxClass ){
-			var list = _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default()(this.$node).find('lyte-dropdown');
-
-			for( var i=0;i<list.length;i++ ){
-				var elem = list[i];
-				
-				var dropbox = this.getDropBox( elem );
-				if( dropbox && dropbox.classList ){
-					_node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default()( dropbox ).addClass( dropdown.boxClass );
-				}
-			}
-		}
-	}
-
-    getDropBox( dropdown ){
-		var that = dropdown.component;
-
-		var box = that.childComp;
-
-		if (!box) {
-			box = that.$node.querySelector('lyte-drop-box');
-		}
-
-		return box;
 	}
 
     addListenerForHoverEvent() {
@@ -3931,16 +3844,6 @@ class LyteCalendarComponent extends _node_modules_zoho_lyte_ui_component_compone
 		var isMultiple = this.getData( 'ltPropMultiple' ),
 		curDate = this.convertToLang( cell.getAttribute( 'data-date' ) );
 
-		if( this.getData('ltPropTransitMonthOnDateSel') && this.getData('viewDate').getMonth() !== _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default().moment(curDate,this.getData('ltPropFormat')).get('month') ){
-			if( isMultiple ) {
-				this.$addon.arrayUtils( this.getData( 'ltPropCurrentDates' ), 'push', curDate );
-			}
-			else {
-				this.setData('ltPropCurrentDate', curDate);
-			}
-			return;
-		}
-
 		this.setData('preventObs', true);
 
 		if( isMultiple ) {
@@ -4063,17 +3966,9 @@ class LyteCalendarComponent extends _node_modules_zoho_lyte_ui_component_compone
 		var firstDayOfWeek = this.getFirstSelectableDay( dateCell ).getAttribute( 'data-date' ),
 		lastDayOfWeek = this.getLastSelectableDay( dateCell ).getAttribute( 'data-date' );
 
-		if( this.getData('ltPropTransitMonthOnDateSel') && this.getData('viewDate').getMonth() !== _node_modules_zoho_lyte_dom_modules_lyte_dom_utils_js__WEBPACK_IMPORTED_MODULE_4___default().moment(firstDayOfWeek,this.getData('ltPropFormat')).get('month') ){
-			this.setData( 'ltPropCurrentWeek', [ this.convertToLang( firstDayOfWeek ), this.convertToLang( lastDayOfWeek ) ] );
-			return;
-		}
-
 		this.removeDayHighlights();
 		this.addWeekHighlight(dateCell);
-
-		this.setData( 'preventObs', true );
 		this.setData('ltPropCurrentWeek', [this.convertToLang(firstDayOfWeek), this.convertToLang(lastDayOfWeek)]);
-		this.setData( 'preventObs', false );
 
 		if (this.getMethods('onWeekSelected')) {
 			this.executeMethod('onWeekSelected', event, firstDayOfWeek, lastDayOfWeek, this);
@@ -4165,8 +4060,6 @@ class LyteCalendarComponent extends _node_modules_zoho_lyte_ui_component_compone
 		var startWeekDay = this.getData('ltPropStartWeekDay');
 		var weekNum = 0;
 
-		startWeekDay = startWeekDay == undefined ? 1 : startWeekDay;
-
 		switch( weekNumCriteria ){
 			case 1:
 				startDate = 1;
@@ -4179,7 +4072,7 @@ class LyteCalendarComponent extends _node_modules_zoho_lyte_ui_component_compone
 
 			case 3: 
 				//find first full week's first date
-				startDate = this.getDateOfFirstDay( currentDateObj.getFullYear(), startWeekDay); 
+				startDate = this.getDateOfFirstDay( currentDateObj.getFullYear(), this.getData('ltPropStartWeekDay') ); 
 				break;
 
 		}
@@ -4215,61 +4108,11 @@ class LyteCalendarComponent extends _node_modules_zoho_lyte_ui_component_compone
 
     getDateObjToStartDay(curDateObj) {
 		var startOfWeekDay = this.getData('ltPropStartWeekDay');
-		startOfWeekDay = startOfWeekDay == undefined ? 1 : startOfWeekDay;
-
 		for( var it=0;it<7;it++ ){
 			if( curDateObj.getDay() == startOfWeekDay ){
 				return;
 			}
 			curDateObj.setDate( curDateObj.getDate() - 1 );
-		}
-	}
-
-    addHolidays( ){
-		var holidays = this.getData('ltPropHolidays');
-		var format = this.getData('ltPropFormat');
-		if( !holidays || !holidays.length ){
-			return;
-		}
-
-		for( var i=0;i<holidays.length;i++ ){
-			var cur = holidays[i];
-			var curDate = this.stringToDate( holidays[i], format );
-			var cell = this.$node.querySelector( 'div[data-date="' + cur + '"]' );
-			if( !cell ){
-				continue;
-			}
-			
-			var isDisabled = cell.classList.contains('lyteCalendarDisabledDate');
-			cell.classList.add('lyteCalHoliday');
-
-			if( this.getData('ltPropDisableHolidays') && !isDisabled ){
-				cell.classList.add('lyteCalendarDisabledDate');
-			}
-
-			if( this.getData('ltPropHighlightWeekendHolidays') && this.isWeekend( curDate ) ){
-				cell.classList.add('lyteCalWeekendHoliday');
-			}
-		}
-
-	}
-
-    removeExistingHolidays( ){
-		var cells = this.$node.querySelectorAll( '.lyteCalHoliday' ),
-		disabledDates = this.getDisabledDates();
-
-		for( var i=0;i<cells.length;i++ ){
-			var currentProcessedDate = this.stringToDate( cells[i].getAttribute('data-date'), this.getData('ltPropFormat') );
-
-			cells[i].classList.remove('lyteCalHoliday');
-
-			if( this.getData('ltPropDisableHolidays') && cells[i].classList.contains('lyteCalendarDisabledDate') && !this.isDisabled( currentProcessedDate, disabledDates ) ){
-				cells[i].classList.remove('lyteCalendarDisabledDate');
-			}
-
-			if( this.getData('ltPropHighlightWeekendHolidays') && cells[i].classList.contains('lyteCalWeekendHoliday') ){
-				cells[i].classList.remove('lyteCalWeekendHoliday');
-			}
 		}
 	}
 
@@ -4774,14 +4617,12 @@ class LyteCalendarComponent extends _node_modules_zoho_lyte_ui_component_compone
             }.observes( 'currentDatechanged' ).on( 'init' ),
 
             selectionTypeObserver: function() {
-				/* if an user changes ltPropSelectionType they want ltPropCurrentvalues to be preserved for other header types too*/
-
-                // if( !this.isDrilldown() ) {
-                //     this.data.ltPropCurrentDate = '';
-                //     this.data.ltPropCurrentWeek = [];
-                //     this.data.ltPropCurrentMonth = '';
-                //     this.data.ltPropCurrentYear = '';
-                // }
+                if( !this.isDrilldown() ) {
+                    this.data.ltPropCurrentDate = '';
+                    this.data.ltPropCurrentWeek = [];
+                    this.data.ltPropCurrentMonth = '';
+                    this.data.ltPropCurrentYear = '';
+                }
 
                 this.decideView();
             }.observes( 'ltPropSelectionType' ),
@@ -4867,36 +4708,7 @@ class LyteCalendarComponent extends _node_modules_zoho_lyte_ui_component_compone
                     parCalendar.classList.remove( 'lyteWeekNumContainer' );
                 }
 
-            }.observes( 'ltPropWeekNumber', 'viewType' ).on( 'didConnect' ),
-
-			holidayObs: function( ){
-				this.removeExistingHolidays();
-				this.addHolidays();
-			}.observes( 'ltPropHolidays' ),
-
-			curWeekObs: function( ){
-				if( this.getData('ltPropSelectionType') !== 'week' || this.getData( 'preventObs' ) || this.getData('isoFlag') ){
-					return;
-				}
-				
-				var cur = this.getData( 'ltPropCurrentWeek' );
-				if( !cur || !cur.length || cur.length < 2 ){
-					this.removeDayHighlights();
-					return;
-				}
-		
-				var viewDate = this.stringToDate( cur[0], this.getData( 'ltPropFormat' ) );
-				if( viewDate === 'Invalid Date' ){
-					this.removeDayHighlights();
-					return;
-				}
-		
-				viewDate.setDate(1);
-				this.setData( 'viewDate', viewDate );
-		
-				this.isFromCurrentDateObserver = true;
-				this.buildDateView();
-			}.observes( 'ltPropCurrentWeek' )
+            }.observes( 'ltPropWeekNumber', 'viewType' ).on( 'didConnect' )
         }), arg1);
     }
 
@@ -4931,7 +4743,6 @@ LyteCalendarComponent._observedAttributes = [
     "selectDate",
     "currentDatechanged",
     "ltPropFillRows",
-    "ltPropFillRowsVariants",
     "ltPropNumberOfRows",
     "callFrmDidcnct",
     "monthDD",
@@ -4977,8 +4788,7 @@ LyteCalendarComponent._observedAttributes = [
     "showYear",
     "ltPropCurrentDisplayMonth",
     "ltPropCurrentDisplayYear",
-    "ltPropCurrentDisplayDecade",
-    "ltPropTransitMonthOnDateSel"
+    "ltPropCurrentDisplayDecade"
 ];
 
 /**
@@ -4998,7 +4808,7 @@ LyteCalendarComponent._observedAttributes = [
 
 
 LyteCalendarComponent.register("lyte-calendar", {
-    hash: "LyteCalendarComponent_13",
+    hash: "LyteCalendarComponent_15",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });
 
@@ -5045,9 +4855,6 @@ var _ = {};
 
 
 
-/* @Slicer.otherframeworkStart */
-
-/*  @Slicer.otherframeworkEnd */
 
 window._lyteDropdownItemId = 0;
 window._lyteDropdownBodyId = 0;
@@ -10961,7 +10768,7 @@ if (!window._lyteUiUtils.registeredCustomElements['lyte-drop-group']) {
 
 
 LyteDropdownComponent.register("lyte-dropdown", {
-    hash: "LyteDropdownComponent_12",
+    hash: "LyteDropdownComponent_17",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });
 
@@ -11010,9 +10817,7 @@ var _ = {};
 
 
 
-/* @Slicer.otherframeworkStart */
 // import "../../plugins/lyte-trapFocus.js";
-/*  @Slicer.otherframeworkEnd */
 
 window._lyteInput = function(evt) {
     // var inputs = document.body.getElementsByTagName( 'lyte-input' );
@@ -14901,7 +14706,7 @@ LyteInputComponent._observedAttributes = [
 
 
 LyteInputComponent.register("lyte-input", {
-    hash: "LyteInputComponent_11",
+    hash: "LyteInputComponent_14",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });
 
@@ -15405,7 +15210,7 @@ LyteMessageboxComponent._observedAttributes = [
 
 
 LyteMessageboxComponent.register("lyte-messagebox", {
-    hash: "LyteMessageboxComponent_5",
+    hash: "LyteMessageboxComponent_27",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });
 
@@ -16521,7 +16326,7 @@ LyteTooltipComponent._observedAttributes = [
 
 
 LyteTooltipComponent.register("lyte-tooltip", {
-  hash: "LyteTooltipComponent_14",
+  hash: "LyteTooltipComponent_16",
   refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });
 
@@ -16804,7 +16609,7 @@ LyteWormholeComponent._observedAttributes = [
 
 
 LyteWormholeComponent.register("lyte-wormhole", {
-    hash: "LyteWormholeComponent_6",
+    hash: "LyteWormholeComponent_18",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });
 
@@ -16858,10 +16663,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
 /* harmony import */ var _node_modules_zoho_lyte_ui_component_addon_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/addon.js */ 8193521);
 /* harmony import */ var _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/core/index.js */ 93425939);
-/* harmony import */ var _data_store_db__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./data-store/db */ 87899682);
+/* harmony import */ var _data_store_db__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./data-store/db */ 87899682);
 /* harmony import */ var _components_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/component */ 54338305);
 /* harmony import */ var _router_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./router/router */ 11607809);
-/* harmony import */ var _services_ServiceProvider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./services/ServiceProvider */ 76246865);
+/* harmony import */ var _services_ServiceProvider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./services/ServiceProvider */ 76246865);
 
 var _ = {};
 
@@ -16878,16 +16683,16 @@ var _ = {};
         return _components_component__WEBPACK_IMPORTED_MODULE_3__.ErmComponentRegistry;
     },
 
-    "ErmDb": function() {
-        return _data_store_db__WEBPACK_IMPORTED_MODULE_4__.ErmDb;
+    "ServiceProvider": function() {
+        return _services_ServiceProvider__WEBPACK_IMPORTED_MODULE_4__.ServiceProvider;
     },
 
     "ErmRouter": function() {
         return _router_router__WEBPACK_IMPORTED_MODULE_5__.ErmRouter;
     },
 
-    "ServiceProvider": function() {
-        return _services_ServiceProvider__WEBPACK_IMPORTED_MODULE_6__.ServiceProvider;
+    "ErmDb": function() {
+        return _data_store_db__WEBPACK_IMPORTED_MODULE_6__.ErmDb;
     }
 });
 
@@ -16904,8 +16709,8 @@ class ErmApp extends _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_
             _node_modules_zoho_lyte_ui_component_addon_js__WEBPACK_IMPORTED_MODULE_2__.LyteUiComponentAddon,
             {component : _components_component__WEBPACK_IMPORTED_MODULE_3__.ErmComponentRegistry},
             {router : _router_router__WEBPACK_IMPORTED_MODULE_5__.ErmRouter},
-            {db : _data_store_db__WEBPACK_IMPORTED_MODULE_4__.ErmDb},
-            {ServiceProvider: _services_ServiceProvider__WEBPACK_IMPORTED_MODULE_6__.ServiceProvider}
+            {db : _data_store_db__WEBPACK_IMPORTED_MODULE_6__.ErmDb},
+            {ServiceProvider: _services_ServiceProvider__WEBPACK_IMPORTED_MODULE_4__.ServiceProvider}
         ];
     }
 
@@ -21964,9 +21769,6 @@ function stringify( obj ){
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "_lyteUiUtils": () => (/* binding */ utils)
-/* harmony export */ });
 /* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
 /* harmony import */ var _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@zoho/lyte-ui-component/components/component.js */ 40876002);
 /* harmony import */ var _node_modules_slyte_component_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@slyte/component/index.js */ 5660422);
@@ -22051,7 +21853,7 @@ var _ = {};
 
 
 
-window._lyteUiUtils = window._lyteUiUtils || { version : "4.1.7" };
+window._lyteUiUtils = window._lyteUiUtils || { version : "4.1.2" };
 
 window._lyteUiUtils.cboxId = 0;
 window._lyteUiUtils.rbuttonId = 0;
@@ -22502,28 +22304,6 @@ _lyteUiUtils.lyteUiFileSize = function( curr, def, dgt ){
 		return "1 Byte";
 	}
 	return ( parseInt( curr / Math.pow( 1000 , idx ) * Math.pow( 10, dgt ) ) / Math.pow( 10, dgt ) ) + ' ' + sizes[ idx ];
-
-};
-
-_lyteUiUtils.lyteUiIsEmpty = function(input){
-
-	let type = typeof input;
-
-	switch (type){
-		case 'string':
-			return input === "";
-		case 'number':
-		case 'Bigint':
-			return input == '';
-		case 'object':
-			if( Array.isArray( input ) ){
-				return input.length === 0;
-			}else{
-				return Object.keys( input ).length === 0;
-			}
-		case 'undefined':
-			return true;
-	}
 
 };
 
@@ -23516,11 +23296,6 @@ _node_modules_zoho_lyte_ui_component_components_component_js__WEBPACK_IMPORTED_M
 	}
 	return false
 });
-
-
-var utils = window._lyteUiUtils;
-
-
 
 /***/ }),
 
@@ -26763,10 +26538,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _router_routes_home_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../router/routes/home/index.js */ 88098444);
 /* harmony import */ var _router_routes_home_details_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../router/routes/home/details.js */ 29748659);
 /* harmony import */ var _router_routes_home_profile_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../router/routes/home/profile.js */ 83727442);
-/* harmony import */ var _router_routes_sign_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../router/routes/sign.js */ 79378899);
-/* harmony import */ var _router_routes_wildcard_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../router/routes/wildcard.js */ 45318946);
-/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
-/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../node_modules/@slyte/router/index.js */ 19170786);
+/* harmony import */ var _router_routes_home_sendMail_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../router/routes/home/sendMail.js */ 57100545);
+/* harmony import */ var _router_routes_home_inbox_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../router/routes/home/inbox.js */ 23271337);
+/* harmony import */ var _router_routes_sign_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../router/routes/sign.js */ 79378899);
+/* harmony import */ var _router_routes_wildcard_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../router/routes/wildcard.js */ 45318946);
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../node_modules/@slyte/router/index.js */ 19170786);
+
+
 
 
 
@@ -26777,21 +26556,21 @@ __webpack_require__.r(__webpack_exports__);
 
 var _ = {};
 
-(0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_6__._defineProperty)(_, {
+(0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_8__._defineProperty)(_, {
     "RouterMap": function() {
-        return _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_7__.RouterMap;
+        return _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_9__.RouterMap;
     }
 });
 
 
 
-class ErmMap extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_7__.RouterMap {
+class ErmMap extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_9__.RouterMap {
     map() {
         this.route("home",{
             path:'/',
             handler: _router_routes_home_js__WEBPACK_IMPORTED_MODULE_0__.Home
         },() => {
-            this.route("index",{
+            this.route("index", {
                 path:'/dashboard',
                 handler: _router_routes_home_index_js__WEBPACK_IMPORTED_MODULE_1__.Index
             });
@@ -26802,13 +26581,19 @@ class ErmMap extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODUL
             this.route("profile", {
                 handler: _router_routes_home_profile_js__WEBPACK_IMPORTED_MODULE_3__.Profile
             });
+            this.route("sendMail", {
+                handler: _router_routes_home_sendMail_js__WEBPACK_IMPORTED_MODULE_4__.SendMail
+            });
+            this.route("inbox", {
+                handler: _router_routes_home_inbox_js__WEBPACK_IMPORTED_MODULE_5__.Inbox
+            });
         });
         this.route("sign", {
-            handler: _router_routes_sign_js__WEBPACK_IMPORTED_MODULE_4__.Sign
+            handler: _router_routes_sign_js__WEBPACK_IMPORTED_MODULE_6__.Sign
         });
         this.route("wildcard", {
             path: "/*",
-            handler: _router_routes_wildcard_js__WEBPACK_IMPORTED_MODULE_5__.Wildcard
+            handler: _router_routes_wildcard_js__WEBPACK_IMPORTED_MODULE_7__.Wildcard
         });
     }
 
@@ -26834,30 +26619,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ErmRouter": () => (/* binding */ ErmRouter)
 /* harmony export */ });
 /* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
-/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@slyte/router/index.js */ 19170786);
-/* harmony import */ var _maps_map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./maps/map */ 29615327);
-/* harmony import */ var _components_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/component */ 54338305);
+/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/router/index.js */ 19170786);
+/* harmony import */ var _maps_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./maps/map */ 29615327);
+/* harmony import */ var _components_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/component */ 54338305);
 
 var _ = {};
 
 (0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__._defineProperty)(_, {
-  "ErmComponentRegistry": function() {
-    return _components_component__WEBPACK_IMPORTED_MODULE_1__.ErmComponentRegistry;
-  },
-
   "Router": function() {
-    return _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_2__.Router;
+    return _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__.Router;
   },
 
   "ErmMap": function() {
-    return _maps_map__WEBPACK_IMPORTED_MODULE_3__.ErmMap;
+    return _maps_map__WEBPACK_IMPORTED_MODULE_2__.ErmMap;
+  },
+
+  "ErmComponentRegistry": function() {
+    return _components_component__WEBPACK_IMPORTED_MODULE_3__.ErmComponentRegistry;
   }
 });
 
 
 
 
-class ErmRouter extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_2__.Router {
+class ErmRouter extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__.Router {
   constructor() {
     super(...arguments);
 
@@ -26869,11 +26654,14 @@ class ErmRouter extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MO
       }
     };
 
-    this.afterRouteNavigation = function (current) {};
+    this.afterRouteNavigation = function (current) {
+      if(["home.index","home.profile","home.sendMail","home.inbox"].includes(current.info.route))
+      this.$app.triggerEvent("routeChanged",current.info.route);
+    };
   }
 
   lookups() {
-    return [{ component: _components_component__WEBPACK_IMPORTED_MODULE_1__.ErmComponentRegistry }];
+    return [{ component: _components_component__WEBPACK_IMPORTED_MODULE_3__.ErmComponentRegistry }];
   }
 
   getComponentRegistry() {
@@ -26882,7 +26670,7 @@ class ErmRouter extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MO
 
   getConfig() {
     var config = {
-      baseMap: _maps_map__WEBPACK_IMPORTED_MODULE_3__.ErmMap,
+      baseMap: _maps_map__WEBPACK_IMPORTED_MODULE_2__.ErmMap,
       history: "html5",
     };
     return config;
@@ -26910,10 +26698,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ServiceProvider": () => (/* binding */ ServiceProvider)
 /* harmony export */ });
 /* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
-/* harmony import */ var _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/@slyte/core/index.js */ 64028528);
+/* harmony import */ var _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/@slyte/core/index.js */ 64028528);
 /* harmony import */ var _components_javascript_toast_comp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../components/javascript/toast-comp */ 51115378);
-/* harmony import */ var _components_javascript_form_comp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../components/javascript/form-comp */ 6162108);
-/* harmony import */ var _components_javascript_alert_comp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../components/javascript/alert-comp */ 92455636);
+/* harmony import */ var _components_javascript_form_comp__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../components/javascript/form-comp */ 6162108);
+/* harmony import */ var _components_javascript_alert_comp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../components/javascript/alert-comp */ 92455636);
 
 var _ = {};
 
@@ -26922,16 +26710,16 @@ var _ = {};
     return _components_javascript_toast_comp__WEBPACK_IMPORTED_MODULE_1__.ToastComp;
   },
 
-  "AlertComp": function() {
-    return _components_javascript_alert_comp__WEBPACK_IMPORTED_MODULE_2__.AlertComp;
-  },
-
   "Service": function() {
-    return _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_3__.Service;
+    return _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_2__.Service;
   },
 
   "FormComp": function() {
-    return _components_javascript_form_comp__WEBPACK_IMPORTED_MODULE_4__.FormComp;
+    return _components_javascript_form_comp__WEBPACK_IMPORTED_MODULE_3__.FormComp;
+  },
+
+  "AlertComp": function() {
+    return _components_javascript_alert_comp__WEBPACK_IMPORTED_MODULE_4__.AlertComp;
   }
 });
 
@@ -26940,157 +26728,169 @@ var _ = {};
 
 
 
-class  ServiceProvider extends _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_3__.Service {
-  validateUser(user){
-    var {userName , password} = user;
-    var updatedData = [
-      {
-        "employeeNumber": "emp101",
-        "name": "Jane Smith",
-        "email": "jane.smith@example.com",
-        "phone": "8765432109",
-        "address": "456 Oak Avenue, CA, USA",
-        "department": "HR",
-        "role": "Admin",
-        "designation": "Manager",
-        "gender": "Female",
-        "password": "password"
-      },
-      {
-        "employeeNumber": "emp103",
-        "name": "Alex Johnson",
-        "email": "alex.j@example.com",
-        "phone": "7654321098",
-        "address": "789 Pine Road, TX, USA",
-        "department": "Finance",
-        "role": "Manager",
-        "designation": "Junior Accountant",
-        "gender": "Non-binary",
-        "password": "password"
-      },
-      {
-        "employeeNumber": "emp104",
-        "name": "Emily Brown",
-        "email": "emily.b@example.com",
-        "phone": "6543210987",
-        "address": "321 Birch Lane, FL, USA",
-        "department": "Marketing",
-        "role": "Lead Developer",
-        "designation": "Senior Associate",
-        "gender": "Female",
-        "password": "password"
-      },
-      {
-        "employeeNumber": "emp105",
-        "name": "Michael Green",
-        "email": "michael.g@example.com",
-        "phone": "9876512345",
-        "address": "654 Cedar Street, WA, USA",
-        "department": "IT",
-        "role": "Senior Developer",
-        "designation": "Associate Engineer",
-        "gender": "Male",
-        "password": "password"
-      },
-      {
-        "employeeNumber": "emp106",
-        "name": "Sophia Wilson",
-        "email": "sophia.w@example.com",
-        "phone": "8765123498",
-        "address": "789 Willow Lane, CO, USA",
-        "department": "HR",
-        "role": "Manager",
-        "designation": "Senior Specialist",
-        "gender": "Female",
-        "password": "password"
-      },
-      {
-        "employeeNumber": "emp107",
-        "name": "Chris Martinez",
-        "email": "chris.m@example.com",
-        "phone": "7651234598",
-        "address": "456 Birch Avenue, TX, USA",
-        "department": "IT",
-        "role": "Admin",
-        "designation": "Lead Engineer",
-        "gender": "Male",
-        "password": "password"
-      },
-      {
-        "employeeNumber": "emp108",
-        "name": "Olivia Taylor",
-        "email": "olivia.t@example.com",
-        "phone": "6547891230",
-        "address": "321 Maple Street, FL, USA",
-        "department": "Finance",
-        "role": "Manager",
-        "designation": "Analyst",
-        "gender": "Female",
-        "password": "password"
-      },
-      {
-        "employeeNumber": "emp109",
-        "name": "Liam Anderson",
-        "email": "liam.a@example.com",
-        "phone": "9877894561",
-        "address": "123 Pine Drive, NY, USA",
-        "department": "Marketing",
-        "role": "Team Lead",
-        "designation": "Junior Specialist",
-        "gender": "Male",
-        "password": "password"
-      },
-      {
-        "employeeNumber": "emp110",
-        "name": "Ava Lee",
-        "email": "ava.l@example.com",
-        "phone": "8763217890",
-        "address": "654 Oak Avenue, CA, USA",
-        "department": "HR",
-        "role": "Manager",
-        "designation": "Analyst",
-        "gender": "Female",
-        "password": "password"
-      },
-      {
-        "employeeNumber": "emp111",
-        "name": "Noah Harris",
-        "email": "noah.h@example.com",
-        "phone": "7659871234",
-        "address": "789 Cedar Lane, TX, USA",
-        "department": "IT",
-        "role": "Senior Developer",
-        "designation": "Developer",
-        "gender": "Male",
-        "password": "password"
-      },
-      {
-        "employeeNumber": "emp112",
-        "name": "Isabella Moore",
-        "email": "isabella.m@example.com",
-        "phone": "6541239876",
-        "address": "123 Maple Street, CO, USA",
-        "department": "Finance",
-        "role": "Manager",
-        "designation": "Manager",
-        "gender": "Female",
-        "password": "password"
-      },
-      {
-        "employeeNumber": "emp113",
-        "name": "Ethan White",
-        "email": "ethan.w@example.com",
-        "phone": "9874561230",
-        "address": "456 Willow Drive, FL, USA",
-        "department": "Marketing",
-        "role": "Manager",
-        "designation": "Senior Strategist",
-        "gender": "Male",
-        "password": "password"
-      },
-      {
-        "employeeNumber": "emp114",
-        "name": "Mia Thompson",
+class ServiceProvider extends _node_modules_slyte_core_index_js__WEBPACK_IMPORTED_MODULE_2__.Service {
+  validateUser(user) {
+    var { userName, password } = user;
+   var updatedData = [
+  {
+    "employeeNumber": "emp101",
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "phone": "8765432109",
+    "address": "456 Oak Avenue, CA, USA",
+    "department": "HR",
+    "role": "Admin",
+    "designation": "Manager",
+    "gender": "Female",
+    "password": "password",
+    "message": []
+  },
+  {
+    "employeeNumber": "emp103",
+    "name": "Alex Johnson",
+    "email": "alex.j@example.com",
+    "phone": "7654321098",
+    "address": "789 Pine Road, TX, USA",
+    "department": "Finance",
+    "role": "Manager",
+    "designation": "Junior Accountant",
+    "gender": "Male",
+    "password": "password",
+    "message": []
+  },
+  {
+    "employeeNumber": "emp104",
+    "name": "Emily Brown",
+    "email": "emily.b@example.com",
+    "phone": "6543210987",
+    "address": "321 Birch Lane, FL, USA",
+    "department": "Marketing",
+    "role": "Lead Developer",
+    "designation": "Senior Associate",
+    "gender": "Female",
+    "password": "password",
+    "message": []
+  },
+  {
+    "employeeNumber": "emp105",
+    "name": "Michael Green",
+    "email": "michael.g@example.com",
+    "phone": "9876512345",
+    "address": "654 Cedar Street, WA, USA",
+    "department": "IT",
+    "role": "Senior Developer",
+    "designation": "Associate Engineer",
+    "gender": "Male",
+    "password": "password",
+    "message": []
+  },
+  {
+    "employeeNumber": "emp106",
+    "name": "Sophia Wilson",
+    "email": "sophia.w@example.com",
+    "phone": "8765123498",
+    "address": "789 Willow Lane, CO, USA",
+    "department": "HR",
+    "role": "Manager",
+    "designation": "Senior Specialist",
+    "gender": "Female",
+    "password": "password",
+    "message": []
+  },
+  {
+    "employeeNumber": "emp107",
+    "name": "Chris Martinez",
+    "email": "chris.m@example.com",
+    "phone": "7651234598",
+    "address": "456 Birch Avenue, TX, USA",
+    "department": "IT",
+    "role": "Admin",
+    "designation": "Lead Engineer",
+    "gender": "Male",
+    "password": "password",
+    "message": []
+  },
+  {
+    "employeeNumber": "emp108",
+    "name": "Olivia Taylor",
+    "email": "olivia.t@example.com",
+    "phone": "6547891230",
+    "address": "321 Maple Street, FL, USA",
+    "department": "Finance",
+    "role": "Manager",
+    "designation": "Analyst",
+    "gender": "Female",
+    "password": "password",
+    "message": []
+  },
+  {
+    "employeeNumber": "emp109",
+    "name": "Liam Anderson",
+    "email": "liam.a@example.com",
+    "phone": "9877894561",
+    "address": "123 Pine Drive, NY, USA",
+    "department": "Marketing",
+    "role": "Team Lead",
+    "designation": "Junior Specialist",
+    "gender": "Male",
+    "password": "password",
+    "message": []
+  },
+  {
+    "employeeNumber": "emp110",
+    "name": "Ava Lee",
+    "email": "ava.l@example.com",
+    "phone": "8763217890",
+    "address": "654 Oak Avenue, CA, USA",
+    "department": "HR",
+    "role": "Manager",
+    "designation": "Analyst",
+    "gender": "Female",
+    "password": "password",
+    "message": []
+  },
+  {
+    "employeeNumber": "emp111",
+    "name": "Noah Harris",
+    "email": "noah.h@example.com",
+    "phone": "7659871234",
+    "address": "789 Cedar Lane, TX, USA",
+    "department": "IT",
+    "role": "Senior Developer",
+    "designation": "Developer",
+    "gender": "Male",
+    "password": "password",
+    "message": []
+  },
+  {
+    "employeeNumber": "emp112",
+    "name": "Isabella Moore",
+    "email": "isabella.m@example.com",
+    "phone": "6541239876",
+    "address": "123 Maple Street, CO, USA",
+    "department": "Finance",
+    "role": "Manager",
+    "designation": "Manager",
+    "gender": "Female",
+    "password": "password",
+    "message": []
+  },
+  {
+    "employeeNumber": "emp113",
+    "name": "Ethan White",
+    "email": "ethan.w@example.com",
+    "phone": "9874561230",
+    "address": "456 Willow Drive, FL, USA",
+    "department": "Marketing",
+    "role": "Manager",
+    "designation": "Senior Strategist",
+    "gender": "Male",
+    "password": "password",
+    "message": []
+  },
+  {
+    "employeeNumber": "emp114",
+    "name": "Mia Thompson",
         "email": "mia.t@example.com",
         "phone": "8766543210",
         "address": "789 Elm Road, CA, USA",
@@ -27098,173 +26898,221 @@ class  ServiceProvider extends _node_modules_slyte_core_index_js__WEBPACK_IMPORT
         "role": "Manager",
         "designation": "Generalist",
         "gender": "Female",
-        "password": "password"
-      },
-      {
-        "employeeNumber": "emp115",
-        "name": "Lucas Perez",
-        "email": "lucas.p@example.com",
-        "phone": "7657891234",
-        "address": "321 Birch Lane, TX, USA",
-        "department": "IT",
-        "role": "Lead Developer",
-        "designation": "Senior Developer",
-        "gender": "Male",
-        "password": "password"
-      },
-      {
-        "employeeNumber": "emp116",
-        "name": "Amelia Evans",
-        "email": "amelia.e@example.com",
-        "phone": "6549873210",
-        "address": "654 Pine Street, NY, USA",
-        "department": "Finance",
-        "role": "Senior Developer",
-        "designation": "Analyst",
-        "gender": "Female",
-        "password": "password"
-      },
-      {
-        "employeeNumber": "emp117",
-        "name": "Elijah Scott",
-        "email": "elijah.s@example.com",
-        "phone": "9873216540",
-        "address": "123 Maple Drive, CO, USA",
-        "department": "Marketing",
-        "role": "Team Lead",
-        "designation": "Writer",
-        "gender": "Male",
-        "password": "password"
-      },
-      {
-        "employeeNumber": "emp118",
-        "name": "Charlotte Martinez",
-        "email": "charlotte.m@example.com",
-        "phone": "8769871234",
-        "address": "456 Cedar Road, FL, USA",
-        "department": "HR",
-        "role": "Manager",
-        "designation": "Specialist",
-        "gender": "Female",
-        "password": "password"
-      },
-      {
-        "employeeNumber": "emp119",
-        "name": "James Ramirez",
-        "email": "james.r@example.com",
-        "phone": "7653219876",
-        "address": "789 Birch Avenue, TX, USA",
-        "department": "IT",
-        "role": "Lead Developer",
-        "designation": "Engineer",
-        "gender": "Male",
-        "password": "password"
-      },
-      {
-        "employeeNumber": "emp120",
-        "name": "Harper Walker",
-        "email": "harper.w@example.com",
-        "phone": "6543219870",
-        "address": "321 Pine Lane, CA, USA",
-        "department": "Finance",
-        "role": "Manager",
-        "designation": "Analyst",
-        "gender": "Female",
-        "password": "password"
-      }
-    ]
-    localStorage.setItem("users",JSON.stringify(updatedData));
+        "password": "password",
+        "message": []
+    },
+  {
+    "employeeNumber": "emp115",
+    "name": "Lucas Perez",
+    "email": "lucas.p@example.com",
+    "phone": "7657891234",
+    "address": "321 Birch Lane, TX, USA",
+    "department": "IT",
+    "role": "Lead Developer",
+    "designation": "Senior Developer",
+    "gender": "Male",
+    "password": "password",
+    "message": []
+  },
+  {
+    "employeeNumber": "emp116",
+    "name": "Amelia Evans",
+    "email": "amelia.e@example.com",
+    "phone": "6549873210",
+    "address": "654 Pine Street, NY, USA",
+    "department": "Finance",
+    "role": "Senior Developer",
+    "designation": "Analyst",
+    "gender": "Female",
+    "password": "password",
+    "message": []
+  },
+  {
+    "employeeNumber": "emp117",
+    "name": "Elijah Scott",
+    "email": "elijah.s@example.com",
+    "phone": "9873216540",
+    "address": "123 Maple Drive, CO, USA",
+    "department": "Marketing",
+    "role": "Team Lead",
+    "designation": "Writer",
+    "gender": "Male",
+    "password": "password",
+    "message": []
+  },
+  {
+    "employeeNumber": "emp118",
+    "name": "Charlotte Martinez",
+    "email": "charlotte.m@example.com",
+    "phone": "8769871234",
+    "address": "456 Cedar Road, FL, USA",
+    "department": "HR",
+    "role": "Manager",
+    "designation": "Specialist",
+    "gender": "Female",
+    "password": "password",
+    "message": []
+  },
+  {
+    "employeeNumber": "emp119",
+    "name": "James Ramirez",
+    "email": "james.r@example.com",
+    "phone": "7653219876",
+    "address": "789 Birch Avenue, TX, USA",
+    "department": "IT",
+    "role": "Lead Developer",
+    "designation": "Engineer",
+    "gender": "Male",
+    "password": "password",
+    "message": []
+  },
+  {
+    "employeeNumber": "emp120",
+    "name": "Harper Walker",
+    "email": "harper.w@example.com",
+    "phone": "6543219870",
+    "address": "321 Pine Lane, CA, USA",
+    "department": "Finance",
+    "role": "Manager",
+    "designation": "Analyst",
+    "gender": "Female",
+    "password": "password",
+    "message": []
+  }
+]
+    localStorage.setItem("users", JSON.stringify(updatedData));
     var users = JSON.parse(localStorage.getItem("users"));
     var currentUser = users.filter(
-      (user) => ((user.employeeNumber == userName || user.name == userName) && user.password == password)
+      (user) =>
+        (user.employeeNumber == userName || user.name == userName) &&
+        user.password == password
     );
-    if(currentUser[0]){
-    localStorage.setItem("auth", JSON.stringify({"empNo":currentUser[0].employeeNumber,"role":currentUser[0].role,"name":currentUser[0].name}));
-    this.$app.$router.navigateTo("home.profile");
-    var url = `https://ui-avatars.com/api/?name=${currentUser[0].name.trim().charAt(0).toUpperCase()}&color=fff&background=${this.getRandomColor()}&rounded=true`;
-    document.querySelector("#favicon").href = url;
-    localStorage.setItem("faviconUrl",url);
-    }
-    else{
+    if (currentUser[0]) {
+      localStorage.setItem(
+        "auth",
+        JSON.stringify({
+          empNo: currentUser[0].employeeNumber,
+          role: currentUser[0].role,
+          name: currentUser[0].name,
+        })
+      );
+      this.$app.$router.navigateTo("home.profile");
+      var url = `https://ui-avatars.com/api/?name=${currentUser[0].name
+        .trim()
+        .charAt(0)
+        .toUpperCase()}&color=fff&background=${this.getRandomColor()}&rounded=true`;
+      document.querySelector("#favicon").href = url;
+      localStorage.setItem("faviconUrl", url);
+    } else {
       return "Wrong Credentials!";
-  }
+    }
   }
 
-  getRole(){
+  getRole() {
     return JSON.parse(localStorage.getItem("auth")).role;
   }
 
-  getUser(empNo){
+  getUser(empNo) {
     var users = this.getUsers();
     var user = users.filter((user) => user.employeeNumber == empNo)[0];
-    var {password , ...remaining} = user;
+    var { password, ...remaining } = user;
     return remaining;
   }
 
   getUsers() {
-    return JSON.parse(localStorage.getItem("users"))?.map(({ password, ...rest }) => rest); 
+    return JSON.parse(localStorage.getItem("users"))?.map(
+      ({ password, ...rest }) => rest
+    );
   }
 
-  addUser(user){
-   try{ var users = this.getUsers();
-    var updatedUsers = [...users,user];
-    localStorage.setItem("users",JSON.stringify(updatedUsers));
-    this.toast("Employee added successfully","success");
-    }catch(e){
-      this.toast("ERROR! something went wrong","error");
-    }
-  }
-
-  updateUser(employee){
-    try{let users = this.getUsers();
-    let updatedUsers = users.map((user) => {
-      if (user.employeeNumber === employee.employeeNumber) {
-        return { ...user, ...employee };
-      }
-      return user; 
-    });
-    localStorage.setItem("users", JSON.stringify(updatedUsers));
-    this.toast("Employee details updated successfully","success");}
-    catch(e){
-      console.log(e);
-      this.toast("ERROR! something went wrong","error");
-    }
-  }
-
-  showFormComp(type,user){
-    this.$app.$component.render(_components_javascript_form_comp__WEBPACK_IMPORTED_MODULE_4__.FormComp,{"type":type,"user":user},"#popup",{clearOutlet : true}); 
-  }
-
-  deleteUser(empNo){
-      try{var updatedUsers = this.getUsers().filter((user) => user.employeeNumber !== empNo);
+  addUser(user) {
+    try {
+      var users = this.getUsers();
+      var updatedUsers = [...users, user];
       localStorage.setItem("users", JSON.stringify(updatedUsers));
-         this.$app.$router.navigateBack();
-      this.toast("Employee deleted successfully","success");}
-      catch(e){
-        this.toast("ERROR! something went wrong","error");
-      }
+      this.toast("Employee added successfully", "success");
+    } catch (e) {
+      this.toast("ERROR! something went wrong", "error");
+    }
   }
 
-  toast(m,t){
-    setTimeout(()=>{this.$app.$component.render(_components_javascript_toast_comp__WEBPACK_IMPORTED_MODULE_1__.ToastComp,{message:m,type:t},"#toast");},1000);
+  updateUser(employee) {
+    try {
+      let users = this.getUsers();
+      let updatedUsers = users.map((user) => {
+        if (user.employeeNumber === employee.employeeNumber) {
+          return { ...user, ...employee };
+        }
+        return user;
+      });
+      localStorage.setItem("users", JSON.stringify(updatedUsers));
+      this.toast("Employee details updated successfully", "success");
+    } catch (e) {
+      console.log(e);
+      this.toast("ERROR! something went wrong", "error");
+    }
+  }
+
+  showFormComp(type, user) {
+    this.$app.$component.render(
+      _components_javascript_form_comp__WEBPACK_IMPORTED_MODULE_3__.FormComp,
+      { type: type, user: user },
+      "#popup",
+      { clearOutlet: true }
+    );
+  }
+
+  deleteUser(empNo) {
+    try {
+      var updatedUsers = this.getUsers().filter(
+        (user) => user.employeeNumber !== empNo
+      );
+      localStorage.setItem("users", JSON.stringify(updatedUsers));
+      this.$app.$router.navigateBack();
+      this.toast("Employee deleted successfully", "success");
+    } catch (e) {
+      this.toast("ERROR! something went wrong", "error");
+    }
+  }
+
+  toast(m, t) {
+      this.$app.$component.render(_components_javascript_toast_comp__WEBPACK_IMPORTED_MODULE_1__.ToastComp, { message: m, type: t }, "#toast");
   }
 
   getRandomColor() {
     var colors = [
-      'F94144', 'F3722C', 'F8961E', 'F9C74F',
-      '90BE6D', '43AA8B', '577590', '577590',
-      'D7263D', '1B998B', '9A031E', '5F0F40'
+      "F94144",
+      "F3722C",
+      "F8961E",
+      "F9C74F",
+      "90BE6D",
+      "43AA8B",
+      "577590",
+      "577590",
+      "D7263D",
+      "1B998B",
+      "9A031E",
+      "5F0F40",
     ];
     return colors[Math.floor(Math.random() * colors.length)];
   }
 
-  showAlert({header,content,cb} = {}){
-    this.$app.$component.render(_components_javascript_alert_comp__WEBPACK_IMPORTED_MODULE_2__.AlertComp,{header:header,content:content},"#toast",{
-      methods : {"perform": function(){ 
-        cb();
-      }},
-      clearOutlet : true,
-    });
+  showAlert({ header, content, cb } = {}) {
+    var node = document.querySelector("#toast");
+    this.$app.$component.render(
+      _components_javascript_alert_comp__WEBPACK_IMPORTED_MODULE_4__.AlertComp,
+      { header: header, content: content },
+      node
+      ,
+      {
+        methods: {
+          perform: function () {
+            cb();
+          },
+        },
+        clearOutlet: true,
+      }
+    );
   }
 
   _() {
@@ -27272,6 +27120,7 @@ class  ServiceProvider extends _node_modules_slyte_core_index_js__WEBPACK_IMPORT
   }
 }
 
+ 
 
 /***/ }),
 
@@ -27310,7 +27159,7 @@ class Home extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_
     }
     divert(){
         if(this.navigation.info.route == "home")
-        this.$app.$router.navigateTo("home.profile");
+        this.$app.$router.navigateTo("home.profile"); 
     }
     static actions(arg1) {
         return Object.assign(super.actions({
@@ -27389,6 +27238,59 @@ class Details extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODU
       DetailsComp = res.DetailsComp;
     }));
   }
+}
+
+
+
+
+
+/***/ }),
+
+/***/ 23271337:
+/*!*************************************!*\
+  !*** ./router/routes/home/inbox.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Inbox": () => (/* binding */ Inbox)
+/* harmony export */ });
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/router/index.js */ 19170786);
+
+var _ = {};
+
+(0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__._defineProperty)(_, {
+    "Route": function() {
+        return _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__.Route;
+    }
+});
+
+
+
+let InboxComp;
+
+class Inbox extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__.Route {
+    render(){
+        return {outlet : "#outlet2",component : InboxComp}
+    }
+    static actions(arg1) {
+        return Object.assign(super.actions({
+
+        }), arg1);
+    }
+
+    _() {
+        _;
+    }
+
+    getRequirements() {
+        arguments[1].push(__webpack_require__.e(/*! import() | components/javascript/inbox-comp */ "components/javascript/inbox-comp").then(__webpack_require__.bind(__webpack_require__, /*! ../../../components/javascript/inbox-comp */ 75043780)).then(function(res) {
+            InboxComp = res.InboxComp;
+        }));
+    }
 }
 
 
@@ -27487,6 +27389,9 @@ var _ = {};
 let ProfileComp;
 
 class Profile extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__.Route {
+    beforeFetch(){
+        // this.$app.triggerEvent("routeChanged","home.profile");
+    }
     render(){
         return {
             outlet : "#outlet2",
@@ -27506,6 +27411,66 @@ class Profile extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODU
     getRequirements() {
         arguments[1].push(Promise.all(/*! import() | components/javascript/profile-comp */[__webpack_require__.e("vendors-node_modules_zoho_lyte-ui-component_components_javascript_lyte-table_js"), __webpack_require__.e("components_javascript_user-comp_js"), __webpack_require__.e("components/javascript/profile-comp")]).then(__webpack_require__.bind(__webpack_require__, /*! ../../../components/javascript/profile-comp */ 60375406)).then(function(res) {
             ProfileComp = res.ProfileComp;
+        }));
+    }
+}
+
+
+
+
+
+/***/ }),
+
+/***/ 57100545:
+/*!****************************************!*\
+  !*** ./router/routes/home/sendMail.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "SendMail": () => (/* binding */ SendMail)
+/* harmony export */ });
+/* harmony import */ var _slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @slyte/core/src/lyte-utils */ 76928134);
+/* harmony import */ var _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/@slyte/router/index.js */ 19170786);
+
+var _ = {};
+
+(0,_slyte_core_src_lyte_utils__WEBPACK_IMPORTED_MODULE_0__._defineProperty)(_, {
+    "Route": function() {
+        return _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__.Route;
+    }
+});
+
+
+
+let MailpanelComp;
+
+class SendMail extends _node_modules_slyte_router_index_js__WEBPACK_IMPORTED_MODULE_1__.Route {
+    beforeFetch(){
+		var role = this.$app.$ServiceProvider.getRole();
+		  if(role != "Admin" && role != "Manager"){
+				   this.navigation.abort();
+					 this.navigateTo("home.profile");
+			}
+	}
+    render(){
+        return {outlet : "#outlet2",component : MailpanelComp}
+    }
+    static actions(arg1) {
+        return Object.assign(super.actions({
+
+        }), arg1);
+    }
+
+    _() {
+        _;
+    }
+
+    getRequirements() {
+        arguments[1].push(__webpack_require__.e(/*! import() | components/javascript/mailpanel-comp */ "components/javascript/mailpanel-comp").then(__webpack_require__.bind(__webpack_require__, /*! ../../../components/javascript/mailpanel-comp */ 63876162)).then(function(res) {
+            MailpanelComp = res.MailpanelComp;
         }));
     }
 }

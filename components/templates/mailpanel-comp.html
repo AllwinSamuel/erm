@@ -1,0 +1,25 @@
+<template tag-name="mailpanel-comp">
+   <form onsubmit="{{action('sendMessage',event)}}">
+    
+    <label  for="receiver">Receiver:</label>
+    <lyte-dropdown lt-prop-id="receiver" lt-prop-selected="{{lbind(receiver)}}"  lt-prop-placeholder="Select A Receiver" lt-prop-class="input">
+      <template is="registerYield" yield-name="yield">
+          <lyte-drop-box>
+              <lyte-drop-body>
+                <template lyte-for="{{users}} as user ">
+                  <lyte-drop-item lt-prop-class="select-item" data-value="{{user.employeeNumber}}"><span>{{user.name}} </span><span> {{user.employeeNumber}}</span></lyte-drop-item>
+                </template>
+              </lyte-drop-body>
+          </lyte-drop-box>
+      </template>
+    </lyte-dropdown>
+  
+    <label  for="receiver">Message:</label>
+    <lyte-input lt-prop-placeholder = 'Enter the Message' lt-prop-type="textarea"  lt-prop-class="input" lt-prop-value="{{lbind(message)}}"></lyte-input>
+    <lyte-button lt-prop-appearance="success" lt-prop-type="submit">
+      <template is="registerYield" yield-name="text">
+          Send
+      </template>
+    </lyte-button>
+  </form>
+</template>

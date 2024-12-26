@@ -261,6 +261,6 @@ LyteWormholeComponent._observedAttributes = [
 export { LyteWormholeComponent };
 
 LyteWormholeComponent.register("lyte-wormhole", {
-    hash: "LyteWormholeComponent_6",
+    hash: "LyteWormholeComponent_18",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });

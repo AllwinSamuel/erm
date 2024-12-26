@@ -586,6 +586,6 @@ LyteAlertComponent._observedAttributes = [
 export { LyteAlertComponent };
 
 LyteAlertComponent.register("lyte-alert", {
-    hash: "LyteAlertComponent_8",
+    hash: "LyteAlertComponent_24",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });

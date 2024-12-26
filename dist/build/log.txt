@@ -1,4 +1,4 @@
-Timing to complete init function0.011 s
+Timing to complete init function0.211 s
 CliLocation :/opt/homebrew/lib/node_modules/@slyte/cli
  CliVersion 1.0.0
 Timing to complete init function0 s
@@ -350,6 +350,12 @@ Timing to complete init function0 s
 [Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-tree.css
 
 [Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/rtl/lyte-ui-tree.css
+Warning : File not found /Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/themes/styles/treeselect.less
+
+[Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-treeselect.css
+Warning : File not found /Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/themes/styles/treeselect.less
+
+[Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/rtl/lyte-ui-treeselect.css
 
 [Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/default/ltr/lyte-ui-video.css
 
@@ -706,6 +712,12 @@ Timing to complete init function0 s
 [Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/night/ltr/lyte-ui-tree.css
 
 [Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/night/rtl/lyte-ui-tree.css
+Warning : File not found /Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/themes/styles/treeselect.less
+
+[Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/night/ltr/lyte-ui-treeselect.css
+Warning : File not found /Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/themes/styles/treeselect.less
+
+[Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/night/rtl/lyte-ui-treeselect.css
 
 [Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/night/ltr/lyte-ui-video.css
 
@@ -1062,6 +1074,12 @@ Timing to complete init function0 s
 [Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/latodefault/ltr/lyte-ui-tree.css
 
 [Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/latodefault/rtl/lyte-ui-tree.css
+Warning : File not found /Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/themes/styles/treeselect.less
+
+[Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/latodefault/ltr/lyte-ui-treeselect.css
+Warning : File not found /Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/themes/styles/treeselect.less
+
+[Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/latodefault/rtl/lyte-ui-treeselect.css
 
 [Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/latodefault/ltr/lyte-ui-video.css
 
@@ -1418,6 +1436,12 @@ Timing to complete init function0 s
 [Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/latonight/ltr/lyte-ui-tree.css
 
 [Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/latonight/rtl/lyte-ui-tree.css
+Warning : File not found /Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/themes/styles/treeselect.less
+
+[Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/latonight/ltr/lyte-ui-treeselect.css
+Warning : File not found /Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/themes/styles/treeselect.less
+
+[Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/latonight/rtl/lyte-ui-treeselect.css
 
 [Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/latonight/ltr/lyte-ui-video.css
 
@@ -1774,6 +1798,12 @@ Timing to complete init function0 s
 [Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/css-variables/ltr/lyte-ui-tree.css
 
 [Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/css-variables/rtl/lyte-ui-tree.css
+Warning : File not found /Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/themes/styles/treeselect.less
+
+[Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/css-variables/ltr/lyte-ui-treeselect.css
+Warning : File not found /Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/themes/styles/treeselect.less
+
+[Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/css-variables/rtl/lyte-ui-treeselect.css
 
 [Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/css-variables/ltr/lyte-ui-video.css
 
@@ -1787,26 +1817,26 @@ Timing to complete init function0 s
 
 [Compiled][themes]create an css files in the outputPath /Users/allwin-pt7686/Desktop/erm/dist/node_modules/@zoho/lyte-ui-component/dist/themes/compiledCSS/css-variables/rtl/lyte-ui-zoomer.css
 Building components ....
-mappingList {"lyte-accordion":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-accordion.js","lyte-alert":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-alert.js","lyte-autocomplete":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-autocomplete.js","lyte-audio-recorder":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-audio-recorder.js","lyte-badge":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-badge.js","lyte-banner":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-banner.js","lyte-beta-modal":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-beta-modal.js","lyte-beta-popover":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-beta-popover.js","lyte-board":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-board.js","lyte-breadcrumb":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-breadcrumb.js","lyte-button-group":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-button-group.js","lyte-button":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-button.js","lyte-calculator":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-calculator.js","lyte-calendar":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-calendar.js","lyte-card":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-card.js","lyte-carousel":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-carousel.js","lyte-checkbox-group":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-checkbox-group.js","lyte-checkbox":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-checkbox.js","lyte-circular-slider":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-circular-slider.js","lyte-clock":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-clock.js","lyte-code-snippet":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-code-snippet.js","lyte-colorbox":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-colorbox.js","lyte-combobox":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-combobox.js","lyte-column-chooser":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-column-chooser.js","lyte-counter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-counter.js","lyte-datemultiselect":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-datemultiselect.js","lyte-daterangepicker":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-daterangepicker.js","lyte-dateselect":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-dateselect.js","lyte-datetime-input":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-datetime-input.js","lyte-dragdrop":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-dragdrop.js","lyte-drawer":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-drawer.js","lyte-dropdown":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-dropdown.js","lyte-dual-listbox":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-dual-listbox.js","lyte-emoji":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-emoji.js","lyte-expresstable":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-expresstable.js","lyte-fileupload":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-fileupload.js","lyte-gradient-slider":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-gradient-slider.js","lyte-gridstack":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-gridstack.js","lyte-grouper":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-grouper.js","lyte-hovercard":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-hovercard.js","lyte-input":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-input.js","lyte-kanbanview":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-kanbanview.js","lyte-keyboard-navigator":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-keyboard-navigator.js","lyte-loader":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-loader.js","lyte-messagebox":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-messagebox.js","lyte-menu":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-menu.js","lyte-modal":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-modal.js","lyte-multislider":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-multislider.js","lyte-multi-dropdown":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-multi-dropdown.js","lyte-nav":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-nav.js","lyte-navigator":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-navigator.js","lyte-number":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-number.js","lyte-pip":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-pip.js","lyte-popover":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-popover.js","lyte-progressbar":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-progressbar.js","lyte-radiobutton-group":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-radiobutton-group.js","lyte-radiobutton":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-radiobutton.js","lyte-rating":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-rating.js","lyte-signature":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-signature.js","lyte-search":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-search.js","lyte-skip-to":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-skip-to.js","lyte-slider":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-slider.js","lyte-step":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-step.js","lyte-splitter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-splitter.js","lyte-svg":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-svg.js","lyte-table":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-table.js","lyte-tabs":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-tabs.js","lyte-tag":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-tag.js","lyte-text":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-text.js","lyte-time-picker":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-time-picker.js","lyte-timeline-view":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-timeline-view.js","lyte-timeline":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-timeline.js","lyte-tooltip":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-tooltip.js","lyte-tour-hint":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-tour-hint.js","lyte-tour-step":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-tour-step.js","lyte-tour":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-tour.js","lyte-tree-table":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-tree-table.js","lyte-tree":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-tree.js","lyte-treeselect":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-treeselect.js","lyte-video":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-video.js","lyte-voicenote":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-voicenote.js","lyte-wormhole":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-wormhole.js","table-tree":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/table-tree.js","lyte-annotator-item":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/annotator/lyte-annotator-item.js","lyte-annotator":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/annotator/lyte-annotator.js","colorpicker-ui":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/colorpicker/colorpicker-ui.js","lyte-colorpicker":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/colorpicker/lyte-colorpicker.js","lyte-avatar-navigator-item":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/avatar-navigator/lyte-avatar-navigator-item.js","lyte-avatar-navigator":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/avatar-navigator/lyte-avatar-navigator.js","lyte-connect-item":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-connect/lyte-connect-item.js","lyte-connect-swimlanes":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-connect/lyte-connect-swimlanes.js","lyte-connect":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-connect/lyte-connect.js","lyte-shape-wrap":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-connect/lyte-shape-wrap.js","lyte-layout-row":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-layout/lyte-layout-row.js","lyte-layout":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-layout/lyte-layout.js","lyte-comment":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-note/lyte-comment.js","lyte-note-editor":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-note/lyte-note-editor.js","lyte-notecomp":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-note/lyte-notecomp.js","lyte-reaction-view":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-note/lyte-reaction-view.js","lyte-scheduler-day":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/scheduler/lyte-scheduler-day.js","lyte-scheduler-event-tag":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/scheduler/lyte-scheduler-event-tag.js","lyte-scheduler-month":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/scheduler/lyte-scheduler-month.js","lyte-scheduler-week":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/scheduler/lyte-scheduler-week.js","lyte-scheduler":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/scheduler/lyte-scheduler.js","lyte-edit-element":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/lyte-edit-element.js","lyte-list-filter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/lyte-list-filter.js","lyte-listview-filter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/lyte-listview-filter.js","lyte-listview":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/lyte-listview.js","lyte-listview1":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/lyte-listview1.js","lyte-boolean-filter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/filters/lyte-boolean-filter.js","lyte-custom-filter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/filters/lyte-custom-filter.js","lyte-date-filter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/filters/lyte-date-filter.js","lyte-datetime-filter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/filters/lyte-datetime-filter.js","lyte-multiselect-filter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/filters/lyte-multiselect-filter.js","lyte-number-filter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/filters/lyte-number-filter.js","lyte-text-filter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/filters/lyte-text-filter.js","lyte-time-filter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/filters/lyte-time-filter.js"}
+mappingList {"lyte-accordion":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-accordion.js","lyte-alert":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-alert.js","lyte-audio-recorder":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-audio-recorder.js","lyte-autocomplete":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-autocomplete.js","lyte-badge":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-badge.js","lyte-banner":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-banner.js","lyte-beta-modal":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-beta-modal.js","lyte-beta-popover":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-beta-popover.js","lyte-board":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-board.js","lyte-breadcrumb":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-breadcrumb.js","lyte-button-group":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-button-group.js","lyte-button":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-button.js","lyte-calculator":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-calculator.js","lyte-calendar":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-calendar.js","lyte-card":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-card.js","lyte-carousel":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-carousel.js","lyte-checkbox-group":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-checkbox-group.js","lyte-checkbox":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-checkbox.js","lyte-circular-slider":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-circular-slider.js","lyte-clock":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-clock.js","lyte-code-snippet":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-code-snippet.js","lyte-colorbox":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-colorbox.js","lyte-column-chooser":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-column-chooser.js","lyte-combobox":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-combobox.js","lyte-counter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-counter.js","lyte-datemultiselect":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-datemultiselect.js","lyte-daterangepicker":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-daterangepicker.js","lyte-dateselect":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-dateselect.js","lyte-datetime-input":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-datetime-input.js","lyte-dragdrop":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-dragdrop.js","lyte-drawer":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-drawer.js","lyte-dropdown":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-dropdown.js","lyte-dual-listbox":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-dual-listbox.js","lyte-emoji":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-emoji.js","lyte-expresstable":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-expresstable.js","lyte-fileupload":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-fileupload.js","lyte-gradient-slider":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-gradient-slider.js","lyte-gridstack":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-gridstack.js","lyte-grouper":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-grouper.js","lyte-hovercard":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-hovercard.js","lyte-input":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-input.js","lyte-kanbanview":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-kanbanview.js","lyte-keyboard-navigator":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-keyboard-navigator.js","lyte-loader":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-loader.js","lyte-menu":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-menu.js","lyte-messagebox":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-messagebox.js","lyte-modal":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-modal.js","lyte-multi-dropdown":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-multi-dropdown.js","lyte-multislider":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-multislider.js","lyte-nav":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-nav.js","lyte-navigator":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-navigator.js","lyte-number":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-number.js","lyte-pip":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-pip.js","lyte-popover":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-popover.js","lyte-progressbar":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-progressbar.js","lyte-radiobutton-group":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-radiobutton-group.js","lyte-radiobutton":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-radiobutton.js","lyte-rating":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-rating.js","lyte-search":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-search.js","lyte-signature":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-signature.js","lyte-skip-to":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-skip-to.js","lyte-slider":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-slider.js","lyte-splitter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-splitter.js","lyte-step":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-step.js","lyte-svg":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-svg.js","lyte-table":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-table.js","lyte-tabs":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-tabs.js","lyte-tag":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-tag.js","lyte-text":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-text.js","lyte-time-picker":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-time-picker.js","lyte-timeline-view":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-timeline-view.js","lyte-timeline":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-timeline.js","lyte-tooltip":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-tooltip.js","lyte-tour-hint":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-tour-hint.js","lyte-tour-step":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-tour-step.js","lyte-tour":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-tour.js","lyte-tree-table":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-tree-table.js","lyte-tree":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-tree.js","lyte-treeselect":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-treeselect.js","lyte-video":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-video.js","lyte-voicenote":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-voicenote.js","lyte-wormhole":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-wormhole.js","table-tree":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/table-tree.js","lyte-avatar-navigator-item":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/avatar-navigator/lyte-avatar-navigator-item.js","lyte-avatar-navigator":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/avatar-navigator/lyte-avatar-navigator.js","colorpicker-ui":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/colorpicker/colorpicker-ui.js","lyte-colorpicker":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/colorpicker/lyte-colorpicker.js","lyte-layout-row":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-layout/lyte-layout-row.js","lyte-annotator":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/annotator/lyte-annotator.js","lyte-layout":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-layout/lyte-layout.js","lyte-annotator-item":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/annotator/lyte-annotator-item.js","lyte-connect-item":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-connect/lyte-connect-item.js","lyte-connect-swimlanes":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-connect/lyte-connect-swimlanes.js","lyte-shape-wrap":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-connect/lyte-shape-wrap.js","lyte-comment":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-note/lyte-comment.js","lyte-note-editor":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-note/lyte-note-editor.js","lyte-notecomp":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-note/lyte-notecomp.js","lyte-reaction-view":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-note/lyte-reaction-view.js","lyte-connect":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-connect/lyte-connect.js","lyte-scheduler-day":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/scheduler/lyte-scheduler-day.js","lyte-scheduler-event-tag":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/scheduler/lyte-scheduler-event-tag.js","lyte-scheduler-month":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/scheduler/lyte-scheduler-month.js","lyte-scheduler-week":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/scheduler/lyte-scheduler-week.js","lyte-scheduler":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/scheduler/lyte-scheduler.js","lyte-edit-element":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/lyte-edit-element.js","lyte-list-filter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/lyte-list-filter.js","lyte-listview-filter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/lyte-listview-filter.js","lyte-listview1":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/lyte-listview1.js","lyte-listview":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/lyte-listview.js","lyte-boolean-filter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/filters/lyte-boolean-filter.js","lyte-custom-filter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/filters/lyte-custom-filter.js","lyte-date-filter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/filters/lyte-date-filter.js","lyte-multiselect-filter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/filters/lyte-multiselect-filter.js","lyte-number-filter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/filters/lyte-number-filter.js","lyte-text-filter":"/Users/allwin-pt7686/Desktop/erm/node_modules/@zoho/lyte-ui-component/components/javascript/view/listview/filters/lyte-text-filter.js"}
 Searching for syntax errors.....
 Finding the unclosed tags compilation over
-[Time] => find unclosedTags => 0.039 s
+[Time] => find unclosedTags => 0.04 s
 Running compilerule ...
-[Time] => Convert Lyte syntax => 0.101 s
-Time to end the dynamic nodes0.416 s
+[Time] => Convert Lyte syntax => 0.103 s
+Time to end the dynamic nodes0.41 s
 Generating dist components...
 
 Time to end processing template0.004 s
 Build sucesss
 Building components ....
-mappingList {"alert-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/alert-comp.js","admin-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/admin-comp.js","form-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/form-comp.js","avatar-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/avatar-comp.js","details-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/details-comp.js","home-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/home-comp.js","sigin-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/sigin-comp.js","navbar-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/navbar-comp.js","list-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/list-comp.js","profile-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/profile-comp.js","toast-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/toast-comp.js","signin-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/signin-comp.js","user-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/user-comp.js"}
+mappingList {"admin-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/admin-comp.js","alert-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/alert-comp.js","avatar-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/avatar-comp.js","details-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/details-comp.js","home-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/home-comp.js","form-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/form-comp.js","inbox-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/inbox-comp.js","list-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/list-comp.js","navbar-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/navbar-comp.js","mailpanel-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/mailpanel-comp.js","profile-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/profile-comp.js","sigin-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/sigin-comp.js","signin-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/signin-comp.js","toast-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/toast-comp.js","user-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/user-comp.js"}
 Searching for syntax errors.....
 Error: ENOENT: no such file or directory, open '/Users/allwin-pt7686/Desktop/erm/components/templates/sigin-comp.html'
 Finding the unclosed tags compilation over
-[Time] => find unclosedTags => 0.002 s
+[Time] => find unclosedTags => 0.004 s
 Running compilerule ...
 [Time] => Convert Lyte syntax => 0 s
-Time to end the dynamic nodes0.005 s
+Time to end the dynamic nodes0.006 s
 Generating dist components...
 
 Time to end processing template0 s
@@ -1823,124 +1853,7 @@ file ended /Users/allwin-pt7686/Desktop/erm/assets/lyte_note_sprite.svg
 Building mixins .....
 Building mixins .....
 Building mixins .....
-LiveServer running in 59632
-Total Building Time : 16.245 s
-Building completed
-Minified Count : 0
-Build sucesss
-mappingList {"form-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/form-comp.js"}
-Searching for syntax errors.....
-Finding the unclosed tags compilation over
-[Time] => find unclosedTags => 0.005 s
-Running compilerule ...
-[Time] => Convert Lyte syntax => 0 s
-Time to end the dynamic nodes0.006 s
-Generating dist components...
-
-Time to end processing template0 s
-mappingList {"form-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/form-comp.js"}
-Searching for syntax errors.....
-Finding the unclosed tags compilation over
-[Time] => find unclosedTags => 0.003 s
-Running compilerule ...
-[Time] => Convert Lyte syntax => 0 s
-Time to end the dynamic nodes0.007 s
-Generating dist components...
-
-Time to end processing template0 s
-mappingList {"form-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/form-comp.js"}
-Searching for syntax errors.....
-Finding the unclosed tags compilation over
-[Time] => find unclosedTags => 0.001 s
-Running compilerule ...
-[Time] => Convert Lyte syntax => 0 s
-Time to end the dynamic nodes0.007 s
-Generating dist components...
-
-Time to end processing template0 s
-mappingList {"form-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/form-comp.js"}
-Searching for syntax errors.....
-Finding the unclosed tags compilation over
-[Time] => find unclosedTags => 0.001 s
-Running compilerule ...
-[Time] => Convert Lyte syntax => 0 s
-Time to end the dynamic nodes0.006 s
-Generating dist components...
-
-Time to end processing template0.001 s
-mappingList {"form-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/form-comp.js"}
-Searching for syntax errors.....
-Finding the unclosed tags compilation over
-[Time] => find unclosedTags => 0 s
-Running compilerule ...
-[Time] => Convert Lyte syntax => 0 s
-Time to end the dynamic nodes0.006 s
-Generating dist components...
-
-Time to end processing template0 s
-mappingList {"form-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/form-comp.js"}
-Searching for syntax errors.....
-Finding the unclosed tags compilation over
-[Time] => find unclosedTags => 0.001 s
-Running compilerule ...
-[Time] => Convert Lyte syntax => 0 s
-Time to end the dynamic nodes0.007 s
-Generating dist components...
-
-Time to end processing template0 s
-mappingList {"form-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/form-comp.js"}
-Searching for syntax errors.....
-Finding the unclosed tags compilation over
-[Time] => find unclosedTags => 0.001 s
-Running compilerule ...
-[Time] => Convert Lyte syntax => 0 s
-Time to end the dynamic nodes0.005 s
-Generating dist components...
-
-Time to end processing template0 s
-mappingList {"form-comp":"/Users/allwin-pt7686/Desktop/erm/components/javascript/form-comp.js"}
-Searching for syntax errors.....
-Finding the unclosed tags compilation over
-[Time] => find unclosedTags => 0.001 s
-Running compilerule ...
-[Time] => Convert Lyte syntax => 0 s
-Time to end the dynamic nodes0.008 s
-Generating dist components...
-
-Time to end processing template0 s
-Timing to complete init function0.038 s
-CliLocation :/opt/homebrew/lib/node_modules/@slyte/cli
- CliVersion 1.0.0
-Timing to complete init function0 s
-Building components ....
-Build sucesss
-Building components ....
-file started /Users/allwin-pt7686/Desktop/erm/assets/logout-svgrepo-com copy.svg
-file ended /Users/allwin-pt7686/Desktop/erm/assets/logout-svgrepo-com copy.svg
-file started /Users/allwin-pt7686/Desktop/erm/assets/lyte_note_sprite.svg
-file ended /Users/allwin-pt7686/Desktop/erm/assets/lyte_note_sprite.svg
-Building mixins .....
-Building mixins .....
-Building mixins .....
-LiveServer running in 50929
-Total Building Time : 0.788 s
-Building completed
-Minified Count : 0
-Timing to complete init function0.037 s
-CliLocation :/opt/homebrew/lib/node_modules/@slyte/cli
- CliVersion 1.0.0
-Timing to complete init function0 s
-Building components ....
-Build sucesss
-Building components ....
-file started /Users/allwin-pt7686/Desktop/erm/assets/logout-svgrepo-com copy.svg
-file ended /Users/allwin-pt7686/Desktop/erm/assets/logout-svgrepo-com copy.svg
-file started /Users/allwin-pt7686/Desktop/erm/assets/lyte_note_sprite.svg
-file ended /Users/allwin-pt7686/Desktop/erm/assets/lyte_note_sprite.svg
-Building mixins .....
-Building mixins .....
-Building mixins .....
-LiveServer running in 52330
-Total Building Time : 0.978 s
+LiveServer running in 59911
+Total Building Time : 15.898 s
 Building completed
 Minified Count : 0

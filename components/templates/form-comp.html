@@ -48,7 +48,7 @@
           <lyte-input lt-prop-label = 'Designation' lt-prop-placeholder = 'Enter Designation' lt-prop-class="form-input" lt-prop-value="{{lbind(user.designation)}}"></lyte-input>
           
           <label for="gender">Gender</label>
-          <lyte-dropdown lt-prop-id="gender" lt-prop-class="form-input" lt-prop-selected="{{lbind(user.gender)}}" lt-prop-placeholder="Select A Gender">
+          <lyte-dropdown lt-prop-id="gender" lt-prop-placeholder="Select A Gender" lt-prop-class="form-input" lt-prop-selected="{{lbind(user.gender)}}" >
             <template is="registerYield" yield-name="yield">
                 <lyte-drop-box>
                     <lyte-drop-body>

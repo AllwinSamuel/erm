@@ -26,7 +26,10 @@ class ErmRouter extends Router {
     }
   };
 
-  afterRouteNavigation = function (current) {};
+  afterRouteNavigation = function (current) {
+    if(["home.index","home.profile","home.sendMail","home.inbox"].includes(current.info.route))
+    this.$app.triggerEvent("routeChanged",current.info.route);
+  };
 }
 
 export { ErmRouter };

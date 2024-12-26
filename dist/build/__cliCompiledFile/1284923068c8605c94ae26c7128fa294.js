@@ -52,6 +52,6 @@ ProfileComp._observedAttributes = ["user"];
 export {ProfileComp};
 
 ProfileComp.register("profile-comp", {
-    hash: "ProfileComp_16",
+    hash: "ProfileComp_5",
     refHash: "C_erm_app_0"
 }); 

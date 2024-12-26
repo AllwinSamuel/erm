@@ -41,10 +41,10 @@ form-comp form{
   display: flex;
   flex-direction: column;
   gap:20px;
-  height: fit-content;
+  height: max-content;
 }
 
-.form-input{
+form-comp .form-input{
   width: 100%;
   height: 40px;
   text-indent: 5px;
@@ -71,4 +71,7 @@ lyte-dropdown {
 
 .lyteField{
   padding: 0;
+}
+#gender{
+  height: 60px;
 }

@@ -71,7 +71,7 @@ AvatarComp._observedAttributes = ["name"];
 
 
 AvatarComp.register("avatar-comp", {
-    hash: "AvatarComp_19",
+    hash: "AvatarComp_8",
     refHash: "C_erm_app_0"
 }); 
 
@@ -146,7 +146,7 @@ ProfileComp._observedAttributes = ["user"];
 
 
 ProfileComp.register("profile-comp", {
-    hash: "ProfileComp_16",
+    hash: "ProfileComp_5",
     refHash: "C_erm_app_0"
 }); 
 

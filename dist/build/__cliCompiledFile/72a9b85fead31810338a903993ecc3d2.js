@@ -479,6 +479,6 @@ LyteMessageboxComponent._observedAttributes = [
 export { LyteMessageboxComponent };
 
 LyteMessageboxComponent.register("lyte-messagebox", {
-    hash: "LyteMessageboxComponent_5",
+    hash: "LyteMessageboxComponent_27",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });

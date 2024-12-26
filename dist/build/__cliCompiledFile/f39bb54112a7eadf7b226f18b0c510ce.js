@@ -8,32 +8,17 @@ _defineProperty(_, {
 
     "Component": function() {
         return Component;
-    },
-
-    "Component": function() {
-        return Component;
-    },
-
-    "prop": function() {
-        return prop;
-    },
-
-    "prop": function() {
-        return prop;
-    },
-
-    "Component": function() {
-        return Component;
     }
 });
 
+import "/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-calendar.js";
+import "/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-wormhole.js";
+import "/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-dropdown.js";
 import { prop } from "/node_modules/@slyte/core/index.js";
 import { Component } from "/node_modules/@zoho/lyte-ui-component/components/component.js";
 import $L from "/node_modules/@zoho/lyte-dom/modules/lyte-dom-utils.js";
 
-/* @Slicer.otherframeworkStart */
 // import "../../plugins/lyte-trapFocus.js";
-/*  @Slicer.otherframeworkEnd */
 
 window._lyteInput = function(evt) {
     // var inputs = document.body.getElementsByTagName( 'lyte-input' );
@@ -3922,6 +3907,6 @@ LyteInputComponent._observedAttributes = [
 export { LyteInputComponent };
 
 LyteInputComponent.register("lyte-input", {
-    hash: "LyteInputComponent_9",
+    hash: "LyteInputComponent_14",
     refHash: "C_lyte-ui-component_@zoho/lyte-ui-component_2"
 });

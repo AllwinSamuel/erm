@@ -16,7 +16,7 @@ class FormComp extends Component {
 		return {
 			submit: function () {
 				try {
-					const { employeeNumber, name, email, phone, address, department, role, designation, gender, type } = this.data.user;
+					const { employeeNumber, name, email, phone, address, department, role, designation, gender, type } = this.data?.user;
 					if (!employeeNumber || !name || !email || !phone || !address || !department || !role || !designation || !gender) {
 						this.$app.$ServiceProvider.toast("All fields are required!", "error");
 						return;
@@ -36,18 +36,17 @@ class FormComp extends Component {
 							"Are you sure you want to add this employee?",
 							() => {
 								this.$app.$ServiceProvider.addUser(this.data.user);
-								this.$node.remove();
+								// this.$node.remove();
 							}
 						);
 					} else {
-						console.log(this.getData("user"));
 						this.$app.$ServiceProvider.showAlert(
 							 {
 							header:	"UPDATE EMPLOYEE!",
 							content: "Are you sure you want to update this employee " + "?",
 							cb: () => {
 								this.$app.$ServiceProvider.updateUser(this.getData("user"));
-								this.$node.remove();
+								// this.$node.remove();
 							}
 						}
 						);

@@ -18,6 +18,12 @@
    "/components_javascript_user-comp_js.js",
    "/vendors-node_modules_zoho_lyte-ui-component_components_javascript_lyte-table_js.js"
   ],
+  "/components/javascript/inbox-comp.js": [
+   "/components/javascript/inbox-comp.js"
+  ],
+  "/components/javascript/mailpanel-comp.js": [
+   "/components/javascript/mailpanel-comp.js"
+  ],
   "/components/javascript/profile-comp.js": [
    "/components/javascript/profile-comp.js",
    "/components/javascript/home-comp.js",

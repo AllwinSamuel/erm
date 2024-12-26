@@ -4,17 +4,10 @@ var _ = {};
 _defineProperty(_, {
     "Component": function() {
         return Component;
-    },
-
-    "Component": function() {
-        return Component;
-    },
-
-    "Component": function() {
-        return Component;
     }
 });
 
+import "/node_modules/@zoho/lyte-ui-component/components/javascript/lyte-alert.js";
 import {Component} from "/node_modules/@slyte/component/index.js";
 
 class AlertComp extends Component {
@@ -55,6 +48,6 @@ AlertComp._observedAttributes = [];
 export {AlertComp};
 
 AlertComp.register("alert-comp", {
-    hash: "AlertComp_5",
+    hash: "AlertComp_189",
     refHash: "C_erm_app_0"
 }); 
